@@ -1,0 +1,327 @@
+[gd_scene load_steps=34 format=3 uid="uid://pjilwspntgn6"]
+
+[ext_resource type="Script" uid="uid://dd7ywskexogj6" path="res://scripts/pane.gd" id="1_ghsmc"]
+[ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="1_k7av0"]
+[ext_resource type="Script" uid="uid://1aqavx17wewq" path="res://scripts/suit_icon.gd" id="2_wmg30"]
+[ext_resource type="Texture2D" uid="uid://bose70kviinn4" path="res://assets/spade.png" id="3_ghsmc"]
+[ext_resource type="Texture2D" uid="uid://5paj0fjfasri" path="res://assets/heart.png" id="4_3kvu7"]
+[ext_resource type="Texture2D" uid="uid://wue3n6ck1l3f" path="res://assets/diamond.png" id="5_dtceb"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="6_56bjc"]
+[ext_resource type="Texture2D" uid="uid://bbgmm1yo4pk1d" path="res://assets/heads_.png" id="7_iibsq"]
+[ext_resource type="Script" uid="uid://b0wbadre6nr1b" path="res://scripts/portrait.gd" id="7_wiqb3"]
+[ext_resource type="Script" uid="uid://byi7e82foeyl5" path="res://scripts/coin.gd" id="8_kl45w"]
+[ext_resource type="Texture2D" uid="uid://b4rickg8vjhv" path="res://assets/suit_tool_icon.png" id="8_rve4u"]
+[ext_resource type="Script" uid="uid://dvw5ap35s8mk7" path="res://scripts/suit_tool.gd" id="9_174d6"]
+[ext_resource type="Texture2D" uid="uid://dumjjj0ft23cr" path="res://assets/tails_.png" id="9_aqm4w"]
+[ext_resource type="Script" uid="uid://ds4qyeolmyv8n" path="res://scripts/gauge_slider.gd" id="9_dtceb"]
+[ext_resource type="Script" uid="uid://ejd2pitsqv7x" path="res://scripts/gauge_icon.gd" id="10_56bjc"]
+[ext_resource type="Texture2D" uid="uid://ijht3pow5svg" path="res://assets/folder.png" id="10_lpq5f"]
+[ext_resource type="AudioStream" uid="uid://baji3fpew3qss" path="res://assets/audio/coin-flip.mp3" id="10_w50lg"]
+[ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="11_lvs2l"]
+[ext_resource type="Texture2D" uid="uid://myp0200iy2ws" path="res://assets/lightning.png" id="11_rve4u"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="11_xq7uq"]
+[ext_resource type="Texture2D" uid="uid://demtkcgcng4ai" path="res://assets/mana.png" id="12_174d6"]
+[ext_resource type="Script" uid="uid://ogs0qx730nyh" path="res://scripts/folder_selector.gd" id="12_bcyca"]
+[ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="12_kleyl"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="13_3kvu7"]
+[ext_resource type="Script" uid="uid://dpbedum2trnxl" path="res://scripts/gauge_label.gd" id="13_174d6"]
+[ext_resource type="Texture2D" uid="uid://ysbddceutenx" path="res://assets/bar_tool.png" id="13_dtceb"]
+[ext_resource type="Texture2D" uid="uid://dr5idoohosp33" path="res://assets/sound_off.png" id="13_kleyl"]
+[ext_resource type="Texture2D" uid="uid://cv5px3rxkku6y" path="res://assets/unlinked.png" id="14_lpq5f"]
+[ext_resource type="Script" uid="uid://dvu4sciwxhw4c" path="res://scripts/hotlinker.gd" id="15_xq7uq"]
+[ext_resource type="Texture2D" uid="uid://05gyxubk1pn6" path="res://assets/linked.png" id="16_bcyca"]
+[ext_resource type="Texture2D" uid="uid://d3d185da1palt" path="res://assets/cycle.png" id="31_rav8p"]
+[ext_resource type="Texture2D" uid="uid://d3ejsw71l54p3" path="res://assets/cycle_clicked.png" id="32_ilg2h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_56bjc"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="Pane" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ghsmc")
+
+[node name="SuitIcon" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+offset_right = 75.0
+offset_bottom = 75.0
+mouse_filter = 0
+texture = ExtResource("1_k7av0")
+expand_mode = 1
+script = ExtResource("2_wmg30")
+clubTexture = ExtResource("1_k7av0")
+spadeTexture = ExtResource("3_ghsmc")
+heartTexture = ExtResource("4_3kvu7")
+diamondTexture = ExtResource("5_dtceb")
+
+[node name="Coin" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.82
+anchor_right = 0.93
+anchor_bottom = 0.2
+grow_horizontal = 0
+texture = ExtResource("7_iibsq")
+stretch_mode = 4
+script = ExtResource("8_kl45w")
+heads_texture = ExtResource("7_iibsq")
+tails_texture = ExtResource("9_aqm4w")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Coin"]
+stream = ExtResource("10_w50lg")
+volume_db = -15.0
+pitch_scale = 0.76
+
+[node name="SoundToggle" type="TextureRect" parent="Coin"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture = ExtResource("11_lvs2l")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("12_kleyl")
+sound_on_texture = ExtResource("11_lvs2l")
+sound_off_texture = ExtResource("13_kleyl")
+
+[node name="Notes" type="TextEdit" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+placeholder_text = "Add any notes here..."
+script = ExtResource("6_56bjc")
+
+[node name="PortraitHolder" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Portrait" type="TextureRect" parent="PortraitHolder"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.00003
+offset_right = 63.99997
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_k7av0")
+expand_mode = 2
+stretch_mode = 5
+script = ExtResource("7_wiqb3")
+
+[node name="GaugeSlider" type="ColorRect" parent="." node_paths=PackedStringArray("gaugeFill")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.87
+anchor_right = 0.75
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.08468992, 0.08468992, 0.08468992, 1)
+script = ExtResource("9_dtceb")
+gaugeFill = NodePath("GaugeFill")
+maxValue = 20
+
+[node name="GaugeFill" type="ColorRect" parent="GaugeSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+mouse_filter = 2
+color = Color(0.7652293, 0, 0.08521909, 1)
+
+[node name="GaugeIcon" type="TextureRect" parent="GaugeSlider" node_paths=PackedStringArray("gaugeFill")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -30.00003
+offset_right = 97.0
+offset_bottom = 97.99997
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_3kvu7")
+script = ExtResource("10_56bjc")
+healthTexture = ExtResource("4_3kvu7")
+staminaTexture = ExtResource("11_rve4u")
+manaTexture = ExtResource("12_174d6")
+healthColor = Color(0.7647059, 0, 0.08627451, 1)
+staminaColor = Color(1, 0.88235295, 0, 1)
+manaColor = Color(0, 0, 0.6784314, 1)
+gaugeFill = NodePath("../GaugeFill")
+
+[node name="Label" type="Label" parent="GaugeSlider/GaugeIcon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -11.5
+offset_right = 21.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "20/20"
+label_settings = SubResource("LabelSettings_56bjc")
+script = ExtResource("13_174d6")
+maxValue = 20
+
+[node name="Hotlinker" type="TextureRect" parent="GaugeSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 5.3150024
+offset_top = -15.000002
+offset_right = 35.315002
+offset_bottom = 14.999998
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("14_lpq5f")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("15_xq7uq")
+offTexture = ExtResource("14_lpq5f")
+onTexture = ExtResource("16_bcyca")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SuitTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("8_rve4u")
+expand_mode = 4
+stretch_mode = 4
+script = ExtResource("9_174d6")
+
+[node name="FolderSelectorTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_lpq5f")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("11_xq7uq")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="GaugeSliderTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_dtceb")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CoinTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_iibsq")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_3kvu7")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="FolderSelectorHolder" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.25
+anchor_top = 0.94
+anchor_right = 0.75
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="FolderSelector" type="OptionButton" parent="FolderSelectorHolder"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("12_bcyca")
+
+[node name="RandomImageButton" type="TextureButton" parent="FolderSelectorHolder"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -5.0
+offset_right = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("31_rav8p")
+texture_pressed = ExtResource("32_ilg2h")
+ignore_texture_size = true
+stretch_mode = 4
+
+[connection signal="gui_input" from="SuitIcon" to="SuitIcon" method="_on_gui_input"]
+[connection signal="gui_input" from="Coin" to="Coin" method="_on_gui_input"]
+[connection signal="gui_input" from="Coin/SoundToggle" to="Coin" method="_on_sound_toggle_gui_input"]
+[connection signal="gui_input" from="Coin/SoundToggle" to="Coin/SoundToggle" method="_on_gui_input"]
+[connection signal="gui_input" from="GaugeSlider" to="GaugeSlider" method="_on_gui_input"]
+[connection signal="gui_input" from="GaugeSlider" to="GaugeSlider/GaugeIcon/Label" method="_on_gauge_slider_gui_input"]
+[connection signal="gui_input" from="GaugeSlider/GaugeIcon" to="GaugeSlider/GaugeIcon" method="_on_gui_input"]
+[connection signal="gaugeValueChanged" from="GaugeSlider/GaugeIcon/Label" to="PortraitHolder/Portrait" method="_on_label_gauge_value_changed"]
+[connection signal="gui_input" from="GaugeSlider/Hotlinker" to="GaugeSlider/Hotlinker" method="_on_gui_input"]
+[connection signal="hotlink" from="GaugeSlider/Hotlinker" to="GaugeSlider/GaugeIcon/Label" method="_on_hotlinker_hotlink"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SuitTool" to="SuitIcon" method="_on_suit_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/FolderSelectorTool" to="FolderSelectorHolder/FolderSelector" method="_on_folder_selector_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/GaugeSliderTool" to="GaugeSlider" method="_on_gauge_slider_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CoinTool" to="Coin" method="_on_coin_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="dir_changed" from="FolderSelectorHolder/FolderSelector" to="PortraitHolder/Portrait" method="_on_folder_selector_dir_changed"]
+[connection signal="image_selected" from="FolderSelectorHolder/FolderSelector" to="PortraitHolder/Portrait" method="_on_folder_selector_image_selected"]
+[connection signal="item_selected" from="FolderSelectorHolder/FolderSelector" to="FolderSelectorHolder/FolderSelector" method="_on_item_selected"]
+[connection signal="pressed" from="FolderSelectorHolder/RandomImageButton" to="FolderSelectorHolder/FolderSelector" method="_on_random_image_button_pressed"]
