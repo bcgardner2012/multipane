@@ -1,0 +1,726 @@
+[gd_scene load_steps=85 format=3 uid="uid://bojxu5kidkrwt"]
+
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_3gpsl"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="1_qxvcr"]
+[ext_resource type="Script" uid="uid://dmrpypluscwb5" path="res://scripts/scoundrel_game.gd" id="1_uk74x"]
+[ext_resource type="Script" uid="uid://byi7e82foeyl5" path="res://scripts/coin.gd" id="2_ad7pd"]
+[ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="2_cx1md"]
+[ext_resource type="Script" uid="uid://dn8lqj50cdcic" path="res://scripts/scoundrel_game_player.gd" id="2_nvew6"]
+[ext_resource type="Texture2D" uid="uid://bbgmm1yo4pk1d" path="res://assets/heads_.png" id="2_qxvcr"]
+[ext_resource type="Script" uid="uid://ds4qyeolmyv8n" path="res://scripts/gauge_slider.gd" id="2_w15mp"]
+[ext_resource type="Texture2D" uid="uid://5paj0fjfasri" path="res://assets/heart.png" id="3_6ajby"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_be3iu"]
+[ext_resource type="Texture2D" uid="uid://gole0g5je4f4" path="res://assets/cards/Scoundrel-Hearts-2.jpg" id="3_cfw1m"]
+[ext_resource type="Texture2D" uid="uid://dumjjj0ft23cr" path="res://assets/tails_.png" id="3_uk74x"]
+[ext_resource type="Texture2D" uid="uid://xm6wmujpp6df" path="res://assets/cards/Scoundrel-Hearts-3.jpg" id="4_cx1md"]
+[ext_resource type="Script" uid="uid://ejd2pitsqv7x" path="res://scripts/gauge_icon.gd" id="4_f1b3a"]
+[ext_resource type="AudioStream" uid="uid://baji3fpew3qss" path="res://assets/audio/coin-flip.mp3" id="4_i5u4i"]
+[ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="5_8wbkb"]
+[ext_resource type="Texture2D" uid="uid://myp0200iy2ws" path="res://assets/lightning.png" id="5_kglon"]
+[ext_resource type="Texture2D" uid="uid://3xcowuulj5tc" path="res://assets/cards/Scoundrel-Hearts-4.jpg" id="5_nvew6"]
+[ext_resource type="Texture2D" uid="uid://demtkcgcng4ai" path="res://assets/mana.png" id="6_2qm50"]
+[ext_resource type="Texture2D" uid="uid://ec4tv2b4xccp" path="res://assets/cards/Scoundrel-Hearts-5.jpg" id="6_d668h"]
+[ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="6_dwkbl"]
+[ext_resource type="Texture2D" uid="uid://dr5idoohosp33" path="res://assets/sound_off.png" id="7_5x2vv"]
+[ext_resource type="Script" uid="uid://dpbedum2trnxl" path="res://scripts/gauge_label.gd" id="7_8r1mr"]
+[ext_resource type="Texture2D" uid="uid://146ghmwg6f1x" path="res://assets/cards/Scoundrel-Hearts-6.jpg" id="7_d1ykn"]
+[ext_resource type="Texture2D" uid="uid://bedqj81hfu4pt" path="res://assets/cards/Scoundrel-Hearts-7.jpg" id="8_nppkp"]
+[ext_resource type="Texture2D" uid="uid://dmm0js5yqcsam" path="res://assets/cards/Scoundrel-Hearts-8.jpg" id="9_8r4q6"]
+[ext_resource type="Texture2D" uid="uid://twyas7apb42v" path="res://assets/cards/Scoundrel-Hearts-9.jpg" id="10_oj1hb"]
+[ext_resource type="Texture2D" uid="uid://32k542xg5ajw" path="res://assets/cards/Scoundrel-Hearts-10.jpg" id="11_lt72t"]
+[ext_resource type="Texture2D" uid="uid://dnahwdnxkkwkb" path="res://assets/cards/Scoundrel-Hearts-J.jpg" id="12_o0f3w"]
+[ext_resource type="Texture2D" uid="uid://cm3vyjp4m882g" path="res://assets/cards/Scoundrel-Hearts-Q.jpg" id="13_4vplx"]
+[ext_resource type="Texture2D" uid="uid://cclouvmgt70xc" path="res://assets/cards/Scoundrel-Hearts-K.jpg" id="14_mkbb6"]
+[ext_resource type="Texture2D" uid="uid://djivkfsm3i1fa" path="res://assets/cards/Scoundrel-Hearts-A.jpg" id="15_rnjvg"]
+[ext_resource type="Texture2D" uid="uid://cmh5ks4ctop1t" path="res://assets/cards/Scoundrel-Diamonds-2.jpg" id="16_4eruv"]
+[ext_resource type="Texture2D" uid="uid://pqnixqafduia" path="res://assets/cards/Scoundrel-Diamonds-3.jpg" id="17_5ydma"]
+[ext_resource type="Texture2D" uid="uid://bv1uw7iv0cs2e" path="res://assets/cards/Scoundrel-Back.jpg" id="17_6ajby"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="18_f1b3a"]
+[ext_resource type="Texture2D" uid="uid://c41pcbt58l6cf" path="res://assets/cards/Scoundrel-Diamonds-4.jpg" id="18_j3ao7"]
+[ext_resource type="Texture2D" uid="uid://ddho5rfkluq57" path="res://assets/cards/Scoundrel-Diamonds-5.jpg" id="19_xtiwo"]
+[ext_resource type="Texture2D" uid="uid://dfgrn0c82ufpt" path="res://assets/cards/Scoundrel-Diamonds-6.jpg" id="20_jhrwm"]
+[ext_resource type="Texture2D" uid="uid://shu11b5htqd5" path="res://assets/cards/Scoundrel-Diamonds-7.jpg" id="21_fjcaa"]
+[ext_resource type="Texture2D" uid="uid://bepembfejaaib" path="res://assets/cards/Scoundrel-Diamonds-8.jpg" id="22_68l8r"]
+[ext_resource type="Texture2D" uid="uid://cqqce66lgq13a" path="res://assets/cards/Scoundrel-Diamonds-9.jpg" id="23_uu5ux"]
+[ext_resource type="Texture2D" uid="uid://bx56bou3jv3xk" path="res://assets/cards/Scoundrel-Diamonds-10.jpg" id="24_5jx8g"]
+[ext_resource type="Texture2D" uid="uid://qsl0ngibqcl2" path="res://assets/cards/Scoundrel-Diamonds-J.jpg" id="25_3mqit"]
+[ext_resource type="Texture2D" uid="uid://c4w1k8p0xx7uv" path="res://assets/cards/Scoundrel-Diamonds-Q.jpg" id="26_babrs"]
+[ext_resource type="Texture2D" uid="uid://dalknlelev44r" path="res://assets/cards/Scoundrel-Diamonds-K.jpg" id="27_ipc7q"]
+[ext_resource type="Texture2D" uid="uid://ce4scrj0b7qq8" path="res://assets/cards/Scoundrel-Diamonds-A.jpg" id="28_xybvw"]
+[ext_resource type="Texture2D" uid="uid://bamyldooi55rg" path="res://assets/cards/Scoundrel-Clubs-2.jpg" id="29_wkap4"]
+[ext_resource type="Texture2D" uid="uid://d4m442c2y76kd" path="res://assets/cards/Scoundrel-Clubs-3.jpg" id="30_pq5hq"]
+[ext_resource type="Texture2D" uid="uid://3uwwk6w4gfav" path="res://assets/cards/Scoundrel-Clubs-4.jpg" id="31_0ascx"]
+[ext_resource type="Texture2D" uid="uid://cigc1is8ntiqe" path="res://assets/cards/Scoundrel-Clubs-5.jpg" id="32_38ut5"]
+[ext_resource type="Texture2D" uid="uid://cqn5lhspigco5" path="res://assets/cards/Scoundrel-Clubs-6.jpg" id="33_rkgpk"]
+[ext_resource type="Texture2D" uid="uid://bd7nvl3x1wao3" path="res://assets/cards/Scoundrel-Clubs-7.jpg" id="34_mfm81"]
+[ext_resource type="Texture2D" uid="uid://7eumevy7f2bh" path="res://assets/cards/Scoundrel-Clubs-8.jpg" id="35_aewdn"]
+[ext_resource type="Texture2D" uid="uid://b1i6otlbmptiw" path="res://assets/cards/Scoundrel-Clubs-9.jpg" id="36_rkqpx"]
+[ext_resource type="Texture2D" uid="uid://b48e7k2w1vfwm" path="res://assets/cards/Scoundrel-Clubs-10.jpg" id="37_4kvjw"]
+[ext_resource type="Texture2D" uid="uid://ddvhgpihn3yt" path="res://assets/cards/Scoundrel-Clubs-J.jpg" id="38_arsr2"]
+[ext_resource type="Texture2D" uid="uid://d2b4wbod1nnw3" path="res://assets/cards/Scoundrel-Clubs-Q.jpg" id="39_o6n0d"]
+[ext_resource type="Texture2D" uid="uid://be0vrf32y62s" path="res://assets/cards/Scoundrel-Clubs-K.jpg" id="40_80y1f"]
+[ext_resource type="Texture2D" uid="uid://de5xciorqhwy5" path="res://assets/cards/Scoundrel-Clubs-A.jpg" id="41_d01gt"]
+[ext_resource type="Texture2D" uid="uid://ws7m6xiebfhg" path="res://assets/cards/Scoundrel-Spades-2.jpg" id="42_3m6km"]
+[ext_resource type="Texture2D" uid="uid://byyjk0qc8bp8e" path="res://assets/cards/Scoundrel-Spades-3.jpg" id="43_k871n"]
+[ext_resource type="Texture2D" uid="uid://ungf2kfmw0yq" path="res://assets/cards/Scoundrel-Spades-4.jpg" id="44_cvswt"]
+[ext_resource type="Texture2D" uid="uid://cn54uiq4n1qso" path="res://assets/cards/Scoundrel-Spades-5.jpg" id="45_egdrl"]
+[ext_resource type="Texture2D" uid="uid://dh0gbwcij531f" path="res://assets/cards/Scoundrel-Spades-6.jpg" id="46_gxtdf"]
+[ext_resource type="Texture2D" uid="uid://cvhmnlwvv4771" path="res://assets/cards/Scoundrel-Spades-7.jpg" id="47_57wl8"]
+[ext_resource type="Texture2D" uid="uid://bjemg5k4ahi04" path="res://assets/cards/Scoundrel-Spades-8.jpg" id="48_yirwl"]
+[ext_resource type="Texture2D" uid="uid://coltkymj7yxvr" path="res://assets/cards/Scoundrel-Spades-9.jpg" id="49_e4n3u"]
+[ext_resource type="Texture2D" uid="uid://brkcdvxvotc2c" path="res://assets/cards/Scoundrel-Spades-10.jpg" id="50_tyx2c"]
+[ext_resource type="Texture2D" uid="uid://brjt74huyv4n5" path="res://assets/cards/Scoundrel-Spades-J.jpg" id="51_6llrd"]
+[ext_resource type="Texture2D" uid="uid://bl1t6gkpknqmy" path="res://assets/cards/Scoundrel-Spades-Q.jpg" id="52_6122r"]
+[ext_resource type="Texture2D" uid="uid://b10e5omsveftl" path="res://assets/cards/Scoundrel-Spades-K.jpg" id="53_hglb1"]
+[ext_resource type="Texture2D" uid="uid://cnjyuvne7ggjv" path="res://assets/cards/Scoundrel-Spades-A.jpg" id="54_wv1c3"]
+[ext_resource type="Texture2D" uid="uid://cemhgd2a67gnb" path="res://assets/healed.png" id="57_lt72t"]
+[ext_resource type="Script" uid="uid://vvhx4x6wtl2m" path="res://scripts/simple_indicator.gd" id="58_4vplx"]
+[ext_resource type="Script" uid="uid://gtmg17rec1gm" path="res://scripts/healed_status.gd" id="58_mkbb6"]
+[ext_resource type="Texture2D" uid="uid://ctdncyejaada6" path="res://assets/tired.png" id="58_o0f3w"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="73_d668h"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="74_d1ykn"]
+[ext_resource type="Texture2D" uid="uid://bnjcpuxudod41" path="res://assets/run.png" id="75_nppkp"]
+[ext_resource type="Texture2D" uid="uid://b5eeqxf5r1fyx" path="res://assets/run_pressed.png" id="76_8r4q6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_27gjq"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ajby"]
+font_size = 96
+
+[sub_resource type="LabelSettings" id="LabelSettings_f1b3a"]
+font_size = 96
+font_color = Color(1, 0.5372549, 0, 1)
+
+[node name="ScoundrelGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uk74x")
+
+[node name="ScoundrelGamePlayer" type="Node" parent="." node_paths=PackedStringArray("room", "deck_label", "health_slider", "weapon_node", "run_button")]
+script = ExtResource("2_nvew6")
+room = NodePath("../PlayArea/Room")
+deck_label = NodePath("../PlayArea/Deck/CountLabel")
+health_slider = NodePath("../GaugeSlider")
+weapon_node = NodePath("../PlayArea/Weapon")
+run_button = NodePath("../PlayArea/RunButton")
+
+[node name="CardDatas" type="Node" parent="ScoundrelGamePlayer"]
+script = ExtResource("2_cx1md")
+
+[node name="H2" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+rank = 2
+texture = ExtResource("3_cfw1m")
+
+[node name="H3" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+rank = 3
+texture = ExtResource("4_cx1md")
+
+[node name="H4" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+rank = 4
+texture = ExtResource("5_nvew6")
+
+[node name="H5" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+rank = 5
+texture = ExtResource("6_d668h")
+
+[node name="H6" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+rank = 6
+texture = ExtResource("7_d1ykn")
+
+[node name="H7" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+rank = 7
+texture = ExtResource("8_nppkp")
+
+[node name="H8" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+rank = 8
+texture = ExtResource("9_8r4q6")
+
+[node name="H9" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+rank = 9
+texture = ExtResource("10_oj1hb")
+
+[node name="H10" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+rank = 10
+texture = ExtResource("11_lt72t")
+
+[node name="D2" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 2
+texture = ExtResource("16_4eruv")
+
+[node name="D3" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 3
+texture = ExtResource("17_5ydma")
+
+[node name="D4" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 4
+texture = ExtResource("18_j3ao7")
+
+[node name="D5" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 5
+texture = ExtResource("19_xtiwo")
+
+[node name="D6" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 6
+texture = ExtResource("20_jhrwm")
+
+[node name="D7" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 7
+texture = ExtResource("21_fjcaa")
+
+[node name="D8" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 8
+texture = ExtResource("22_68l8r")
+
+[node name="D9" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 9
+texture = ExtResource("23_uu5ux")
+
+[node name="D10" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 10
+texture = ExtResource("24_5jx8g")
+
+[node name="C2" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 2
+texture = ExtResource("29_wkap4")
+
+[node name="C3" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 3
+texture = ExtResource("30_pq5hq")
+
+[node name="C4" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 4
+texture = ExtResource("31_0ascx")
+
+[node name="C5" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 5
+texture = ExtResource("32_38ut5")
+
+[node name="C6" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 6
+texture = ExtResource("33_rkgpk")
+
+[node name="C7" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 7
+texture = ExtResource("34_mfm81")
+
+[node name="C8" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 8
+texture = ExtResource("35_aewdn")
+
+[node name="C9" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 9
+texture = ExtResource("36_rkqpx")
+
+[node name="C10" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 10
+texture = ExtResource("37_4kvjw")
+
+[node name="CJ" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 11
+texture = ExtResource("38_arsr2")
+
+[node name="CQ" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 12
+texture = ExtResource("39_o6n0d")
+
+[node name="CK" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 13
+texture = ExtResource("40_80y1f")
+
+[node name="CA" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 2
+rank = 14
+texture = ExtResource("41_d01gt")
+
+[node name="S2" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 2
+texture = ExtResource("42_3m6km")
+
+[node name="S3" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 3
+texture = ExtResource("43_k871n")
+
+[node name="S4" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 4
+texture = ExtResource("44_cvswt")
+
+[node name="S5" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 5
+texture = ExtResource("45_egdrl")
+
+[node name="S6" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 6
+texture = ExtResource("46_gxtdf")
+
+[node name="S7" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 7
+texture = ExtResource("47_57wl8")
+
+[node name="S8" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 8
+texture = ExtResource("48_yirwl")
+
+[node name="S9" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 9
+texture = ExtResource("49_e4n3u")
+
+[node name="S10" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 10
+texture = ExtResource("50_tyx2c")
+
+[node name="SJ" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 11
+texture = ExtResource("51_6llrd")
+
+[node name="SQ" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 12
+texture = ExtResource("52_6122r")
+
+[node name="SK" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 13
+texture = ExtResource("53_hglb1")
+
+[node name="SA" type="Node" parent="ScoundrelGamePlayer/CardDatas"]
+script = ExtResource("18_f1b3a")
+suit = 3
+rank = 14
+texture = ExtResource("54_wv1c3")
+
+[node name="UnusedCards" type="Node" parent="ScoundrelGamePlayer"]
+
+[node name="HJ" type="Node" parent="ScoundrelGamePlayer/UnusedCards"]
+script = ExtResource("18_f1b3a")
+rank = 11
+texture = ExtResource("12_o0f3w")
+
+[node name="HQ" type="Node" parent="ScoundrelGamePlayer/UnusedCards"]
+script = ExtResource("18_f1b3a")
+rank = 12
+texture = ExtResource("13_4vplx")
+
+[node name="HK" type="Node" parent="ScoundrelGamePlayer/UnusedCards"]
+script = ExtResource("18_f1b3a")
+rank = 13
+texture = ExtResource("14_mkbb6")
+
+[node name="HA" type="Node" parent="ScoundrelGamePlayer/UnusedCards"]
+script = ExtResource("18_f1b3a")
+rank = 14
+texture = ExtResource("15_rnjvg")
+
+[node name="DJ" type="Node" parent="ScoundrelGamePlayer/UnusedCards"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 11
+texture = ExtResource("25_3mqit")
+
+[node name="DQ" type="Node" parent="ScoundrelGamePlayer/UnusedCards"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 12
+texture = ExtResource("26_babrs")
+
+[node name="DK" type="Node" parent="ScoundrelGamePlayer/UnusedCards"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 13
+texture = ExtResource("27_ipc7q")
+
+[node name="DA" type="Node" parent="ScoundrelGamePlayer/UnusedCards"]
+script = ExtResource("18_f1b3a")
+suit = 1
+rank = 14
+texture = ExtResource("28_xybvw")
+
+[node name="StatusContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.102000006
+anchor_right = 0.18200001
+anchor_bottom = 0.102000006
+offset_left = -1.1040001
+offset_top = -0.09600067
+offset_right = 1.3359833
+offset_bottom = 19.904
+
+[node name="HealedStatus" type="TextureRect" parent="StatusContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("57_lt72t")
+expand_mode = 3
+stretch_mode = 4
+script = ExtResource("58_mkbb6")
+
+[node name="TiredStatus" type="TextureRect" parent="StatusContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("58_o0f3w")
+expand_mode = 3
+stretch_mode = 4
+script = ExtResource("58_4vplx")
+
+[node name="GaugeSlider" type="ColorRect" parent="." node_paths=PackedStringArray("gaugeFill")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.05
+anchor_right = 0.18
+anchor_bottom = 0.085
+offset_left = 30.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.08468992, 0.08468992, 0.08468992, 1)
+script = ExtResource("2_w15mp")
+gaugeFill = NodePath("GaugeFill")
+maxValue = 20
+
+[node name="GaugeFill" type="ColorRect" parent="GaugeSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+mouse_filter = 2
+color = Color(0.7652293, 0, 0.08521909, 1)
+
+[node name="GaugeIcon" type="TextureRect" parent="GaugeSlider" node_paths=PackedStringArray("gaugeFill")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -30.00003
+offset_right = 97.0
+offset_bottom = 97.99997
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6ajby")
+script = ExtResource("4_f1b3a")
+healthTexture = ExtResource("3_6ajby")
+staminaTexture = ExtResource("5_kglon")
+manaTexture = ExtResource("6_2qm50")
+healthColor = Color(0.7647059, 0, 0.08627451, 1)
+staminaColor = Color(1, 0.88235295, 0, 1)
+manaColor = Color(0, 0, 0.6784314, 1)
+gaugeFill = NodePath("../GaugeFill")
+
+[node name="Label" type="Label" parent="GaugeSlider/GaugeIcon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -11.5
+offset_right = 21.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "20/20"
+label_settings = SubResource("LabelSettings_27gjq")
+script = ExtResource("7_8r1mr")
+maxValue = 20
+
+[node name="Coin" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.82
+anchor_right = 0.93
+anchor_bottom = 0.2
+offset_left = -1.2800293
+grow_horizontal = 0
+texture = ExtResource("2_qxvcr")
+stretch_mode = 4
+script = ExtResource("2_ad7pd")
+heads_texture = ExtResource("2_qxvcr")
+tails_texture = ExtResource("3_uk74x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Coin"]
+stream = ExtResource("4_i5u4i")
+volume_db = -15.0
+pitch_scale = 0.76
+
+[node name="SoundToggle" type="TextureRect" parent="Coin"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture = ExtResource("5_8wbkb")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("6_dwkbl")
+sound_on_texture = ExtResource("5_8wbkb")
+sound_off_texture = ExtResource("7_5x2vv")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+folded = true
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_3gpsl")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CoinTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_qxvcr")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_be3iu")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.3
+anchor_right = 0.9
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Deck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.2
+anchor_bottom = 0.2
+offset_left = -0.0004005432
+offset_top = -84.0
+offset_right = 821.9996
+offset_bottom = 1038.0
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("17_6ajby")
+stretch_mode = 4
+script = ExtResource("73_d668h")
+
+[node name="CountLabel" type="Label" parent="PlayArea/Deck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 55.0
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "44"
+label_settings = SubResource("LabelSettings_6ajby")
+
+[node name="Room" type="HBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.2
+offset_left = 200.0
+offset_top = -82.784
+offset_right = 309.80707
+offset_bottom = 130.396
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Card" parent="PlayArea/Room" instance=ExtResource("74_d1ykn")]
+layout_mode = 2
+
+[node name="Card2" parent="PlayArea/Room" instance=ExtResource("74_d1ykn")]
+layout_mode = 2
+
+[node name="Card3" parent="PlayArea/Room" instance=ExtResource("74_d1ykn")]
+layout_mode = 2
+
+[node name="Card4" parent="PlayArea/Room" instance=ExtResource("74_d1ykn")]
+layout_mode = 2
+
+[node name="Weapon" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.73
+anchor_bottom = 0.73
+offset_left = -0.0004005432
+offset_top = -111.48001
+offset_right = 821.9996
+offset_bottom = 1010.52
+grow_vertical = 2
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("17_6ajby")
+stretch_mode = 4
+
+[node name="DurabilityLabel" type="Label" parent="PlayArea/Weapon"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 55.0
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "15"
+label_settings = SubResource("LabelSettings_f1b3a")
+
+[node name="RunButton" type="TextureButton" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.73
+anchor_bottom = 0.73
+offset_left = -67.600006
+offset_top = -31.040009
+offset_right = 732.4
+offset_bottom = 768.95996
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("75_nppkp")
+texture_pressed = ExtResource("76_8r4q6")
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click the deck to start
+- Left click monster cards
+to fight with a weapon
+- Right click monsters to
+fight bare-handed
+- Click the running man
+to skip a room
+- The yellow text is your
+weapon's durability
+- The white text is the
+number of cards left"
+placeholder_text = "Add any notes here..."
+script = ExtResource("1_qxvcr")
+
+[connection signal="fled" from="." to="StatusContainer/TiredStatus" method="_turn_on"]
+[connection signal="potion_used" from="." to="StatusContainer/HealedStatus" method="_turn_on"]
+[connection signal="room_cleared" from="." to="StatusContainer/HealedStatus" method="_turn_off"]
+[connection signal="room_cleared" from="." to="StatusContainer/TiredStatus" method="_turn_off"]
+[connection signal="gui_input" from="GaugeSlider" to="GaugeSlider" method="_on_gui_input"]
+[connection signal="gui_input" from="GaugeSlider" to="GaugeSlider/GaugeIcon/Label" method="_on_gauge_slider_gui_input"]
+[connection signal="gui_input" from="GaugeSlider/GaugeIcon" to="GaugeSlider/GaugeIcon" method="_on_gui_input"]
+[connection signal="gui_input" from="Coin" to="Coin" method="_on_gui_input"]
+[connection signal="gui_input" from="Coin/SoundToggle" to="Coin" method="_on_sound_toggle_gui_input"]
+[connection signal="gui_input" from="Coin/SoundToggle" to="Coin/SoundToggle" method="_on_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CoinTool" to="Coin" method="_on_coin_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="PlayArea/Deck" to="PlayArea/Deck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/Deck" to="ScoundrelGamePlayer" method="_on_deck_start_game"]
+[connection signal="use_card" from="PlayArea/Room/Card" to="ScoundrelGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Room/Card2" to="ScoundrelGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Room/Card3" to="ScoundrelGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Room/Card4" to="ScoundrelGamePlayer" method="_on_card_use_card"]
+[connection signal="pressed" from="PlayArea/RunButton" to="ScoundrelGamePlayer" method="_on_run_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://pjilwspntgn6"]
+[gd_scene load_steps=35 format=3 uid="uid://pjilwspntgn6"]
 
 [ext_resource type="Script" uid="uid://dd7ywskexogj6" path="res://scripts/pane.gd" id="1_ghsmc"]
 [ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="1_k7av0"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://cv5px3rxkku6y" path="res://assets/unlinked.png" id="14_lpq5f"]
 [ext_resource type="Script" uid="uid://dvu4sciwxhw4c" path="res://scripts/hotlinker.gd" id="15_xq7uq"]
 [ext_resource type="Texture2D" uid="uid://05gyxubk1pn6" path="res://assets/linked.png" id="16_bcyca"]
+[ext_resource type="Script" uid="uid://d571nsxmjowr" path="res://scripts/control_holder.gd" id="30_xrk25"]
 [ext_resource type="Texture2D" uid="uid://d3d185da1palt" path="res://assets/cycle.png" id="31_rav8p"]
 [ext_resource type="Texture2D" uid="uid://d3ejsw71l54p3" path="res://assets/cycle_clicked.png" id="32_ilg2h"]
 
@@ -280,6 +281,7 @@ anchor_right = 0.75
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
+script = ExtResource("30_xrk25")
 
 [node name="FolderSelector" type="OptionButton" parent="FolderSelectorHolder"]
 layout_mode = 1
@@ -316,7 +318,7 @@ stretch_mode = 4
 [connection signal="gui_input" from="GaugeSlider/Hotlinker" to="GaugeSlider/Hotlinker" method="_on_gui_input"]
 [connection signal="hotlink" from="GaugeSlider/Hotlinker" to="GaugeSlider/GaugeIcon/Label" method="_on_hotlinker_hotlink"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/SuitTool" to="SuitIcon" method="_on_suit_tool_gui_input"]
-[connection signal="gui_input" from="Toolbar/VBoxContainer/FolderSelectorTool" to="FolderSelectorHolder/FolderSelector" method="_on_folder_selector_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/FolderSelectorTool" to="FolderSelectorHolder" method="_on_folder_selector_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/GaugeSliderTool" to="GaugeSlider" method="_on_gauge_slider_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/CoinTool" to="Coin" method="_on_coin_tool_gui_input"]

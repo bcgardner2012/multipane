@@ -31,3 +31,6 @@ func _on_hotlinker_hotlink(isOn: bool) -> void:
 	hotlinkingIsOn = isOn
 	if isOn:
 		gaugeValueChanged.emit(currentValue)
+
+func update_text(t: String) -> void:
+	text = t + "/" + str(maxValue)

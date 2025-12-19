@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv4urw8yngepo"]
+
+[ext_resource type="Script" uid="uid://dbw0rj3vf8fqk" path="res://scripts/pane_selector.gd" id="1_croqb"]
+
+[node name="PaneSelectorPane" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PaneSelector" type="OptionButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.5
+anchor_right = 0.75
+anchor_bottom = 0.5
+offset_top = -10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 2
+popup/item_0/text = "Image Pane"
+popup/item_0/id = 0
+popup/item_1/text = "Scoundrel Game"
+popup/item_1/id = 1
+script = ExtResource("1_croqb")
+
+[connection signal="item_selected" from="PaneSelector" to="PaneSelector" method="_on_item_selected"]

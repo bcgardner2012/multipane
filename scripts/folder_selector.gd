@@ -7,10 +7,6 @@ var current_dir: String
 signal image_selected(path: String)
 signal dir_changed(dir: String)
 
-func _on_folder_selector_tool_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		visible = !visible
-
 func _ready() -> void:
 	var dir = DirAccess.open("./portraits")
 	home_dir = dir.get_current_dir()
