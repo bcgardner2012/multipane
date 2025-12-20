@@ -48,8 +48,10 @@ func _on_deck_start_game() -> void:
 		_set_can_run(true)
 		_signals().game_started.emit()
 
-
 func _on_card_use_card(data: CardData, button_index: int) -> void:
+	use_card(data, button_index)
+
+func use_card(data: CardData, button_index: int) -> void:
 	_set_can_run(false)
 	if data.suit == CardData.Suit.HEARTS:
 		# Heal
@@ -106,7 +108,7 @@ func _force_refill_room() -> void:
 	for card_node in room.get_children():
 		card_node.set_card_data(deck.pop_front())
 
-func _on_run_button_pressed() -> void:
+func _do_run_away() -> void:
 	cards_resolved = 0
 	for card_node in room.get_children():
 		if card_node.data != null:

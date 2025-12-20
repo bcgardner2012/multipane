@@ -19,7 +19,7 @@ signal room_cleared()
 
 func _on_close_tool_gui_input(event: InputEvent) -> void:
 	# close tool clicked, destroy pane
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if ClickHelper.is_left_click(event):
 		queue_free()
 
 # get image pane siblings and attempt to hook up my signals to them
@@ -28,7 +28,7 @@ func _on_close_tool_gui_input(event: InputEvent) -> void:
 # signals and not others...
 # The main function is updating the portrait node in response to a signal
 func _on_broadcast_tool_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if ClickHelper.is_left_click(event):
 		for sibling in get_parent().get_children():
 			if sibling.has_method("receive_broadcast"):
 				sibling.receive_broadcast(self)

@@ -10,7 +10,7 @@ func _ready() -> void:
 	isOn = true
 
 func _on_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if ClickHelper.is_left_click(event):
 		isOn = !isOn
 		if isOn:
 			texture = sound_on_texture

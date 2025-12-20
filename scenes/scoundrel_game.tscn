@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=3 uid="uid://bojxu5kidkrwt"]
+[gd_scene load_steps=101 format=3 uid="uid://bojxu5kidkrwt"]
 
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_3gpsl"]
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="1_qxvcr"]
@@ -86,12 +86,17 @@
 [ext_resource type="AudioStream" uid="uid://hw453vo06gbl" path="res://assets/audio/medieval-fanfare-6826.mp3" id="63_68l8r"]
 [ext_resource type="AudioStream" uid="uid://can7veoxkxntr" path="res://assets/audio/game-over-39-199830.mp3" id="64_uu5ux"]
 [ext_resource type="AudioStream" uid="uid://bs7a2yc4o4oqh" path="res://assets/audio/tarot-shuffle-89105.mp3" id="65_5jx8g"]
+[ext_resource type="Script" uid="uid://cjaxclxnet13m" path="res://scripts/scoundrel_brain.gd" id="66_3mqit"]
+[ext_resource type="Script" uid="uid://c7abs33fp0wdq" path="res://scripts/scoundrel_brain_signals.gd" id="66_babrs"]
 [ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="73_d668h"]
 [ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="74_d1ykn"]
 [ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="75_mkbb6"]
 [ext_resource type="Texture2D" uid="uid://bnjcpuxudod41" path="res://assets/run.png" id="75_nppkp"]
 [ext_resource type="Texture2D" uid="uid://b5eeqxf5r1fyx" path="res://assets/run_pressed.png" id="76_8r4q6"]
+[ext_resource type="Texture2D" uid="uid://bkr2yuudvtqjb" path="res://assets/robot_icon.png" id="87_ipc7q"]
 [ext_resource type="Script" uid="uid://cy3mrvbeiq6k2" path="res://scripts/scoundrel_run_button.gd" id="90_uu5ux"]
+[ext_resource type="Script" uid="uid://y0u7kb7sr2ga" path="res://scripts/scoundrel_ai_selector.gd" id="96_xybvw"]
+[ext_resource type="AudioStream" uid="uid://c2pkv123n3a2e" path="res://assets/audio/080124_turning-a-radio-on-39451.mp3" id="97_wkap4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_27gjq"]
 font_size = 20
@@ -463,6 +468,12 @@ stream = ExtResource("65_5jx8g")
 volume_db = -21.596
 pitch_scale = 2.22
 
+[node name="AIBrains" type="Node" parent="ScoundrelGamePlayer"]
+script = ExtResource("66_babrs")
+
+[node name="PrototypeBrain" type="Node" parent="ScoundrelGamePlayer/AIBrains"]
+script = ExtResource("66_3mqit")
+
 [node name="StatusContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -635,6 +646,12 @@ texture = ExtResource("75_mkbb6")
 expand_mode = 4
 stretch_mode = 4
 
+[node name="AIPlayerTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("87_ipc7q")
+expand_mode = 4
+stretch_mode = 4
+
 [node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("3_be3iu")
@@ -767,31 +784,54 @@ number of cards left"
 placeholder_text = "Add any notes here..."
 script = ExtResource("1_qxvcr")
 
+[node name="AISelector" type="OptionButton" parent="." node_paths=PackedStringArray("brains")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 0.01
+anchor_right = 0.95
+anchor_bottom = 0.01
+grow_horizontal = 0
+script = ExtResource("96_xybvw")
+brains = NodePath("../ScoundrelGamePlayer/AIBrains")
+
+[node name="RadioSoundPlayer" type="AudioStreamPlayer" parent="AISelector"]
+stream = ExtResource("97_wkap4")
+volume_db = -5.0
+
 [connection signal="failure" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_failure"]
-[connection signal="fled" from="." to="StatusContainer/TiredStatus" method="_turn_on"]
 [connection signal="fled" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_fled"]
+[connection signal="fled" from="." to="StatusContainer/TiredStatus" method="_turn_on"]
 [connection signal="game_started" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_game_started"]
 [connection signal="monster_killed" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_monster_killed"]
 [connection signal="potion_discarded" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_potion_discarded"]
-[connection signal="potion_used" from="." to="StatusContainer/HealedStatus" method="_turn_on"]
 [connection signal="potion_used" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_potion_used"]
+[connection signal="potion_used" from="." to="StatusContainer/HealedStatus" method="_turn_on"]
+[connection signal="room_cleared" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_room_cleared"]
 [connection signal="room_cleared" from="." to="StatusContainer/HealedStatus" method="_turn_off"]
 [connection signal="room_cleared" from="." to="StatusContainer/TiredStatus" method="_turn_off"]
-[connection signal="room_cleared" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_room_cleared"]
-[connection signal="victory" from="." to="PlayArea/RunButton" method="_on_scoundrel_game_victory"]
 [connection signal="victory" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_victory"]
+[connection signal="victory" from="." to="PlayArea/RunButton" method="_on_scoundrel_game_victory"]
 [connection signal="weapon_equipped" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_weapon_equipped"]
+[connection signal="play_card" from="ScoundrelGamePlayer/AIBrains" to="PlayArea/Room/Card" method="_on_ai_brains_play_card"]
+[connection signal="play_card" from="ScoundrelGamePlayer/AIBrains" to="PlayArea/Room/Card2" method="_on_ai_brains_play_card"]
+[connection signal="play_card" from="ScoundrelGamePlayer/AIBrains" to="PlayArea/Room/Card3" method="_on_ai_brains_play_card"]
+[connection signal="play_card" from="ScoundrelGamePlayer/AIBrains" to="PlayArea/Room/Card4" method="_on_ai_brains_play_card"]
+[connection signal="run_away" from="ScoundrelGamePlayer/AIBrains" to="ScoundrelGamePlayer" method="_do_run_away"]
+[connection signal="start_game" from="ScoundrelGamePlayer/AIBrains" to="PlayArea/Deck" method="_on_brain_game_started"]
 [connection signal="gui_input" from="GaugeSlider" to="GaugeSlider" method="_on_gui_input"]
 [connection signal="gui_input" from="GaugeSlider" to="GaugeSlider/GaugeIcon/Label" method="_on_gauge_slider_gui_input"]
 [connection signal="gui_input" from="GaugeSlider/GaugeIcon" to="GaugeSlider/GaugeIcon" method="_on_gui_input"]
 [connection signal="gui_input" from="Coin" to="Coin" method="_on_gui_input"]
 [connection signal="gui_input" from="Coin/SoundToggle" to="Coin" method="_on_sound_toggle_gui_input"]
 [connection signal="gui_input" from="Coin/SoundToggle" to="Coin/SoundToggle" method="_on_gui_input"]
-[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Toolbar/VBoxContainer/SoundToggle" method="_on_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="ScoundrelGamePlayer/Audio" method="_on_sound_toggle_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Toolbar/VBoxContainer/SoundToggle" method="_on_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/CoinTool" to="Coin" method="_on_coin_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/AIPlayerTool" to="AISelector" method="_on_ai_player_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
 [connection signal="gui_input" from="PlayArea/Deck" to="PlayArea/Deck" method="_on_gui_input"]
 [connection signal="start_game" from="PlayArea/Deck" to="ScoundrelGamePlayer" method="_on_deck_start_game"]
@@ -799,4 +839,5 @@ script = ExtResource("1_qxvcr")
 [connection signal="use_card" from="PlayArea/Room/Card2" to="ScoundrelGamePlayer" method="_on_card_use_card"]
 [connection signal="use_card" from="PlayArea/Room/Card3" to="ScoundrelGamePlayer" method="_on_card_use_card"]
 [connection signal="use_card" from="PlayArea/Room/Card4" to="ScoundrelGamePlayer" method="_on_card_use_card"]
-[connection signal="pressed" from="PlayArea/RunButton" to="ScoundrelGamePlayer" method="_on_run_button_pressed"]
+[connection signal="pressed" from="PlayArea/RunButton" to="ScoundrelGamePlayer" method="_do_run_away"]
+[connection signal="item_selected" from="AISelector" to="AISelector" method="_on_item_selected"]

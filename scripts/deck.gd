@@ -6,7 +6,12 @@ signal start_game()
 var game_in_progress: bool
 
 func _on_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if ClickHelper.is_left_click(event):
 		if not game_in_progress:
 			game_in_progress = true
 			start_game.emit()
+
+func _on_brain_game_started() -> void:
+	if not game_in_progress:
+		game_in_progress = true
+		start_game.emit()

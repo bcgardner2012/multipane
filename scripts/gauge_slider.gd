@@ -11,16 +11,16 @@ func _ready() -> void:
 	currentValue = maxValue
 
 func _on_gauge_slider_tool_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if ClickHelper.is_left_click(event):
 		visible = !visible
 
 
 func _on_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if ClickHelper.is_left_click(event):
 		# Decrease value by 1
 		currentValue = clampi(currentValue - 1, 0, maxValue)
 		gaugeFill.anchor_right = (1.0 / maxValue) * currentValue
-	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+	elif ClickHelper.is_right_click(event):
 		# Increase value by 1
 		currentValue = clampi(currentValue + 1, 0, maxValue)
 		gaugeFill.anchor_right = (1.0 / maxValue) * currentValue

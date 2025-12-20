@@ -11,12 +11,12 @@ func _ready() -> void:
 	isMute = false
 
 func _on_coin_tool_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if ClickHelper.is_left_click(event):
 		visible = !visible
 
 
 func _on_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if ClickHelper.is_left_click(event):
 		if not isMute:
 			$AudioStreamPlayer.play()
 		var r = randi() %2
@@ -27,5 +27,5 @@ func _on_gui_input(event: InputEvent) -> void:
 
 
 func _on_sound_toggle_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if ClickHelper.is_left_click(event):
 		isMute = !isMute

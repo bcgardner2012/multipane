@@ -18,12 +18,12 @@ func _ready() -> void:
 	index = 0
 
 func _on_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if ClickHelper.is_left_click(event):
 		index += 1
 		index %= 4
 		texture = textures[index]
 
 
 func _on_suit_tool_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if ClickHelper.is_left_click(event):
 		visible = !visible
