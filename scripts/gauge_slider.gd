@@ -25,7 +25,8 @@ func _on_gui_input(event: InputEvent) -> void:
 		currentValue = clampi(currentValue + 1, 0, maxValue)
 		gaugeFill.anchor_right = (1.0 / maxValue) * currentValue
 
-func change_value(delta: int) -> void:
+func change_value(delta: int) -> int:
 	currentValue = clampi(currentValue + delta, 0, maxValue)
 	gaugeFill.anchor_right = (1.0 / maxValue) * currentValue
 	$GaugeIcon/Label.update_text(str(currentValue))
+	return currentValue

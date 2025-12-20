@@ -1,7 +1,8 @@
-[gd_scene load_steps=35 format=3 uid="uid://pjilwspntgn6"]
+[gd_scene load_steps=36 format=3 uid="uid://pjilwspntgn6"]
 
 [ext_resource type="Script" uid="uid://dd7ywskexogj6" path="res://scripts/pane.gd" id="1_ghsmc"]
 [ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="1_k7av0"]
+[ext_resource type="Script" uid="uid://lxkouvgicaya" path="res://scripts/scoundrel_game_plug.gd" id="2_6n4o8"]
 [ext_resource type="Script" uid="uid://1aqavx17wewq" path="res://scripts/suit_icon.gd" id="2_wmg30"]
 [ext_resource type="Texture2D" uid="uid://bose70kviinn4" path="res://assets/spade.png" id="3_ghsmc"]
 [ext_resource type="Texture2D" uid="uid://5paj0fjfasri" path="res://assets/heart.png" id="4_3kvu7"]
@@ -47,6 +48,12 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_ghsmc")
+
+[node name="ScoundrelGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait", "health_bar", "folder_selector")]
+script = ExtResource("2_6n4o8")
+portrait = NodePath("../PortraitHolder/Portrait")
+health_bar = NodePath("../GaugeSlider")
+folder_selector = NodePath("../FolderSelectorHolder/FolderSelector")
 
 [node name="SuitIcon" type="TextureRect" parent="."]
 visible = false

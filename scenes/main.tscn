@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://b0y6xlrl2t0pr"]
+[gd_scene load_steps=11 format=3 uid="uid://b0y6xlrl2t0pr"]
 
 [ext_resource type="Texture2D" uid="uid://cow5ideodi8y0" path="res://assets/10654999.png" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://cjv4ixhe6ri4b" path="res://assets/10654999_pressed.png" id="2_0wfyh"]
 [ext_resource type="Script" uid="uid://spypdcmu4ica" path="res://scripts/background_image.gd" id="2_o6xl0"]
 [ext_resource type="Script" uid="uid://bl4m6dnx3amxu" path="res://scripts/add_pane_button.gd" id="3_jyhfs"]
 [ext_resource type="Script" uid="uid://bk0txhbwrhr3n" path="res://scripts/panes.gd" id="4_tefeu"]
-[ext_resource type="PackedScene" uid="uid://bojxu5kidkrwt" path="res://scenes/scoundrel_game.tscn" id="4_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://8e2gx1aswka7" path="res://assets/pl.png" id="5_choun"]
 [ext_resource type="Texture2D" uid="uid://coupb1e3qm8n3" path="res://assets/pl_pressed.png" id="6_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://d3d185da1palt" path="res://assets/cycle.png" id="8_tipki"]
@@ -42,9 +41,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("4_tefeu")
-
-[node name="ScoundrelGame" parent="App/Panes" instance=ExtResource("4_ya4ey")]
-layout_mode = 1
 
 [node name="ChangeOrientationButton" type="TextureButton" parent="App"]
 layout_mode = 1

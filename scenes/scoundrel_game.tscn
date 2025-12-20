@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://bojxu5kidkrwt"]
+[gd_scene load_steps=96 format=3 uid="uid://bojxu5kidkrwt"]
 
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_3gpsl"]
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="1_qxvcr"]
@@ -73,14 +73,25 @@
 [ext_resource type="Texture2D" uid="uid://bl1t6gkpknqmy" path="res://assets/cards/Scoundrel-Spades-Q.jpg" id="52_6122r"]
 [ext_resource type="Texture2D" uid="uid://b10e5omsveftl" path="res://assets/cards/Scoundrel-Spades-K.jpg" id="53_hglb1"]
 [ext_resource type="Texture2D" uid="uid://cnjyuvne7ggjv" path="res://assets/cards/Scoundrel-Spades-A.jpg" id="54_wv1c3"]
+[ext_resource type="Script" uid="uid://ctqbet1dfmo4u" path="res://scripts/scoundrel_game_audio.gd" id="57_jhrwm"]
 [ext_resource type="Texture2D" uid="uid://cemhgd2a67gnb" path="res://assets/healed.png" id="57_lt72t"]
+[ext_resource type="AudioStream" uid="uid://cvatl1i25vvoh" path="res://assets/audio/dorm-door-opening-6038.mp3" id="57_rnjvg"]
+[ext_resource type="AudioStream" uid="uid://dvygg105wp2rq" path="res://assets/audio/glass-shatter-1-46837.mp3" id="58_4eruv"]
 [ext_resource type="Script" uid="uid://vvhx4x6wtl2m" path="res://scripts/simple_indicator.gd" id="58_4vplx"]
 [ext_resource type="Script" uid="uid://gtmg17rec1gm" path="res://scripts/healed_status.gd" id="58_mkbb6"]
 [ext_resource type="Texture2D" uid="uid://ctdncyejaada6" path="res://assets/tired.png" id="58_o0f3w"]
+[ext_resource type="AudioStream" uid="uid://br8143ekwg2cu" path="res://assets/audio/item-equip-6904.mp3" id="59_j3ao7"]
+[ext_resource type="AudioStream" uid="uid://cluju4e7miymi" path="res://assets/audio/glug-glug-glug-trimmed.mp3" id="60_xtiwo"]
+[ext_resource type="AudioStream" uid="uid://btmeq2ysqhnjr" path="res://assets/audio/swoosh-018-383967.mp3" id="61_xtiwo"]
+[ext_resource type="AudioStream" uid="uid://hw453vo06gbl" path="res://assets/audio/medieval-fanfare-6826.mp3" id="63_68l8r"]
+[ext_resource type="AudioStream" uid="uid://can7veoxkxntr" path="res://assets/audio/game-over-39-199830.mp3" id="64_uu5ux"]
+[ext_resource type="AudioStream" uid="uid://bs7a2yc4o4oqh" path="res://assets/audio/tarot-shuffle-89105.mp3" id="65_5jx8g"]
 [ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="73_d668h"]
 [ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="74_d1ykn"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="75_mkbb6"]
 [ext_resource type="Texture2D" uid="uid://bnjcpuxudod41" path="res://assets/run.png" id="75_nppkp"]
 [ext_resource type="Texture2D" uid="uid://b5eeqxf5r1fyx" path="res://assets/run_pressed.png" id="76_8r4q6"]
+[ext_resource type="Script" uid="uid://cy3mrvbeiq6k2" path="res://scripts/scoundrel_run_button.gd" id="90_uu5ux"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_27gjq"]
 font_size = 20
@@ -414,6 +425,44 @@ suit = 1
 rank = 14
 texture = ExtResource("28_xybvw")
 
+[node name="Audio" type="Node" parent="ScoundrelGamePlayer"]
+script = ExtResource("57_jhrwm")
+
+[node name="DoorSoundPlayer" type="AudioStreamPlayer" parent="ScoundrelGamePlayer/Audio"]
+stream = ExtResource("57_rnjvg")
+volume_db = -20.642
+pitch_scale = 0.8
+
+[node name="SpillSoundPlayer" type="AudioStreamPlayer" parent="ScoundrelGamePlayer/Audio"]
+stream = ExtResource("58_4eruv")
+pitch_scale = 0.48
+
+[node name="EquipSoundPlayer" type="AudioStreamPlayer" parent="ScoundrelGamePlayer/Audio"]
+stream = ExtResource("59_j3ao7")
+
+[node name="DrinkSoundPlayer" type="AudioStreamPlayer" parent="ScoundrelGamePlayer/Audio"]
+stream = ExtResource("60_xtiwo")
+volume_db = -18.725
+
+[node name="SwingSoundPlayer" type="AudioStreamPlayer" parent="ScoundrelGamePlayer/Audio"]
+stream = ExtResource("61_xtiwo")
+volume_db = -17.934
+pitch_scale = 0.74
+
+[node name="WinSoundPlayer" type="AudioStreamPlayer" parent="ScoundrelGamePlayer/Audio"]
+stream = ExtResource("63_68l8r")
+volume_db = -20.642
+
+[node name="LoseSoundPlayer" type="AudioStreamPlayer" parent="ScoundrelGamePlayer/Audio"]
+stream = ExtResource("64_uu5ux")
+volume_db = -9.661
+pitch_scale = 0.5
+
+[node name="ShuffleSoundPlayer" type="AudioStreamPlayer" parent="ScoundrelGamePlayer/Audio"]
+stream = ExtResource("65_5jx8g")
+volume_db = -21.596
+pitch_scale = 2.22
+
 [node name="StatusContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -553,13 +602,20 @@ offset_bottom = 1.6879883
 grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 1
-folded = true
 title = "Tools"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
-visible = false
 layout_mode = 2
 mouse_filter = 2
+
+[node name="SoundToggle" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_8wbkb")
+expand_mode = 4
+stretch_mode = 4
+script = ExtResource("6_dwkbl")
+sound_on_texture = ExtResource("5_8wbkb")
+sound_off_texture = ExtResource("7_5x2vv")
 
 [node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
 layout_mode = 2
@@ -570,6 +626,12 @@ stretch_mode = 4
 [node name="CoinTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("2_qxvcr")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("75_mkbb6")
 expand_mode = 4
 stretch_mode = 4
 
@@ -679,6 +741,7 @@ offset_bottom = 768.95996
 scale = Vector2(0.08, 0.08)
 texture_normal = ExtResource("75_nppkp")
 texture_pressed = ExtResource("76_8r4q6")
+script = ExtResource("90_uu5ux")
 
 [node name="Notes" type="TextEdit" parent="."]
 layout_mode = 1
@@ -704,18 +767,31 @@ number of cards left"
 placeholder_text = "Add any notes here..."
 script = ExtResource("1_qxvcr")
 
+[connection signal="failure" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_failure"]
 [connection signal="fled" from="." to="StatusContainer/TiredStatus" method="_turn_on"]
+[connection signal="fled" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_fled"]
+[connection signal="game_started" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_game_started"]
+[connection signal="monster_killed" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_monster_killed"]
+[connection signal="potion_discarded" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_potion_discarded"]
 [connection signal="potion_used" from="." to="StatusContainer/HealedStatus" method="_turn_on"]
+[connection signal="potion_used" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_potion_used"]
 [connection signal="room_cleared" from="." to="StatusContainer/HealedStatus" method="_turn_off"]
 [connection signal="room_cleared" from="." to="StatusContainer/TiredStatus" method="_turn_off"]
+[connection signal="room_cleared" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_room_cleared"]
+[connection signal="victory" from="." to="PlayArea/RunButton" method="_on_scoundrel_game_victory"]
+[connection signal="victory" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_victory"]
+[connection signal="weapon_equipped" from="." to="ScoundrelGamePlayer/Audio" method="_on_scoundrel_game_weapon_equipped"]
 [connection signal="gui_input" from="GaugeSlider" to="GaugeSlider" method="_on_gui_input"]
 [connection signal="gui_input" from="GaugeSlider" to="GaugeSlider/GaugeIcon/Label" method="_on_gauge_slider_gui_input"]
 [connection signal="gui_input" from="GaugeSlider/GaugeIcon" to="GaugeSlider/GaugeIcon" method="_on_gui_input"]
 [connection signal="gui_input" from="Coin" to="Coin" method="_on_gui_input"]
 [connection signal="gui_input" from="Coin/SoundToggle" to="Coin" method="_on_sound_toggle_gui_input"]
 [connection signal="gui_input" from="Coin/SoundToggle" to="Coin/SoundToggle" method="_on_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Toolbar/VBoxContainer/SoundToggle" method="_on_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="ScoundrelGamePlayer/Audio" method="_on_sound_toggle_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/CoinTool" to="Coin" method="_on_coin_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
 [connection signal="gui_input" from="PlayArea/Deck" to="PlayArea/Deck" method="_on_gui_input"]
 [connection signal="start_game" from="PlayArea/Deck" to="ScoundrelGamePlayer" method="_on_deck_start_game"]

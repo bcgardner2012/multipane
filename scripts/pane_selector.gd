@@ -11,4 +11,5 @@ func _on_item_selected(index: int) -> void:
 		get_parent().get_parent().queue_add_image_pane()
 		get_parent().free()
 	elif index == SCOUNDREL_GAME:
-		pass
+		get_parent().get_parent().queue_add_scoundrel_game_pane()
+		get_parent().free()

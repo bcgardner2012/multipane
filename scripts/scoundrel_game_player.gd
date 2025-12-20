@@ -57,7 +57,6 @@ func _on_card_use_card(data: CardData, button_index: int) -> void:
 			health_slider.change_value(data.rank)
 			_signals().health_changed.emit(data.rank, false, data)
 			can_heal = false
-			print("potion_used emitted")
 			_signals().potion_used.emit(data)
 		else:
 			_signals().potion_discarded.emit(data)
@@ -75,11 +74,11 @@ func _on_card_use_card(data: CardData, button_index: int) -> void:
 			weapon_node.get_child(0).text = str(durability)
 			var delta = -clampi(data.rank - equipped_weapon.rank, 0, 20)
 			health_slider.change_value(delta)
-			if delta > 0:
-				_signals().health_changed.emit(delta, true, data)
+			if delta < 0:
+				_signals().health_changed.emit(delta, false, data)
 		else:
 			health_slider.change_value(-data.rank)
-			_signals().health_changed.emit(-data.rank, false, data)
+			_signals().health_changed.emit(-data.rank, true, data)
 		
 		_signals().monster_killed.emit(data)
 	
