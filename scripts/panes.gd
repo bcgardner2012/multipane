@@ -40,9 +40,7 @@ func _process(_delta: float) -> void:
 		should_add_scoundrel_game_pane = false
 	
 	if childCount != get_child_count():
-		print("Count is off...")
 		if childCount > get_child_count():
-			print("resizing")
 			# a child was deleted, resize everything
 			_reorganize()
 		childCount = get_child_count()
