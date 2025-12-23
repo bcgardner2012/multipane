@@ -42,9 +42,7 @@ func on_health_changed(delta: int, was_unarmed_attack: bool, _card_data: CardDat
 		return # 8-10 value heal
 	else:
 		# cycle up from current hp to max looking for next valid image
-		for i in range(hp, 21):
-			if portrait.try_load_numbered_image(i):
-				break
+		PortraitHelper.seeburg_select(portrait, hp, 21)
 
 # happens instead of health_changed or potion_used, no conflict
 func on_potion_discarded(_card_data: CardData) -> void:

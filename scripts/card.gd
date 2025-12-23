@@ -3,6 +3,9 @@ class_name Card
 
 signal use_card(data: CardData, button_index: int)
 
+@export var should_wipe_texture_on_click: bool = true
+@export var should_wipe_data_on_click: bool = true
+
 var data: CardData
 var original_texture: Texture2D
 
@@ -25,6 +28,15 @@ func _on_ai_brains_play_card(card: CardData, button: int) -> void:
 
 func reset_texture_and_emit(button: int) -> void:
 	var tmp = data
-	data = null
-	texture = original_texture
+	if should_wipe_data_on_click:
+		data = null
+	if should_wipe_texture_on_click:
+		texture = original_texture
 	use_card.emit(tmp, button)
+
+func reset_texture() -> void:
+	texture = original_texture
+
+func reset_texture_and_data() -> void:
+	texture = original_texture
+	data = null

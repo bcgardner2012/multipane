@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3mtnjxew1ax2"]
 
-[ext_resource type="Texture2D" uid="uid://bv1uw7iv0cs2e" path="res://assets/cards/Scoundrel-Back.jpg" id="1_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://bv1uw7iv0cs2e" path="res://assets/cards/scoundrel/Scoundrel-Back.jpg" id="1_6u4wf"]
 [ext_resource type="Script" uid="uid://yprb11vhunnp" path="res://scripts/card.gd" id="2_ktuci"]
 
 [node name="Card" type="TextureRect"]

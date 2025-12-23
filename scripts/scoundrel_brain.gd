@@ -1,6 +1,11 @@
 extends Node
 class_name ScoundrelBrain
 
+# This brain is now capable of winning, but seems to make some clear mistakes
+# Notably, when using any weapon with say 6 dur, it will barehand a 5 monster, then
+# use the weapon on a 4 monster, both in the same room. It should weapon on both.
+# This is a result of taking it one card at a time and barehanding based on health %.
+
 # delay before making another decision, so we can watch
 const DELAY = 1.5
 var timer: float
@@ -13,6 +18,7 @@ var game_player: ScoundrelGamePlayer
 # AI can skip a card when processing left-to-right. After MAX, just resolve in order.
 const MAX_SKIPS = 8
 var skips: int
+var is_skipping_frames: bool # if we did a skip last frame, don't do a DELAY
 
 # Needs to be separate from the game_player's state
 var cards_resolved: int
@@ -36,7 +42,7 @@ func _process(delta: float) -> void:
 	if not is_active:
 		return
 	timer += delta
-	if timer > DELAY:
+	if timer > DELAY or is_skipping_frames:
 		timer = 0.0
 		_do_turn()
 
@@ -51,7 +57,8 @@ func _do_turn() -> void:
 		var card_nodes = game_player.room.get_children()
 		var cards: Array[CardData] = []
 		for card_node in card_nodes:
-			cards.append(card_node.data)
+			if card_node.data != null: # false in cases on last room
+				cards.append(card_node.data)
 			
 		if cards.size() < 4:
 			# we made it through the dungeon! We win!
@@ -87,6 +94,7 @@ func _do_turn() -> void:
 		
 		# take 1 desperate action, then go back to normal logic until we hit the limit again
 		_play(sorted_cards[card_index])
+		sorted_cards = _sort_cards(sorted_cards)
 		skips = 0
 		return
 	
@@ -128,7 +136,7 @@ func _do_turn() -> void:
 
 func _is_heal_tolerable(card: CardData) -> bool:
 	var dmg = 20 - _health()
-	if dmg >= card.rank - 1: # means we will waste at most 1 HP from a potion. TODO: config this
+	if dmg >= card.rank - 0: # means we will waste at most 1 HP from a potion. TODO: config this
 		return true
 	return false
 
@@ -136,12 +144,19 @@ func _is_weapon_swap_tolerable(card: CardData) -> bool:
 	# TODO: extend this class and implement a Hook function
 	# if my weapon's durability is less than 7, that means it can be used on less
 	# than half of the monsters I will encounter. So swap it.
-	return game_player.durability < 7
+	return game_player.equipped_weapon == null or (game_player.durability < 7 and not _weapon_is_immediately_useful())
+
+func _weapon_is_immediately_useful() -> bool:
+	for card in sorted_cards:
+		if card.suit == CardData.Suit.CLUBS or card.suit == CardData.Suit.SPADES:
+			if game_player.equipped_weapon.rank >= card.rank and game_player.durability > card.rank:
+				return true
+	return false
 
 func _is_unarmed_dmg_tolerable(card: CardData) -> bool:
 	# TODO: hook function
-	# if it would take more than 25% of my current health, false
-	return card.rank < 0.25 * _health()
+	# if it would take more than 50% of my current health, false
+	return card.rank < 0.5 * _health()
 
 func _is_armed_dmg_tolerable(card: CardData) -> bool:
 	# TODO: hook function
@@ -152,6 +167,9 @@ func _is_armed_dmg_tolerable(card: CardData) -> bool:
 		return card.rank - game_player.equipped_weapon.rank < _health()
 
 func _should_run_away() -> bool:
+	if _is_premature_red_flush():
+		return true
+	
 	var potential_dmg = 0
 	var virtual_durability = game_player.durability
 	var virtual_can_heal = true
@@ -190,6 +208,19 @@ func _should_run_away() -> bool:
 	
 	return potential_dmg >= _health()
 
+func _is_premature_red_flush() -> bool:
+	if _is_red_flush() and _health() > 10 and game_player.equipped_weapon != null and game_player.durability > 12:
+		return true
+	return false
+
+func _is_red_flush() -> bool:
+	var red_flush = true
+	for card in sorted_cards:
+		if card.suit == CardData.Suit.CLUBS or card.suit == CardData.Suit.SPADES:
+			red_flush = false
+			break
+	return red_flush
+
 # sorts by suit first H,D,SC, then by rank (ex, H10, D11, D9, S3)
 # greater first
 func _sort_cards(cards: Array[CardData]) -> Array[CardData]:
@@ -209,8 +240,8 @@ func _desperate_sort_cards(cards: Array[CardData]) -> Array[CardData]:
 	var blacks = _sort_extract_by_suit([CardData.Suit.SPADES, CardData.Suit.CLUBS], cards, false)
 	
 	var sorted: Array[CardData] = []
-	sorted.append_array(hearts)
 	sorted.append_array(diamonds)
+	sorted.append_array(hearts)
 	sorted.append_array(blacks)
 	return sorted
 
@@ -235,8 +266,10 @@ func _skip() -> void:
 	skips += 1
 	card_index += 1
 	card_index %= sorted_cards.size()
+	is_skipping_frames = true
 
 func _play(card: CardData, button: int = MOUSE_BUTTON_LEFT) -> void:
+	is_skipping_frames = false
 	signals.play_card.emit(card, button)
 	cards_resolved += 1
 	if cards_resolved == 3:

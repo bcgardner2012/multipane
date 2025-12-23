@@ -13,4 +13,13 @@ enum Suit {
 @export var texture: Texture2D
 
 func equals(other: CardData) -> bool:
-	return other.rank == rank and other.suit == suit
+	return not other == null and other.rank == rank and other.suit == suit
+
+func same_color(other: CardData) -> bool:
+	return not other == null and other.is_red() == is_red()
+
+func is_red() -> bool:
+	return suit == Suit.HEARTS or suit == Suit.DIAMONDS
+
+func is_black() -> bool:
+	return suit == Suit.CLUBS or suit == Suit.SPADES

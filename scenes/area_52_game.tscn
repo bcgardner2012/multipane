@@ -1,0 +1,964 @@
+[gd_scene load_steps=80 format=3 uid="uid://cjuytov2ll3g8"]
+
+[ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="1_4q62k"]
+[ext_resource type="Script" uid="uid://7w4yfydc3ffx" path="res://scripts/area_52_game_player.gd" id="1_6ki1a"]
+[ext_resource type="Script" uid="uid://dc00bvpvb4de6" path="res://scripts/area_52_game_pane.gd" id="1_57ttv"]
+[ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_om5bm"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_js67o"]
+[ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="2_l1egf"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="3_klb6r"]
+[ext_resource type="Texture2D" uid="uid://dr5idoohosp33" path="res://assets/sound_off.png" id="3_uia22"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="4_7e00k"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="4_8878j"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="5_dmbgr"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="5_yjhdr"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="6_61mw2"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="6_rwavj"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="7_acida"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="7_l1egf"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="8_g7gj0"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="9_6ki1a"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="10_17lq6"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="11_fm3wh"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="12_7a6l7"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="13_y6gq0"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="14_c0vyg"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="15_gloaf"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="16_5dpdv"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="17_57ttv"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="18_52um1"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="19_qp13y"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="20_mw2g7"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="21_lummw"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="22_erq23"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="23_rlot0"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="24_46vb3"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="25_k7mlj"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="26_cpja8"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="27_b1yv3"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="28_w1377"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="29_kmdp1"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="30_vnrpf"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="31_gylcq"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="32_avhph"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="33_ol7u8"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="34_jd3ki"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="35_cxxrg"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="36_bo24l"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="37_r0m1g"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="38_qlxxr"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="39_w8vc8"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="40_4go60"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="41_ni73y"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="42_mqfkk"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="43_ybqot"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="44_7k4d0"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="45_fghwr"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="46_18aqs"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="47_vg3ui"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="48_dfr84"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="49_8s2al"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="50_7f12q"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="51_twt4d"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="52_vgn28"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="53_76g2g"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="54_yukuh"]
+[ext_resource type="Script" uid="uid://co0lo1o5plypj" path="res://scripts/area_52_game_audio.gd" id="56_5dpdv"]
+[ext_resource type="AudioStream" uid="uid://dk26qjp1002e5" path="res://assets/audio/meaty-gunshot-101257.mp3" id="56_7a6l7"]
+[ext_resource type="Script" uid="uid://cnir1xs667nea" path="res://scripts/area_52_warnings.gd" id="56_17lq6"]
+[ext_resource type="AudioStream" uid="uid://dudrafwn1omha" path="res://assets/audio/thump-and-grunt-85606.mp3" id="57_y6gq0"]
+[ext_resource type="AudioStream" uid="uid://bs7a2yc4o4oqh" path="res://assets/audio/tarot-shuffle-89105.mp3" id="58_gloaf"]
+[ext_resource type="AudioStream" uid="uid://hw453vo06gbl" path="res://assets/audio/medieval-fanfare-6826.mp3" id="59_5dpdv"]
+[ext_resource type="AudioStream" uid="uid://can7veoxkxntr" path="res://assets/audio/game-over-39-199830.mp3" id="60_57ttv"]
+[ext_resource type="Texture2D" uid="uid://bfildnevjcona" path="res://assets/cards/normal/back_red.png" id="61_klb6r"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="62_8878j"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="63_dmbgr"]
+[ext_resource type="Texture2D" uid="uid://cm36j136fu2ho" path="res://assets/cards/card_holder_transparent.png" id="63_rwavj"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="64_rwavj"]
+[ext_resource type="Script" uid="uid://cjrsd47nnngmp" path="res://scripts/card_highlighter.gd" id="66_acida"]
+[ext_resource type="Texture2D" uid="uid://ddyq3kgxhcboc" path="res://assets/cards/card_hilight.png" id="67_g7gj0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rwavj"]
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dmbgr"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="Area52GamePane" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_57ttv")
+
+[node name="Area52GamePlayer" type="Node" parent="." node_paths=PackedStringArray("alien_card_nodes", "human_card_nodes", "alien_deck_label", "human_deck_label", "wave_label")]
+script = ExtResource("1_6ki1a")
+alien_card_nodes = [NodePath("../PlayArea/AlienSide/AlienSlots/CardHolder1/Card"), NodePath("../PlayArea/AlienSide/AlienSlots/CardHolder2/Card"), NodePath("../PlayArea/AlienSide/AlienSlots/CardHolder3/Card")]
+human_card_nodes = [NodePath("../PlayArea/HumanSide/HumanSlots/TopRow/CardHolder1/Card"), NodePath("../PlayArea/HumanSide/HumanSlots/TopRow/CardHolder2/Card"), NodePath("../PlayArea/HumanSide/HumanSlots/TopRow/CardHolder3/Card"), NodePath("../PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder1/Card"), NodePath("../PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder2/Card"), NodePath("../PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder3/Card")]
+alien_deck_label = NodePath("../PlayArea/AlienSide/AlienDeck/CountLabel")
+human_deck_label = NodePath("../PlayArea/HumanSide/HumanDeck/CountLabel")
+wave_label = NodePath("../WaveLabel")
+
+[node name="CardDatas" type="Node" parent="Area52GamePlayer"]
+script = ExtResource("1_om5bm")
+
+[node name="H2" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 2
+texture = ExtResource("3_klb6r")
+
+[node name="H3" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 3
+texture = ExtResource("4_8878j")
+
+[node name="H4" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 4
+texture = ExtResource("5_dmbgr")
+
+[node name="H5" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 5
+texture = ExtResource("6_rwavj")
+
+[node name="H6" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 6
+texture = ExtResource("7_acida")
+
+[node name="H7" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 7
+texture = ExtResource("8_g7gj0")
+
+[node name="H8" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 8
+texture = ExtResource("9_6ki1a")
+
+[node name="H9" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 9
+texture = ExtResource("10_17lq6")
+
+[node name="H10" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 10
+texture = ExtResource("11_fm3wh")
+
+[node name="HJ" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 11
+texture = ExtResource("12_7a6l7")
+
+[node name="HQ" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 12
+texture = ExtResource("13_y6gq0")
+
+[node name="HK" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 13
+texture = ExtResource("14_c0vyg")
+
+[node name="HA" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+rank = 14
+texture = ExtResource("15_gloaf")
+
+[node name="D2" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 2
+texture = ExtResource("16_5dpdv")
+
+[node name="D3" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 3
+texture = ExtResource("17_57ttv")
+
+[node name="D4" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 4
+texture = ExtResource("18_52um1")
+
+[node name="D5" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 5
+texture = ExtResource("19_qp13y")
+
+[node name="D6" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 6
+texture = ExtResource("20_mw2g7")
+
+[node name="D7" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 7
+texture = ExtResource("21_lummw")
+
+[node name="D8" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 8
+texture = ExtResource("22_erq23")
+
+[node name="D9" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 9
+texture = ExtResource("23_rlot0")
+
+[node name="D10" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 10
+texture = ExtResource("24_46vb3")
+
+[node name="DJ" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 11
+texture = ExtResource("25_k7mlj")
+
+[node name="DQ" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 12
+texture = ExtResource("26_cpja8")
+
+[node name="DK" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 13
+texture = ExtResource("27_b1yv3")
+
+[node name="DA" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 1
+rank = 14
+texture = ExtResource("28_w1377")
+
+[node name="C2" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 2
+texture = ExtResource("29_kmdp1")
+
+[node name="C3" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 3
+texture = ExtResource("30_vnrpf")
+
+[node name="C4" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 4
+texture = ExtResource("31_gylcq")
+
+[node name="C5" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 5
+texture = ExtResource("32_avhph")
+
+[node name="C6" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 6
+texture = ExtResource("33_ol7u8")
+
+[node name="C7" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 7
+texture = ExtResource("34_jd3ki")
+
+[node name="C8" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 8
+texture = ExtResource("35_cxxrg")
+
+[node name="C9" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 9
+texture = ExtResource("36_bo24l")
+
+[node name="C10" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 10
+texture = ExtResource("37_r0m1g")
+
+[node name="CJ" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 11
+texture = ExtResource("38_qlxxr")
+
+[node name="CQ" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 12
+texture = ExtResource("39_w8vc8")
+
+[node name="CK" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 13
+texture = ExtResource("40_4go60")
+
+[node name="CA" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 2
+rank = 14
+texture = ExtResource("41_ni73y")
+
+[node name="S2" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 2
+texture = ExtResource("42_mqfkk")
+
+[node name="S3" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 3
+texture = ExtResource("43_ybqot")
+
+[node name="S4" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 4
+texture = ExtResource("44_7k4d0")
+
+[node name="S5" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 5
+texture = ExtResource("45_fghwr")
+
+[node name="S6" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 6
+texture = ExtResource("46_18aqs")
+
+[node name="S7" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 7
+texture = ExtResource("47_vg3ui")
+
+[node name="S8" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 8
+texture = ExtResource("48_dfr84")
+
+[node name="S9" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 9
+texture = ExtResource("49_8s2al")
+
+[node name="S10" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 10
+texture = ExtResource("50_7f12q")
+
+[node name="SJ" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 11
+texture = ExtResource("51_twt4d")
+
+[node name="SQ" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 12
+texture = ExtResource("52_vgn28")
+
+[node name="SK" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 13
+texture = ExtResource("53_76g2g")
+
+[node name="SA" type="Node" parent="Area52GamePlayer/CardDatas"]
+script = ExtResource("2_js67o")
+suit = 3
+rank = 14
+texture = ExtResource("54_yukuh")
+
+[node name="Audio" type="Node" parent="Area52GamePlayer"]
+script = ExtResource("56_5dpdv")
+
+[node name="GunshotSoundPlayer" type="AudioStreamPlayer" parent="Area52GamePlayer/Audio"]
+stream = ExtResource("56_7a6l7")
+volume_db = -13.0
+
+[node name="SacrificeSoundPlayer" type="AudioStreamPlayer" parent="Area52GamePlayer/Audio"]
+stream = ExtResource("57_y6gq0")
+volume_db = -8.0
+pitch_scale = 0.9
+
+[node name="ShuffleSoundPlayer" type="AudioStreamPlayer" parent="Area52GamePlayer/Audio"]
+stream = ExtResource("58_gloaf")
+volume_db = -21.596
+pitch_scale = 2.22
+
+[node name="WinSoundPlayer" type="AudioStreamPlayer" parent="Area52GamePlayer/Audio"]
+stream = ExtResource("59_5dpdv")
+volume_db = -20.642
+
+[node name="LoseSoundPlayer" type="AudioStreamPlayer" parent="Area52GamePlayer/Audio"]
+stream = ExtResource("60_57ttv")
+volume_db = -9.661
+pitch_scale = 0.5
+
+[node name="WaveLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.01
+anchor_bottom = 0.01
+offset_right = 56.0
+offset_bottom = 23.0
+text = "Wave 1"
+
+[node name="Warnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("56_17lq6")
+
+[node name="TooManyHumans" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -200.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "Too many defenders selected!"
+label_settings = SubResource("LabelSettings_rwavj")
+horizontal_alignment = 1
+
+[node name="TooFewHumans" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -200.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "Select at least 1 defender!"
+label_settings = SubResource("LabelSettings_rwavj")
+horizontal_alignment = 1
+
+[node name="SumInvalid" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -245.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "Defender sum does not match target value!"
+label_settings = SubResource("LabelSettings_rwavj")
+horizontal_alignment = 1
+
+[node name="ColorInvalid" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -370.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "For single attacks, defender and enemy must be opposite colors"
+label_settings = SubResource("LabelSettings_rwavj")
+horizontal_alignment = 1
+
+[node name="RankTooLow" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -370.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "For single attacks, defender must have a higher rank than the enemy"
+label_settings = SubResource("LabelSettings_rwavj")
+horizontal_alignment = 1
+
+[node name="SacrificeInvalid" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -240.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "Sacrifice requires exactly 1 defender!"
+label_settings = SubResource("LabelSettings_rwavj")
+horizontal_alignment = 1
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SoundToggle" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_4q62k")
+expand_mode = 4
+stretch_mode = 4
+script = ExtResource("2_l1egf")
+sound_on_texture = ExtResource("1_4q62k")
+sound_off_texture = ExtResource("3_uia22")
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_7e00k")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_yjhdr")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_61mw2")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="AlienSide" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="AlienDeck" type="TextureRect" parent="PlayArea/AlienSide"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -0.0004005432
+offset_top = -61.0
+offset_right = 87.9996
+offset_bottom = 63.0
+texture = ExtResource("61_klb6r")
+stretch_mode = 4
+script = ExtResource("62_8878j")
+
+[node name="CountLabel" type="Label" parent="PlayArea/AlienSide/AlienDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "26"
+label_settings = SubResource("LabelSettings_dmbgr")
+horizontal_alignment = 1
+
+[node name="AlienSlots" type="VBoxContainer" parent="PlayArea/AlienSide"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 120.0
+offset_top = -94.0
+offset_right = 208.0
+offset_bottom = 94.0
+grow_vertical = 2
+alignment = 1
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/AlienSide/AlienSlots"]
+layout_mode = 2
+texture = ExtResource("63_rwavj")
+script = ExtResource("66_acida")
+default_texture = ExtResource("63_rwavj")
+highlight_texture = ExtResource("67_g7gj0")
+
+[node name="Card" parent="PlayArea/AlienSide/AlienSlots/CardHolder1" instance=ExtResource("63_dmbgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_klb6r")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/AlienSide/AlienSlots"]
+layout_mode = 2
+texture = ExtResource("63_rwavj")
+script = ExtResource("66_acida")
+default_texture = ExtResource("63_rwavj")
+highlight_texture = ExtResource("67_g7gj0")
+
+[node name="Card" parent="PlayArea/AlienSide/AlienSlots/CardHolder2" instance=ExtResource("63_dmbgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_klb6r")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/AlienSide/AlienSlots"]
+layout_mode = 2
+texture = ExtResource("63_rwavj")
+script = ExtResource("66_acida")
+default_texture = ExtResource("63_rwavj")
+highlight_texture = ExtResource("67_g7gj0")
+
+[node name="Card" parent="PlayArea/AlienSide/AlienSlots/CardHolder3" instance=ExtResource("63_dmbgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_klb6r")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="HumanSide" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HumanDeck" type="TextureRect" parent="PlayArea/HumanSide"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.5
+anchor_right = 0.3
+anchor_bottom = 0.5
+offset_left = 165.0
+offset_top = -61.0
+offset_right = -2.0
+offset_bottom = 63.0
+texture = ExtResource("64_rwavj")
+stretch_mode = 4
+script = ExtResource("62_8878j")
+
+[node name="CountLabel" type="Label" parent="PlayArea/HumanSide/HumanDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "26"
+label_settings = SubResource("LabelSettings_dmbgr")
+horizontal_alignment = 1
+
+[node name="HumanSlots" type="VBoxContainer" parent="PlayArea/HumanSide"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.5
+anchor_right = 0.3
+anchor_bottom = 0.5
+offset_left = -135.0
+grow_vertical = 2
+alignment = 1
+
+[node name="TopRow" type="HBoxContainer" parent="PlayArea/HumanSide/HumanSlots"]
+layout_mode = 2
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/HumanSide/HumanSlots/TopRow"]
+layout_mode = 2
+texture = ExtResource("63_rwavj")
+script = ExtResource("66_acida")
+default_texture = ExtResource("63_rwavj")
+highlight_texture = ExtResource("67_g7gj0")
+
+[node name="Card" parent="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder1" instance=ExtResource("63_dmbgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("64_rwavj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/HumanSide/HumanSlots/TopRow"]
+layout_mode = 2
+texture = ExtResource("63_rwavj")
+script = ExtResource("66_acida")
+default_texture = ExtResource("63_rwavj")
+highlight_texture = ExtResource("67_g7gj0")
+
+[node name="Card" parent="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder2" instance=ExtResource("63_dmbgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("64_rwavj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/HumanSide/HumanSlots/TopRow"]
+layout_mode = 2
+texture = ExtResource("63_rwavj")
+script = ExtResource("66_acida")
+default_texture = ExtResource("63_rwavj")
+highlight_texture = ExtResource("67_g7gj0")
+
+[node name="Card" parent="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder3" instance=ExtResource("63_dmbgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("64_rwavj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="BottomRow" type="HBoxContainer" parent="PlayArea/HumanSide/HumanSlots"]
+layout_mode = 2
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/HumanSide/HumanSlots/BottomRow"]
+layout_mode = 2
+texture = ExtResource("63_rwavj")
+script = ExtResource("66_acida")
+default_texture = ExtResource("63_rwavj")
+highlight_texture = ExtResource("67_g7gj0")
+
+[node name="Card" parent="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder1" instance=ExtResource("63_dmbgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("64_rwavj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/HumanSide/HumanSlots/BottomRow"]
+layout_mode = 2
+texture = ExtResource("63_rwavj")
+script = ExtResource("66_acida")
+default_texture = ExtResource("63_rwavj")
+highlight_texture = ExtResource("67_g7gj0")
+
+[node name="Card" parent="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder2" instance=ExtResource("63_dmbgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("64_rwavj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/HumanSide/HumanSlots/BottomRow"]
+layout_mode = 2
+texture = ExtResource("63_rwavj")
+script = ExtResource("66_acida")
+default_texture = ExtResource("63_rwavj")
+highlight_texture = ExtResource("67_g7gj0")
+
+[node name="Card" parent="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder3" instance=ExtResource("63_dmbgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("64_rwavj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="SacrificeButton" type="Button" parent="PlayArea/HumanSide"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.5
+anchor_right = 0.3
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -166.0
+offset_right = 55.0
+offset_bottom = -135.0
+text = "Sacrifice"
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click a deck to start
+- Click up to 2 defenders to select 
+who will attack
+- Right-click a defender to deselect
+- Defender ranks must sum to the
+rank of the highlighted enemy for
+dual attacks.
+- Defenders must be opposite color
+and greater in value for a single
+attack.
+- Select 1 defender with lesser value
+to sacrifice them to the highlighted
+enemy.
+- The highlighted enemy is the one
+currently being attacked. Click it to
+confirm your attack selections."
+placeholder_text = "Add any notes here..."
+script = ExtResource("7_l1egf")
+
+[connection signal="aliens_drawn" from="Area52GamePlayer" to="." method="_on_area_52_game_player_aliens_drawn"]
+[connection signal="defender_drawn" from="Area52GamePlayer" to="." method="_on_area_52_game_player_defender_drawn"]
+[connection signal="dual_attack_performed" from="Area52GamePlayer" to="." method="_on_area_52_game_player_dual_attack_performed"]
+[connection signal="dual_attack_performed" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder1" method="_on_area_52_game_player_dual_attack_performed"]
+[connection signal="dual_attack_performed" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder2" method="_on_area_52_game_player_dual_attack_performed"]
+[connection signal="dual_attack_performed" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder3" method="_on_area_52_game_player_dual_attack_performed"]
+[connection signal="dual_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder1" method="_on_area_52_game_player_dual_attack_performed"]
+[connection signal="dual_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder2" method="_on_area_52_game_player_dual_attack_performed"]
+[connection signal="dual_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder3" method="_on_area_52_game_player_dual_attack_performed"]
+[connection signal="dual_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder1" method="_on_area_52_game_player_dual_attack_performed"]
+[connection signal="dual_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder2" method="_on_area_52_game_player_dual_attack_performed"]
+[connection signal="dual_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder3" method="_on_area_52_game_player_dual_attack_performed"]
+[connection signal="dual_attack_performed" from="Area52GamePlayer" to="Area52GamePlayer/Audio" method="_on_area_52_game_player_dual_attack_performed"]
+[connection signal="game_over" from="Area52GamePlayer" to="Area52GamePlayer/Audio" method="_on_area_52_game_player_game_over"]
+[connection signal="game_won" from="Area52GamePlayer" to="Area52GamePlayer/Audio" method="_on_area_52_game_player_game_won"]
+[connection signal="invalid_color_played" from="Area52GamePlayer" to="Warnings" method="_on_area_52_game_player_invalid_color_played"]
+[connection signal="invalid_sacrifice_played" from="Area52GamePlayer" to="Warnings" method="_on_area_52_game_player_invalid_sacrifice_played"]
+[connection signal="invalid_sum_played" from="Area52GamePlayer" to="Warnings" method="_on_area_52_game_player_invalid_sum_played"]
+[connection signal="new_wave_incoming" from="Area52GamePlayer" to="Area52GamePlayer/Audio" method="_on_area_52_game_player_new_wave_incoming"]
+[connection signal="sacrifice_performed" from="Area52GamePlayer" to="." method="_on_area_52_game_player_sacrifice_performed"]
+[connection signal="sacrifice_performed" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder1" method="_on_area_52_game_player_sacrifice_performed"]
+[connection signal="sacrifice_performed" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder2" method="_on_area_52_game_player_sacrifice_performed"]
+[connection signal="sacrifice_performed" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder3" method="_on_area_52_game_player_sacrifice_performed"]
+[connection signal="sacrifice_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder1" method="_on_area_52_game_player_sacrifice_performed"]
+[connection signal="sacrifice_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder2" method="_on_area_52_game_player_sacrifice_performed"]
+[connection signal="sacrifice_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder3" method="_on_area_52_game_player_sacrifice_performed"]
+[connection signal="sacrifice_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder1" method="_on_area_52_game_player_sacrifice_performed"]
+[connection signal="sacrifice_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder2" method="_on_area_52_game_player_sacrifice_performed"]
+[connection signal="sacrifice_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder3" method="_on_area_52_game_player_sacrifice_performed"]
+[connection signal="sacrifice_performed" from="Area52GamePlayer" to="Area52GamePlayer/Audio" method="_on_area_52_game_player_sacrifice_performed"]
+[connection signal="single_attack_performed" from="Area52GamePlayer" to="." method="_on_area_52_game_player_single_attack_performed"]
+[connection signal="single_attack_performed" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder1" method="_on_area_52_game_player_single_attack_performed"]
+[connection signal="single_attack_performed" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder2" method="_on_area_52_game_player_single_attack_performed"]
+[connection signal="single_attack_performed" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder3" method="_on_area_52_game_player_single_attack_performed"]
+[connection signal="single_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder1" method="_on_area_52_game_player_single_attack_performed"]
+[connection signal="single_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder2" method="_on_area_52_game_player_single_attack_performed"]
+[connection signal="single_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder3" method="_on_area_52_game_player_single_attack_performed"]
+[connection signal="single_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder1" method="_on_area_52_game_player_single_attack_performed"]
+[connection signal="single_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder2" method="_on_area_52_game_player_single_attack_performed"]
+[connection signal="single_attack_performed" from="Area52GamePlayer" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder3" method="_on_area_52_game_player_single_attack_performed"]
+[connection signal="single_attack_performed" from="Area52GamePlayer" to="Area52GamePlayer/Audio" method="_on_area_52_game_player_single_attack_performed"]
+[connection signal="too_few_humans_played" from="Area52GamePlayer" to="Warnings" method="_on_area_52_game_player_too_few_humans_played"]
+[connection signal="too_low_single_rank_played" from="Area52GamePlayer" to="Warnings" method="_on_area_52_game_player_too_low_single_rank_played"]
+[connection signal="too_many_humans_played" from="Area52GamePlayer" to="Warnings" method="_on_area_52_game_player_too_many_humans_played"]
+[connection signal="trigger_highlight" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder1" method="_on_area_52_game_player_trigger_highlight"]
+[connection signal="trigger_highlight" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder2" method="_on_area_52_game_player_trigger_highlight"]
+[connection signal="trigger_highlight" from="Area52GamePlayer" to="PlayArea/AlienSide/AlienSlots/CardHolder3" method="_on_area_52_game_player_trigger_highlight"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Toolbar/VBoxContainer/SoundToggle" method="_on_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Area52GamePlayer/Audio" method="_on_sound_toggle_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="PlayArea/AlienSide/AlienDeck" to="PlayArea/AlienSide/AlienDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/AlienSide/AlienDeck" to="." method="_on_deck_start_game"]
+[connection signal="start_game" from="PlayArea/AlienSide/AlienDeck" to="Area52GamePlayer" method="_on_deck_start_game"]
+[connection signal="start_game" from="PlayArea/AlienSide/AlienDeck" to="PlayArea/HumanSide/HumanDeck" method="_on_other_deck_start_game"]
+[connection signal="use_card" from="PlayArea/AlienSide/AlienSlots/CardHolder1/Card" to="Area52GamePlayer" method="_on_alien_card_use_card"]
+[connection signal="use_card" from="PlayArea/AlienSide/AlienSlots/CardHolder2/Card" to="Area52GamePlayer" method="_on_alien_card_use_card"]
+[connection signal="use_card" from="PlayArea/AlienSide/AlienSlots/CardHolder3/Card" to="Area52GamePlayer" method="_on_alien_card_use_card"]
+[connection signal="gui_input" from="PlayArea/HumanSide/HumanDeck" to="PlayArea/HumanSide/HumanDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/HumanSide/HumanDeck" to="." method="_on_deck_start_game"]
+[connection signal="start_game" from="PlayArea/HumanSide/HumanDeck" to="Area52GamePlayer" method="_on_deck_start_game"]
+[connection signal="start_game" from="PlayArea/HumanSide/HumanDeck" to="PlayArea/AlienSide/AlienDeck" method="_on_other_deck_start_game"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder1/Card" to="Area52GamePlayer" method="_on_human_card_use_card"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder1/Card" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder2/Card" to="Area52GamePlayer" method="_on_human_card_use_card"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder2/Card" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder3/Card" to="Area52GamePlayer" method="_on_human_card_use_card"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder3/Card" to="PlayArea/HumanSide/HumanSlots/TopRow/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder1/Card" to="Area52GamePlayer" method="_on_human_card_use_card"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder1/Card" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder2/Card" to="Area52GamePlayer" method="_on_human_card_use_card"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder2/Card" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder3/Card" to="Area52GamePlayer" method="_on_human_card_use_card"]
+[connection signal="use_card" from="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder3/Card" to="PlayArea/HumanSide/HumanSlots/BottomRow/CardHolder3" method="_on_card_use_card"]
+[connection signal="pressed" from="PlayArea/HumanSide/SacrificeButton" to="Area52GamePlayer" method="_on_sacrifice_button_pressed"]

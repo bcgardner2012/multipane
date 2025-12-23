@@ -18,6 +18,10 @@ func _on_label_gauge_value_changed(value: int) -> void:
 func try_load_numbered_image(value: int) -> bool:
 	return try_load_image(str(value) + ".png") or try_load_image(str(value) + ".jpg")
 
+func try_load_numbered_image_from_subdir(value: int, subdir: String) -> bool:
+	var suffix = subdir.path_join(str(value))
+	return try_load_image(suffix + ".png") or try_load_image(suffix + ".jpg")
+
 func try_load_random_image_from_subdir(subdir: String) -> bool:
 	var path = current_dir.path_join(subdir)
 	var dir = DirAccess.open(path)

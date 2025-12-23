@@ -16,26 +16,16 @@ var cards_resolved: int
 var can_run: bool
 var can_heal: bool
 
-var deck: Array[Node] # all nodes should use CardData script
+var deck: Array[CardData] # all nodes should use CardData script
 var game_in_progress: bool
 
 # Called when the node enters the scene tree for the first time, after children
 # have ready() 'd
 func _ready() -> void:
 	randomize()
-	deck = get_child(0).get_children()
-	_shuffle_deck()
-
-# Fisher-Yates Shuffle Algorithm
-func _shuffle_deck() -> void:
-	var i = deck.size()
-	while i > 0:
-		var r = randi() % i
-		var tmp = deck[r]
-		deck[r] = deck[i-1]
-		deck[i-1] = tmp
-		i -= 1
-
+	deck = []
+	deck.append_array($CardDatas.get_children())
+	DeckHelper.shuffle(deck)
 
 func _on_deck_start_game() -> void:
 	if not game_in_progress:

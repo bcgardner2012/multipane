@@ -1,6 +1,8 @@
 extends Control
 class_name Pane
 
+# 0 = hearts, 1 = diamonds, 2 = clubs, 3 = spades
+var suit_channel: int
 
 func _on_close_tool_gui_input(event: InputEvent) -> void:
 	# close tool clicked, destroy pane
@@ -18,3 +20,14 @@ func receive_broadcast(from: Node) -> void:
 		sgp.potion_used.connect($ScoundrelGamePlug.on_potion_used)
 		sgp.room_cleared.connect($ScoundrelGamePlug.on_room_cleared)
 		sgp.victory.connect($ScoundrelGamePlug.on_victory)
+	elif from is Area52GamePane:
+		var a52p = from as Area52GamePane
+		a52p.aliens_drawn.connect($Area52GamePlug.on_aliens_drawn)
+		a52p.defender_drawn.connect($Area52GamePlug.on_defender_drawn)
+		a52p.dual_attack_performed.connect($Area52GamePlug.on_dual_attack_performed)
+		a52p.sacrifice_performed.connect($Area52GamePlug.on_sacrifice_performed)
+		a52p.single_attack_performed.connect($Area52GamePlug.on_single_attack_performed)
+
+
+func _on_suit_icon_tune_suit_channel(channel: int) -> void:
+	suit_channel = channel
