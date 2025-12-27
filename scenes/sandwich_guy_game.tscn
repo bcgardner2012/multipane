@@ -1,0 +1,781 @@
+[gd_scene load_steps=76 format=3 uid="uid://hmkujffux4ck"]
+
+[ext_resource type="Script" uid="uid://0ivfv48ad021" path="res://scripts/sandwich_guy_game_pane.gd" id="1_3kws5"]
+[ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_aloaj"]
+[ext_resource type="Script" uid="uid://dhl5e37e4nxr1" path="res://scripts/sandwich_guy_game_player.gd" id="1_c8tn0"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_7iiuy"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="3_jy1st"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="4_iqya2"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="5_wffey"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="6_6wo58"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="7_t3h8p"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="8_c8tn0"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="9_juqqi"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="10_n48l4"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="11_64a5e"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="12_n64rd"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="13_bex36"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="14_roqc0"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="15_jp4u1"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="16_5bs17"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="17_c5k2i"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="18_3kws5"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="19_mysd4"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="20_mwrgl"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="21_6nd5g"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="22_vluyr"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="23_gcjwh"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="24_xurlh"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="25_kuywg"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="26_wv81l"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="27_23neq"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="28_2qwrl"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="29_2db87"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="30_6p3ta"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="31_7ffim"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="32_40re2"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="33_eqbvx"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="34_h55x7"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="35_0lrx1"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="36_rkqyn"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="37_e8npq"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="38_ha82j"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="39_jnegq"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="40_r6axv"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="41_pibst"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="42_x7kjx"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="43_0t502"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="44_5717h"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="45_loi3d"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="46_kyxia"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="47_2eedr"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="48_hiboq"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="49_yjamp"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="50_mahr7"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="51_6hke8"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="52_wo38v"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="53_kuxt7"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="54_8125n"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="55_jy1st"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="56_iqya2"]
+[ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="56_roqc0"]
+[ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="57_jp4u1"]
+[ext_resource type="Script" uid="uid://344m3ucjempt" path="res://scripts/sandwich_guy_game_audio.gd" id="57_mysd4"]
+[ext_resource type="Texture2D" uid="uid://cm36j136fu2ho" path="res://assets/cards/card_holder_transparent.png" id="57_t3h8p"]
+[ext_resource type="Texture2D" uid="uid://dr5idoohosp33" path="res://assets/sound_off.png" id="58_5bs17"]
+[ext_resource type="Script" uid="uid://cjrsd47nnngmp" path="res://scripts/card_highlighter.gd" id="58_c8tn0"]
+[ext_resource type="AudioStream" uid="uid://bnyqgj23l7nlp" path="res://assets/audio/cash-register-kaching-376867.mp3" id="58_mwrgl"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="59_c5k2i"]
+[ext_resource type="Texture2D" uid="uid://ddyq3kgxhcboc" path="res://assets/cards/card_hilight.png" id="59_juqqi"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="60_3kws5"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="60_n48l4"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="61_mysd4"]
+[ext_resource type="Script" uid="uid://ck6t13ijlisao" path="res://scripts/sandwich_guy_hand.gd" id="64_5bs17"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="68_jp4u1"]
+[ext_resource type="Script" uid="uid://c33v0mdm80q0c" path="res://scripts/sandwich_guy_warnings.gd" id="70_c5k2i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wffey"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5bs17"]
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+
+[node name="SandwichGuyGamePane" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3kws5")
+
+[node name="SandwichGuyGamePlayer" type="Node" parent="." node_paths=PackedStringArray("hand_node", "deck_label")]
+script = ExtResource("1_c8tn0")
+hand_node = NodePath("../PlayArea/Hand")
+deck_label = NodePath("../PlayArea/Deck/CountLabel")
+
+[node name="CardDatas" type="Node" parent="SandwichGuyGamePlayer"]
+script = ExtResource("1_aloaj")
+
+[node name="H2" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 2
+texture = ExtResource("3_jy1st")
+
+[node name="H3" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 3
+texture = ExtResource("4_iqya2")
+
+[node name="H4" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 4
+texture = ExtResource("5_wffey")
+
+[node name="H5" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 5
+texture = ExtResource("6_6wo58")
+
+[node name="H6" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 6
+texture = ExtResource("7_t3h8p")
+
+[node name="H7" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 7
+texture = ExtResource("8_c8tn0")
+
+[node name="H8" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 8
+texture = ExtResource("9_juqqi")
+
+[node name="H9" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 9
+texture = ExtResource("10_n48l4")
+
+[node name="H10" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 10
+texture = ExtResource("11_64a5e")
+
+[node name="HJ" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 11
+texture = ExtResource("12_n64rd")
+
+[node name="HQ" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 12
+texture = ExtResource("13_bex36")
+
+[node name="HK" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 13
+texture = ExtResource("14_roqc0")
+
+[node name="HA" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+rank = 1
+texture = ExtResource("15_jp4u1")
+
+[node name="D2" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 2
+texture = ExtResource("16_5bs17")
+
+[node name="D3" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 3
+texture = ExtResource("17_c5k2i")
+
+[node name="D4" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 4
+texture = ExtResource("18_3kws5")
+
+[node name="D5" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 5
+texture = ExtResource("19_mysd4")
+
+[node name="D6" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 6
+texture = ExtResource("20_mwrgl")
+
+[node name="D7" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 7
+texture = ExtResource("21_6nd5g")
+
+[node name="D8" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 8
+texture = ExtResource("22_vluyr")
+
+[node name="D9" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 9
+texture = ExtResource("23_gcjwh")
+
+[node name="D10" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 10
+texture = ExtResource("24_xurlh")
+
+[node name="DJ" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 11
+texture = ExtResource("25_kuywg")
+
+[node name="DQ" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 12
+texture = ExtResource("26_wv81l")
+
+[node name="DK" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 13
+texture = ExtResource("27_23neq")
+
+[node name="DA" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 1
+rank = 1
+texture = ExtResource("28_2qwrl")
+
+[node name="C2" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 2
+texture = ExtResource("29_2db87")
+
+[node name="C3" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 3
+texture = ExtResource("30_6p3ta")
+
+[node name="C4" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 4
+texture = ExtResource("31_7ffim")
+
+[node name="C5" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 5
+texture = ExtResource("32_40re2")
+
+[node name="C6" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 6
+texture = ExtResource("33_eqbvx")
+
+[node name="C7" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 7
+texture = ExtResource("34_h55x7")
+
+[node name="C8" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 8
+texture = ExtResource("35_0lrx1")
+
+[node name="C9" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 9
+texture = ExtResource("36_rkqyn")
+
+[node name="C10" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 10
+texture = ExtResource("37_e8npq")
+
+[node name="CJ" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 11
+texture = ExtResource("38_ha82j")
+
+[node name="CQ" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 12
+texture = ExtResource("39_jnegq")
+
+[node name="CK" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 13
+texture = ExtResource("40_r6axv")
+
+[node name="CA" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 2
+rank = 1
+texture = ExtResource("41_pibst")
+
+[node name="S2" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 2
+texture = ExtResource("42_x7kjx")
+
+[node name="S3" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 3
+texture = ExtResource("43_0t502")
+
+[node name="S4" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 4
+texture = ExtResource("44_5717h")
+
+[node name="S5" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 5
+texture = ExtResource("45_loi3d")
+
+[node name="S6" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 6
+texture = ExtResource("46_kyxia")
+
+[node name="S7" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 7
+texture = ExtResource("47_2eedr")
+
+[node name="S8" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 8
+texture = ExtResource("48_hiboq")
+
+[node name="S9" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 9
+texture = ExtResource("49_yjamp")
+
+[node name="S10" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 10
+texture = ExtResource("50_mahr7")
+
+[node name="SJ" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 11
+texture = ExtResource("51_6hke8")
+
+[node name="SQ" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 12
+texture = ExtResource("52_wo38v")
+
+[node name="SK" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 13
+texture = ExtResource("53_kuxt7")
+
+[node name="SA" type="Node" parent="SandwichGuyGamePlayer/CardDatas"]
+script = ExtResource("2_7iiuy")
+suit = 3
+rank = 1
+texture = ExtResource("54_8125n")
+
+[node name="Audio" type="Node" parent="SandwichGuyGamePlayer"]
+script = ExtResource("57_mysd4")
+
+[node name="CashRegisterSoundPlayer" type="AudioStreamPlayer" parent="SandwichGuyGamePlayer/Audio"]
+stream = ExtResource("58_mwrgl")
+volume_db = -20.0
+pitch_scale = 0.8
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SoundToggle" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("56_roqc0")
+expand_mode = 4
+stretch_mode = 4
+script = ExtResource("57_jp4u1")
+sound_on_texture = ExtResource("56_roqc0")
+sound_off_texture = ExtResource("58_5bs17")
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("59_c5k2i")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("60_3kws5")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("61_mysd4")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Deck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.8
+anchor_right = 0.1
+anchor_bottom = 0.8
+offset_top = -60.0
+offset_right = 88.0
+offset_bottom = 64.0
+texture = ExtResource("55_jy1st")
+stretch_mode = 4
+script = ExtResource("56_iqya2")
+
+[node name="CountLabel" type="Label" parent="PlayArea/Deck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "52"
+label_settings = SubResource("LabelSettings_wffey")
+horizontal_alignment = 1
+
+[node name="Hand" type="HBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.8
+anchor_right = 0.1
+anchor_bottom = 0.8
+offset_left = 160.0
+offset_top = -62.0
+offset_right = 254.0
+offset_bottom = 68.0
+alignment = 1
+script = ExtResource("64_5bs17")
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("57_t3h8p")
+script = ExtResource("58_c8tn0")
+default_texture = ExtResource("57_t3h8p")
+highlight_texture = ExtResource("59_juqqi")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder1" instance=ExtResource("60_n48l4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("55_jy1st")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("57_t3h8p")
+script = ExtResource("58_c8tn0")
+default_texture = ExtResource("57_t3h8p")
+highlight_texture = ExtResource("59_juqqi")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder2" instance=ExtResource("60_n48l4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("55_jy1st")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("57_t3h8p")
+script = ExtResource("58_c8tn0")
+default_texture = ExtResource("57_t3h8p")
+highlight_texture = ExtResource("59_juqqi")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder3" instance=ExtResource("60_n48l4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("55_jy1st")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder4" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("57_t3h8p")
+script = ExtResource("58_c8tn0")
+default_texture = ExtResource("57_t3h8p")
+highlight_texture = ExtResource("59_juqqi")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder4" instance=ExtResource("60_n48l4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("55_jy1st")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder5" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("57_t3h8p")
+script = ExtResource("58_c8tn0")
+default_texture = ExtResource("57_t3h8p")
+highlight_texture = ExtResource("59_juqqi")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder5" instance=ExtResource("60_n48l4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("55_jy1st")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder6" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("57_t3h8p")
+script = ExtResource("58_c8tn0")
+default_texture = ExtResource("57_t3h8p")
+highlight_texture = ExtResource("59_juqqi")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder6" instance=ExtResource("60_n48l4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("55_jy1st")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder7" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("57_t3h8p")
+script = ExtResource("58_c8tn0")
+default_texture = ExtResource("57_t3h8p")
+highlight_texture = ExtResource("59_juqqi")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder7" instance=ExtResource("60_n48l4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("55_jy1st")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder8" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("57_t3h8p")
+script = ExtResource("58_c8tn0")
+default_texture = ExtResource("57_t3h8p")
+highlight_texture = ExtResource("59_juqqi")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder8" instance=ExtResource("60_n48l4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("55_jy1st")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="ServeButton" type="Button" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.8
+anchor_right = 0.1
+anchor_bottom = 0.8
+offset_left = 523.0
+offset_top = -98.0
+offset_right = 574.0
+offset_bottom = -67.0
+text = "Serve"
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click the deck to start
+- Click 3 cards in hand to assemble a 
+sandwich
+- Right-click a card to deselect
+- Click \"Serve\" to discard selected
+cards
+- Cards used to make a sandwich
+must be an equal distance apart in
+rank.
+- If all cards are the same suit, draw
+4 more cards or until you have 8
+- If all cards are the same color but
+not the same suit, draw 3
+- If cards use multiple colors, draw 2
+- The game is over when you are
+unable to make a valid sandwich
+- You win if you manage to draw all 
+cards
+- Aces are low"
+placeholder_text = "Add any notes here..."
+script = ExtResource("68_jp4u1")
+
+[node name="Warnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("70_c5k2i")
+
+[node name="WrongCardCount" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+offset_left = -209.0
+offset_right = 209.0
+offset_bottom = 34.0
+text = "A sandwich requires exactly 3 cards!"
+label_settings = SubResource("LabelSettings_5bs17")
+
+[node name="UnequalDistance" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -323.0
+offset_right = 324.0
+offset_bottom = 34.0
+text = "Selected cards must be an equal distance apart by rank!"
+label_settings = SubResource("LabelSettings_5bs17")
+
+[connection signal="not_equidistant_ranks" from="SandwichGuyGamePlayer" to="Warnings" method="_on_sandwich_guy_game_player_not_equidistant_ranks"]
+[connection signal="sandwich_served" from="SandwichGuyGamePlayer" to="." method="_on_sandwich_guy_game_player_sandwich_served"]
+[connection signal="sandwich_served" from="SandwichGuyGamePlayer" to="PlayArea/Hand" method="_on_sandwich_guy_game_player_sandwich_served"]
+[connection signal="sandwich_served" from="SandwichGuyGamePlayer" to="SandwichGuyGamePlayer/Audio" method="_on_sandwich_guy_game_player_sandwich_served"]
+[connection signal="too_few_cards" from="SandwichGuyGamePlayer" to="Warnings" method="_on_sandwich_guy_game_player_too_few_cards"]
+[connection signal="too_many_cards" from="SandwichGuyGamePlayer" to="Warnings" method="_on_sandwich_guy_game_player_too_many_cards"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Toolbar/VBoxContainer/SoundToggle" method="_on_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="SandwichGuyGamePlayer/Audio" method="_on_sound_toggle_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="PlayArea/Deck" to="PlayArea/Deck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/Deck" to="SandwichGuyGamePlayer" method="_on_deck_start_game"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder1/Card" to="SandwichGuyGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder1/Card" to="PlayArea/Hand/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder2/Card" to="SandwichGuyGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder2/Card" to="PlayArea/Hand/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder3/Card" to="SandwichGuyGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder3/Card" to="PlayArea/Hand/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder4/Card" to="SandwichGuyGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder4/Card" to="PlayArea/Hand/CardHolder4" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder5/Card" to="SandwichGuyGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder5/Card" to="PlayArea/Hand/CardHolder5" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder6/Card" to="SandwichGuyGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder6/Card" to="PlayArea/Hand/CardHolder6" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder7/Card" to="SandwichGuyGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder7/Card" to="PlayArea/Hand/CardHolder7" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder8/Card" to="SandwichGuyGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder8/Card" to="PlayArea/Hand/CardHolder8" method="_on_card_use_card"]
+[connection signal="pressed" from="PlayArea/ServeButton" to="SandwichGuyGamePlayer" method="_on_serve_button_pressed"]

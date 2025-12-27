@@ -10,6 +10,7 @@ enum Orientation {
 @onready var pane_scene = preload("res://scenes/pane.tscn")
 @onready var scoundrel_game_scene = preload("res://scenes/scoundrel_game.tscn")
 @onready var area_52_game_scene = preload("res://scenes/area_52_game.tscn")
+@onready var sandwich_guy_game_scene = preload("res://scenes/sandwich_guy_game.tscn")
 
 @onready var orientation = Orientation.PORTRAIT
 
@@ -17,6 +18,7 @@ var childCount: int
 var should_add_image_pane: bool
 var should_add_scoundrel_game_pane: bool
 var should_add_area_52_game_pane: bool
+var should_add_sandwich_guy_game_pane: bool
 
 func queue_add_image_pane() -> void:
 	should_add_image_pane = true
@@ -26,6 +28,9 @@ func queue_add_scoundrel_game_pane() -> void:
 	
 func queue_add_area_52_game_pane() -> void:
 	should_add_area_52_game_pane = true
+
+func queue_add_sandwich_guy_game_pane() -> void:
+	should_add_sandwich_guy_game_pane = true
 
 func _add_pane(scene: Resource) -> void:
 	# we are designing with up to 4 panes in mind
@@ -46,6 +51,9 @@ func _process(_delta: float) -> void:
 	elif should_add_area_52_game_pane:
 		_add_pane(area_52_game_scene)
 		should_add_area_52_game_pane = false
+	elif should_add_sandwich_guy_game_pane:
+		_add_pane(sandwich_guy_game_scene)
+		should_add_sandwich_guy_game_pane = false
 	
 	if childCount != get_child_count():
 		if childCount > get_child_count():

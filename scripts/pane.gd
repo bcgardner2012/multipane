@@ -27,6 +27,10 @@ func receive_broadcast(from: Node) -> void:
 		a52p.dual_attack_performed.connect($Area52GamePlug.on_dual_attack_performed)
 		a52p.sacrifice_performed.connect($Area52GamePlug.on_sacrifice_performed)
 		a52p.single_attack_performed.connect($Area52GamePlug.on_single_attack_performed)
+	elif from is SandwichGuyGamePane:
+		var sggp = from as SandwichGuyGamePane
+		print("Connected sandwich")
+		sggp.sandwich_served.connect($SandwichGuyGamePlug.on_sandwich_served)
 
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:

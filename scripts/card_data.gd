@@ -23,3 +23,6 @@ func is_red() -> bool:
 
 func is_black() -> bool:
 	return suit == Suit.CLUBS or suit == Suit.SPADES
+
+func same_suit(other: CardData) -> bool:
+	return not other == null and other.suit == suit
