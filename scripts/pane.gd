@@ -29,9 +29,16 @@ func receive_broadcast(from: Node) -> void:
 		a52p.single_attack_performed.connect($Area52GamePlug.on_single_attack_performed)
 	elif from is SandwichGuyGamePane:
 		var sggp = from as SandwichGuyGamePane
-		print("Connected sandwich")
 		sggp.sandwich_served.connect($SandwichGuyGamePlug.on_sandwich_served)
-
+	elif from is EmissaryGamePane:
+		var egp = from as EmissaryGamePane
+		egp.advisor_consulted.connect($EmissaryGamePlug.on_advisor_consulted)
+		egp.debate_started.connect($EmissaryGamePlug.on_debate_started)
+		egp.lost_kingdom.connect($EmissaryGamePlug.on_lost_kingdom)
+		egp.lost_topic.connect($EmissaryGamePlug.on_lost_topic)
+		egp.won_game.connect($EmissaryGamePlug.on_won_game)
+		egp.won_kingdom.connect($EmissaryGamePlug.on_won_kingdom)
+		egp.won_topic.connect($EmissaryGamePlug.on_won_topic)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

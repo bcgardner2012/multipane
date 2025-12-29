@@ -26,3 +26,15 @@ static func sort_by_rank(deck: Array[CardData], descending: bool = false) -> Arr
 					sorted_deck.append(card)
 					break
 	return sorted_deck
+
+static func contains_suit(deck: Array[CardData], suit: CardData.Suit) -> bool:
+	for card in deck:
+		if card.suit == suit:
+			return true
+	return false
+
+static func remove_card(deck: Array[CardData], card: CardData) -> void:
+	for i in range(0, deck.size()):
+		if deck[i].equals(card):
+			deck.remove_at(i)
+			break

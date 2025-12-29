@@ -16,3 +16,9 @@ func _process(delta: float) -> void:
 func _hide_all_children() -> void:
 	for child in get_children():
 		child.visible = false
+
+# subclasses should use this only
+func _show_warning(node: Node) -> void:
+	_hide_all_children()
+	node.visible = true
+	warning_displayed = true

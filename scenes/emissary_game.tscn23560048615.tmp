@@ -1,0 +1,1365 @@
+[gd_scene load_steps=75 format=3 uid="uid://b1ckbsurgmry0"]
+
+[ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_owa50"]
+[ext_resource type="Script" uid="uid://cfrywac67yn7o" path="res://scripts/emissary_game_pane.gd" id="1_qfl8q"]
+[ext_resource type="Script" uid="uid://b8iynmwmrwjx6" path="res://scripts/emissary_game_player.gd" id="2_xf047"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="3_dm6q7"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="4_y4ibh"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="5_hngiu"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="6_fr3bf"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="7_yqw4v"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="8_kty5l"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="9_qfl8q"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="10_7gubk"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="11_17ojj"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="12_8g3ty"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="13_dtw45"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="14_ky2lu"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="15_wvmsx"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="16_ejklm"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="17_ykuso"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="18_xf047"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="19_gxp8o"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="20_gcekt"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="21_giynw"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="22_lh3ja"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="23_kvw1m"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="24_kdkte"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="25_aaqdu"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="26_msdox"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="27_rewfh"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="28_jb6qa"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="29_jqb3x"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="30_2rsvy"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="31_dkdy0"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="32_usfnb"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="33_s8ni7"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="34_27q68"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="35_do0ms"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="36_h4mcv"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="37_vt46j"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="38_fli51"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="39_47wvy"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="40_eotkg"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="41_pdlrr"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="42_5merp"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="43_l0v5g"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="44_60lbf"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="45_ktxas"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="46_64oar"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="47_fe4g6"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="48_eht4d"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="49_rku20"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="50_jwncl"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="51_odi37"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="52_i3xfp"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="53_8lo11"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="54_qafj1"]
+[ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="55_yqw4v"]
+[ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="56_kty5l"]
+[ext_resource type="Texture2D" uid="uid://dr5idoohosp33" path="res://assets/sound_off.png" id="57_qfl8q"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="58_7gubk"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="59_17ojj"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="60_8g3ty"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="61_kty5l"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="63_17ojj"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="64_8g3ty"]
+[ext_resource type="Texture2D" uid="uid://dtibwbmx8sy8t" path="res://assets/crown.png" id="65_ejklm"]
+[ext_resource type="Texture2D" uid="uid://cm36j136fu2ho" path="res://assets/cards/card_holder_transparent.png" id="65_wvmsx"]
+[ext_resource type="Script" uid="uid://cjrsd47nnngmp" path="res://scripts/card_highlighter.gd" id="66_ejklm"]
+[ext_resource type="Script" uid="uid://f6wngmokvg6" path="res://scripts/emissary_kingdoms.gd" id="67_gxp8o"]
+[ext_resource type="Texture2D" uid="uid://ddyq3kgxhcboc" path="res://assets/cards/card_hilight.png" id="67_ykuso"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="68_xf047"]
+[ext_resource type="Texture2D" uid="uid://g8ti8wekjihb" path="res://assets/hand_icon.png" id="70_ykuso"]
+
+[sub_resource type="GDScript" id="GDScript_xf047"]
+script/source = "extends Node
+class_name CardData
+
+enum Suit {
+	HEARTS,
+	DIAMONDS,
+	CLUBS,
+	SPADES
+}
+
+@export var suit: Suit
+@export var rank: int # aces high
+@export var texture: Texture2D
+
+func equals(other: CardData) -> bool:
+	return not other == null and other.rank == rank and other.suit == suit
+
+func same_color(other: CardData) -> bool:
+	return not other == null and other.is_red() == is_red()
+
+func is_red() -> bool:
+	return suit == Suit.HEARTS or suit == Suit.DIAMONDS
+
+func is_black() -> bool:
+	return suit == Suit.CLUBS or suit == Suit.SPADES
+
+func same_suit(other: CardData) -> bool:
+	return not other == null and other.suit == suit
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_dtw45"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qfl8q"]
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+
+[node name="EmissaryGamePane" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qfl8q")
+
+[node name="EmissaryGamePlayer" type="Node" parent="." node_paths=PackedStringArray("kingdoms_node", "advisors_node", "hand_node", "win_count_label", "loss_count_label", "ability_uses_node", "deck_label")]
+script = ExtResource("2_xf047")
+kingdoms_node = NodePath("../PlayArea/Kingdoms")
+advisors_node = NodePath("../PlayArea/Advisors")
+hand_node = NodePath("../PlayArea/Hand")
+win_count_label = NodePath("../PlayArea/WLRatio/Wins")
+loss_count_label = NodePath("../PlayArea/WLRatio/Losses")
+ability_uses_node = NodePath("../PlayArea/AbilityUsesRemaining")
+deck_label = NodePath("../PlayArea/Deck/CountLabel")
+
+[node name="CardDatas" type="Node" parent="EmissaryGamePlayer"]
+script = ExtResource("1_owa50")
+
+[node name="HA" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+rank = 1
+texture = ExtResource("10_7gubk")
+
+[node name="H2" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+rank = 2
+texture = ExtResource("3_dm6q7")
+
+[node name="H3" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+rank = 3
+texture = ExtResource("4_y4ibh")
+
+[node name="H4" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+rank = 4
+texture = ExtResource("5_hngiu")
+
+[node name="H5" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+rank = 5
+texture = ExtResource("6_fr3bf")
+
+[node name="H6" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+rank = 6
+texture = ExtResource("7_yqw4v")
+
+[node name="H7" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+rank = 7
+texture = ExtResource("8_kty5l")
+
+[node name="H8" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+rank = 8
+texture = ExtResource("9_qfl8q")
+
+[node name="DA" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 1
+texture = ExtResource("18_xf047")
+
+[node name="D2" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 2
+texture = ExtResource("11_17ojj")
+
+[node name="D3" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 3
+texture = ExtResource("12_8g3ty")
+
+[node name="D4" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 4
+texture = ExtResource("13_dtw45")
+
+[node name="D5" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 5
+texture = ExtResource("14_ky2lu")
+
+[node name="D6" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 6
+texture = ExtResource("15_wvmsx")
+
+[node name="D7" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 7
+texture = ExtResource("16_ejklm")
+
+[node name="D8" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 8
+texture = ExtResource("17_ykuso")
+
+[node name="CA" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 1
+texture = ExtResource("26_msdox")
+
+[node name="C2" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 2
+texture = ExtResource("19_gxp8o")
+
+[node name="C3" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 3
+texture = ExtResource("20_gcekt")
+
+[node name="C4" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 4
+texture = ExtResource("21_giynw")
+
+[node name="C5" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 5
+texture = ExtResource("22_lh3ja")
+
+[node name="C6" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 6
+texture = ExtResource("23_kvw1m")
+
+[node name="C7" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 7
+texture = ExtResource("24_kdkte")
+
+[node name="C8" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 8
+texture = ExtResource("25_aaqdu")
+
+[node name="SA" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 1
+texture = ExtResource("34_27q68")
+
+[node name="S2" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 2
+texture = ExtResource("27_rewfh")
+
+[node name="S3" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 3
+texture = ExtResource("28_jb6qa")
+
+[node name="S4" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 4
+texture = ExtResource("29_jqb3x")
+
+[node name="S5" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 5
+texture = ExtResource("30_2rsvy")
+
+[node name="S6" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 6
+texture = ExtResource("31_dkdy0")
+
+[node name="S7" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 7
+texture = ExtResource("32_usfnb")
+
+[node name="S8" type="Node" parent="EmissaryGamePlayer/CardDatas"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 8
+texture = ExtResource("33_s8ni7")
+
+[node name="RoyalCards" type="Node" parent="EmissaryGamePlayer"]
+
+[node name="HQ" type="Node" parent="EmissaryGamePlayer/RoyalCards"]
+script = SubResource("GDScript_xf047")
+rank = 12
+texture = ExtResource("35_do0ms")
+
+[node name="HK" type="Node" parent="EmissaryGamePlayer/RoyalCards"]
+script = SubResource("GDScript_xf047")
+rank = 13
+texture = ExtResource("36_h4mcv")
+
+[node name="SQ" type="Node" parent="EmissaryGamePlayer/RoyalCards"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 12
+texture = ExtResource("37_vt46j")
+
+[node name="SK" type="Node" parent="EmissaryGamePlayer/RoyalCards"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 13
+texture = ExtResource("38_fli51")
+
+[node name="CQ" type="Node" parent="EmissaryGamePlayer/RoyalCards"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 12
+texture = ExtResource("39_47wvy")
+
+[node name="CK" type="Node" parent="EmissaryGamePlayer/RoyalCards"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 13
+texture = ExtResource("40_eotkg")
+
+[node name="DQ" type="Node" parent="EmissaryGamePlayer/RoyalCards"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 12
+texture = ExtResource("41_pdlrr")
+
+[node name="DK" type="Node" parent="EmissaryGamePlayer/RoyalCards"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 13
+texture = ExtResource("42_5merp")
+
+[node name="Jacks" type="Node" parent="EmissaryGamePlayer"]
+
+[node name="HJ" type="Node" parent="EmissaryGamePlayer/Jacks"]
+script = SubResource("GDScript_xf047")
+rank = 11
+texture = ExtResource("43_l0v5g")
+
+[node name="SJ" type="Node" parent="EmissaryGamePlayer/Jacks"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 11
+texture = ExtResource("44_60lbf")
+
+[node name="CJ" type="Node" parent="EmissaryGamePlayer/Jacks"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 11
+texture = ExtResource("45_ktxas")
+
+[node name="DJ" type="Node" parent="EmissaryGamePlayer/Jacks"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 11
+texture = ExtResource("46_64oar")
+
+[node name="UnusedCards" type="Node" parent="EmissaryGamePlayer"]
+
+[node name="D9" type="Node" parent="EmissaryGamePlayer/UnusedCards"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 9
+texture = ExtResource("47_fe4g6")
+
+[node name="D10" type="Node" parent="EmissaryGamePlayer/UnusedCards"]
+script = SubResource("GDScript_xf047")
+suit = 1
+rank = 10
+texture = ExtResource("48_eht4d")
+
+[node name="S9" type="Node" parent="EmissaryGamePlayer/UnusedCards"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 9
+texture = ExtResource("49_rku20")
+
+[node name="S10" type="Node" parent="EmissaryGamePlayer/UnusedCards"]
+script = SubResource("GDScript_xf047")
+suit = 3
+rank = 10
+texture = ExtResource("50_jwncl")
+
+[node name="C9" type="Node" parent="EmissaryGamePlayer/UnusedCards"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 9
+texture = ExtResource("51_odi37")
+
+[node name="C10" type="Node" parent="EmissaryGamePlayer/UnusedCards"]
+script = SubResource("GDScript_xf047")
+suit = 2
+rank = 10
+texture = ExtResource("52_i3xfp")
+
+[node name="H9" type="Node" parent="EmissaryGamePlayer/UnusedCards"]
+script = SubResource("GDScript_xf047")
+rank = 9
+texture = ExtResource("53_8lo11")
+
+[node name="H10" type="Node" parent="EmissaryGamePlayer/UnusedCards"]
+script = SubResource("GDScript_xf047")
+rank = 10
+texture = ExtResource("54_qafj1")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SoundToggle" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("55_yqw4v")
+expand_mode = 4
+stretch_mode = 4
+script = ExtResource("56_kty5l")
+sound_on_texture = ExtResource("55_yqw4v")
+sound_off_texture = ExtResource("57_qfl8q")
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("58_7gubk")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("59_17ojj")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("60_8g3ty")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Aces are low. 9s and 10s are not
+used.
+- Click the deck to start
+- Consider the cards drawn and
+select a King or Queen to debate
+- A debate consists of 8 rounds
+typically. You must win 1-8 rounds
+exactly (no more, no less) to win
+the debate, determined by the
+kingdoms position.
+- Play proceeds in phases once a 
+debate starts:
+1. Pick an advisor to play, if any
+2. Draw a card for the noble. This
+represents the topic being 
+discussed.
+3. Play a card in your hand that is
+the same suit if possible. If not, any
+card may be played.
+4. Repeat until your hand is empty
+
+- Win a round if: played a card with
+the same suit but higher rank, or
+changed topic to the noble's suit
+- Special abilities:
+Hearts: discard all cards of the
+noble's suit from hand
+Diamonds: draw 2, then discard 2
+Clubs: draw 1 card per club in hand
+(limit: 15 cards in hand)
+Spades: swap the active noble with
+another that hasn't been defeated"
+placeholder_text = "Add any notes here..."
+script = ExtResource("61_kty5l")
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="Deck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.01
+anchor_right = 0.5
+anchor_bottom = 0.01
+offset_left = -44.0
+texture = ExtResource("63_17ojj")
+stretch_mode = 4
+script = ExtResource("64_8g3ty")
+
+[node name="CountLabel" type="Label" parent="PlayArea/Deck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "32"
+label_settings = SubResource("LabelSettings_dtw45")
+horizontal_alignment = 1
+
+[node name="CrownIcon" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.01
+anchor_right = 0.5
+anchor_bottom = 0.01
+offset_left = -451.0
+offset_top = 168.8
+offset_right = 573.0
+offset_bottom = 1192.8
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("65_ejklm")
+
+[node name="Kingdoms" type="HBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.01
+anchor_right = 0.5
+anchor_bottom = 0.01
+offset_left = -390.0
+offset_top = 120.0
+offset_bottom = 260.0
+alignment = 1
+script = ExtResource("67_gxp8o")
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Kingdoms"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Kingdoms/CardHolder1" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Kingdoms"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Kingdoms/CardHolder2" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Kingdoms"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Kingdoms/CardHolder3" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder4" type="TextureRect" parent="PlayArea/Kingdoms"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Kingdoms/CardHolder4" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder5" type="TextureRect" parent="PlayArea/Kingdoms"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Kingdoms/CardHolder5" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder6" type="TextureRect" parent="PlayArea/Kingdoms"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Kingdoms/CardHolder6" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder7" type="TextureRect" parent="PlayArea/Kingdoms"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Kingdoms/CardHolder7" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder8" type="TextureRect" parent="PlayArea/Kingdoms"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Kingdoms/CardHolder8" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Advisors" type="VBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.01
+anchor_right = 0.5
+anchor_bottom = 0.01
+offset_left = 500.0
+offset_right = 500.0
+
+[node name="HeartAdvisorCard" parent="PlayArea/Advisors" instance=ExtResource("68_xf047")]
+layout_mode = 2
+texture = ExtResource("43_l0v5g")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="DiamondAdvisorCard" parent="PlayArea/Advisors" instance=ExtResource("68_xf047")]
+layout_mode = 2
+texture = ExtResource("46_64oar")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="ClubAdvisorCard" parent="PlayArea/Advisors" instance=ExtResource("68_xf047")]
+layout_mode = 2
+texture = ExtResource("45_ktxas")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="SpadeAdvisorCard" parent="PlayArea/Advisors" instance=ExtResource("68_xf047")]
+layout_mode = 2
+texture = ExtResource("44_60lbf")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="HandIcon" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.99
+anchor_right = 0.5
+anchor_bottom = 0.99
+offset_left = -450.0
+offset_top = -90.0
+offset_right = 62.0
+offset_bottom = 422.00006
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("70_ykuso")
+stretch_mode = 4
+
+[node name="Hand" type="HBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.99
+anchor_right = 0.5
+anchor_bottom = 0.99
+offset_top = -130.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder1" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder2" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder3" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder4" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder4" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder5" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder5" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder6" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder6" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder7" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder7" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder8" type="TextureRect" parent="PlayArea/Hand"]
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder8" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder9" type="TextureRect" parent="PlayArea/Hand"]
+visible = false
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder9" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder10" type="TextureRect" parent="PlayArea/Hand"]
+visible = false
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder10" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder11" type="TextureRect" parent="PlayArea/Hand"]
+visible = false
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder11" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder12" type="TextureRect" parent="PlayArea/Hand"]
+visible = false
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder12" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder13" type="TextureRect" parent="PlayArea/Hand"]
+visible = false
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder13" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder14" type="TextureRect" parent="PlayArea/Hand"]
+visible = false
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder14" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder15" type="TextureRect" parent="PlayArea/Hand"]
+visible = false
+layout_mode = 2
+texture = ExtResource("65_wvmsx")
+script = ExtResource("66_ejklm")
+default_texture = ExtResource("65_wvmsx")
+highlight_texture = ExtResource("67_ykuso")
+
+[node name="Card" parent="PlayArea/Hand/CardHolder15" instance=ExtResource("68_xf047")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("63_17ojj")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="WLRatio" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.99
+anchor_right = 0.5
+anchor_bottom = 0.99
+offset_left = -20.0
+offset_top = -170.0
+offset_right = 20.0
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Wins" type="Label" parent="PlayArea/WLRatio"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "W: 0"
+
+[node name="Losses" type="Label" parent="PlayArea/WLRatio"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 50.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "L: 0"
+
+[node name="AbilityUsesRemaining" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.01
+anchor_right = 0.5
+anchor_bottom = 0.01
+offset_left = 600.0
+
+[node name="HeartUses" type="Label" parent="PlayArea/AbilityUsesRemaining"]
+layout_mode = 1
+anchors_preset = -1
+offset_top = 50.0
+offset_right = 40.0
+text = "1"
+
+[node name="DiamondUses" type="Label" parent="PlayArea/AbilityUsesRemaining"]
+layout_mode = 1
+anchors_preset = -1
+offset_top = 180.8
+offset_right = 40.0
+offset_bottom = 203.8
+text = "1"
+
+[node name="ClubUses" type="Label" parent="PlayArea/AbilityUsesRemaining"]
+layout_mode = 1
+anchors_preset = -1
+offset_top = 310.8
+offset_right = 40.0
+offset_bottom = 333.8
+text = "1"
+
+[node name="SpadeUses" type="Label" parent="PlayArea/AbilityUsesRemaining"]
+layout_mode = 1
+anchors_preset = -1
+offset_top = 437.8
+offset_right = 40.0
+offset_bottom = 460.8
+text = "1"
+
+[node name="PhaseInstructions" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.01
+anchor_bottom = 0.01
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ChooseKingdom" type="Label" parent="PlayArea/PhaseInstructions"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Choose a kingdom to debate"
+
+[node name="UseAbilityOrPlay" type="Label" parent="PlayArea/PhaseInstructions"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Click a Jack to use an ability or play a card from your hand"
+
+[node name="ChooseTwoDiscard" type="Label" parent="PlayArea/PhaseInstructions"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Choose 2 cards from hand to discard"
+
+[node name="ChooseKingdomSwap" type="Label" parent="PlayArea/PhaseInstructions"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Choose which kingdom to swap with the current"
+
+[node name="Warnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="MustPlaySameSuit" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -385.0
+offset_right = 388.0
+offset_bottom = 34.0
+text = "Hand contains same suit. Same suit must be played when possible."
+label_settings = SubResource("LabelSettings_qfl8q")
+
+[connection signal="debate_started" from="EmissaryGamePlayer" to="PlayArea/Kingdoms" method="_on_emissary_game_player_debate_started"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Toolbar/VBoxContainer/SoundToggle" method="_on_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="PlayArea/Deck" to="PlayArea/Deck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/Deck" to="EmissaryGamePlayer" method="_on_deck_start_game"]
+[connection signal="kingdom_card_flipped" from="PlayArea/Kingdoms" to="EmissaryGamePlayer" method="_on_kingdoms_kingdom_card_flipped"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder1/Card" to="EmissaryGamePlayer" method="_on_kingdom_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder1/Card" to="PlayArea/Kingdoms/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder2/Card" to="EmissaryGamePlayer" method="_on_kingdom_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder2/Card" to="PlayArea/Kingdoms/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder3/Card" to="EmissaryGamePlayer" method="_on_kingdom_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder3/Card" to="PlayArea/Kingdoms/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder4/Card" to="EmissaryGamePlayer" method="_on_kingdom_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder4/Card" to="PlayArea/Kingdoms/CardHolder4" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder5/Card" to="EmissaryGamePlayer" method="_on_kingdom_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder5/Card" to="PlayArea/Kingdoms/CardHolder5" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder6/Card" to="EmissaryGamePlayer" method="_on_kingdom_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder6/Card" to="PlayArea/Kingdoms/CardHolder6" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder7/Card" to="EmissaryGamePlayer" method="_on_kingdom_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder7/Card" to="PlayArea/Kingdoms/CardHolder7" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder8/Card" to="EmissaryGamePlayer" method="_on_kingdom_card_use_card"]
+[connection signal="use_card" from="PlayArea/Kingdoms/CardHolder8/Card" to="PlayArea/Kingdoms/CardHolder8" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder1/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder1/Card" to="PlayArea/Hand/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder2/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder2/Card" to="PlayArea/Hand/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder3/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder3/Card" to="PlayArea/Hand/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder4/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder4/Card" to="PlayArea/Hand/CardHolder4" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder5/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder5/Card" to="PlayArea/Hand/CardHolder5" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder6/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder6/Card" to="PlayArea/Hand/CardHolder6" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder7/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder7/Card" to="PlayArea/Hand/CardHolder7" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder8/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder8/Card" to="PlayArea/Hand/CardHolder8" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder9/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder9/Card" to="PlayArea/Hand/CardHolder9" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder10/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder10/Card" to="PlayArea/Hand/CardHolder10" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder11/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder11/Card" to="PlayArea/Hand/CardHolder11" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder12/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder12/Card" to="PlayArea/Hand/CardHolder12" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder13/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder13/Card" to="PlayArea/Hand/CardHolder13" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder14/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder14/Card" to="PlayArea/Hand/CardHolder14" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder15/Card" to="EmissaryGamePlayer" method="_on_hand_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder15/Card" to="PlayArea/Hand/CardHolder15" method="_on_card_use_card"]

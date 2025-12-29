@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://byw7nmqrudsep"]
+
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="1_l3qqf"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="2_36nrg"]
+
+[node name="StackedCard" instance=ExtResource("1_l3qqf")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 70.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_36nrg")
+expand_mode = 0
+is_facedown = true

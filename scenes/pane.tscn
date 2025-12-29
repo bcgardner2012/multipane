@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://pjilwspntgn6"]
+[gd_scene load_steps=39 format=3 uid="uid://pjilwspntgn6"]
 
 [ext_resource type="Script" uid="uid://dd7ywskexogj6" path="res://scripts/pane.gd" id="1_ghsmc"]
 [ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="1_k7av0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bose70kviinn4" path="res://assets/spade.png" id="3_ghsmc"]
 [ext_resource type="Texture2D" uid="uid://5paj0fjfasri" path="res://assets/heart.png" id="4_3kvu7"]
 [ext_resource type="Script" uid="uid://cwp5e4mm0ripx" path="res://scripts/sandwich_guy_game_plug.gd" id="4_gq7ai"]
+[ext_resource type="Script" uid="uid://6ui7r3nhxw7l" path="res://scripts/emissary_game_plug.gd" id="5_3krkw"]
 [ext_resource type="Texture2D" uid="uid://wue3n6ck1l3f" path="res://assets/diamond.png" id="5_dtceb"]
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="6_56bjc"]
 [ext_resource type="Texture2D" uid="uid://bbgmm1yo4pk1d" path="res://assets/heads_.png" id="7_iibsq"]
@@ -63,6 +64,10 @@ portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="SandwichGuyGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("4_gq7ai")
+portrait = NodePath("../PortraitHolder/Portrait")
+
+[node name="EmissaryGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
+script = ExtResource("5_3krkw")
 portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="SuitIcon" type="TextureRect" parent="."]
