@@ -39,6 +39,12 @@ func receive_broadcast(from: Node) -> void:
 		egp.won_game.connect($EmissaryGamePlug.on_won_game)
 		egp.won_kingdom.connect($EmissaryGamePlug.on_won_kingdom)
 		egp.won_topic.connect($EmissaryGamePlug.on_won_topic)
+	elif from is WarGamePane:
+		var wgp = from as WarGamePane
+		wgp.game_over.connect($WarGamePlug.on_game_over)
+		wgp.game_started.connect($WarGamePlug.on_game_started)
+		wgp.round_tied.connect($WarGamePlug.on_round_tied)
+		wgp.round_won.connect($WarGamePlug.on_round_won)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

@@ -1,0 +1,796 @@
+[gd_scene load_steps=69 format=3 uid="uid://blkvh550p7uqs"]
+
+[ext_resource type="Script" uid="uid://c00wy6rcamu08" path="res://scripts/war_game_pane.gd" id="1_i5q7p"]
+[ext_resource type="Script" uid="uid://q57cfnvylnr7" path="res://scripts/war_game_player.gd" id="1_lu24n"]
+[ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="2_a2e2d"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="3_g0ds6"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="4_20eii"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="4_bjo11"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="5_a04v4"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="5_xllcf"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="6_jl5sy"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="6_muhbr"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="7_7wg75"]
+[ext_resource type="Texture2D" uid="uid://bfildnevjcona" path="res://assets/cards/normal/back_red.png" id="7_20eii"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="7_j4et8"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="8_a04v4"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="8_xfj2g"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="9_a04v4"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="9_vyt7w"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="10_f1c5y"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="10_jl5sy"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="11_ji4q5"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="12_dymfl"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="13_f4hew"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="14_q5w2i"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="15_iurpi"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="16_l7cfj"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="17_55oir"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="18_rl034"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="19_5f5k6"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="20_307fp"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="21_rm32i"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="22_7vrw3"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="23_5msye"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="24_ye8vi"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="25_wu7q2"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="26_jynmb"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="27_s0iig"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="28_mf5cd"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="29_2cjhw"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="30_bb7jd"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="31_kv6d6"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="32_sumwh"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="33_djix8"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="34_2gamn"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="35_nd4da"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="36_hw0l0"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="37_f2usk"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="38_7wj3j"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="39_3w3n4"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="40_rgdsk"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="41_wtmhl"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="42_lfvav"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="43_1eosx"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="44_tyo0c"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="45_drmuf"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="46_om7ke"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="47_rrwjb"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="48_xsp51"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="49_dtlg5"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="50_344vy"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="51_o2g3f"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="52_hkqml"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="53_es1o5"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="54_hv6fe"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="55_q3pej"]
+[ext_resource type="Script" uid="uid://bxkyvuis4xhjp" path="res://scripts/war_tiebreaker.gd" id="66_g0ds6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a2e2d"]
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jl5sy"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g0ds6"]
+font_size = 24
+font_color = Color(0, 0, 1, 1)
+
+[node name="WarGamePane" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i5q7p")
+
+[node name="WarGamePlayer" type="Node" parent="." node_paths=PackedStringArray("red_deck_label", "blue_deck_label", "red_card_node", "blue_card_node", "red_score_label", "blue_score_label", "red_tiebreaker", "blue_tiebreaker", "signals")]
+script = ExtResource("1_lu24n")
+red_deck_label = NodePath("../PlayArea/RedSide/RedDeck/CountLabel")
+blue_deck_label = NodePath("../PlayArea/BlueSide/BlueDeck/CountLabel")
+red_card_node = NodePath("../PlayArea/RedSide/RedCard")
+blue_card_node = NodePath("../PlayArea/BlueSide/BlueCard")
+red_score_label = NodePath("../PlayArea/RedSide/RedScore")
+blue_score_label = NodePath("../PlayArea/BlueSide/BlueScore")
+red_tiebreaker = NodePath("../PlayArea/RedSide/RedTiebreaker")
+blue_tiebreaker = NodePath("../PlayArea/BlueSide/BlueTiebreaker")
+signals = NodePath("..")
+
+[node name="CardDatas" type="Node" parent="WarGamePlayer"]
+script = ExtResource("2_a2e2d")
+
+[node name="H2" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 2
+texture = ExtResource("4_bjo11")
+
+[node name="H3" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 3
+texture = ExtResource("5_xllcf")
+
+[node name="H4" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 4
+texture = ExtResource("6_muhbr")
+
+[node name="H5" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 5
+texture = ExtResource("7_j4et8")
+
+[node name="H6" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 6
+texture = ExtResource("8_xfj2g")
+
+[node name="H7" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 7
+texture = ExtResource("9_vyt7w")
+
+[node name="H8" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 8
+texture = ExtResource("10_f1c5y")
+
+[node name="H9" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 9
+texture = ExtResource("11_ji4q5")
+
+[node name="H10" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 10
+texture = ExtResource("12_dymfl")
+
+[node name="HJ" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 11
+texture = ExtResource("13_f4hew")
+
+[node name="HQ" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 12
+texture = ExtResource("14_q5w2i")
+
+[node name="HK" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 13
+texture = ExtResource("15_iurpi")
+
+[node name="HA" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+rank = 14
+texture = ExtResource("16_l7cfj")
+
+[node name="D2" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 2
+texture = ExtResource("17_55oir")
+
+[node name="D3" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 3
+texture = ExtResource("18_rl034")
+
+[node name="D4" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 4
+texture = ExtResource("19_5f5k6")
+
+[node name="D5" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 5
+texture = ExtResource("20_307fp")
+
+[node name="D6" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 6
+texture = ExtResource("21_rm32i")
+
+[node name="D7" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 7
+texture = ExtResource("22_7vrw3")
+
+[node name="D8" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 8
+texture = ExtResource("23_5msye")
+
+[node name="D9" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 9
+texture = ExtResource("24_ye8vi")
+
+[node name="D10" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 10
+texture = ExtResource("25_wu7q2")
+
+[node name="DJ" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 11
+texture = ExtResource("26_jynmb")
+
+[node name="DQ" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 12
+texture = ExtResource("27_s0iig")
+
+[node name="DK" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 13
+texture = ExtResource("28_mf5cd")
+
+[node name="DA" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 1
+rank = 14
+texture = ExtResource("29_2cjhw")
+
+[node name="C2" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 2
+texture = ExtResource("30_bb7jd")
+
+[node name="C3" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 3
+texture = ExtResource("31_kv6d6")
+
+[node name="C4" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 4
+texture = ExtResource("32_sumwh")
+
+[node name="C5" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 5
+texture = ExtResource("33_djix8")
+
+[node name="C6" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 6
+texture = ExtResource("34_2gamn")
+
+[node name="C7" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 7
+texture = ExtResource("35_nd4da")
+
+[node name="C8" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 8
+texture = ExtResource("36_hw0l0")
+
+[node name="C9" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 9
+texture = ExtResource("37_f2usk")
+
+[node name="C10" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 10
+texture = ExtResource("38_7wj3j")
+
+[node name="CJ" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 11
+texture = ExtResource("39_3w3n4")
+
+[node name="CQ" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 12
+texture = ExtResource("40_rgdsk")
+
+[node name="CK" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 13
+texture = ExtResource("41_wtmhl")
+
+[node name="CA" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 2
+rank = 14
+texture = ExtResource("42_lfvav")
+
+[node name="S2" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 2
+texture = ExtResource("43_1eosx")
+
+[node name="S3" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 3
+texture = ExtResource("44_tyo0c")
+
+[node name="S4" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 4
+texture = ExtResource("45_drmuf")
+
+[node name="S5" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 5
+texture = ExtResource("46_om7ke")
+
+[node name="S6" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 6
+texture = ExtResource("47_rrwjb")
+
+[node name="S7" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 7
+texture = ExtResource("48_xsp51")
+
+[node name="S8" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 8
+texture = ExtResource("49_dtlg5")
+
+[node name="S9" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 9
+texture = ExtResource("50_344vy")
+
+[node name="S10" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 10
+texture = ExtResource("51_o2g3f")
+
+[node name="SJ" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 11
+texture = ExtResource("52_hkqml")
+
+[node name="SQ" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 12
+texture = ExtResource("53_es1o5")
+
+[node name="SK" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 13
+texture = ExtResource("54_hv6fe")
+
+[node name="SA" type="Node" parent="WarGamePlayer/CardDatas"]
+script = ExtResource("3_g0ds6")
+suit = 3
+rank = 14
+texture = ExtResource("55_q3pej")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_20eii")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_a04v4")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_jl5sy")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="RedSide" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchor_right = 0.5
+anchor_bottom = 1.0
+
+[node name="RedScore" type="Label" parent="PlayArea/RedSide"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_a2e2d")
+horizontal_alignment = 1
+
+[node name="RedDeck" type="TextureRect" parent="PlayArea/RedSide"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -0.00039672852
+offset_top = -61.0
+offset_right = 87.9996
+offset_bottom = 63.0
+texture = ExtResource("7_20eii")
+stretch_mode = 4
+script = ExtResource("8_a04v4")
+
+[node name="CountLabel" type="Label" parent="PlayArea/RedSide/RedDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "26"
+label_settings = SubResource("LabelSettings_jl5sy")
+horizontal_alignment = 1
+
+[node name="RedCard" parent="PlayArea/RedSide" instance=ExtResource("9_a04v4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -62.0
+offset_right = 188.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_20eii")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+is_facedown = true
+is_is_facedown_mutable = true
+
+[node name="RedTiebreaker" type="Control" parent="PlayArea/RedSide"]
+visible = false
+layout_mode = 1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 95.0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("66_g0ds6")
+
+[node name="Card" parent="PlayArea/RedSide/RedTiebreaker" instance=ExtResource("9_a04v4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_top = 2.0
+offset_right = 88.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_20eii")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+is_facedown = true
+is_is_facedown_mutable = true
+
+[node name="Card2" parent="PlayArea/RedSide/RedTiebreaker" instance=ExtResource("9_a04v4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 100.0
+offset_top = 2.0
+offset_right = 188.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_20eii")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+is_facedown = true
+is_is_facedown_mutable = true
+
+[node name="Card3" parent="PlayArea/RedSide/RedTiebreaker" instance=ExtResource("9_a04v4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 200.0
+offset_top = 2.0
+offset_right = 288.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_20eii")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+is_facedown = true
+is_is_facedown_mutable = true
+
+[node name="Card4" parent="PlayArea/RedSide/RedTiebreaker" instance=ExtResource("9_a04v4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 300.0
+offset_top = 2.0
+offset_right = 388.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_20eii")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+is_facedown = true
+is_is_facedown_mutable = true
+
+[node name="BlueSide" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="BlueScore" type="Label" parent="PlayArea/BlueSide"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_g0ds6")
+horizontal_alignment = 1
+
+[node name="BlueDeck" type="TextureRect" parent="PlayArea/BlueSide"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -61.0
+offset_bottom = 63.0
+texture = ExtResource("10_jl5sy")
+stretch_mode = 4
+script = ExtResource("8_a04v4")
+
+[node name="CountLabel" type="Label" parent="PlayArea/BlueSide/BlueDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "26"
+label_settings = SubResource("LabelSettings_jl5sy")
+horizontal_alignment = 1
+
+[node name="BlueCard" parent="PlayArea/BlueSide" instance=ExtResource("9_a04v4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -188.0
+offset_top = -62.0
+offset_right = -100.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_jl5sy")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+is_facedown = true
+is_is_facedown_mutable = true
+
+[node name="BlueTiebreaker" type="Control" parent="PlayArea/BlueSide"]
+visible = false
+layout_mode = 1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 95.0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("66_g0ds6")
+
+[node name="Card" parent="PlayArea/BlueSide/BlueTiebreaker" instance=ExtResource("9_a04v4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -88.0
+offset_top = 2.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_jl5sy")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+is_facedown = true
+is_is_facedown_mutable = true
+
+[node name="Card2" parent="PlayArea/BlueSide/BlueTiebreaker" instance=ExtResource("9_a04v4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -188.0
+offset_top = 2.0
+offset_right = -100.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_jl5sy")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+is_facedown = true
+is_is_facedown_mutable = true
+
+[node name="Card3" parent="PlayArea/BlueSide/BlueTiebreaker" instance=ExtResource("9_a04v4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -288.0
+offset_top = 2.0
+offset_right = -200.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_jl5sy")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+is_facedown = true
+is_is_facedown_mutable = true
+
+[node name="Card4" parent="PlayArea/BlueSide/BlueTiebreaker" instance=ExtResource("9_a04v4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -388.0
+offset_top = 2.0
+offset_right = -300.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_jl5sy")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+is_facedown = true
+is_is_facedown_mutable = true
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click a deck to start
+- War is entirely luck-based
+- Click a face-down card to flip.
+Both sides flip at the same time.
+- Higher rank wins
+- Aces are 14, kings 13, and so on
+- On a tie, 4 cards are laid facedown
+and flipped one at a time until there 
+are no matches. First to win a round 
+takes all cards.
+- Whoever takes the most cards
+wins
+- Click the robot in the Tools bar to
+play automatically."
+placeholder_text = "Add any notes here..."
+script = ExtResource("7_7wg75")
+
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="PlayArea/RedSide/RedDeck" to="PlayArea/RedSide/RedDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/RedSide/RedDeck" to="WarGamePlayer" method="_on_deck_start_game"]
+[connection signal="card_flipped" from="PlayArea/RedSide/RedCard" to="WarGamePlayer" method="_on_red_card_card_flipped"]
+[connection signal="use_card" from="PlayArea/RedSide/RedCard" to="WarGamePlayer" method="_on_red_card_use_card"]
+[connection signal="do_tiebreak" from="PlayArea/RedSide/RedTiebreaker" to="WarGamePlayer" method="_on_red_tiebreaker_do_tiebreak"]
+[connection signal="card_flipped" from="PlayArea/RedSide/RedTiebreaker/Card" to="PlayArea/RedSide/RedTiebreaker" method="_on_card_card_flipped"]
+[connection signal="card_flipped" from="PlayArea/RedSide/RedTiebreaker/Card2" to="PlayArea/RedSide/RedTiebreaker" method="_on_card_card_flipped"]
+[connection signal="card_flipped" from="PlayArea/RedSide/RedTiebreaker/Card3" to="PlayArea/RedSide/RedTiebreaker" method="_on_card_card_flipped"]
+[connection signal="card_flipped" from="PlayArea/RedSide/RedTiebreaker/Card4" to="PlayArea/RedSide/RedTiebreaker" method="_on_card_card_flipped"]
+[connection signal="gui_input" from="PlayArea/BlueSide/BlueDeck" to="PlayArea/BlueSide/BlueDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/BlueSide/BlueDeck" to="WarGamePlayer" method="_on_deck_start_game"]
+[connection signal="card_flipped" from="PlayArea/BlueSide/BlueCard" to="WarGamePlayer" method="_on_blue_card_card_flipped"]
+[connection signal="use_card" from="PlayArea/BlueSide/BlueCard" to="WarGamePlayer" method="_on_blue_card_use_card"]
+[connection signal="do_tiebreak" from="PlayArea/BlueSide/BlueTiebreaker" to="WarGamePlayer" method="_on_blue_tiebreaker_do_tiebreak"]
+[connection signal="card_flipped" from="PlayArea/BlueSide/BlueTiebreaker/Card" to="PlayArea/BlueSide/BlueTiebreaker" method="_on_card_card_flipped"]
+[connection signal="card_flipped" from="PlayArea/BlueSide/BlueTiebreaker/Card2" to="PlayArea/BlueSide/BlueTiebreaker" method="_on_card_card_flipped"]
+[connection signal="card_flipped" from="PlayArea/BlueSide/BlueTiebreaker/Card3" to="PlayArea/BlueSide/BlueTiebreaker" method="_on_card_card_flipped"]
+[connection signal="card_flipped" from="PlayArea/BlueSide/BlueTiebreaker/Card4" to="PlayArea/BlueSide/BlueTiebreaker" method="_on_card_card_flipped"]

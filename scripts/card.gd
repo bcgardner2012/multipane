@@ -9,6 +9,7 @@ signal card_flipped(data: CardData, button_index: int)
 
 # means the card will be facedown until clicked
 @export var is_facedown: bool = false
+@export var is_is_facedown_mutable: bool = false
 
 @export var data: CardData = null
 var original_texture: Texture2D
@@ -22,6 +23,8 @@ func _on_gui_input(event: InputEvent) -> void:
 			if is_facedown:
 				texture = data.texture
 				card_flipped.emit(data, event.button_index)
+				if is_is_facedown_mutable:
+					is_facedown = false
 			else:
 				reset_texture_and_emit(event.button_index)
 
@@ -49,3 +52,13 @@ func reset_texture() -> void:
 func reset_texture_and_data() -> void:
 	texture = original_texture
 	data = null
+
+func flip() -> void:
+	if texture == original_texture:
+		texture = data.texture
+		if is_is_facedown_mutable:
+			is_facedown = false
+	else:
+		texture = original_texture
+		if is_is_facedown_mutable:
+			is_facedown = true
