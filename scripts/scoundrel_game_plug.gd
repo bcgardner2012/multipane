@@ -1,7 +1,6 @@
-extends Node
+extends GamePlug
 class_name ScoundrelGamePlug
 
-@export var portrait: TextureRect
 @export var health_bar: GaugeSlider
 @export var folder_selector: FolderSelector
 

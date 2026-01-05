@@ -8,7 +8,7 @@ static func seeburg_select(portrait: Portrait, from: int, to: int, step: int = 1
 		if portrait.try_load_numbered_image(i):
 			break
 
-static func seeburg_select_subdir(portrait: Portrait, from: int, to: int, subdir: String) -> void:
-	for i in range(from, to):
+static func seeburg_select_subdir(portrait: Portrait, from: int, to: int, subdir: String, step: int = 1) -> void:
+	for i in range(from, to, step):
 		if portrait.try_load_numbered_image_from_subdir(i, subdir):
 			break

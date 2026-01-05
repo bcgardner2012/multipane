@@ -1,0 +1,863 @@
+[gd_scene load_steps=79 format=3 uid="uid://pvyts8s77xly"]
+
+[ext_resource type="Script" uid="uid://5qhe16pf41ov" path="res://scripts/high_low_game_player.gd" id="1_7kqi8"]
+[ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_a4f6w"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_napwn"]
+[ext_resource type="Script" uid="uid://dr0r64wtt6gxo" path="res://scripts/high_low_game_pane.gd" id="1_ypl11"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_hrhc4"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_x58s0"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_vviyl"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="3_x18q1"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="4_u6vqk"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="5_mcwmv"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="6_7kqi8"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="7_ypl11"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="8_pdyn6"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="9_3guri"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="10_h2c1h"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="11_slvq5"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="12_x1wpt"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="13_2vlu8"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="14_hhu1h"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="15_7vov1"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="16_nq6nm"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="17_k55qh"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="18_mkjs2"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="19_unctu"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="20_xd2xy"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="21_2k1f8"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="22_lh1t1"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="23_dcdto"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="24_smdlr"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="25_c7wta"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="26_7dl4x"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="27_f2fcy"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="28_jksb7"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="29_yaw06"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="30_uqo3h"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="31_hr7uh"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="32_8cnix"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="33_mydxb"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="34_snqyi"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="35_wlpes"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="36_kmrjd"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="37_priv2"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="38_xi4dl"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="39_s0dv4"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="40_gk036"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="41_5vhm2"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="42_3hbi3"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="43_w8mn2"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="44_s8qdv"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="45_vpkg7"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="46_t4jdi"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="47_jbpyb"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="48_oqhj2"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="49_47pjp"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="50_3mrhd"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="51_lgjmn"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="52_4j6ke"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="53_ag7lf"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="54_h18ik"]
+[ext_resource type="Script" uid="uid://b16438o62uya" path="res://scripts/high_low_coin_flipper_ai.gd" id="57_nq6nm"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="58_hrhc4"]
+[ext_resource type="Script" uid="uid://ct8vkdhyppc1l" path="res://scripts/high_low_opposittor_ai.gd" id="58_k55qh"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="58_u6vqk"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="59_mcwmv"]
+[ext_resource type="Script" uid="uid://bxrfwha3irc1f" path="res://scripts/high_low_samesies_ai.gd" id="59_mkjs2"]
+[ext_resource type="Texture2D" uid="uid://cqhbiu5f2jvpb" path="res://assets/add_player.png" id="59_slvq5"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="60_mcwmv"]
+[ext_resource type="Script" uid="uid://dv6w5qj1wqeu" path="res://scripts/high_low_simple_probability_ai.gd" id="60_unctu"]
+[ext_resource type="Script" uid="uid://dgcn0adjaqilu" path="res://scripts/high_low_play_area.gd" id="61_7vov1"]
+[ext_resource type="Script" uid="uid://b1k0o0dfueyke" path="res://scripts/high_low_weighted_rand_prob_ai.gd" id="61_xd2xy"]
+[ext_resource type="Script" uid="uid://bl8fl4gpiuk5y" path="res://scripts/high_low_card_counter_ai.gd" id="62_2k1f8"]
+[ext_resource type="Texture2D" uid="uid://5paj0fjfasri" path="res://assets/heart.png" id="63_3guri"]
+[ext_resource type="Script" uid="uid://bjm6vne5yvud7" path="res://scenes/high_low_player_controls.gd" id="63_h2c1h"]
+[ext_resource type="Texture2D" uid="uid://bkr2yuudvtqjb" path="res://assets/robot_icon.png" id="64_h2c1h"]
+[ext_resource type="Texture2D" uid="uid://wue3n6ck1l3f" path="res://assets/diamond.png" id="67_x1wpt"]
+[ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="68_hhu1h"]
+[ext_resource type="Texture2D" uid="uid://bose70kviinn4" path="res://assets/spade.png" id="69_7vov1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7kqi8"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="HighLowGamePane" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ypl11")
+
+[node name="HighLowGamePlayer" type="Node" parent="." node_paths=PackedStringArray("deck_label", "card_node", "player1", "player2", "player3", "player4", "_signals")]
+script = ExtResource("1_7kqi8")
+deck_label = NodePath("../PlayArea/Deck/CountLabel")
+card_node = NodePath("../PlayArea/Card")
+player1 = NodePath("../PlayArea/Player1Controls")
+player2 = NodePath("../PlayArea/Player2Controls")
+player3 = NodePath("../PlayArea/Player3Controls")
+player4 = NodePath("../PlayArea/Player4Controls")
+_signals = NodePath("..")
+
+[node name="CardDatas" type="Node" parent="HighLowGamePlayer"]
+script = ExtResource("1_a4f6w")
+
+[node name="H2" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 2
+texture = ExtResource("3_x18q1")
+
+[node name="H3" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 3
+texture = ExtResource("4_u6vqk")
+
+[node name="H4" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 4
+texture = ExtResource("5_mcwmv")
+
+[node name="H5" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 5
+texture = ExtResource("6_7kqi8")
+
+[node name="H6" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 6
+texture = ExtResource("7_ypl11")
+
+[node name="H7" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 7
+texture = ExtResource("8_pdyn6")
+
+[node name="H8" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 8
+texture = ExtResource("9_3guri")
+
+[node name="H9" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 9
+texture = ExtResource("10_h2c1h")
+
+[node name="H10" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 10
+texture = ExtResource("11_slvq5")
+
+[node name="HJ" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 11
+texture = ExtResource("12_x1wpt")
+
+[node name="HQ" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 12
+texture = ExtResource("13_2vlu8")
+
+[node name="HK" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 13
+texture = ExtResource("14_hhu1h")
+
+[node name="HA" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+rank = 1
+texture = ExtResource("15_7vov1")
+
+[node name="D2" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 2
+texture = ExtResource("16_nq6nm")
+
+[node name="D3" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 3
+texture = ExtResource("17_k55qh")
+
+[node name="D4" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 4
+texture = ExtResource("18_mkjs2")
+
+[node name="D5" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 5
+texture = ExtResource("19_unctu")
+
+[node name="D6" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 6
+texture = ExtResource("20_xd2xy")
+
+[node name="D7" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 7
+texture = ExtResource("21_2k1f8")
+
+[node name="D8" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 8
+texture = ExtResource("22_lh1t1")
+
+[node name="D9" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 9
+texture = ExtResource("23_dcdto")
+
+[node name="D10" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 10
+texture = ExtResource("24_smdlr")
+
+[node name="DJ" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 11
+texture = ExtResource("25_c7wta")
+
+[node name="DQ" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 12
+texture = ExtResource("26_7dl4x")
+
+[node name="DK" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 13
+texture = ExtResource("27_f2fcy")
+
+[node name="DA" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 1
+rank = 1
+texture = ExtResource("28_jksb7")
+
+[node name="C2" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 2
+texture = ExtResource("29_yaw06")
+
+[node name="C3" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 3
+texture = ExtResource("30_uqo3h")
+
+[node name="C4" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 4
+texture = ExtResource("31_hr7uh")
+
+[node name="C5" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 5
+texture = ExtResource("32_8cnix")
+
+[node name="C6" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 6
+texture = ExtResource("33_mydxb")
+
+[node name="C7" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 7
+texture = ExtResource("34_snqyi")
+
+[node name="C8" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 8
+texture = ExtResource("35_wlpes")
+
+[node name="C9" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 9
+texture = ExtResource("36_kmrjd")
+
+[node name="C10" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 10
+texture = ExtResource("37_priv2")
+
+[node name="CJ" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 11
+texture = ExtResource("38_xi4dl")
+
+[node name="CQ" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 12
+texture = ExtResource("39_s0dv4")
+
+[node name="CK" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 13
+texture = ExtResource("40_gk036")
+
+[node name="CA" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 2
+rank = 1
+texture = ExtResource("41_5vhm2")
+
+[node name="S2" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 2
+texture = ExtResource("42_3hbi3")
+
+[node name="S3" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 3
+texture = ExtResource("43_w8mn2")
+
+[node name="S4" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 4
+texture = ExtResource("44_s8qdv")
+
+[node name="S5" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 5
+texture = ExtResource("45_vpkg7")
+
+[node name="S6" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 6
+texture = ExtResource("46_t4jdi")
+
+[node name="S7" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 7
+texture = ExtResource("47_jbpyb")
+
+[node name="S8" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 8
+texture = ExtResource("48_oqhj2")
+
+[node name="S9" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 9
+texture = ExtResource("49_47pjp")
+
+[node name="S10" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 10
+texture = ExtResource("50_3mrhd")
+
+[node name="SJ" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 11
+texture = ExtResource("51_lgjmn")
+
+[node name="SQ" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 12
+texture = ExtResource("52_4j6ke")
+
+[node name="SK" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 13
+texture = ExtResource("53_ag7lf")
+
+[node name="SA" type="Node" parent="HighLowGamePlayer/CardDatas"]
+script = ExtResource("2_hrhc4")
+suit = 3
+rank = 1
+texture = ExtResource("54_h18ik")
+
+[node name="AIBrains" type="Node" parent="HighLowGamePlayer"]
+
+[node name="CoinFlipper" type="Node" parent="HighLowGamePlayer/AIBrains"]
+script = ExtResource("57_nq6nm")
+
+[node name="Opposittor" type="Node" parent="HighLowGamePlayer/AIBrains"]
+script = ExtResource("58_k55qh")
+
+[node name="Samesies" type="Node" parent="HighLowGamePlayer/AIBrains"]
+script = ExtResource("59_mkjs2")
+
+[node name="SimpleProbability" type="Node" parent="HighLowGamePlayer/AIBrains"]
+script = ExtResource("60_unctu")
+
+[node name="WeightedRandProb" type="Node" parent="HighLowGamePlayer/AIBrains"]
+script = ExtResource("61_xd2xy")
+
+[node name="CardCounterAI" type="Node" parent="HighLowGamePlayer/AIBrains"]
+script = ExtResource("62_2k1f8")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_napwn")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_x58s0")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="AddPlayerTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("59_slvq5")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_vviyl")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="." node_paths=PackedStringArray("brains")]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+script = ExtResource("61_7vov1")
+brains = NodePath("../HighLowGamePlayer/AIBrains")
+
+[node name="Deck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -62.0
+offset_right = -12.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_u6vqk")
+stretch_mode = 4
+script = ExtResource("59_mcwmv")
+
+[node name="CountLabel" type="Label" parent="PlayArea/Deck"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "52"
+label_settings = SubResource("LabelSettings_7kqi8")
+horizontal_alignment = 1
+
+[node name="Card" parent="PlayArea" instance=ExtResource("60_mcwmv")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -62.0
+offset_right = 12.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_u6vqk")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Player1Controls" type="Control" parent="PlayArea" node_paths=PackedStringArray("_signals")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+script = ExtResource("63_h2c1h")
+_signals = NodePath("../..")
+
+[node name="PlayerSymbol" type="TextureRect" parent="PlayArea/Player1Controls"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 4.0
+offset_top = -50.0
+offset_right = 132.0
+offset_bottom = 78.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("63_3guri")
+
+[node name="Score" type="Label" parent="PlayArea/Player1Controls"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 48.0
+offset_top = -41.0
+offset_right = 109.0
+offset_bottom = -18.0
+text = "Score: 0"
+
+[node name="AIGuessLabel" type="Label" parent="PlayArea/Player1Controls"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 48.0
+offset_top = -63.0
+offset_right = 109.0
+offset_bottom = -40.0
+text = "High!"
+
+[node name="HighButton" type="Button" parent="PlayArea/Player1Controls"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 47.0
+offset_right = 91.0
+offset_bottom = 30.0
+text = "High"
+
+[node name="LowButton" type="Button" parent="PlayArea/Player1Controls"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 100.0
+offset_right = 140.0
+offset_bottom = 30.0
+text = "Low"
+
+[node name="RobotButton" type="TextureRect" parent="PlayArea/Player1Controls"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 3.0
+offset_top = -8.0
+offset_right = 131.0
+offset_bottom = 120.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("64_h2c1h")
+
+[node name="AISelector" type="OptionButton" parent="PlayArea/Player1Controls"]
+visible = false
+layout_mode = 0
+offset_left = 58.0
+offset_right = 289.0
+offset_bottom = 31.0
+item_count = 6
+popup/item_0/text = "Easy - Coin Flipper AI"
+popup/item_0/id = 0
+popup/item_1/text = "Easy - Opposittor"
+popup/item_1/id = 1
+popup/item_2/text = "Easy - Samesies"
+popup/item_2/id = 2
+popup/item_3/text = "Med - SimpleProbability"
+popup/item_3/id = 3
+popup/item_4/text = "Med - WeightedRandProb"
+popup/item_4/id = 4
+popup/item_5/text = "Hard - CardCounterAI"
+popup/item_5/id = 5
+
+[node name="Player2Controls" type="Control" parent="PlayArea" node_paths=PackedStringArray("_signals")]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("63_h2c1h")
+ai_enabled = true
+suit_channel = 1
+_signals = NodePath("../..")
+
+[node name="PlayerSymbol" type="TextureRect" parent="PlayArea/Player2Controls"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -67.0
+offset_top = -41.0
+offset_right = 61.0
+offset_bottom = 87.0
+grow_horizontal = 0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("67_x1wpt")
+
+[node name="Score" type="Label" parent="PlayArea/Player2Controls"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -137.0
+offset_top = -33.0
+offset_right = -76.0
+offset_bottom = -10.0
+grow_horizontal = 0
+text = "Score: 0"
+
+[node name="AIGuessLabel" type="Label" parent="PlayArea/Player2Controls"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -138.0
+offset_top = -53.0
+offset_right = -77.0
+offset_bottom = -30.0
+grow_horizontal = 0
+text = "High!"
+
+[node name="AISelector" type="OptionButton" parent="PlayArea/Player2Controls"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -63.0
+offset_top = 5.0
+offset_right = -31.0
+offset_bottom = 25.0
+grow_horizontal = 0
+item_count = 6
+popup/item_0/text = "Easy - Coin Flipper AI"
+popup/item_0/id = 0
+popup/item_1/text = "Easy - Opposittor"
+popup/item_1/id = 1
+popup/item_2/text = "Easy - Samesies"
+popup/item_2/id = 2
+popup/item_3/text = "Med - SimpleProbability"
+popup/item_3/id = 3
+popup/item_4/text = "Med - WeightedRandProb"
+popup/item_4/id = 4
+popup/item_5/text = "Hard - CardCounterAI"
+popup/item_5/id = 5
+
+[node name="Player3Controls" type="Control" parent="PlayArea" node_paths=PackedStringArray("_signals")]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+script = ExtResource("63_h2c1h")
+ai_enabled = true
+suit_channel = 2
+_signals = NodePath("../..")
+
+[node name="PlayerSymbol" type="TextureRect" parent="PlayArea/Player3Controls"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -67.0
+offset_top = 4.0
+offset_right = 61.0
+offset_bottom = 132.0
+grow_horizontal = 0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("68_hhu1h")
+
+[node name="AIGuessLabel" type="Label" parent="PlayArea/Player3Controls"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -138.0
+offset_top = 20.0
+offset_right = -77.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "High!"
+
+[node name="Score" type="Label" parent="PlayArea/Player3Controls"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -137.0
+offset_right = -76.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "Score: 0"
+
+[node name="AISelector" type="OptionButton" parent="PlayArea/Player3Controls"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -63.0
+offset_top = 48.0
+offset_right = -31.0
+offset_bottom = 68.0
+grow_horizontal = 0
+item_count = 6
+popup/item_0/text = "Easy - Coin Flipper AI"
+popup/item_0/id = 0
+popup/item_1/text = "Easy - Opposittor"
+popup/item_1/id = 1
+popup/item_2/text = "Easy - Samesies"
+popup/item_2/id = 2
+popup/item_3/text = "Med - SimpleProbability"
+popup/item_3/id = 3
+popup/item_4/text = "Med - WeightedRandProb"
+popup/item_4/id = 4
+popup/item_5/text = "Hard - CardCounterAI"
+popup/item_5/id = 5
+
+[node name="Player4Controls" type="Control" parent="PlayArea" node_paths=PackedStringArray("_signals")]
+visible = false
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("63_h2c1h")
+ai_enabled = true
+suit_channel = 3
+_signals = NodePath("../..")
+
+[node name="PlayerSymbol" type="TextureRect" parent="PlayArea/Player4Controls"]
+layout_mode = 1
+offset_right = 128.0
+offset_bottom = 128.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("69_7vov1")
+
+[node name="Score" type="Label" parent="PlayArea/Player4Controls"]
+layout_mode = 1
+offset_left = 40.0
+offset_right = 101.0
+offset_bottom = 23.0
+text = "Score: 0"
+
+[node name="AISelector" type="OptionButton" parent="PlayArea/Player4Controls"]
+layout_mode = 1
+offset_left = 4.0
+offset_top = 41.0
+offset_right = 36.0
+offset_bottom = 61.0
+item_count = 6
+popup/item_0/text = "Easy - Coin Flipper AI"
+popup/item_0/id = 0
+popup/item_1/text = "Easy - Opposittor"
+popup/item_1/id = 1
+popup/item_2/text = "Easy - Samesies"
+popup/item_2/id = 2
+popup/item_3/text = "Med - SimpleProbability"
+popup/item_3/id = 3
+popup/item_4/text = "Med - WeightedRandProb"
+popup/item_4/id = 4
+popup/item_5/text = "Hard - CardCounterAI"
+popup/item_5/id = 5
+
+[node name="AIGuessLabel" type="Label" parent="PlayArea/Player4Controls"]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 16.0
+offset_right = 101.0
+offset_bottom = 39.0
+text = "High!"
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click the deck to start
+- The first card will be drawn. Guess 
+whether the next card will be higher 
+or lower using buttons in bottom
+left.
+- Other players are bots, select a
+profile using the dropdowns
+- You can also sit out by clicking the
+robot icon in the bottom left, letting
+a bot play for you.
+- Make a guess or click the card to
+advance the game"
+placeholder_text = "Add any notes here..."
+script = ExtResource("58_hrhc4")
+
+[connection signal="evaluate_guesses" from="HighLowGamePlayer" to="PlayArea/Player1Controls" method="_on_high_low_game_player_evaluate_guesses"]
+[connection signal="evaluate_guesses" from="HighLowGamePlayer" to="PlayArea/Player2Controls" method="_on_high_low_game_player_evaluate_guesses"]
+[connection signal="evaluate_guesses" from="HighLowGamePlayer" to="PlayArea/Player3Controls" method="_on_high_low_game_player_evaluate_guesses"]
+[connection signal="evaluate_guesses" from="HighLowGamePlayer" to="PlayArea/Player4Controls" method="_on_high_low_game_player_evaluate_guesses"]
+[connection signal="game_started" from="HighLowGamePlayer" to="PlayArea/Player1Controls" method="_on_high_low_game_player_game_started"]
+[connection signal="game_started" from="HighLowGamePlayer" to="PlayArea/Player2Controls" method="_on_high_low_game_player_game_started"]
+[connection signal="game_started" from="HighLowGamePlayer" to="PlayArea/Player3Controls" method="_on_high_low_game_player_game_started"]
+[connection signal="game_started" from="HighLowGamePlayer" to="PlayArea/Player4Controls" method="_on_high_low_game_player_game_started"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/AddPlayerTool" to="PlayArea" method="_on_add_player_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="PlayArea/Deck" to="PlayArea/Deck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/Deck" to="HighLowGamePlayer" method="_on_deck_start_game"]
+[connection signal="use_card" from="PlayArea/Card" to="HighLowGamePlayer" method="_on_card_use_card"]
+[connection signal="player_guessed" from="PlayArea/Player1Controls" to="HighLowGamePlayer" method="_on_player_controls_player_guessed"]
+[connection signal="pressed" from="PlayArea/Player1Controls/HighButton" to="PlayArea/Player1Controls" method="_on_high_button_pressed"]
+[connection signal="pressed" from="PlayArea/Player1Controls/LowButton" to="PlayArea/Player1Controls" method="_on_low_button_pressed"]
+[connection signal="gui_input" from="PlayArea/Player1Controls/RobotButton" to="PlayArea/Player1Controls" method="_on_robot_button_gui_input"]
+[connection signal="item_selected" from="PlayArea/Player1Controls/AISelector" to="PlayArea/Player1Controls" method="_on_ai_selector_item_selected"]
+[connection signal="item_selected" from="PlayArea/Player2Controls/AISelector" to="PlayArea/Player2Controls" method="_on_ai_selector_item_selected"]
+[connection signal="item_selected" from="PlayArea/Player3Controls/AISelector" to="PlayArea/Player3Controls" method="_on_ai_selector_item_selected"]
+[connection signal="item_selected" from="PlayArea/Player4Controls/AISelector" to="PlayArea/Player4Controls" method="_on_ai_selector_item_selected"]

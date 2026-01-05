@@ -1,7 +1,5 @@
-extends Node
+extends GamePlug
 class_name Area52GamePlug
-
-@export var portrait: Portrait
 
 const DEFENDER_CHANNEL = 3
 const DUAL_ATTACK_FOLDER = "double"

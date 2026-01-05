@@ -1,0 +1,2 @@
+extends GamePane
+class_name ZombieDiceGamePane

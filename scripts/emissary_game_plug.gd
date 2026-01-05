@@ -1,7 +1,5 @@
-extends Node
+extends GamePlug
 class_name EmissaryGamePlug
-
-@export var portrait: Portrait
 
 # signals
 const ADVISOR_FOLDER = "advisors"

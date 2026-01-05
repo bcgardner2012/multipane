@@ -1,0 +1,814 @@
+[gd_scene load_steps=48 format=3 uid="uid://dhknikeyf6q1f"]
+
+[ext_resource type="Script" uid="uid://bnkj4oo60wwhy" path="res://scripts/zombie_dice_game_player.gd" id="1_a2gr1"]
+[ext_resource type="Script" uid="uid://rvshffh4v6g4" path="res://scripts/zombie_dice_game_pane.gd" id="1_alx14"]
+[ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_tphij"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_rl4md"]
+[ext_resource type="Texture2D" uid="uid://6ayasou0qmys" path="res://assets/cards/zombie_dice/zd_jh.png" id="3_5u3pf"]
+[ext_resource type="Texture2D" uid="uid://k2eptym5xijs" path="res://assets/cards/zombie_dice/zd_qh.png" id="4_5sqj7"]
+[ext_resource type="Texture2D" uid="uid://c2dsulnonrmom" path="res://assets/cards/zombie_dice/zd_kh.png" id="5_laq1d"]
+[ext_resource type="Texture2D" uid="uid://f53y5w5x4yxx" path="res://assets/cards/zombie_dice/zd_jd.png" id="6_mqkg1"]
+[ext_resource type="Texture2D" uid="uid://cwasaslgheg23" path="res://assets/cards/zombie_dice/zd_qd.png" id="7_qx6sp"]
+[ext_resource type="Texture2D" uid="uid://b0outl1qmyu4" path="res://assets/cards/zombie_dice/zd_kd.png" id="8_bds2b"]
+[ext_resource type="Texture2D" uid="uid://d4dswh0fcabwk" path="res://assets/cards/zombie_dice/zd_jc.png" id="9_n6r8f"]
+[ext_resource type="Texture2D" uid="uid://crc30t1dey74t" path="res://assets/cards/zombie_dice/zd_qc.png" id="10_g7u2n"]
+[ext_resource type="Texture2D" uid="uid://docf12627pq5a" path="res://assets/cards/zombie_dice/zd_kc.png" id="11_ofh7u"]
+[ext_resource type="Texture2D" uid="uid://bfus04vd5a70h" path="res://assets/cards/zombie_dice/zd_js.png" id="12_s3fgw"]
+[ext_resource type="Texture2D" uid="uid://dymrjh0fypqh1" path="res://assets/cards/zombie_dice/zd_qs.png" id="13_a2gr1"]
+[ext_resource type="Texture2D" uid="uid://mwclbvrexaiy" path="res://assets/cards/zombie_dice/zd_ks.png" id="14_ydi4v"]
+[ext_resource type="Texture2D" uid="uid://dlsx0xir4sep1" path="res://assets/cards/zombie_dice/zd_xh.png" id="15_alx14"]
+[ext_resource type="Texture2D" uid="uid://c634kqr8qfmk0" path="res://assets/cards/zombie_dice/zd_xd.png" id="16_ihqdo"]
+[ext_resource type="Texture2D" uid="uid://caego5lffgt6w" path="res://assets/cards/zombie_dice/zd_xc.png" id="17_0lcuc"]
+[ext_resource type="Texture2D" uid="uid://b6ym603b7yrap" path="res://assets/cards/zombie_dice/zd_xs.png" id="18_j0xpv"]
+[ext_resource type="Texture2D" uid="uid://bva7axc367nnn" path="res://assets/cards/zombie_dice/zd_brain_card.png" id="19_08jg7"]
+[ext_resource type="Texture2D" uid="uid://62jpbqk5d3hb" path="res://assets/cards/zombie_dice/zd_bullet_card.png" id="20_jf7t6"]
+[ext_resource type="Texture2D" uid="uid://cryhbl67hlebb" path="res://assets/cards/zombie_dice/zd_run_card.png" id="21_qvt0e"]
+[ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="22_bds2b"]
+[ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="23_n6r8f"]
+[ext_resource type="Script" uid="uid://cghsvfuwbhjtr" path="res://scripts/zombie_dice_game_audio.gd" id="24_fptr0"]
+[ext_resource type="Texture2D" uid="uid://dr5idoohosp33" path="res://assets/sound_off.png" id="24_g7u2n"]
+[ext_resource type="AudioStream" uid="uid://cvatl1i25vvoh" path="res://assets/audio/dorm-door-opening-6038.mp3" id="24_jf7t6"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="25_ofh7u"]
+[ext_resource type="AudioStream" uid="uid://bs7a2yc4o4oqh" path="res://assets/audio/tarot-shuffle-89105.mp3" id="26_fptr0"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="26_s3fgw"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="27_a2gr1"]
+[ext_resource type="AudioStream" uid="uid://dk26qjp1002e5" path="res://assets/audio/meaty-gunshot-101257.mp3" id="27_qvt0e"]
+[ext_resource type="AudioStream" uid="uid://b1vunitxlcvh1" path="res://assets/audio/zombie-bite-96528.mp3" id="28_fptr0"]
+[ext_resource type="Texture2D" uid="uid://c55gpfihx1bbp" path="res://assets/cards/zombie_dice/zd_card_back.png" id="28_g7u2n"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="28_ydi4v"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="29_ofh7u"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="30_ofh7u"]
+[ext_resource type="Texture2D" uid="uid://dtibwbmx8sy8t" path="res://assets/crown.png" id="31_s3fgw"]
+[ext_resource type="Script" uid="uid://cg42x5w7y5wgl" path="res://scripts/zombie_dice_human_slots.gd" id="31_ydi4v"]
+[ext_resource type="Texture2D" uid="uid://b5du84ehm1i8u" path="res://assets/gear_icon.png" id="34_2foyg"]
+[ext_resource type="Script" uid="uid://i7ybgdg87pyq" path="res://scripts/zombie_dice_action_slots.gd" id="34_ihqdo"]
+[ext_resource type="Script" uid="uid://b8too0b7c8t4s" path="res://scripts/zombie_dice_warnings.gd" id="37_0lcuc"]
+[ext_resource type="Script" uid="uid://bbdvknmh6fmi1" path="res://scripts/zombie_dice_settings.gd" id="43_8wgbe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s3fgw"]
+font_size = 24
+font_color = Color(1, 0.84705883, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ihqdo"]
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fptr0"]
+font_size = 24
+font_color = Color(0, 0.7607843, 0, 1)
+
+[node name="ZombieDiceGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_alx14")
+
+[node name="ZombieDiceGamePlayer" type="Node" parent="." node_paths=PackedStringArray("human_slots", "action_slots", "pending_brains_label", "pending_bullets_label", "score_label", "round_label", "injury_label", "bullets_taken_label", "draw_button", "stop_button", "endless_button")]
+script = ExtResource("1_a2gr1")
+human_slots = NodePath("../PlayArea/HumanSlots")
+action_slots = NodePath("../PlayArea/ActionSlots")
+pending_brains_label = NodePath("../PlayArea/BrainCounter/CountLabel")
+pending_bullets_label = NodePath("../PlayArea/BulletCounter/CountLabel")
+score_label = NodePath("../BrainsLabel")
+round_label = NodePath("../RoundLabel")
+injury_label = NodePath("../InjuryLabel")
+bullets_taken_label = NodePath("../BulletsTakenLabel")
+draw_button = NodePath("../PlayArea/DrawAgainButton")
+stop_button = NodePath("../PlayArea/StopButton")
+endless_button = NodePath("../PlayArea/EndlessButton")
+
+[node name="Humans" type="Node" parent="ZombieDiceGamePlayer"]
+script = ExtResource("1_tphij")
+
+[node name="HJ" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+rank = 11
+texture = ExtResource("3_5u3pf")
+
+[node name="HQ" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+rank = 12
+texture = ExtResource("4_5sqj7")
+
+[node name="HK" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+rank = 13
+texture = ExtResource("5_laq1d")
+
+[node name="DJ" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 1
+rank = 11
+texture = ExtResource("6_mqkg1")
+
+[node name="DQ" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 1
+rank = 12
+texture = ExtResource("7_qx6sp")
+
+[node name="DK" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 1
+rank = 13
+texture = ExtResource("8_bds2b")
+
+[node name="CJ" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 2
+rank = 11
+texture = ExtResource("9_n6r8f")
+
+[node name="CQ" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 2
+rank = 12
+texture = ExtResource("10_g7u2n")
+
+[node name="CK" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 2
+rank = 13
+texture = ExtResource("11_ofh7u")
+
+[node name="SJ" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 3
+rank = 11
+texture = ExtResource("12_s3fgw")
+
+[node name="SQ" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 3
+rank = 12
+texture = ExtResource("13_a2gr1")
+
+[node name="SK" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 3
+rank = 13
+texture = ExtResource("14_ydi4v")
+
+[node name="HX" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+rank = 10
+texture = ExtResource("15_alx14")
+
+[node name="DX" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 1
+rank = 10
+texture = ExtResource("16_ihqdo")
+
+[node name="CX" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 3
+rank = 10
+texture = ExtResource("17_0lcuc")
+
+[node name="SX" type="Node" parent="ZombieDiceGamePlayer/Humans"]
+script = ExtResource("2_rl4md")
+suit = 3
+rank = 10
+texture = ExtResource("18_j0xpv")
+
+[node name="EasyDeck" type="Node" parent="ZombieDiceGamePlayer"]
+script = ExtResource("1_tphij")
+
+[node name="HA" type="Node" parent="ZombieDiceGamePlayer/EasyDeck"]
+script = ExtResource("2_rl4md")
+rank = 1
+texture = ExtResource("19_08jg7")
+
+[node name="H2" type="Node" parent="ZombieDiceGamePlayer/EasyDeck"]
+script = ExtResource("2_rl4md")
+rank = 2
+texture = ExtResource("19_08jg7")
+
+[node name="H3" type="Node" parent="ZombieDiceGamePlayer/EasyDeck"]
+script = ExtResource("2_rl4md")
+rank = 3
+texture = ExtResource("19_08jg7")
+
+[node name="CA" type="Node" parent="ZombieDiceGamePlayer/EasyDeck"]
+script = ExtResource("2_rl4md")
+suit = 2
+rank = 1
+texture = ExtResource("20_jf7t6")
+
+[node name="SA" type="Node" parent="ZombieDiceGamePlayer/EasyDeck"]
+script = ExtResource("2_rl4md")
+suit = 3
+rank = 1
+texture = ExtResource("21_qvt0e")
+
+[node name="S2" type="Node" parent="ZombieDiceGamePlayer/EasyDeck"]
+script = ExtResource("2_rl4md")
+suit = 3
+rank = 2
+texture = ExtResource("21_qvt0e")
+
+[node name="MedDeck" type="Node" parent="ZombieDiceGamePlayer"]
+script = ExtResource("1_tphij")
+
+[node name="HA" type="Node" parent="ZombieDiceGamePlayer/MedDeck"]
+script = ExtResource("2_rl4md")
+rank = 1
+texture = ExtResource("19_08jg7")
+
+[node name="H2" type="Node" parent="ZombieDiceGamePlayer/MedDeck"]
+script = ExtResource("2_rl4md")
+rank = 2
+texture = ExtResource("19_08jg7")
+
+[node name="CA" type="Node" parent="ZombieDiceGamePlayer/MedDeck"]
+script = ExtResource("2_rl4md")
+suit = 2
+rank = 1
+texture = ExtResource("20_jf7t6")
+
+[node name="C2" type="Node" parent="ZombieDiceGamePlayer/MedDeck"]
+script = ExtResource("2_rl4md")
+suit = 2
+rank = 2
+texture = ExtResource("20_jf7t6")
+
+[node name="SA" type="Node" parent="ZombieDiceGamePlayer/MedDeck"]
+script = ExtResource("2_rl4md")
+suit = 3
+rank = 1
+texture = ExtResource("21_qvt0e")
+
+[node name="S2" type="Node" parent="ZombieDiceGamePlayer/MedDeck"]
+script = ExtResource("2_rl4md")
+suit = 3
+rank = 2
+texture = ExtResource("21_qvt0e")
+
+[node name="HardDeck" type="Node" parent="ZombieDiceGamePlayer"]
+script = ExtResource("1_tphij")
+
+[node name="HA" type="Node" parent="ZombieDiceGamePlayer/HardDeck"]
+script = ExtResource("2_rl4md")
+rank = 1
+texture = ExtResource("19_08jg7")
+
+[node name="CA" type="Node" parent="ZombieDiceGamePlayer/HardDeck"]
+script = ExtResource("2_rl4md")
+suit = 2
+rank = 1
+texture = ExtResource("20_jf7t6")
+
+[node name="C2" type="Node" parent="ZombieDiceGamePlayer/HardDeck"]
+script = ExtResource("2_rl4md")
+suit = 2
+rank = 2
+texture = ExtResource("20_jf7t6")
+
+[node name="C3" type="Node" parent="ZombieDiceGamePlayer/HardDeck"]
+script = ExtResource("2_rl4md")
+suit = 2
+rank = 3
+texture = ExtResource("20_jf7t6")
+
+[node name="SA" type="Node" parent="ZombieDiceGamePlayer/HardDeck"]
+script = ExtResource("2_rl4md")
+suit = 3
+rank = 1
+texture = ExtResource("21_qvt0e")
+
+[node name="S2" type="Node" parent="ZombieDiceGamePlayer/HardDeck"]
+script = ExtResource("2_rl4md")
+suit = 3
+rank = 2
+texture = ExtResource("21_qvt0e")
+
+[node name="Audio" type="Node" parent="ZombieDiceGamePlayer"]
+script = ExtResource("24_fptr0")
+
+[node name="DoorSoundPlayer" type="AudioStreamPlayer" parent="ZombieDiceGamePlayer/Audio"]
+stream = ExtResource("24_jf7t6")
+volume_db = -20.642
+pitch_scale = 0.8
+
+[node name="ShuffleSoundPlayer" type="AudioStreamPlayer" parent="ZombieDiceGamePlayer/Audio"]
+stream = ExtResource("26_fptr0")
+volume_db = -21.596
+pitch_scale = 2.22
+
+[node name="GunshotSoundPlayer" type="AudioStreamPlayer" parent="ZombieDiceGamePlayer/Audio"]
+stream = ExtResource("27_qvt0e")
+volume_db = -13.0
+
+[node name="ZombieBiteSoundPlayer" type="AudioStreamPlayer" parent="ZombieDiceGamePlayer/Audio"]
+stream = ExtResource("28_fptr0")
+volume_db = -13.262
+
+[node name="BrainsLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.01
+anchor_bottom = 0.01
+offset_right = 86.0
+offset_bottom = 23.0
+text = "Brains: 0"
+
+[node name="RoundLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.01
+anchor_bottom = 0.01
+offset_top = 21.8
+offset_right = 86.0
+offset_bottom = 44.8
+text = "Round: 1"
+
+[node name="InjuryLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.01
+anchor_bottom = 0.01
+offset_top = 42.8
+offset_right = 86.0
+offset_bottom = 65.8
+text = "Injuries: 0"
+
+[node name="BulletsTakenLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.01
+anchor_bottom = 0.01
+offset_top = 42.8
+offset_right = 122.0
+offset_bottom = 65.8
+text = "Bullets Taken: 0"
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SoundToggle" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("22_bds2b")
+expand_mode = 4
+stretch_mode = 4
+script = ExtResource("23_n6r8f")
+sound_on_texture = ExtResource("22_bds2b")
+sound_off_texture = ExtResource("24_g7u2n")
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("25_ofh7u")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("26_s3fgw")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="SettingsTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("34_2foyg")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("27_a2gr1")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="HumanDeck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -62.0
+offset_right = -160.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_g7u2n")
+stretch_mode = 4
+script = ExtResource("29_ofh7u")
+
+[node name="CountLabel" type="Label" parent="PlayArea/HumanDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "16"
+label_settings = SubResource("LabelSettings_s3fgw")
+horizontal_alignment = 1
+
+[node name="HumanSlots" type="VBoxContainer" parent="PlayArea" node_paths=PackedStringArray("action_slots")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -199.0
+offset_right = -55.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("31_ydi4v")
+action_slots = NodePath("../ActionSlots")
+
+[node name="Card" parent="PlayArea/HumanSlots" instance=ExtResource("30_ofh7u")]
+layout_mode = 2
+texture = ExtResource("28_g7u2n")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card2" parent="PlayArea/HumanSlots" instance=ExtResource("30_ofh7u")]
+layout_mode = 2
+texture = ExtResource("28_g7u2n")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card3" parent="PlayArea/HumanSlots" instance=ExtResource("30_ofh7u")]
+layout_mode = 2
+texture = ExtResource("28_g7u2n")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="ActionSlots" type="VBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -199.0
+offset_right = 45.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("34_ihqdo")
+
+[node name="Card" parent="PlayArea/ActionSlots" instance=ExtResource("30_ofh7u")]
+layout_mode = 2
+texture = ExtResource("28_g7u2n")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card2" parent="PlayArea/ActionSlots" instance=ExtResource("30_ofh7u")]
+layout_mode = 2
+texture = ExtResource("28_g7u2n")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card3" parent="PlayArea/ActionSlots" instance=ExtResource("30_ofh7u")]
+layout_mode = 2
+texture = ExtResource("28_g7u2n")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Crown" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = -239.0
+offset_right = -81.0
+offset_bottom = -199.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("31_s3fgw")
+expand_mode = 1
+
+[node name="BrainCounter" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -352.0
+offset_top = -234.0
+offset_right = -264.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_08jg7")
+stretch_mode = 4
+
+[node name="CountLabel" type="Label" parent="PlayArea/BrainCounter"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "0"
+label_settings = SubResource("LabelSettings_s3fgw")
+horizontal_alignment = 1
+
+[node name="BulletCounter" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 151.0
+offset_top = -234.0
+offset_right = 239.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_jf7t6")
+stretch_mode = 4
+
+[node name="CountLabel" type="Label" parent="PlayArea/BulletCounter"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "0"
+label_settings = SubResource("LabelSettings_s3fgw")
+horizontal_alignment = 1
+
+[node name="DrawAgainButton" type="Button" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 61.0
+offset_top = -57.0
+offset_right = 158.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Draw Again"
+
+[node name="StopButton" type="Button" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 61.0
+offset_top = -13.0
+offset_right = 158.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Stop"
+
+[node name="EndlessButton" type="Button" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 61.0
+offset_top = 31.0
+offset_right = 158.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Endless Mode"
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click a deck to start
+- This game is a twist on Zombie Dice
+using cards instead. Actions are
+drawn from 3 decks with 6 cards
+each.
+- 3 face cards will be drawn,
+representing humans you are
+attacking. Then, 3 action cards will
+be drawn from offscreen decks
+- Green is easy. Their action deck
+has 3 brains, 1 shotgun shell, and
+2 flee.
+- Yellow is medium. Their deck has
+2 of each action.
+- Red is hard. Their deck has 1 brain,
+2 flee, and 3 shotgun shells.
+- After drawing 3 actions, you can
+choose to stop attacking and 
+collect the brains. Or you can keep
+drawing: draw 3 more face cards
+minus number of flee drawn, keep
+the face cards that drew flee. Then
+draw 3 more action cards from
+their decks.
+- You get a point for each brain
+drawn when you stop attacking.
+- You lose a round and all drawn 
+brains if there are ever at least 3
+shotgun shells in play.
+- The goal is to collect 13 brains."
+placeholder_text = "Add any notes here..."
+script = ExtResource("28_ydi4v")
+
+[node name="Settings" type="Control" parent="." node_paths=PackedStringArray("injury_label", "bullets_label")]
+visible = false
+layout_mode = 1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+script = ExtResource("43_8wgbe")
+injury_label = NodePath("../InjuryLabel")
+bullets_label = NodePath("../BulletsTakenLabel")
+
+[node name="GoalLabel" type="Label" parent="Settings"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Win Condition: Brain Count"
+
+[node name="BrainCountSetting" type="SpinBox" parent="Settings"]
+layout_mode = 0
+offset_left = 222.0
+offset_top = -4.0
+offset_right = 308.5625
+offset_bottom = 27.0
+min_value = 1.0
+max_value = 9999.0
+value = 13.0
+custom_arrow_step = 1.0
+
+[node name="LoseCondition" type="Label" parent="Settings"]
+layout_mode = 0
+offset_top = 44.0
+offset_right = 120.0
+offset_bottom = 67.0
+text = "Lose Condition:"
+
+[node name="OptionButton" type="OptionButton" parent="Settings"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 40.0
+offset_right = 158.0
+offset_bottom = 60.0
+selected = 0
+item_count = 4
+popup/item_0/text = "None"
+popup/item_0/id = 0
+popup/item_1/text = "Rounds Passed"
+popup/item_1/id = 1
+popup/item_2/text = "Severe Injuries"
+popup/item_2/id = 2
+popup/item_3/text = "Bullets Taken"
+popup/item_3/id = 3
+
+[node name="LoseSetting" type="SpinBox" parent="Settings"]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 40.0
+offset_right = 369.5625
+offset_bottom = 71.0
+min_value = 1.0
+max_value = 9999.0
+value = 7.0
+custom_arrow_step = 1.0
+
+[node name="Warnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("37_0lcuc")
+
+[node name="HitThreeTimes" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -246.0
+offset_right = 249.0
+offset_bottom = 34.0
+text = "Hit three times! You've lost your brains this round"
+label_settings = SubResource("LabelSettings_ihqdo")
+
+[node name="GameWon" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -345.0
+offset_right = 346.0
+offset_bottom = 34.0
+text = "You've consumed everyone's brain! Somehow, still hungry..."
+label_settings = SubResource("LabelSettings_fptr0")
+
+[node name="GameLost" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -69.0
+offset_right = 75.0
+offset_bottom = 34.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_ihqdo")
+
+[connection signal="game_lost" from="ZombieDiceGamePlayer" to="Warnings" method="_on_zombie_dice_game_player_game_lost"]
+[connection signal="game_won" from="ZombieDiceGamePlayer" to="Warnings" method="_on_zombie_dice_game_player_game_won"]
+[connection signal="hit_three_times" from="ZombieDiceGamePlayer" to="Warnings" method="_on_zombie_dice_game_player_hit_three_times"]
+[connection signal="hit_three_times" from="ZombieDiceGamePlayer" to="ZombieDiceGamePlayer/Audio" method="_on_zombie_dice_game_player_hit_three_times"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Toolbar/VBoxContainer/SoundToggle" method="_on_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="ZombieDiceGamePlayer/Audio" method="_on_sound_toggle_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SettingsTool" to="Notes" method="_on_settings_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SettingsTool" to="Settings" method="_on_settings_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="PlayArea/HumanDeck" to="PlayArea/HumanDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/HumanDeck" to="ZombieDiceGamePlayer" method="_on_human_deck_start_game"]
+[connection signal="start_game" from="PlayArea/HumanDeck" to="ZombieDiceGamePlayer/Audio" method="_on_human_deck_start_game"]
+[connection signal="start_game" from="PlayArea/HumanDeck" to="Settings" method="_on_human_deck_start_game"]
+[connection signal="pressed" from="PlayArea/DrawAgainButton" to="ZombieDiceGamePlayer" method="_on_draw_again_button_pressed"]
+[connection signal="pressed" from="PlayArea/DrawAgainButton" to="ZombieDiceGamePlayer/Audio" method="_on_draw_again_button_pressed"]
+[connection signal="pressed" from="PlayArea/StopButton" to="ZombieDiceGamePlayer" method="_on_stop_button_pressed"]
+[connection signal="pressed" from="PlayArea/StopButton" to="ZombieDiceGamePlayer/Audio" method="_on_stop_button_pressed"]
+[connection signal="pressed" from="PlayArea/EndlessButton" to="ZombieDiceGamePlayer" method="_on_endless_button_pressed"]
+[connection signal="value_changed" from="Settings/BrainCountSetting" to="Settings" method="_on_brain_count_setting_value_changed"]
+[connection signal="item_selected" from="Settings/OptionButton" to="Settings" method="_on_option_button_item_selected"]
+[connection signal="value_changed" from="Settings/LoseSetting" to="Settings" method="_on_lose_setting_value_changed"]

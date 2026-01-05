@@ -1,7 +1,5 @@
-extends Node
+extends GamePlug
 class_name WarGamePlug
-
-@export var portrait: Portrait
 
 const COMBINED_CHANNEL = 0
 const RED_CHANNEL = 1
@@ -79,6 +77,3 @@ func on_round_won(_did_red_win: bool, red_score: int, blue_score: int) -> void:
 		if inverted_ratio < 0:
 			step = -1
 		PortraitHelper.seeburg_select(portrait, 0, inverted_ratio, step)
-
-func _get_suit_channel() -> int:
-	return get_parent().suit_channel

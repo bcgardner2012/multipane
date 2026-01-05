@@ -1,0 +1,1048 @@
+[gd_scene load_steps=81 format=3 uid="uid://bt2fiffmcs7ks"]
+
+[ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_4dx5i"]
+[ext_resource type="Script" uid="uid://c5csnobgg2dgq" path="res://scripts/bards_and_nobles_game_pane.gd" id="1_qd5iq"]
+[ext_resource type="Script" uid="uid://b6nqeyg2xaywg" path="res://scripts/bards_and_nobles_game_player.gd" id="1_wobb0"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_ms0g2"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="3_2d51a"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="4_7dsjg"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="5_sjkr8"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="6_fxncb"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="7_lkcet"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="8_1isgb"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="9_wobb0"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="10_qd5iq"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="11_g5dmh"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="12_08wc7"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="13_oasi1"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="14_yd4ny"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="15_78vaa"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="16_i08p6"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="17_w80sr"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="18_o1tkp"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="19_6lp5t"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="20_nujsm"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="21_kbhdk"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="22_lyg8v"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="23_wjx8m"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="24_hpch6"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="25_wxd63"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="26_wfr4x"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="27_f0tui"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="28_08atl"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="29_jl83k"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="30_lqxh0"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="31_uc82t"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="32_y2f2g"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="33_vjs8j"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="34_nhw0o"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="35_7n3gx"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="36_xtgc8"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="37_3ry5w"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="38_0lrmw"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="39_k6vl7"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="40_8vsel"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="41_qqj3m"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="42_4l5pv"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="43_pcnns"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="44_u66s8"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="45_pimbs"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="46_3s8kn"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="47_dnipn"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="48_y5l5t"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="49_jhwi2"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="50_mg1x0"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="51_ec7jb"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="52_t0onl"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="53_njrrv"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="54_mau47"]
+[ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="55_fx4fp"]
+[ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="56_51n52"]
+[ext_resource type="Script" uid="uid://cs63fhltmbmyw" path="res://scripts/bards_and_nobles_game_audio.gd" id="57_i08p6"]
+[ext_resource type="AudioStream" uid="uid://bnyqgj23l7nlp" path="res://assets/audio/cash-register-kaching-376867.mp3" id="57_oasi1"]
+[ext_resource type="Texture2D" uid="uid://dr5idoohosp33" path="res://assets/sound_off.png" id="57_xw4mg"]
+[ext_resource type="AudioStream" uid="uid://can7veoxkxntr" path="res://assets/audio/game-over-39-199830.mp3" id="58_78vaa"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="58_wdg1x"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="59_bn68f"]
+[ext_resource type="AudioStream" uid="uid://hw453vo06gbl" path="res://assets/audio/medieval-fanfare-6826.mp3" id="59_i08p6"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="60_otapq"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="61_7dsjg"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="61_ms0g2"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="62_sjkr8"]
+[ext_resource type="Texture2D" uid="uid://cm36j136fu2ho" path="res://assets/cards/card_holder_transparent.png" id="64_qd5iq"]
+[ext_resource type="Script" uid="uid://br7jb2qs3wd04" path="res://scenes/bnn_store_area.gd" id="65_08wc7"]
+[ext_resource type="Script" uid="uid://cjrsd47nnngmp" path="res://scripts/card_highlighter.gd" id="65_g5dmh"]
+[ext_resource type="Texture2D" uid="uid://ddyq3kgxhcboc" path="res://assets/cards/card_hilight.png" id="66_08wc7"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="67_oasi1"]
+[ext_resource type="Script" uid="uid://bt0y6cl5jdes8" path="res://scripts/bards_and_nobles_warnings.gd" id="71_08wc7"]
+[ext_resource type="Texture2D" uid="uid://dtibwbmx8sy8t" path="res://assets/crown.png" id="74_w80sr"]
+[ext_resource type="Texture2D" uid="uid://c84a0snycb8dj" path="res://assets/book.png" id="75_o1tkp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fxncb"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g5dmh"]
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i08p6"]
+font_size = 24
+font_color = Color(0, 0.92156863, 0.0627451, 1)
+
+[node name="BardsAndNoblesGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qd5iq")
+
+[node name="BardsAndNoblesGamePlayer" type="Node" parent="." node_paths=PackedStringArray("store_deck_label", "customer_deck_label", "trade_in_deck_label", "guild_standing_label", "store_area", "customer_card_node", "trade_in_card_node", "_signals")]
+script = ExtResource("1_wobb0")
+store_deck_label = NodePath("../PlayArea/StoreDeck/CountLabel")
+customer_deck_label = NodePath("../PlayArea/CustomerDeck/CountLabel")
+trade_in_deck_label = NodePath("../PlayArea/TradeInDeck/CountLabel")
+guild_standing_label = NodePath("../StandingLabel")
+store_area = NodePath("../PlayArea/StoreArea")
+customer_card_node = NodePath("../PlayArea/CustomerCard")
+trade_in_card_node = NodePath("../PlayArea/TradeInCard")
+_signals = NodePath("..")
+
+[node name="CardDatas" type="Node" parent="BardsAndNoblesGamePlayer"]
+script = ExtResource("1_4dx5i")
+
+[node name="H2" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+rank = 2
+texture = ExtResource("3_2d51a")
+
+[node name="H3" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+rank = 3
+texture = ExtResource("4_7dsjg")
+
+[node name="H4" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+rank = 4
+texture = ExtResource("5_sjkr8")
+
+[node name="H5" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+rank = 5
+texture = ExtResource("6_fxncb")
+
+[node name="H6" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+rank = 6
+texture = ExtResource("7_lkcet")
+
+[node name="H7" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+rank = 7
+texture = ExtResource("8_1isgb")
+
+[node name="H8" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+rank = 8
+texture = ExtResource("9_wobb0")
+
+[node name="H9" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+rank = 9
+texture = ExtResource("10_qd5iq")
+
+[node name="H10" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+rank = 10
+texture = ExtResource("11_g5dmh")
+
+[node name="HA" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+rank = 11
+texture = ExtResource("12_08wc7")
+
+[node name="D2" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 2
+texture = ExtResource("13_oasi1")
+
+[node name="D3" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 3
+texture = ExtResource("14_yd4ny")
+
+[node name="D4" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 4
+texture = ExtResource("15_78vaa")
+
+[node name="D5" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 5
+texture = ExtResource("16_i08p6")
+
+[node name="D6" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 6
+texture = ExtResource("17_w80sr")
+
+[node name="D7" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 7
+texture = ExtResource("18_o1tkp")
+
+[node name="D8" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 8
+texture = ExtResource("19_6lp5t")
+
+[node name="D9" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 9
+texture = ExtResource("20_nujsm")
+
+[node name="D10" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 10
+texture = ExtResource("21_kbhdk")
+
+[node name="DA" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 11
+texture = ExtResource("22_lyg8v")
+
+[node name="C2" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 2
+texture = ExtResource("23_wjx8m")
+
+[node name="C3" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 3
+texture = ExtResource("24_hpch6")
+
+[node name="C4" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 4
+texture = ExtResource("25_wxd63")
+
+[node name="C5" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 5
+texture = ExtResource("26_wfr4x")
+
+[node name="C6" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 6
+texture = ExtResource("27_f0tui")
+
+[node name="C7" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 7
+texture = ExtResource("28_08atl")
+
+[node name="C8" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 8
+texture = ExtResource("29_jl83k")
+
+[node name="C9" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 9
+texture = ExtResource("30_lqxh0")
+
+[node name="C10" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 10
+texture = ExtResource("31_uc82t")
+
+[node name="CA" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 11
+texture = ExtResource("32_y2f2g")
+
+[node name="S2" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 2
+texture = ExtResource("33_vjs8j")
+
+[node name="S3" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 3
+texture = ExtResource("34_nhw0o")
+
+[node name="S4" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 4
+texture = ExtResource("35_7n3gx")
+
+[node name="S5" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 5
+texture = ExtResource("36_xtgc8")
+
+[node name="S6" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 6
+texture = ExtResource("37_3ry5w")
+
+[node name="S7" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 7
+texture = ExtResource("38_0lrmw")
+
+[node name="S8" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 8
+texture = ExtResource("39_k6vl7")
+
+[node name="S9" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 9
+texture = ExtResource("40_8vsel")
+
+[node name="S10" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 10
+texture = ExtResource("41_qqj3m")
+
+[node name="SA" type="Node" parent="BardsAndNoblesGamePlayer/CardDatas"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 11
+texture = ExtResource("42_4l5pv")
+
+[node name="CustomerCards" type="Node" parent="BardsAndNoblesGamePlayer"]
+script = ExtResource("1_4dx5i")
+
+[node name="HJ" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+rank = 11
+texture = ExtResource("43_pcnns")
+
+[node name="HQ" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+rank = 12
+texture = ExtResource("44_u66s8")
+
+[node name="HK" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+rank = 13
+texture = ExtResource("45_pimbs")
+
+[node name="SJ" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 11
+texture = ExtResource("46_3s8kn")
+
+[node name="SQ" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 12
+texture = ExtResource("47_dnipn")
+
+[node name="SK" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+suit = 3
+rank = 13
+texture = ExtResource("48_y5l5t")
+
+[node name="CJ" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 11
+texture = ExtResource("49_jhwi2")
+
+[node name="CQ" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 12
+texture = ExtResource("50_mg1x0")
+
+[node name="CK" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+suit = 2
+rank = 13
+texture = ExtResource("51_ec7jb")
+
+[node name="DJ" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 11
+texture = ExtResource("52_t0onl")
+
+[node name="DQ" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 12
+texture = ExtResource("53_njrrv")
+
+[node name="DK" type="Node" parent="BardsAndNoblesGamePlayer/CustomerCards"]
+script = ExtResource("2_ms0g2")
+suit = 1
+rank = 13
+texture = ExtResource("54_mau47")
+
+[node name="Audio" type="Node" parent="BardsAndNoblesGamePlayer"]
+script = ExtResource("57_i08p6")
+
+[node name="CashRegisterSoundPlayer" type="AudioStreamPlayer" parent="BardsAndNoblesGamePlayer/Audio"]
+stream = ExtResource("57_oasi1")
+volume_db = -20.0
+pitch_scale = 0.8
+
+[node name="LoseSoundPlayer" type="AudioStreamPlayer" parent="BardsAndNoblesGamePlayer/Audio"]
+stream = ExtResource("58_78vaa")
+volume_db = -9.661
+pitch_scale = 0.5
+
+[node name="WinSoundPlayer" type="AudioStreamPlayer" parent="BardsAndNoblesGamePlayer/Audio"]
+stream = ExtResource("59_i08p6")
+volume_db = -20.642
+
+[node name="StandingLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.01
+anchor_bottom = 0.01
+offset_right = 56.0
+offset_bottom = 23.0
+text = "Standing: 0"
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SoundToggle" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("55_fx4fp")
+expand_mode = 4
+stretch_mode = 4
+script = ExtResource("56_51n52")
+sound_on_texture = ExtResource("55_fx4fp")
+sound_off_texture = ExtResource("57_xw4mg")
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("58_wdg1x")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("59_bn68f")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("60_otapq")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="StoreDeck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -62.0
+offset_right = -160.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+stretch_mode = 4
+script = ExtResource("62_sjkr8")
+
+[node name="CountLabel" type="Label" parent="PlayArea/StoreDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "28"
+label_settings = SubResource("LabelSettings_fxncb")
+horizontal_alignment = 1
+
+[node name="StoreArea" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -68.0
+offset_right = 233.0
+offset_bottom = 181.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("65_08wc7")
+
+[node name="TopShelf" type="HBoxContainer" parent="PlayArea/StoreArea"]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/StoreArea/TopShelf"]
+layout_mode = 2
+texture = ExtResource("64_qd5iq")
+script = ExtResource("65_g5dmh")
+default_texture = ExtResource("64_qd5iq")
+highlight_texture = ExtResource("66_08wc7")
+
+[node name="Card" parent="PlayArea/StoreArea/TopShelf/CardHolder1" instance=ExtResource("67_oasi1")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/StoreArea/TopShelf"]
+layout_mode = 2
+texture = ExtResource("64_qd5iq")
+script = ExtResource("65_g5dmh")
+default_texture = ExtResource("64_qd5iq")
+highlight_texture = ExtResource("66_08wc7")
+
+[node name="Card" parent="PlayArea/StoreArea/TopShelf/CardHolder2" instance=ExtResource("67_oasi1")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/StoreArea/TopShelf"]
+layout_mode = 2
+texture = ExtResource("64_qd5iq")
+script = ExtResource("65_g5dmh")
+default_texture = ExtResource("64_qd5iq")
+highlight_texture = ExtResource("66_08wc7")
+
+[node name="Card" parent="PlayArea/StoreArea/TopShelf/CardHolder3" instance=ExtResource("67_oasi1")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder4" type="TextureRect" parent="PlayArea/StoreArea/TopShelf"]
+layout_mode = 2
+texture = ExtResource("64_qd5iq")
+script = ExtResource("65_g5dmh")
+default_texture = ExtResource("64_qd5iq")
+highlight_texture = ExtResource("66_08wc7")
+
+[node name="Card" parent="PlayArea/StoreArea/TopShelf/CardHolder4" instance=ExtResource("67_oasi1")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="BottomShelf" type="HBoxContainer" parent="PlayArea/StoreArea"]
+layout_mode = 1
+anchors_preset = -1
+offset_top = 130.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/StoreArea/BottomShelf"]
+layout_mode = 2
+texture = ExtResource("64_qd5iq")
+script = ExtResource("65_g5dmh")
+default_texture = ExtResource("64_qd5iq")
+highlight_texture = ExtResource("66_08wc7")
+
+[node name="Card" parent="PlayArea/StoreArea/BottomShelf/CardHolder1" instance=ExtResource("67_oasi1")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/StoreArea/BottomShelf"]
+layout_mode = 2
+texture = ExtResource("64_qd5iq")
+script = ExtResource("65_g5dmh")
+default_texture = ExtResource("64_qd5iq")
+highlight_texture = ExtResource("66_08wc7")
+
+[node name="Card" parent="PlayArea/StoreArea/BottomShelf/CardHolder2" instance=ExtResource("67_oasi1")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/StoreArea/BottomShelf"]
+layout_mode = 2
+texture = ExtResource("64_qd5iq")
+script = ExtResource("65_g5dmh")
+default_texture = ExtResource("64_qd5iq")
+highlight_texture = ExtResource("66_08wc7")
+
+[node name="Card" parent="PlayArea/StoreArea/BottomShelf/CardHolder3" instance=ExtResource("67_oasi1")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder4" type="TextureRect" parent="PlayArea/StoreArea/BottomShelf"]
+layout_mode = 2
+texture = ExtResource("64_qd5iq")
+script = ExtResource("65_g5dmh")
+default_texture = ExtResource("64_qd5iq")
+highlight_texture = ExtResource("66_08wc7")
+
+[node name="Card" parent="PlayArea/StoreArea/BottomShelf/CardHolder4" instance=ExtResource("67_oasi1")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CustomerDeck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -195.0
+offset_right = -61.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+stretch_mode = 4
+script = ExtResource("62_sjkr8")
+
+[node name="CountLabel" type="Label" parent="PlayArea/CustomerDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "12"
+label_settings = SubResource("LabelSettings_fxncb")
+horizontal_alignment = 1
+
+[node name="CustomerCard" parent="PlayArea" instance=ExtResource("67_oasi1")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -196.0
+offset_right = 39.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="TradeInDeck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 146.0
+offset_top = -195.0
+offset_right = 234.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+stretch_mode = 4
+script = ExtResource("62_sjkr8")
+
+[node name="CountLabel" type="Label" parent="PlayArea/TradeInDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "12"
+label_settings = SubResource("LabelSettings_fxncb")
+horizontal_alignment = 1
+
+[node name="TradeInCard" parent="PlayArea" instance=ExtResource("67_oasi1")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 49.0
+offset_top = -196.0
+offset_right = 137.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_7dsjg")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="OfferButton" type="Button" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 251.0
+offset_top = -61.0
+offset_right = 346.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Make Offer"
+
+[node name="TurnAwayButton" type="Button" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 253.0
+offset_top = -18.0
+offset_right = 343.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Turn Away
+"
+
+[node name="Crown" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -239.0
+offset_right = 15.0
+offset_bottom = -199.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("74_w80sr")
+expand_mode = 1
+
+[node name="Book" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 74.0
+offset_top = -239.0
+offset_right = 114.0
+offset_bottom = -199.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("75_o1tkp")
+expand_mode = 1
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click a deck to start
+- The goal is to satisfy every
+customer and maintain a standing
+of at least 7.
+- 8 slots will be populated with
+books.
+- A customer face card will be drawn
+- A trade-in book will be drawn
+- Face card rank + trade-in rank is
+the value you must match in 
+selected books (ex, Jh + 8c = $19)
+- Cards matching the trade-in book
+suit will be worth $0 but may be
+given away freely
+- Cards matching the customer's
+suit are what they want, and will
+each add 1 standing when sold or 
+given away.
+- You may turn away a customer
+if you want for any reason. You
+must if you can't match their sum
+- Turning away lowers you standing
+1 for Js, 2 for Qs, 3 for Ks.
+- Game over if standing drops below
+zero
+- Trade-ins are added to the bottom
+of the store's deck.
+- Aces can be both $11 or $1 as
+needed."
+placeholder_text = "Add any notes here..."
+script = ExtResource("61_ms0g2")
+
+[node name="Warnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("71_08wc7")
+
+[node name="NoCardsSelected" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -209.0
+offset_right = 209.0
+offset_bottom = 34.0
+text = "Cannot make offer, no cards were selected"
+label_settings = SubResource("LabelSettings_g5dmh")
+
+[node name="OfferValueDoesNotMatch" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -442.0
+offset_right = 448.0
+offset_bottom = 34.0
+text = "Cannot make offer, the value does not match the customer and trade-in sum"
+label_settings = SubResource("LabelSettings_g5dmh")
+
+[node name="Terminated" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -84.0
+offset_right = 87.0
+offset_bottom = 34.0
+text = "Terminated!!!"
+label_settings = SubResource("LabelSettings_g5dmh")
+
+[node name="EmployeeOfMonth" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -137.0
+offset_right = 141.0
+offset_bottom = 34.0
+text = "Employee of the Month!"
+label_settings = SubResource("LabelSettings_i08p6")
+
+[node name="PerformanceBonus" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -217.0
+offset_right = 215.0
+offset_bottom = 34.0
+text = "Employee of the Month, and a bonus!"
+label_settings = SubResource("LabelSettings_i08p6")
+
+[node name="Promotion" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -74.0
+offset_right = 75.0
+offset_bottom = 34.0
+text = "Promotion!!!"
+label_settings = SubResource("LabelSettings_i08p6")
+
+[node name="CompanyStake" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -185.0
+offset_right = 190.0
+offset_bottom = 34.0
+text = "Promotion and company stake!!!"
+label_settings = SubResource("LabelSettings_i08p6")
+
+[node name="Executive" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -260.0
+offset_right = 261.0
+offset_bottom = 34.0
+text = "You've become an executive of the company!"
+label_settings = SubResource("LabelSettings_i08p6")
+
+[connection signal="game_over" from="." to="BardsAndNoblesGamePlayer/Audio" method="_on_bards_and_nobles_game_game_over"]
+[connection signal="game_over" from="." to="Warnings" method="_on_bards_and_nobles_game_game_over"]
+[connection signal="sale_made" from="." to="BardsAndNoblesGamePlayer/Audio" method="_on_bards_and_nobles_game_sale_made"]
+[connection signal="no_cards_selected_error" from="BardsAndNoblesGamePlayer" to="Warnings" method="_on_bards_and_nobles_game_player_no_cards_selected_error"]
+[connection signal="wrong_value_error" from="BardsAndNoblesGamePlayer" to="Warnings" method="_on_bards_and_nobles_game_player_wrong_value_error"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="BardsAndNoblesGamePlayer/Audio" method="_on_sound_toggle_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Toolbar/VBoxContainer/SoundToggle" method="_on_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="PlayArea/StoreDeck" to="PlayArea/StoreDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/StoreDeck" to="BardsAndNoblesGamePlayer" method="_on_deck_start_game"]
+[connection signal="use_card" from="PlayArea/StoreArea/TopShelf/CardHolder1/Card" to="BardsAndNoblesGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/TopShelf/CardHolder1/Card" to="PlayArea/StoreArea/TopShelf/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/TopShelf/CardHolder2/Card" to="BardsAndNoblesGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/TopShelf/CardHolder2/Card" to="PlayArea/StoreArea/TopShelf/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/TopShelf/CardHolder3/Card" to="BardsAndNoblesGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/TopShelf/CardHolder3/Card" to="PlayArea/StoreArea/TopShelf/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/TopShelf/CardHolder4/Card" to="BardsAndNoblesGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/TopShelf/CardHolder4/Card" to="PlayArea/StoreArea/TopShelf/CardHolder4" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/BottomShelf/CardHolder1/Card" to="BardsAndNoblesGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/BottomShelf/CardHolder1/Card" to="PlayArea/StoreArea/BottomShelf/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/BottomShelf/CardHolder2/Card" to="BardsAndNoblesGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/BottomShelf/CardHolder2/Card" to="PlayArea/StoreArea/BottomShelf/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/BottomShelf/CardHolder3/Card" to="BardsAndNoblesGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/BottomShelf/CardHolder3/Card" to="PlayArea/StoreArea/BottomShelf/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/BottomShelf/CardHolder4/Card" to="BardsAndNoblesGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/StoreArea/BottomShelf/CardHolder4/Card" to="PlayArea/StoreArea/BottomShelf/CardHolder4" method="_on_card_use_card"]
+[connection signal="gui_input" from="PlayArea/CustomerDeck" to="PlayArea/CustomerDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/CustomerDeck" to="BardsAndNoblesGamePlayer" method="_on_deck_start_game"]
+[connection signal="gui_input" from="PlayArea/TradeInDeck" to="PlayArea/TradeInDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/TradeInDeck" to="BardsAndNoblesGamePlayer" method="_on_deck_start_game"]
+[connection signal="pressed" from="PlayArea/OfferButton" to="BardsAndNoblesGamePlayer" method="_on_offer_button_pressed"]
+[connection signal="pressed" from="PlayArea/TurnAwayButton" to="BardsAndNoblesGamePlayer" method="_on_turn_away_button_pressed"]

@@ -45,6 +45,17 @@ func receive_broadcast(from: Node) -> void:
 		wgp.game_started.connect($WarGamePlug.on_game_started)
 		wgp.round_tied.connect($WarGamePlug.on_round_tied)
 		wgp.round_won.connect($WarGamePlug.on_round_won)
+	elif from is HighLowGamePane:
+		var hlgp = from as HighLowGamePane
+		hlgp.game_started.connect($HighLowGamePlug.on_game_started)
+		hlgp.guessed_incorrectly.connect($HighLowGamePlug.on_guessed_incorrectly)
+	elif from is BardsAndNoblesGamePane:
+		var bnngp = from as BardsAndNoblesGamePane
+		bnngp.customer_turned_away.connect($BardsAndNoblesGamePlug.on_customer_turned_away)
+		bnngp.game_over.connect($BardsAndNoblesGamePlug.on_game_over)
+		bnngp.game_started.connect($BardsAndNoblesGamePlug.on_game_started)
+		bnngp.sale_made.connect($BardsAndNoblesGamePlug.on_sale_made)
+	
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

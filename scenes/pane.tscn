@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://pjilwspntgn6"]
+[gd_scene load_steps=42 format=3 uid="uid://pjilwspntgn6"]
 
 [ext_resource type="Script" uid="uid://dd7ywskexogj6" path="res://scripts/pane.gd" id="1_ghsmc"]
 [ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="1_k7av0"]
@@ -13,7 +13,9 @@
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="6_56bjc"]
 [ext_resource type="Script" uid="uid://s8nsoq5tiodc" path="res://scripts/war_game_plug.gd" id="6_rle6u"]
 [ext_resource type="Texture2D" uid="uid://bbgmm1yo4pk1d" path="res://assets/heads_.png" id="7_iibsq"]
+[ext_resource type="Script" uid="uid://dnecv48er0d4y" path="res://scripts/high_low_game_plug.gd" id="7_tt1o5"]
 [ext_resource type="Script" uid="uid://b0wbadre6nr1b" path="res://scripts/portrait.gd" id="7_wiqb3"]
+[ext_resource type="Script" uid="uid://iywkg03c3r7o" path="res://scripts/bards_and_nobles_game_plug.gd" id="8_ax55a"]
 [ext_resource type="Script" uid="uid://byi7e82foeyl5" path="res://scripts/coin.gd" id="8_kl45w"]
 [ext_resource type="Texture2D" uid="uid://b4rickg8vjhv" path="res://assets/suit_tool_icon.png" id="8_rve4u"]
 [ext_resource type="Script" uid="uid://dvw5ap35s8mk7" path="res://scripts/suit_tool.gd" id="9_174d6"]
@@ -53,11 +55,11 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_ghsmc")
 
-[node name="ScoundrelGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait", "health_bar", "folder_selector")]
+[node name="ScoundrelGamePlug" type="Node" parent="." node_paths=PackedStringArray("health_bar", "folder_selector", "portrait")]
 script = ExtResource("2_6n4o8")
-portrait = NodePath("../PortraitHolder/Portrait")
 health_bar = NodePath("../GaugeSlider")
 folder_selector = NodePath("../FolderSelectorHolder/FolderSelector")
+portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="Area52GamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("3_clsva")
@@ -73,6 +75,14 @@ portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="WarGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("6_rle6u")
+portrait = NodePath("../PortraitHolder/Portrait")
+
+[node name="HighLowGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
+script = ExtResource("7_tt1o5")
+portrait = NodePath("../PortraitHolder/Portrait")
+
+[node name="BardsAndNoblesGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
+script = ExtResource("8_ax55a")
 portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="SuitIcon" type="TextureRect" parent="."]
