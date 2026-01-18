@@ -9,16 +9,6 @@ const TOPIC_WIN_FOLDER = "topic/win"
 const TOPIC_LOSE_FOLDER = "topic/lose"
 const GAME_WON_FOLDER = "won"
 
-# kingdoms
-const QH_SUBDIR = "qh"
-const QC_SUBDIR = "qc"
-const QS_SUBDIR = "qs"
-const QD_SUBDIR = "qd"
-const KH_SUBDIR = "kh"
-const KC_SUBDIR = "kc"
-const KS_SUBDIR = "ks"
-const KD_SUBDIR = "kd"
-
 # advisors
 const HEARTS_SUBDIR = "hearts"
 const CLUBS_SUBDIR = "clubs"

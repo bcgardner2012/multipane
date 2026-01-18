@@ -66,7 +66,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_alx14")
 
-[node name="ZombieDiceGamePlayer" type="Node" parent="." node_paths=PackedStringArray("human_slots", "action_slots", "pending_brains_label", "pending_bullets_label", "score_label", "round_label", "injury_label", "bullets_taken_label", "draw_button", "stop_button", "endless_button")]
+[node name="ZombieDiceGamePlayer" type="Node" parent="." node_paths=PackedStringArray("human_slots", "action_slots", "pending_brains_label", "pending_bullets_label", "score_label", "round_label", "injury_label", "bullets_taken_label", "draw_button", "stop_button", "endless_button", "_signals")]
 script = ExtResource("1_a2gr1")
 human_slots = NodePath("../PlayArea/HumanSlots")
 action_slots = NodePath("../PlayArea/ActionSlots")
@@ -79,6 +79,7 @@ bullets_taken_label = NodePath("../BulletsTakenLabel")
 draw_button = NodePath("../PlayArea/DrawAgainButton")
 stop_button = NodePath("../PlayArea/StopButton")
 endless_button = NodePath("../PlayArea/EndlessButton")
+_signals = NodePath("..")
 
 [node name="Humans" type="Node" parent="ZombieDiceGamePlayer"]
 script = ExtResource("1_tphij")
@@ -791,10 +792,10 @@ label_settings = SubResource("LabelSettings_ihqdo")
 
 [connection signal="game_lost" from="ZombieDiceGamePlayer" to="Warnings" method="_on_zombie_dice_game_player_game_lost"]
 [connection signal="game_won" from="ZombieDiceGamePlayer" to="Warnings" method="_on_zombie_dice_game_player_game_won"]
-[connection signal="hit_three_times" from="ZombieDiceGamePlayer" to="Warnings" method="_on_zombie_dice_game_player_hit_three_times"]
 [connection signal="hit_three_times" from="ZombieDiceGamePlayer" to="ZombieDiceGamePlayer/Audio" method="_on_zombie_dice_game_player_hit_three_times"]
-[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Toolbar/VBoxContainer/SoundToggle" method="_on_gui_input"]
+[connection signal="hit_three_times" from="ZombieDiceGamePlayer" to="Warnings" method="_on_zombie_dice_game_player_hit_three_times"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="ZombieDiceGamePlayer/Audio" method="_on_sound_toggle_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Toolbar/VBoxContainer/SoundToggle" method="_on_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/SettingsTool" to="Notes" method="_on_settings_tool_gui_input"]

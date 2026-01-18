@@ -18,6 +18,8 @@ signal game_lost()
 @export var stop_button: Button
 @export var endless_button: Button
 
+@export var _signals: ZombieDiceGamePane
+
 # check ranks. 10 and 11 are easy, 12 is med, 13 is hard
 # pop and push_back to cycle through all humans as round drags on
 # shuffle at end of round.
@@ -146,6 +148,7 @@ func _draw_actions() -> void:
 	
 	active_actions = actions
 	action_slots.populate(actions)
+	_signals.cards_drawn.emit(active_humans, active_actions)
 
 func _record_brains_and_bullets() -> void:
 	var bullet_count = _get_bullet_count()
@@ -184,6 +187,7 @@ func _on_draw_again_button_pressed() -> void:
 		hit_three_times.emit()
 		injury_count += 1
 		injury_label.text = "Injuries: " + str(injury_count)
+		_signals.round_lost.emit(active_humans)
 		
 		if ZombieDiceSettings.lose_condition == ZombieDiceSettings.ZombieDiceLoseCondition.INJURY_COUNT:
 			if injury_count >= ZombieDiceSettings.lose_condition_count:
@@ -208,6 +212,7 @@ func _on_stop_button_pressed() -> void:
 				if _round > ZombieDiceSettings.lose_condition_count:
 					game_lost.emit()
 	
+	_signals.round_won.emit(active_humans)
 	_setup_next_round()
 
 func _cleanup_round() -> void:

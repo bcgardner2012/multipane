@@ -55,6 +55,11 @@ func receive_broadcast(from: Node) -> void:
 		bnngp.game_over.connect($BardsAndNoblesGamePlug.on_game_over)
 		bnngp.game_started.connect($BardsAndNoblesGamePlug.on_game_started)
 		bnngp.sale_made.connect($BardsAndNoblesGamePlug.on_sale_made)
+	elif from is ZombieDiceGamePane:
+		var zdgp = from as ZombieDiceGamePane
+		zdgp.cards_drawn.connect()
+		zdgp.round_won.connect()
+		zdgp.round_lost.connect()
 	
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:

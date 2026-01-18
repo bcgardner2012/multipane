@@ -13,19 +13,7 @@ const PLAYER_CHANNEL = 2
 # endings, use seeburg select to choose most relevant image
 const ENDING_FOLDER = "ending"
 
-# nobles
-const QH_SUBDIR = "qh"
-const QC_SUBDIR = "qc"
-const QS_SUBDIR = "qs"
-const QD_SUBDIR = "qd"
-const KH_SUBDIR = "kh"
-const KC_SUBDIR = "kc"
-const KS_SUBDIR = "ks"
-const KD_SUBDIR = "kd"
-const JH_SUBDIR = "jh"
-const JC_SUBDIR = "jc"
-const JS_SUBDIR = "js"
-const JD_SUBDIR = "jd"
+# use subdirs j-k
 
 # noble scenes
 const ANGRY = "angry"
@@ -71,7 +59,8 @@ func on_game_started(customer: CardData, _trade_in: CardData) -> void:
 		# pick a random player idle
 		portrait.try_load_random_image_from_subdir(PLAYER_FOLDER)
 
-# TODO? Consider score_delta for tipping player?
+# TODO? Consider score_delta for tipping player on player pane?
+# TODO? Consider number of items sold for happy/angry image (0-6)
 func on_sale_made(customer: CardData, _trade_in: CardData, _score_delta: int, next_customer: CardData) -> void:
 	var channel = _get_suit_channel()
 	if channel == NEXT_CHANNEL:
@@ -85,35 +74,3 @@ func on_sale_made(customer: CardData, _trade_in: CardData, _score_delta: int, ne
 	elif channel == PLAYER_CHANNEL:
 		# pick a random player idle
 		portrait.try_load_random_image_from_subdir(PLAYER_FOLDER)
-
-func _card_to_notation(card: CardData) -> String:
-	match card.suit:
-		CardData.Suit.HEARTS:
-			if card.rank == 11:
-				return JH_SUBDIR
-			if card.rank == 12:
-				return QH_SUBDIR
-			if card.rank == 13:
-				return KH_SUBDIR
-		CardData.Suit.DIAMONDS:
-			if card.rank == 11:
-				return JD_SUBDIR
-			if card.rank == 12:
-				return QD_SUBDIR
-			if card.rank == 13:
-				return KD_SUBDIR
-		CardData.Suit.CLUBS:
-			if card.rank == 11:
-				return JC_SUBDIR
-			if card.rank == 12:
-				return QC_SUBDIR
-			if card.rank == 13:
-				return KC_SUBDIR
-		CardData.Suit.SPADES:
-			if card.rank == 11:
-				return JS_SUBDIR
-			if card.rank == 12:
-				return QS_SUBDIR
-			if card.rank == 13:
-				return KS_SUBDIR
-	return ""
