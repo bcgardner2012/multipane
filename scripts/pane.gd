@@ -60,6 +60,10 @@ func receive_broadcast(from: Node) -> void:
 		zdgp.cards_drawn.connect()
 		zdgp.round_won.connect()
 		zdgp.round_lost.connect()
+	elif from is JokerJailbreakGamePane:
+		var jjb = from as JokerJailbreakGamePane
+		jjb.chipped.connect($JokerJailbreakGamePlug.on_chipped)
+		jjb.game_won.connect($JokerJailbreakGamePlug.on_game_won)
 	
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:

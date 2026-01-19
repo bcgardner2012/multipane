@@ -12,6 +12,7 @@ const WAR_GAME := 5
 const HILO_GAME := 6
 const BNN_GAME := 7
 const ZOMBIE_DICE_GAME := 8
+const JOKER_JB_GAME := 9
 
 func _on_item_selected(index: int) -> void:
 	if index == IMAGE_PANE:
@@ -40,4 +41,7 @@ func _on_item_selected(index: int) -> void:
 		get_parent().free()
 	elif index == ZOMBIE_DICE_GAME:
 		get_parent().get_parent().queue_add_zombie_dice_game_pane()
+		get_parent().free()
+	elif index == JOKER_JB_GAME:
+		get_parent().get_parent().queue_add_joker_jb_game_pane()
 		get_parent().free()

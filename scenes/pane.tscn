@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://pjilwspntgn6"]
+[gd_scene load_steps=44 format=3 uid="uid://pjilwspntgn6"]
 
 [ext_resource type="Script" uid="uid://dd7ywskexogj6" path="res://scripts/pane.gd" id="1_ghsmc"]
 [ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="1_k7av0"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" uid="uid://3bhafietc7xr" path="res://scripts/zombie_dice_game_plug.gd" id="9_ux75t"]
 [ext_resource type="Script" uid="uid://ejd2pitsqv7x" path="res://scripts/gauge_icon.gd" id="10_56bjc"]
 [ext_resource type="Texture2D" uid="uid://ijht3pow5svg" path="res://assets/folder.png" id="10_lpq5f"]
+[ext_resource type="Script" uid="uid://bkl2485yj05op" path="res://scripts/joker_jailbreak_game_plug.gd" id="10_v21tk"]
 [ext_resource type="AudioStream" uid="uid://baji3fpew3qss" path="res://assets/audio/coin-flip.mp3" id="10_w50lg"]
 [ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="11_lvs2l"]
 [ext_resource type="Texture2D" uid="uid://myp0200iy2ws" path="res://assets/lightning.png" id="11_rve4u"]
@@ -88,6 +89,10 @@ portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="ZombieDiceGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("9_ux75t")
+portrait = NodePath("../PortraitHolder/Portrait")
+
+[node name="JokerJailbreakGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
+script = ExtResource("10_v21tk")
 portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="SuitIcon" type="TextureRect" parent="."]

@@ -1,0 +1,969 @@
+[gd_scene load_steps=82 format=3 uid="uid://cvqspycf8y8a0"]
+
+[ext_resource type="Script" uid="uid://dbui5s6dt8oje" path="res://scripts/joker_jailbreak_game_pane.gd" id="1_1v6m6"]
+[ext_resource type="Script" uid="uid://fi2pegkvhwax" path="res://scripts/joker_jailbreak_game_player.gd" id="1_dgljc"]
+[ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="1_hgek0"]
+[ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="2_6iuw3"]
+[ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="2_cj6ev"]
+[ext_resource type="Texture2D" uid="uid://dr5idoohosp33" path="res://assets/sound_off.png" id="3_4fouo"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="3_eqbig"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="4_7bqo4"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="4_rvlxu"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="5_6tvdl"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="5_rc1sd"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="6_stylk"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="6_usu3a"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="7_1v6m6"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="7_2dj88"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="8_daolq"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="8_dgljc"]
+[ext_resource type="Texture2D" uid="uid://cm36j136fu2ho" path="res://assets/cards/card_holder_transparent.png" id="9_s0rft"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="9_voat3"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="10_y0ufv"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="11_jty0q"]
+[ext_resource type="Texture2D" uid="uid://ddyq3kgxhcboc" path="res://assets/cards/card_hilight.png" id="11_orlkp"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="12_3k8ij"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="12_jw6iw"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="13_6gleb"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="13_vjs02"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="14_hfxs2"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="15_331lt"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="16_nu27o"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="17_64sqo"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="18_5rm8k"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="19_viu70"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="20_f12un"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="21_ef18k"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="22_e4c60"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="23_cti7m"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="24_fjnri"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="25_ujnrl"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="26_crpi1"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="27_ejle6"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="28_cttdx"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="29_1wcmk"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="30_dwus1"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="31_vukev"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="32_el662"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="33_7so4h"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="34_xlqqp"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="35_3svw2"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="36_567jp"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="37_raovc"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="38_pxagg"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="39_3h15c"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="40_4qenc"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="41_jp8b2"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="42_sgynn"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="43_7qo0h"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="44_0djec"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="45_7gjg0"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="46_n7fqa"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="47_4dem8"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="48_ocyq4"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="49_oynr6"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="50_n0mbr"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="51_muaky"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="52_l2bwm"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="53_hdbsq"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="54_kcu1w"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="55_wgcst"]
+[ext_resource type="Script" uid="uid://dbl38f670k8dd" path="res://scripts/joker_jailbreak_game_audio.gd" id="56_rc1sd"]
+[ext_resource type="AudioStream" uid="uid://ch0ah7pekynts" path="res://assets/audio/pickaxe-blow-333695.mp3" id="57_usu3a"]
+[ext_resource type="AudioStream" uid="uid://wth8qiwjf4dx" path="res://assets/audio/rocks-6129.mp3" id="59_daolq"]
+[ext_resource type="Script" uid="uid://dv38hnfiyyx5" path="res://scripts/joker_jailbreak_slots.gd" id="64_eqbig"]
+[ext_resource type="Script" uid="uid://cjrsd47nnngmp" path="res://scripts/card_highlighter.gd" id="66_6iuw3"]
+[ext_resource type="Script" uid="uid://crd1lc2ecvbsr" path="res://scripts/joker_jailbreak_warnings.gd" id="70_rvlxu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2dj88"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rvlxu"]
+font_color = Color(0.87734634, 3.8745256e-06, 1.2513996e-06, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_usu3a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1v6m6"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3gto0"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rc1sd"]
+font_color = Color(0.8495599, 3.2969565e-06, 1.540184e-06, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_daolq"]
+font_color = Color(1.6364455e-06, 0.8081867, 1.540184e-06, 1)
+
+[node name="JokerJailbreakGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1v6m6")
+
+[node name="JokerJailbreakGamePlayer" type="Node" parent="." node_paths=PackedStringArray("deck_count_label", "tl_label", "tc_label", "tr_label", "ml_label", "mr_label", "bl_label", "bc_label", "br_label", "red_sum_label", "black_sum_label", "slots")]
+script = ExtResource("1_dgljc")
+deck_count_label = NodePath("../PlayArea/Deck/CountLabel")
+tl_label = NodePath("../PlayArea/Labels/tl")
+tc_label = NodePath("../PlayArea/Labels/top")
+tr_label = NodePath("../PlayArea/Labels/tr")
+ml_label = NodePath("../PlayArea/Labels/left")
+mr_label = NodePath("../PlayArea/Labels/right")
+bl_label = NodePath("../PlayArea/Labels/bl")
+bc_label = NodePath("../PlayArea/Labels/bot")
+br_label = NodePath("../PlayArea/Labels/br")
+red_sum_label = NodePath("../PlayArea/Labels/redsum")
+black_sum_label = NodePath("../PlayArea/Labels/blacksum")
+slots = NodePath("../PlayArea/Slots")
+
+[node name="CardDatas" type="Node" parent="JokerJailbreakGamePlayer"]
+script = ExtResource("2_6iuw3")
+
+[node name="H2" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 2
+texture = ExtResource("4_rvlxu")
+
+[node name="H3" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 3
+texture = ExtResource("5_rc1sd")
+
+[node name="H4" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 4
+texture = ExtResource("6_usu3a")
+
+[node name="H5" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 5
+texture = ExtResource("7_1v6m6")
+
+[node name="H6" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 6
+texture = ExtResource("8_daolq")
+
+[node name="H7" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 7
+texture = ExtResource("9_voat3")
+
+[node name="H8" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 8
+texture = ExtResource("10_y0ufv")
+
+[node name="H9" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 9
+texture = ExtResource("11_jty0q")
+
+[node name="H10" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 10
+texture = ExtResource("12_jw6iw")
+
+[node name="HJ" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 11
+texture = ExtResource("13_vjs02")
+
+[node name="HQ" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 12
+texture = ExtResource("14_hfxs2")
+
+[node name="HK" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 13
+texture = ExtResource("15_331lt")
+
+[node name="HA" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+rank = 1
+texture = ExtResource("16_nu27o")
+
+[node name="D2" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 2
+texture = ExtResource("17_64sqo")
+
+[node name="D3" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 3
+texture = ExtResource("18_5rm8k")
+
+[node name="D4" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 4
+texture = ExtResource("19_viu70")
+
+[node name="D5" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 5
+texture = ExtResource("20_f12un")
+
+[node name="D6" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 6
+texture = ExtResource("21_ef18k")
+
+[node name="D7" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 7
+texture = ExtResource("22_e4c60")
+
+[node name="D8" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 8
+texture = ExtResource("23_cti7m")
+
+[node name="D9" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 9
+texture = ExtResource("24_fjnri")
+
+[node name="D10" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 10
+texture = ExtResource("25_ujnrl")
+
+[node name="DJ" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 11
+texture = ExtResource("26_crpi1")
+
+[node name="DQ" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 12
+texture = ExtResource("27_ejle6")
+
+[node name="DK" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 13
+texture = ExtResource("28_cttdx")
+
+[node name="DA" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 1
+rank = 1
+texture = ExtResource("29_1wcmk")
+
+[node name="C2" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 2
+texture = ExtResource("30_dwus1")
+
+[node name="C3" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 3
+texture = ExtResource("31_vukev")
+
+[node name="C4" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 4
+texture = ExtResource("32_el662")
+
+[node name="C5" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 5
+texture = ExtResource("33_7so4h")
+
+[node name="C6" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 6
+texture = ExtResource("34_xlqqp")
+
+[node name="C7" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 7
+texture = ExtResource("35_3svw2")
+
+[node name="C8" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 8
+texture = ExtResource("36_567jp")
+
+[node name="C9" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 9
+texture = ExtResource("37_raovc")
+
+[node name="C10" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 10
+texture = ExtResource("38_pxagg")
+
+[node name="CJ" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 11
+texture = ExtResource("39_3h15c")
+
+[node name="CQ" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 12
+texture = ExtResource("40_4qenc")
+
+[node name="CK" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 13
+texture = ExtResource("41_jp8b2")
+
+[node name="CA" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 2
+rank = 1
+texture = ExtResource("42_sgynn")
+
+[node name="S2" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 2
+texture = ExtResource("43_7qo0h")
+
+[node name="S3" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 3
+texture = ExtResource("44_0djec")
+
+[node name="S4" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 4
+texture = ExtResource("45_7gjg0")
+
+[node name="S5" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 5
+texture = ExtResource("46_n7fqa")
+
+[node name="S6" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 6
+texture = ExtResource("47_4dem8")
+
+[node name="S7" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 7
+texture = ExtResource("48_ocyq4")
+
+[node name="S8" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 8
+texture = ExtResource("49_oynr6")
+
+[node name="S9" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 9
+texture = ExtResource("50_n0mbr")
+
+[node name="S10" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 10
+texture = ExtResource("51_muaky")
+
+[node name="SJ" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 11
+texture = ExtResource("52_l2bwm")
+
+[node name="SQ" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 12
+texture = ExtResource("53_hdbsq")
+
+[node name="SK" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 13
+texture = ExtResource("54_kcu1w")
+
+[node name="SA" type="Node" parent="JokerJailbreakGamePlayer/CardDatas"]
+script = ExtResource("3_eqbig")
+suit = 3
+rank = 1
+texture = ExtResource("55_wgcst")
+
+[node name="Audio" type="Node" parent="JokerJailbreakGamePlayer"]
+script = ExtResource("56_rc1sd")
+
+[node name="PickaxeSoundPlayer" type="AudioStreamPlayer" parent="JokerJailbreakGamePlayer/Audio"]
+stream = ExtResource("57_usu3a")
+volume_db = -18.148
+pitch_scale = 0.62
+
+[node name="GameWonSoundPlayer" type="AudioStreamPlayer" parent="JokerJailbreakGamePlayer/Audio"]
+stream = ExtResource("59_daolq")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SoundToggle" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_hgek0")
+expand_mode = 4
+stretch_mode = 4
+script = ExtResource("2_cj6ev")
+sound_on_texture = ExtResource("1_hgek0")
+sound_off_texture = ExtResource("3_4fouo")
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_7bqo4")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_6tvdl")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_stylk")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="Labels" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="top" type="Label" parent="PlayArea/Labels"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = -204.0
+offset_right = 29.0
+offset_bottom = -181.0
+text = "7"
+label_settings = SubResource("LabelSettings_2dj88")
+horizontal_alignment = 1
+
+[node name="bot" type="Label" parent="PlayArea/Labels"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 219.0
+offset_right = 28.0
+offset_bottom = 242.0
+text = "7"
+label_settings = SubResource("LabelSettings_2dj88")
+horizontal_alignment = 1
+
+[node name="left" type="Label" parent="PlayArea/Labels"]
+layout_mode = 0
+offset_left = -149.0
+offset_right = -126.0
+offset_bottom = 23.0
+text = "7"
+label_settings = SubResource("LabelSettings_2dj88")
+horizontal_alignment = 1
+
+[node name="right" type="Label" parent="PlayArea/Labels"]
+layout_mode = 0
+offset_left = 169.0
+offset_right = 194.0
+offset_bottom = 23.0
+text = "7"
+label_settings = SubResource("LabelSettings_2dj88")
+horizontal_alignment = 1
+
+[node name="tl" type="Label" parent="PlayArea/Labels"]
+layout_mode = 0
+offset_left = -137.0
+offset_top = -203.0
+offset_right = -115.0
+offset_bottom = -180.0
+text = "4"
+label_settings = SubResource("LabelSettings_2dj88")
+horizontal_alignment = 1
+
+[node name="tr" type="Label" parent="PlayArea/Labels"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = -201.0
+offset_right = 177.0
+offset_bottom = -178.0
+text = "4"
+label_settings = SubResource("LabelSettings_2dj88")
+horizontal_alignment = 1
+
+[node name="bl" type="Label" parent="PlayArea/Labels"]
+layout_mode = 0
+offset_left = -137.0
+offset_top = 218.0
+offset_right = -116.0
+offset_bottom = 241.0
+text = "4"
+label_settings = SubResource("LabelSettings_2dj88")
+horizontal_alignment = 1
+
+[node name="br" type="Label" parent="PlayArea/Labels"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 218.0
+offset_right = 178.0
+offset_bottom = 241.0
+text = "4"
+label_settings = SubResource("LabelSettings_2dj88")
+horizontal_alignment = 1
+
+[node name="redsum" type="Label" parent="PlayArea/Labels"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = -21.0
+offset_right = 286.0
+offset_bottom = 2.0
+text = "0"
+label_settings = SubResource("LabelSettings_rvlxu")
+horizontal_alignment = 2
+
+[node name="colon" type="Label" parent="PlayArea/Labels"]
+layout_mode = 0
+offset_left = 290.0
+offset_top = -21.0
+offset_right = 306.0
+offset_bottom = 2.0
+text = ":"
+label_settings = SubResource("LabelSettings_usu3a")
+
+[node name="blacksum" type="Label" parent="PlayArea/Labels"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = -21.0
+offset_right = 339.0
+offset_bottom = 2.0
+text = "0"
+label_settings = SubResource("LabelSettings_1v6m6")
+
+[node name="Deck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = -62.0
+offset_right = -263.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_2dj88")
+stretch_mode = 4
+script = ExtResource("8_dgljc")
+has_post_start_functionality = true
+
+[node name="CountLabel" type="Label" parent="PlayArea/Deck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "52"
+label_settings = SubResource("LabelSettings_3gto0")
+horizontal_alignment = 1
+
+[node name="Slots" type="VBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = -199.0
+offset_right = 145.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("64_eqbig")
+
+[node name="TopRow" type="HBoxContainer" parent="PlayArea/Slots"]
+layout_mode = 2
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Slots/TopRow"]
+layout_mode = 2
+texture = ExtResource("9_s0rft")
+script = ExtResource("66_6iuw3")
+default_texture = ExtResource("9_s0rft")
+highlight_texture = ExtResource("11_orlkp")
+
+[node name="Card" parent="PlayArea/Slots/TopRow/CardHolder1" instance=ExtResource("12_3k8ij")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_2dj88")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Slots/TopRow"]
+layout_mode = 2
+texture = ExtResource("9_s0rft")
+script = ExtResource("66_6iuw3")
+default_texture = ExtResource("9_s0rft")
+highlight_texture = ExtResource("11_orlkp")
+
+[node name="Card" parent="PlayArea/Slots/TopRow/CardHolder2" instance=ExtResource("12_3k8ij")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_2dj88")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Slots/TopRow"]
+layout_mode = 2
+texture = ExtResource("9_s0rft")
+script = ExtResource("66_6iuw3")
+default_texture = ExtResource("9_s0rft")
+highlight_texture = ExtResource("11_orlkp")
+
+[node name="Card" parent="PlayArea/Slots/TopRow/CardHolder3" instance=ExtResource("12_3k8ij")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_2dj88")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="MidRow" type="HBoxContainer" parent="PlayArea/Slots"]
+layout_mode = 2
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Slots/MidRow"]
+layout_mode = 2
+texture = ExtResource("9_s0rft")
+script = ExtResource("66_6iuw3")
+default_texture = ExtResource("9_s0rft")
+highlight_texture = ExtResource("11_orlkp")
+
+[node name="Card" parent="PlayArea/Slots/MidRow/CardHolder1" instance=ExtResource("12_3k8ij")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_2dj88")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Slots/MidRow"]
+layout_mode = 2
+texture = ExtResource("9_s0rft")
+script = ExtResource("66_6iuw3")
+default_texture = ExtResource("9_s0rft")
+highlight_texture = ExtResource("11_orlkp")
+
+[node name="Card" parent="PlayArea/Slots/MidRow/CardHolder2" instance=ExtResource("12_3k8ij")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_2dj88")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Slots/MidRow"]
+layout_mode = 2
+texture = ExtResource("9_s0rft")
+script = ExtResource("66_6iuw3")
+default_texture = ExtResource("9_s0rft")
+highlight_texture = ExtResource("11_orlkp")
+
+[node name="Card" parent="PlayArea/Slots/MidRow/CardHolder3" instance=ExtResource("12_3k8ij")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_2dj88")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="BottomRow" type="HBoxContainer" parent="PlayArea/Slots"]
+layout_mode = 2
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Slots/BottomRow"]
+layout_mode = 2
+texture = ExtResource("9_s0rft")
+script = ExtResource("66_6iuw3")
+default_texture = ExtResource("9_s0rft")
+highlight_texture = ExtResource("11_orlkp")
+
+[node name="Card" parent="PlayArea/Slots/BottomRow/CardHolder1" instance=ExtResource("12_3k8ij")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_2dj88")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Slots/BottomRow"]
+layout_mode = 2
+texture = ExtResource("9_s0rft")
+script = ExtResource("66_6iuw3")
+default_texture = ExtResource("9_s0rft")
+highlight_texture = ExtResource("11_orlkp")
+
+[node name="Card" parent="PlayArea/Slots/BottomRow/CardHolder2" instance=ExtResource("12_3k8ij")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_2dj88")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Slots/BottomRow"]
+layout_mode = 2
+texture = ExtResource("9_s0rft")
+script = ExtResource("66_6iuw3")
+default_texture = ExtResource("9_s0rft")
+highlight_texture = ExtResource("11_orlkp")
+
+[node name="Card" parent="PlayArea/Slots/BottomRow/CardHolder3" instance=ExtResource("12_3k8ij")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_2dj88")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="ConfirmButton" type="Button" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 229.0
+offset_top = -15.5
+offset_right = 317.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Confirm"
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click the deck to start
+- Aces are low.
+- Left-click any number of cards to 
+select. Right-click to de-select.
+- Selected red suit cards must sum
+to the same number as selected
+black suit cards.
+- Press confirm button to confirm
+selection. Selected cards will be 
+discarded if valid.
+- Goal: empty one of the middle
+stacks of cards to \"free the joker\"
+- If you are unable to make a valid
+selection of cards, click the deck to
+place another card in the very
+center that may be used. The center
+card must be used in the next
+selection.
+- The center may contain a max of
+3 cards.
+- You lose if you cannot make a
+valid selection and cannot draw
+more cards from the deck."
+placeholder_text = "Add any notes here..."
+script = ExtResource("13_6gleb")
+
+[node name="Warnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("70_rvlxu")
+
+[node name="SumsInvalidError" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -231.0
+offset_right = 234.0
+offset_bottom = 23.0
+text = "The sum of red cards does not match the sum of black cards"
+label_settings = SubResource("LabelSettings_rc1sd")
+
+[node name="DeckEmptyError" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -123.0
+offset_right = 125.0
+offset_bottom = 23.0
+text = "There are no cards left to draw"
+label_settings = SubResource("LabelSettings_rc1sd")
+
+[node name="CellFullError" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -279.0
+offset_right = 283.0
+offset_bottom = 23.0
+text = "There are too many unresolved cards in the middle already. 3 is the max."
+label_settings = SubResource("LabelSettings_rc1sd")
+
+[node name="GameWon" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -37.0
+offset_right = 35.0
+offset_bottom = 23.0
+text = "You win!"
+label_settings = SubResource("LabelSettings_daolq")
+
+[connection signal="cell_full_error" from="JokerJailbreakGamePlayer" to="Warnings" method="_on_joker_jailbreak_game_player_cell_full_error"]
+[connection signal="deck_empty_error" from="JokerJailbreakGamePlayer" to="Warnings" method="_on_joker_jailbreak_game_player_deck_empty_error"]
+[connection signal="game_won" from="JokerJailbreakGamePlayer" to="Warnings" method="_on_joker_jailbreak_game_player_game_won"]
+[connection signal="game_won" from="JokerJailbreakGamePlayer" to="JokerJailbreakGamePlayer/Audio" method="_on_joker_jailbreak_game_player_game_won"]
+[connection signal="selection_confirmed" from="JokerJailbreakGamePlayer" to="JokerJailbreakGamePlayer/Audio" method="_on_joker_jailbreak_game_player_selection_confirmed"]
+[connection signal="sums_invalid_error" from="JokerJailbreakGamePlayer" to="Warnings" method="_on_joker_jailbreak_game_player_sums_invalid_error"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="Toolbar/VBoxContainer/SoundToggle" method="_on_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SoundToggle" to="JokerJailbreakGamePlayer/Audio" method="_on_sound_toggle_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="deck_clicked" from="PlayArea/Deck" to="JokerJailbreakGamePlayer" method="_on_deck_deck_clicked"]
+[connection signal="gui_input" from="PlayArea/Deck" to="PlayArea/Deck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/Deck" to="JokerJailbreakGamePlayer" method="_on_deck_start_game"]
+[connection signal="use_card" from="PlayArea/Slots/TopRow/CardHolder1/Card" to="PlayArea/Slots/TopRow/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/TopRow/CardHolder1/Card" to="JokerJailbreakGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/TopRow/CardHolder2/Card" to="PlayArea/Slots/TopRow/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/TopRow/CardHolder2/Card" to="JokerJailbreakGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/TopRow/CardHolder3/Card" to="PlayArea/Slots/TopRow/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/TopRow/CardHolder3/Card" to="JokerJailbreakGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/MidRow/CardHolder1/Card" to="PlayArea/Slots/MidRow/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/MidRow/CardHolder1/Card" to="JokerJailbreakGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/MidRow/CardHolder3/Card" to="PlayArea/Slots/MidRow/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/MidRow/CardHolder3/Card" to="JokerJailbreakGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/BottomRow/CardHolder1/Card" to="PlayArea/Slots/BottomRow/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/BottomRow/CardHolder1/Card" to="JokerJailbreakGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/BottomRow/CardHolder2/Card" to="PlayArea/Slots/BottomRow/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/BottomRow/CardHolder2/Card" to="JokerJailbreakGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/BottomRow/CardHolder3/Card" to="PlayArea/Slots/BottomRow/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Slots/BottomRow/CardHolder3/Card" to="JokerJailbreakGamePlayer" method="_on_card_use_card"]
+[connection signal="pressed" from="PlayArea/ConfirmButton" to="JokerJailbreakGamePlayer" method="_on_confirm_button_pressed"]
