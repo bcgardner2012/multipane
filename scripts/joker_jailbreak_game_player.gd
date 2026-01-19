@@ -44,6 +44,8 @@ var selected_cards: Array[CardData]
 var red_sum: int
 var black_sum: int
 
+var _signals: JokerJailbreakGamePane
+
 func _ready() -> void:
 	deck = []
 	deck.append_array($CardDatas.get_children())
@@ -85,6 +87,7 @@ func _multi_pop(count: int) -> Array[CardData]:
 
 
 func _on_deck_start_game() -> void:
+	_signals = get_parent()
 	slots.populate(_get_walls())
 	_update_labels()
 
@@ -154,8 +157,10 @@ func _on_confirm_button_pressed() -> void:
 		# game won check
 		if _game_won():
 			game_won.emit()
+			_signals.game_won.emit()
 		else:
 			selection_confirmed.emit()
+			_signals.chipped.emit(all_stacks)
 	else:
 		sums_invalid_error.emit(red_sum, black_sum)
 
