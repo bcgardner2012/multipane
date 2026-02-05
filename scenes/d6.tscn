@@ -1,0 +1,68 @@
+[gd_scene load_steps=27 format=3 uid="uid://b2vbyy4hg2ko7"]
+
+[ext_resource type="Texture2D" uid="uid://cwiihc70t0rwf" path="res://assets/dice/tile000.png" id="1_4t7vw"]
+[ext_resource type="Script" uid="uid://cumck443bitm7" path="res://scripts/d6.gd" id="2_df0ln"]
+[ext_resource type="Script" uid="uid://q44hcocs8o5m" path="res://scripts/die_side.gd" id="3_er5e8"]
+[ext_resource type="Texture2D" uid="uid://creuvx5pjc4dv" path="res://assets/dice/tile001.png" id="4_wh6ca"]
+[ext_resource type="Texture2D" uid="uid://dxdgiy86ei88l" path="res://assets/dice/tile002.png" id="5_iexpr"]
+[ext_resource type="Texture2D" uid="uid://btn56y3pr8bdf" path="res://assets/dice/tile003.png" id="6_itrxx"]
+[ext_resource type="Texture2D" uid="uid://bunw08rb3csab" path="res://assets/dice/tile004.png" id="7_mxn78"]
+[ext_resource type="Texture2D" uid="uid://cou0ms3iss1jk" path="res://assets/dice/tile005.png" id="8_045jp"]
+[ext_resource type="Texture2D" uid="uid://ku6ujyhacsh0" path="res://assets/dice/tile006.png" id="9_ldvc5"]
+[ext_resource type="Texture2D" uid="uid://dvrmmtrq5jcci" path="res://assets/dice/tile007.png" id="10_0jls8"]
+[ext_resource type="Texture2D" uid="uid://cgahl03s1jj2f" path="res://assets/dice/tile008.png" id="11_g6epi"]
+[ext_resource type="Texture2D" uid="uid://cxrtv0w2xx4am" path="res://assets/dice/tile009.png" id="12_mnk2c"]
+[ext_resource type="Texture2D" uid="uid://bcikmuw6vewc3" path="res://assets/dice/tile010.png" id="13_qbmgh"]
+[ext_resource type="Texture2D" uid="uid://dgapnt50r0olb" path="res://assets/dice/tile011.png" id="14_bfiqp"]
+[ext_resource type="Texture2D" uid="uid://dkwprqmy0nlbd" path="res://assets/dice/tile012.png" id="15_8qrb0"]
+[ext_resource type="Texture2D" uid="uid://crln0tuf5oqwj" path="res://assets/dice/tile013.png" id="16_7f0wd"]
+[ext_resource type="Texture2D" uid="uid://dqnoqoa10ooat" path="res://assets/dice/tile014.png" id="17_uvsht"]
+[ext_resource type="Texture2D" uid="uid://capuqh5nje1cd" path="res://assets/dice/tile015.png" id="18_hol6p"]
+[ext_resource type="Texture2D" uid="uid://bturnus26cxhi" path="res://assets/dice/tile016.png" id="19_utvnx"]
+[ext_resource type="Texture2D" uid="uid://cjadmai55elhf" path="res://assets/dice/tile017.png" id="20_2ipiv"]
+[ext_resource type="Texture2D" uid="uid://cyx1p1dmaoygr" path="res://assets/dice/tile018.png" id="21_diy7m"]
+[ext_resource type="Texture2D" uid="uid://bnrj8pn508dkw" path="res://assets/dice/tile019.png" id="22_v4j7k"]
+[ext_resource type="Texture2D" uid="uid://b45b56ww5t6q1" path="res://assets/dice/tile020.png" id="23_u8s7s"]
+[ext_resource type="Texture2D" uid="uid://7hxq5jiqssr8" path="res://assets/dice/tile021.png" id="24_7os1f"]
+[ext_resource type="Texture2D" uid="uid://c7r7aqlkf4dd3" path="res://assets/dice/tile022.png" id="25_jugxq"]
+[ext_resource type="Texture2D" uid="uid://dqg1wgrl5cff5" path="res://assets/dice/tile023.png" id="26_mpu48"]
+
+[node name="D6" type="TextureRect"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4t7vw")
+stretch_mode = 4
+script = ExtResource("2_df0ln")
+
+[node name="Side1" type="Node" parent="."]
+script = ExtResource("3_er5e8")
+sprites = Array[Texture2D]([ExtResource("1_4t7vw"), ExtResource("4_wh6ca"), ExtResource("5_iexpr"), ExtResource("6_itrxx")])
+
+[node name="Side2" type="Node" parent="."]
+script = ExtResource("3_er5e8")
+sprites = Array[Texture2D]([ExtResource("7_mxn78"), ExtResource("8_045jp"), ExtResource("9_ldvc5"), ExtResource("10_0jls8")])
+
+[node name="Side3" type="Node" parent="."]
+script = ExtResource("3_er5e8")
+sprites = Array[Texture2D]([ExtResource("11_g6epi"), ExtResource("12_mnk2c"), ExtResource("13_qbmgh"), ExtResource("14_bfiqp")])
+
+[node name="Side4" type="Node" parent="."]
+script = ExtResource("3_er5e8")
+sprites = Array[Texture2D]([ExtResource("15_8qrb0"), ExtResource("16_7f0wd"), ExtResource("17_uvsht"), ExtResource("18_hol6p")])
+
+[node name="Side5" type="Node" parent="."]
+script = ExtResource("3_er5e8")
+sprites = Array[Texture2D]([ExtResource("19_utvnx"), ExtResource("20_2ipiv"), ExtResource("21_diy7m"), ExtResource("22_v4j7k")])
+
+[node name="Side6" type="Node" parent="."]
+script = ExtResource("3_er5e8")
+sprites = Array[Texture2D]([ExtResource("23_u8s7s"), ExtResource("24_7os1f"), ExtResource("25_jugxq"), ExtResource("26_mpu48")])

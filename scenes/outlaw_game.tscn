@@ -1,0 +1,525 @@
+[gd_scene load_steps=17 format=3 uid="uid://knr4lv4oo5ps"]
+
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_3ymqy"]
+[ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="1_g7025"]
+[ext_resource type="Script" uid="uid://cmnsr143vvv7i" path="res://scripts/outlaw_game_player.gd" id="1_owmnv"]
+[ext_resource type="Script" uid="uid://bfwivusug2fk4" path="res://scripts/outlaw_game_pane.gd" id="1_ytil5"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_uvy3o"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_3ypv2"]
+[ext_resource type="Texture2D" uid="uid://bkav0sfatefj" path="res://assets/outlaw/outlaw_chart.jpg" id="5_3ypv2"]
+[ext_resource type="Script" uid="uid://bvlwige5msnfw" path="res://scripts/outlaw_cross.gd" id="5_c2qt5"]
+[ext_resource type="Script" uid="uid://vm8gsk162esu" path="res://scripts/outlaw_chart.gd" id="5_cvxja"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="5_uvy3o"]
+[ext_resource type="Texture2D" uid="uid://decq1dys2mxw0" path="res://assets/outlaw/yellow_x.png" id="6_kvtgn"]
+[ext_resource type="Script" uid="uid://ch5dhhlb28xak" path="res://scripts/outlaw_roll_area.gd" id="9_18lln"]
+[ext_resource type="Script" uid="uid://d3g46t6chc45d" path="res://scripts/outlaw_keep_area.gd" id="11_uknak"]
+[ext_resource type="Script" uid="uid://u03fhu027m5l" path="res://scripts/outlaw_game_warnings.gd" id="13_flcce"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uknak"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_flcce"]
+font_color = Color(5.7275593e-06, 0.91231567, 0.07365198, 1)
+
+[node name="OutlawGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ytil5")
+
+[node name="OutlawGamePlayer" type="Node" parent="." node_paths=PackedStringArray("roll_area", "keep_area", "keep_area_label", "chart", "score_label", "npc_score_label", "_signals")]
+script = ExtResource("1_owmnv")
+roll_area = NodePath("../PlayArea/DiceArea/RollArea")
+keep_area = NodePath("../PlayArea/DiceArea/KeepArea")
+keep_area_label = NodePath("../PlayArea/DiceArea/KeepArea/Total")
+chart = NodePath("../PlayArea/Chart")
+score_label = NodePath("../PlayerScore")
+npc_score_label = NodePath("../NPCScore")
+_signals = NodePath("..")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_3ymqy")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_uvy3o")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_3ypv2")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="Chart" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.8
+texture = ExtResource("5_3ypv2")
+expand_mode = 1
+script = ExtResource("5_cvxja")
+
+[node name="Cross4" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.111
+anchor_top = 0.278
+anchor_right = 0.111
+anchor_bottom = 0.278
+offset_left = -28.888
+offset_top = -28.056
+offset_right = 29.112
+offset_bottom = 29.944
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="Cross5" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.277
+anchor_top = 0.278
+anchor_right = 0.277
+anchor_bottom = 0.279
+offset_left = -27.216003
+offset_top = -28.056
+offset_right = 30.783997
+offset_bottom = 29.207962
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="Cross6" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.43400002
+anchor_top = 0.278
+anchor_right = 0.43400002
+anchor_bottom = 0.279
+offset_left = -29.472015
+offset_top = -28.056
+offset_right = 28.527985
+offset_bottom = 29.207962
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="Cross7" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.586
+anchor_top = 0.278
+anchor_right = 0.586
+anchor_bottom = 0.278
+offset_left = -28.68805
+offset_top = -28.056
+offset_right = 29.31195
+offset_bottom = 29.944
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="Cross8" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74100006
+anchor_top = 0.278
+anchor_right = 0.74100006
+anchor_bottom = 0.27800003
+offset_left = -31.92804
+offset_top = -30.0
+offset_right = 28.07196
+offset_bottom = 29.943985
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="Cross9" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89
+anchor_top = 0.278
+anchor_right = 0.89
+anchor_bottom = 0.279
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.000015
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="Cross19" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.111
+anchor_top = 0.674
+anchor_right = 0.11100001
+anchor_bottom = 0.674
+offset_left = -28.888
+offset_top = -28.064026
+offset_right = 29.111992
+offset_bottom = 29.935974
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="Cross20" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26500002
+anchor_top = 0.666
+anchor_right = 0.266
+anchor_bottom = 0.666
+offset_left = -28.120026
+offset_top = -28.175995
+offset_right = 28.87201
+offset_bottom = 29.824005
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="Cross21" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.43400002
+anchor_top = 0.67
+anchor_right = 0.43400002
+anchor_bottom = 0.67
+offset_left = -29.472015
+offset_top = -28.120026
+offset_right = 28.527985
+offset_bottom = 29.879974
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="Cross22" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.586
+anchor_top = 0.66800004
+anchor_right = 0.586
+anchor_bottom = 0.66800004
+offset_left = -28.68805
+offset_top = -30.64804
+offset_right = 29.31195
+offset_bottom = 27.35196
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="Cross23" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74100006
+anchor_top = 0.671
+anchor_right = 0.74100006
+anchor_bottom = 0.671
+offset_left = -31.92804
+offset_top = -29.856018
+offset_right = 28.07196
+offset_bottom = 30.087952
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="Cross24" type="TextureRect" parent="PlayArea/Chart"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89
+anchor_top = 0.675
+anchor_right = 0.89000005
+anchor_bottom = 0.675
+offset_left = -30.0
+offset_top = -29.800018
+offset_right = 29.999939
+offset_bottom = 30.936005
+texture = ExtResource("3_3ypv2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_c2qt5")
+player_cross_texture = ExtResource("3_3ypv2")
+npc_cross_texture = ExtResource("6_kvtgn")
+
+[node name="DiceArea" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RollArea" type="Panel" parent="PlayArea/DiceArea" node_paths=PackedStringArray("keep_area")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_right = -30.0
+script = ExtResource("9_18lln")
+keep_area = NodePath("../KeepArea")
+
+[node name="Label" type="Label" parent="PlayArea/DiceArea/RollArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_bottom = 23.0
+text = "Roll"
+horizontal_alignment = 1
+
+[node name="D6" parent="PlayArea/DiceArea/RollArea" instance=ExtResource("1_g7025")]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.2
+
+[node name="D6_2" parent="PlayArea/DiceArea/RollArea" instance=ExtResource("1_g7025")]
+layout_mode = 1
+anchor_left = 0.4
+anchor_right = 0.4
+
+[node name="D6_3" parent="PlayArea/DiceArea/RollArea" instance=ExtResource("1_g7025")]
+layout_mode = 1
+anchor_left = 0.6
+anchor_right = 0.6
+
+[node name="D6_4" parent="PlayArea/DiceArea/RollArea" instance=ExtResource("1_g7025")]
+layout_mode = 1
+anchor_left = 0.8
+anchor_right = 0.8
+
+[node name="KeepArea" type="Panel" parent="PlayArea/DiceArea" node_paths=PackedStringArray("roll_area")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+script = ExtResource("11_uknak")
+roll_area = NodePath("../RollArea")
+
+[node name="Label" type="Label" parent="PlayArea/DiceArea/KeepArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_bottom = 23.0
+text = "Keep"
+horizontal_alignment = 1
+
+[node name="Total" type="Label" parent="PlayArea/DiceArea/KeepArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+text = "Total: 0"
+horizontal_alignment = 1
+
+[node name="RerollButton" type="Button" parent="PlayArea/DiceArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -36.0
+offset_right = 27.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Reroll"
+
+[node name="ClaimButton" type="Button" parent="PlayArea/DiceArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = 6.0
+offset_right = 27.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Claim"
+
+[node name="PlayerScore" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Player Score: $0"
+
+[node name="NPCScore" type="Label" parent="."]
+layout_mode = 0
+offset_top = 23.0
+offset_right = 122.0
+offset_bottom = 46.0
+text = "NPC Score: $0"
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Every turn, you'll roll 4 six-sided
+dice. You can roll any number of
+these dice up to 3 times.
+- Click a rolled die to set it aside.
+- You want the dice to sum to
+any unmarked value less than 10 or
+greater than 18.
+- If you roll an outlaw that is already
+marked in your color, you lose that
+bounty. If you roll an outlow in your
+enemy's color, you steal their 
+bounty.
+- Once 3 outlaws are marked in your
+color, you claim their bounties.
+Clear your color off the chart.
+- Goal: claim $50,000 in bounties."
+placeholder_text = "Add any notes here..."
+script = ExtResource("5_uvy3o")
+
+[node name="Warnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("13_flcce")
+
+[node name="TooFewDiceClaimed" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -105.0
+offset_right = 107.0
+offset_bottom = 23.0
+text = "All four dice must be used"
+label_settings = SubResource("LabelSettings_uknak")
+
+[node name="YouWin" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -36.0
+offset_right = 38.0
+offset_bottom = 23.0
+text = "You win!"
+label_settings = SubResource("LabelSettings_flcce")
+
+[node name="YouLose" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -173.0
+offset_right = 173.0
+offset_bottom = 23.0
+text = "You lose, your opponent earned $50,000 first"
+label_settings = SubResource("LabelSettings_uknak")
+
+[connection signal="error_too_few_dice_claimed" from="OutlawGamePlayer" to="Warnings" method="_on_outlaw_game_player_error_too_few_dice_claimed"]
+[connection signal="player_lost" from="OutlawGamePlayer" to="Warnings" method="_on_outlaw_game_player_player_lost"]
+[connection signal="player_won" from="OutlawGamePlayer" to="Warnings" method="_on_outlaw_game_player_player_won"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="d6_entered_tree" from="PlayArea/DiceArea/RollArea/D6" to="OutlawGamePlayer" method="_on_d_6_d_6_entered_tree"]
+[connection signal="gui_input" from="PlayArea/DiceArea/RollArea/D6" to="PlayArea/DiceArea/RollArea/D6" method="_on_gui_input"]
+[connection signal="left_clicked" from="PlayArea/DiceArea/RollArea/D6" to="OutlawGamePlayer" method="_on_d_6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/DiceArea/RollArea/D6" to="PlayArea/DiceArea/RollArea/D6" method="_on_tree_entered"]
+[connection signal="d6_entered_tree" from="PlayArea/DiceArea/RollArea/D6_2" to="OutlawGamePlayer" method="_on_d_6_d_6_entered_tree"]
+[connection signal="gui_input" from="PlayArea/DiceArea/RollArea/D6_2" to="PlayArea/DiceArea/RollArea/D6_2" method="_on_gui_input"]
+[connection signal="left_clicked" from="PlayArea/DiceArea/RollArea/D6_2" to="OutlawGamePlayer" method="_on_d_6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/DiceArea/RollArea/D6_2" to="PlayArea/DiceArea/RollArea/D6_2" method="_on_tree_entered"]
+[connection signal="d6_entered_tree" from="PlayArea/DiceArea/RollArea/D6_3" to="OutlawGamePlayer" method="_on_d_6_d_6_entered_tree"]
+[connection signal="gui_input" from="PlayArea/DiceArea/RollArea/D6_3" to="PlayArea/DiceArea/RollArea/D6_3" method="_on_gui_input"]
+[connection signal="left_clicked" from="PlayArea/DiceArea/RollArea/D6_3" to="OutlawGamePlayer" method="_on_d_6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/DiceArea/RollArea/D6_3" to="PlayArea/DiceArea/RollArea/D6_3" method="_on_tree_entered"]
+[connection signal="d6_entered_tree" from="PlayArea/DiceArea/RollArea/D6_4" to="OutlawGamePlayer" method="_on_d_6_d_6_entered_tree"]
+[connection signal="gui_input" from="PlayArea/DiceArea/RollArea/D6_4" to="PlayArea/DiceArea/RollArea/D6_4" method="_on_gui_input"]
+[connection signal="left_clicked" from="PlayArea/DiceArea/RollArea/D6_4" to="OutlawGamePlayer" method="_on_d_6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/DiceArea/RollArea/D6_4" to="PlayArea/DiceArea/RollArea/D6_4" method="_on_tree_entered"]
+[connection signal="pressed" from="PlayArea/DiceArea/RerollButton" to="OutlawGamePlayer" method="_on_reroll_button_pressed"]
+[connection signal="pressed" from="PlayArea/DiceArea/ClaimButton" to="OutlawGamePlayer" method="_on_claim_button_pressed"]

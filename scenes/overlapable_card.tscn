@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://xlvrspmbkfmg"]
+
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="1_0mp02"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="2_7lskl"]
+
+[node name="Card" instance=ExtResource("1_0mp02")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -132.0
+offset_right = 46.838684
+offset_bottom = -4.0
+texture = ExtResource("2_7lskl")
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false

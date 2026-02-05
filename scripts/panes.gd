@@ -17,6 +17,8 @@ enum Orientation {
 @onready var bnn_game_scene = preload("res://scenes/bards_and_nobles_game.tscn")
 @onready var zombie_dice_game_scene = preload("res://scenes/zombie_dice_game.tscn")
 @onready var joker_jb_game_scene = preload("res://scenes/joker_jailbreak_game.tscn")
+@onready var scorpion_tail_game_scene = preload("res://scenes/scorpion_tail_game.tscn")
+@onready var outlaw_game_scene = preload("res://scenes/outlaw_game.tscn")
 
 @onready var orientation = Orientation.PORTRAIT
 
@@ -31,6 +33,8 @@ var should_add_high_low_game_pane: bool
 var should_add_bnn_game_pane: bool
 var should_add_zombie_dice_game_pane: bool
 var should_add_joker_jb_game_pane: bool
+var should_add_scorpion_tail_game_pane: bool
+var should_add_outlaw_game_pane: bool
 
 func queue_add_image_pane() -> void:
 	should_add_image_pane = true
@@ -61,6 +65,12 @@ func queue_add_zombie_dice_game_pane() -> void:
 	
 func queue_add_joker_jb_game_pane() -> void:
 	should_add_joker_jb_game_pane = true
+
+func queue_add_scorpion_tail_game_pane() -> void:
+	should_add_scorpion_tail_game_pane = true
+
+func queue_add_outlaw_game_pane() -> void:
+	should_add_outlaw_game_pane = true
 
 func _add_pane(scene: Resource) -> void:
 	# we are designing with up to 4 panes in mind
@@ -102,6 +112,12 @@ func _process(_delta: float) -> void:
 	elif should_add_joker_jb_game_pane:
 		_add_pane(joker_jb_game_scene)
 		should_add_joker_jb_game_pane = false
+	elif should_add_scorpion_tail_game_pane:
+		_add_pane(scorpion_tail_game_scene)
+		should_add_scorpion_tail_game_pane = false
+	elif should_add_outlaw_game_pane:
+		_add_pane(outlaw_game_scene)
+		should_add_outlaw_game_pane = false
 	
 	if childCount != get_child_count():
 		if childCount > get_child_count():

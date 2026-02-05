@@ -57,13 +57,23 @@ func receive_broadcast(from: Node) -> void:
 		bnngp.sale_made.connect($BardsAndNoblesGamePlug.on_sale_made)
 	elif from is ZombieDiceGamePane:
 		var zdgp = from as ZombieDiceGamePane
-		zdgp.cards_drawn.connect()
-		zdgp.round_won.connect()
-		zdgp.round_lost.connect()
+		zdgp.cards_drawn.connect($ZombieDiceGamePlug.on_cards_drawn)
+		zdgp.round_won.connect($ZombieDiceGamePlug.on_round_won)
+		zdgp.round_lost.connect($ZombieDiceGamePlug.on_round_lost)
 	elif from is JokerJailbreakGamePane:
 		var jjb = from as JokerJailbreakGamePane
 		jjb.chipped.connect($JokerJailbreakGamePlug.on_chipped)
 		jjb.game_won.connect($JokerJailbreakGamePlug.on_game_won)
+	elif from is ScorpionTailGamePane:
+		var stgp = from as ScorpionTailGamePane
+		stgp.tail_grew.connect($ScorpionTailGamePlug.on_tail_grew)
+		stgp.tail_stung.connect($ScorpionTailGamePlug.on_tail_stung)
+	elif from is OutlawGamePane:
+		var ogp = from as OutlawGamePane
+		ogp.bounty_collected.connect($OutlawGamePlug.on_bounty_collected)
+		ogp.outlaw_claimed.connect($OutlawGamePlug.on_outlaw_claimed)
+		ogp.player_lost.connect($OutlawGamePlug.on_player_lost)
+		ogp.player_won.connect($OutlawGamePlug.on_player_won)
 	
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:

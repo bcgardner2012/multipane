@@ -1,0 +1,842 @@
+[gd_scene load_steps=69 format=3 uid="uid://ccgdwu58v4k8t"]
+
+[ext_resource type="Script" uid="uid://cyb22ir0ctu54" path="res://scripts/scorpion_tail_game_player.gd" id="1_3qwi8"]
+[ext_resource type="Script" uid="uid://db075si8eylai" path="res://scripts/scorpion_tail_game_pane.gd" id="1_8shyf"]
+[ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="2_xti1b"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="3_8shyf"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="4_dg3mo"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="4_ygruk"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="5_8lply"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="5_74xln"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="6_faee0"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="6_ys4it"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="7_3qwi8"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="7_7llx8"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="7_8lply"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="8_cwfov"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="8_ys4it"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="9_3qwi8"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="9_d3aga"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="10_l23ew"]
+[ext_resource type="Script" uid="uid://mloe0kgitkaj" path="res://scripts/hand_h_box.gd" id="10_ldu4f"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="11_0orer"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="12_meb2k"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="13_toqv6"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="14_lc6up"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="15_5saac"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="16_2rp7l"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="17_myb05"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="18_2yslk"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="19_mwm7q"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="20_81dbq"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="21_g22po"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="22_bhu3k"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="23_hdwxr"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="24_txxqa"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="25_r01pa"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="26_1qsfk"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="27_btiwn"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="28_7v34g"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="29_umtv1"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="30_lggai"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="31_hgjir"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="32_b7urr"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="33_ru2eh"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="34_uamst"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="35_m63ff"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="36_0tqct"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="37_wacyo"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="38_hywvl"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="39_bff2m"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="40_5fxjj"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="41_hf2f5"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="42_7qh46"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="43_d5okw"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="44_q8rr1"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="45_3ygy4"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="46_nvhye"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="47_gexdj"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="48_0iihw"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="49_ccc1m"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="50_hijnh"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="51_3r1k5"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="52_skm1c"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="53_463bb"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="54_5y3f0"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="55_ghxc0"]
+[ext_resource type="Script" uid="uid://ct4n2pnig4gai" path="res://scripts/scorpion_tail_tail_node.gd" id="62_xti1b"]
+[ext_resource type="Script" uid="uid://dc188c72go6no" path="res://scripts/scorpion_tail_warnings.gd" id="66_0ypex"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_metcd"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ypex"]
+font_color = Color(0.8495599, 3.2969565e-06, 1.540184e-06, 1)
+
+[node name="ScorpionTailGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8shyf")
+
+[node name="ScorpionTailGamePlayer" type="Node" parent="." node_paths=PackedStringArray("hand", "tail_node", "npc_hand_label", "deck_count_label")]
+script = ExtResource("1_3qwi8")
+hand = NodePath("../PlayArea/HandHBox")
+tail_node = NodePath("../PlayArea/Tail")
+npc_hand_label = NodePath("../PlayArea/NPCHandSize")
+deck_count_label = NodePath("../PlayArea/Deck/CountLabel")
+
+[node name="CardDatas" type="Node" parent="ScorpionTailGamePlayer"]
+script = ExtResource("2_xti1b")
+
+[node name="H2" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 2
+texture = ExtResource("4_dg3mo")
+
+[node name="H3" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 3
+texture = ExtResource("5_74xln")
+
+[node name="H4" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 4
+texture = ExtResource("6_faee0")
+
+[node name="H5" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 5
+texture = ExtResource("7_7llx8")
+
+[node name="H6" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 6
+texture = ExtResource("8_cwfov")
+
+[node name="H7" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 7
+texture = ExtResource("9_d3aga")
+
+[node name="H8" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 8
+texture = ExtResource("10_l23ew")
+
+[node name="H9" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 9
+texture = ExtResource("11_0orer")
+
+[node name="H10" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 10
+texture = ExtResource("12_meb2k")
+
+[node name="HJ" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 11
+texture = ExtResource("13_toqv6")
+
+[node name="HQ" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 12
+texture = ExtResource("14_lc6up")
+
+[node name="HK" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 13
+texture = ExtResource("15_5saac")
+
+[node name="HA" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+rank = 1
+texture = ExtResource("16_2rp7l")
+
+[node name="D2" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 2
+texture = ExtResource("17_myb05")
+
+[node name="D3" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 3
+texture = ExtResource("18_2yslk")
+
+[node name="D4" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 4
+texture = ExtResource("19_mwm7q")
+
+[node name="D5" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 5
+texture = ExtResource("20_81dbq")
+
+[node name="D6" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 6
+texture = ExtResource("21_g22po")
+
+[node name="D7" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 7
+texture = ExtResource("22_bhu3k")
+
+[node name="D8" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 8
+texture = ExtResource("23_hdwxr")
+
+[node name="D9" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 9
+texture = ExtResource("24_txxqa")
+
+[node name="D10" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 10
+texture = ExtResource("25_r01pa")
+
+[node name="DJ" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 11
+texture = ExtResource("26_1qsfk")
+
+[node name="DQ" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 12
+texture = ExtResource("27_btiwn")
+
+[node name="DK" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 13
+texture = ExtResource("28_7v34g")
+
+[node name="DA" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 1
+rank = 1
+texture = ExtResource("29_umtv1")
+
+[node name="C2" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 2
+texture = ExtResource("30_lggai")
+
+[node name="C3" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 3
+texture = ExtResource("31_hgjir")
+
+[node name="C4" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 4
+texture = ExtResource("32_b7urr")
+
+[node name="C5" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 5
+texture = ExtResource("33_ru2eh")
+
+[node name="C6" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 6
+texture = ExtResource("34_uamst")
+
+[node name="C7" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 7
+texture = ExtResource("35_m63ff")
+
+[node name="C8" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 8
+texture = ExtResource("36_0tqct")
+
+[node name="C9" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 9
+texture = ExtResource("37_wacyo")
+
+[node name="C10" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 10
+texture = ExtResource("38_hywvl")
+
+[node name="CJ" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 11
+texture = ExtResource("39_bff2m")
+
+[node name="CQ" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 12
+texture = ExtResource("40_5fxjj")
+
+[node name="CK" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 13
+texture = ExtResource("41_hf2f5")
+
+[node name="CA" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 2
+rank = 1
+texture = ExtResource("42_7qh46")
+
+[node name="S2" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 2
+texture = ExtResource("43_d5okw")
+
+[node name="S3" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 3
+texture = ExtResource("44_q8rr1")
+
+[node name="S4" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 4
+texture = ExtResource("45_3ygy4")
+
+[node name="S5" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 5
+texture = ExtResource("46_nvhye")
+
+[node name="S6" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 6
+texture = ExtResource("47_gexdj")
+
+[node name="S7" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 7
+texture = ExtResource("48_0iihw")
+
+[node name="S8" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 8
+texture = ExtResource("49_ccc1m")
+
+[node name="S9" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 9
+texture = ExtResource("50_hijnh")
+
+[node name="S10" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 10
+texture = ExtResource("51_3r1k5")
+
+[node name="SJ" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 11
+texture = ExtResource("52_skm1c")
+
+[node name="SQ" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 12
+texture = ExtResource("53_463bb")
+
+[node name="SK" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 13
+texture = ExtResource("54_5y3f0")
+
+[node name="SA" type="Node" parent="ScorpionTailGamePlayer/CardDatas"]
+script = ExtResource("3_8shyf")
+suit = 3
+rank = 1
+texture = ExtResource("55_ghxc0")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_ygruk")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_8lply")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_ys4it")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="NPCHandSize" type="Label" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "NPC Hand: 5 cards"
+
+[node name="Tail" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("62_xti1b")
+
+[node name="Card" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card2" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = -109.0
+offset_right = -19.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card3" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -191.0
+offset_right = -52.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card4" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -275.0
+offset_right = -23.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card5" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -328.0
+offset_right = 28.0
+offset_bottom = -204.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card6" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = -330.0
+offset_right = 105.0
+offset_bottom = -206.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card7" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 85.0
+offset_top = -307.0
+offset_right = 173.0
+offset_bottom = -183.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card8" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 121.0
+offset_top = -228.0
+offset_right = 209.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card9" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 117.0
+offset_top = -128.0
+offset_right = 205.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card10" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 111.0
+offset_top = -36.0
+offset_right = 199.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card11" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 91.0
+offset_top = 51.0
+offset_right = 179.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card12" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 51.0
+offset_top = 94.0
+offset_right = 139.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card13" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 114.0
+offset_right = 68.0
+offset_bottom = 238.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card14" parent="PlayArea/Tail" instance=ExtResource("7_8lply")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = 114.0
+offset_right = -8.0
+offset_bottom = 238.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Deck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = -62.0
+offset_right = -263.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ys4it")
+stretch_mode = 4
+script = ExtResource("9_3qwi8")
+has_post_start_functionality = true
+
+[node name="CountLabel" type="Label" parent="PlayArea/Deck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "52"
+label_settings = SubResource("LabelSettings_metcd")
+horizontal_alignment = 1
+
+[node name="HandHBox" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchor_left = 0.185
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("10_ldu4f")
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click the deck to start
+- Aces are low.
+- You may play any card other than
+an ace to start
+- Every card played must be less
+that the last card added to the tail
+- Play an ace to sting the other
+player. They must take the tail into
+their hand and shuffle the ace back
+into the deck.
+- Click the deck again to draw a card
+and skip your turn.
+- Goal: empty your hand of cards, or
+have the fewest cards in hand when
+a stalemate is reached."
+placeholder_text = "Add any notes here..."
+script = ExtResource("7_3qwi8")
+
+[node name="Warnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("66_0ypex")
+
+[node name="InvalidStartError" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -116.0
+offset_right = 117.0
+offset_bottom = 23.0
+text = "Tails cannot start with an ace"
+label_settings = SubResource("LabelSettings_0ypex")
+
+[node name="LowerOnlyError" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -261.0
+offset_right = 264.0
+offset_bottom = 23.0
+text = "You must play a card lower than the last one played, or draw a card."
+label_settings = SubResource("LabelSettings_0ypex")
+
+[connection signal="must_play_lower_rank" from="ScorpionTailGamePlayer" to="Warnings" method="_on_scorpion_tail_game_player_must_play_lower_rank"]
+[connection signal="tail_cannot_start_with_ace" from="ScorpionTailGamePlayer" to="Warnings" method="_on_scorpion_tail_game_player_tail_cannot_start_with_ace"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="deck_clicked" from="PlayArea/Deck" to="ScorpionTailGamePlayer" method="_on_deck_deck_clicked"]
+[connection signal="gui_input" from="PlayArea/Deck" to="PlayArea/Deck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/Deck" to="ScorpionTailGamePlayer" method="_on_deck_start_game"]
+[connection signal="child_entered_tree" from="PlayArea/HandHBox" to="PlayArea/HandHBox" method="_on_child_entered_tree"]
+[connection signal="child_order_changed" from="PlayArea/HandHBox" to="PlayArea/HandHBox" method="_on_child_order_changed"]

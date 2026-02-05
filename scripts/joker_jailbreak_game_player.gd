@@ -52,16 +52,16 @@ func _ready() -> void:
 	DeckHelper.shuffle(deck)
 	
 	# populate corners
-	tl_stack = _multi_pop(4)
-	tr_stack = _multi_pop(4)
-	bl_stack = _multi_pop(4)
-	br_stack = _multi_pop(4)
+	tl_stack = DeckHelper.multi_pop(deck, 4)
+	tr_stack = DeckHelper.multi_pop(deck, 4)
+	bl_stack = DeckHelper.multi_pop(deck, 4)
+	br_stack = DeckHelper.multi_pop(deck, 4)
 	
 	# populate walls
-	tc_stack = _multi_pop(7)
-	mr_stack = _multi_pop(7)
-	bc_stack = _multi_pop(7)
-	ml_stack = _multi_pop(7)
+	tc_stack = DeckHelper.multi_pop(deck, 7)
+	mr_stack = DeckHelper.multi_pop(deck, 7)
+	bc_stack = DeckHelper.multi_pop(deck, 7)
+	ml_stack = DeckHelper.multi_pop(deck, 7)
 	
 	# populate joker's cell
 	mc_stack = []
@@ -78,13 +78,6 @@ func _ready() -> void:
 	all_stacks.append(br_stack)
 	
 	selected_cards = []
-
-func _multi_pop(count: int) -> Array[CardData]:
-	var stack: Array[CardData] = []
-	for i in range(count):
-		stack.append(deck.pop_front())
-	return stack
-
 
 func _on_deck_start_game() -> void:
 	_signals = get_parent()
