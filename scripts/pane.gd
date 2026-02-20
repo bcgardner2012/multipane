@@ -74,7 +74,9 @@ func receive_broadcast(from: Node) -> void:
 		ogp.outlaw_claimed.connect($OutlawGamePlug.on_outlaw_claimed)
 		ogp.player_lost.connect($OutlawGamePlug.on_player_lost)
 		ogp.player_won.connect($OutlawGamePlug.on_player_won)
-	
+	elif from is CardCaptureGamePane:
+		var ccgp = from as CardCaptureGamePane
+		ccgp.captured.connect($CardCaptureGamePlug.on_captured)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

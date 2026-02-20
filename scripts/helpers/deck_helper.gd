@@ -39,6 +39,11 @@ static func remove_card(deck: Array[CardData], card: CardData) -> void:
 			deck.remove_at(i)
 			break
 
+static func remove_cards(deck: Array[CardData], to_remove: Array[CardData]) -> void:
+	for to_r in to_remove:
+		if to_r in deck:
+			remove_card(deck, to_r)
+
 static func multi_pop(deck: Array[CardData], count: int) -> Array[CardData]:
 	var stack: Array[CardData] = []
 	for i in range(count):

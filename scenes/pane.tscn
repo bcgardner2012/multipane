@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://pjilwspntgn6"]
+[gd_scene load_steps=47 format=3 uid="uid://pjilwspntgn6"]
 
 [ext_resource type="Script" uid="uid://dd7ywskexogj6" path="res://scripts/pane.gd" id="1_ghsmc"]
 [ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="1_k7av0"]
@@ -38,6 +38,7 @@
 [ext_resource type="Script" uid="uid://dpbedum2trnxl" path="res://scripts/gauge_label.gd" id="13_174d6"]
 [ext_resource type="Texture2D" uid="uid://ysbddceutenx" path="res://assets/bar_tool.png" id="13_dtceb"]
 [ext_resource type="Texture2D" uid="uid://dr5idoohosp33" path="res://assets/sound_off.png" id="13_kleyl"]
+[ext_resource type="Script" uid="uid://b80748isileax" path="res://scripts/card_capture_game_plug.gd" id="13_ooiuq"]
 [ext_resource type="Texture2D" uid="uid://cv5px3rxkku6y" path="res://assets/unlinked.png" id="14_lpq5f"]
 [ext_resource type="Script" uid="uid://dvu4sciwxhw4c" path="res://scripts/hotlinker.gd" id="15_xq7uq"]
 [ext_resource type="Texture2D" uid="uid://05gyxubk1pn6" path="res://assets/linked.png" id="16_bcyca"]
@@ -103,6 +104,10 @@ portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="OutlawGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("12_q5vdo")
+portrait = NodePath("../PortraitHolder/Portrait")
+
+[node name="CardCaptureGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
+script = ExtResource("13_ooiuq")
 portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="SuitIcon" type="TextureRect" parent="."]

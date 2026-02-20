@@ -4,6 +4,7 @@ class_name CardHighlighter
 @export var default_texture: Texture2D
 @export var highlight_texture: Texture2D
 @export var is_singleton_highlight: bool = false
+@export var unhighlight_on_second_click: bool = false
 
 static var _singleton: CardHighlighter
 
@@ -13,6 +14,8 @@ func _on_card_use_card(_data: CardData, button_index: int) -> void:
 			if _singleton == null:
 				texture = highlight_texture
 				_singleton = self
+		elif unhighlight_on_second_click and texture == highlight_texture:
+			texture = default_texture
 		else:
 			texture = highlight_texture
 	elif button_index == MOUSE_BUTTON_RIGHT:

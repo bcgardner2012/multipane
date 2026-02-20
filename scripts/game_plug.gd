@@ -1,6 +1,10 @@
 extends Node
 class_name GamePlug
 
+const AH_SUBDIR = "ah"
+const AC_SUBDIR = "ac"
+const AS_SUBDIR = "as"
+const AD_SUBDIR = "ad"
 const QH_SUBDIR = "qh"
 const QC_SUBDIR = "qc"
 const QS_SUBDIR = "qs"
@@ -34,6 +38,8 @@ func _card_to_notation(card: CardData) -> String:
 				return QH_SUBDIR
 			if card.rank == 13:
 				return KH_SUBDIR
+			if card.rank == 14:
+				return AH_SUBDIR
 		CardData.Suit.DIAMONDS:
 			if card.rank == 10:
 				return XD_SUBDIR
@@ -43,6 +49,8 @@ func _card_to_notation(card: CardData) -> String:
 				return QD_SUBDIR
 			if card.rank == 13:
 				return KD_SUBDIR
+			if card.rank == 14:
+				return AD_SUBDIR
 		CardData.Suit.CLUBS:
 			if card.rank == 10:
 				return XC_SUBDIR
@@ -52,6 +60,8 @@ func _card_to_notation(card: CardData) -> String:
 				return QC_SUBDIR
 			if card.rank == 13:
 				return KC_SUBDIR
+			if card.rank == 14:
+				return AC_SUBDIR
 		CardData.Suit.SPADES:
 			if card.rank == 10:
 				return XS_SUBDIR
@@ -61,4 +71,6 @@ func _card_to_notation(card: CardData) -> String:
 				return QS_SUBDIR
 			if card.rank == 13:
 				return KS_SUBDIR
+			if card.rank == 14:
+				return AS_SUBDIR
 	return ""
