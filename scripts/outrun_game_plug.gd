@@ -25,6 +25,11 @@ func on_captured(index: int) -> void:
 		health = 0
 		portrait.try_load_image(_index_to_color(channel).path_join(str(health)))
 		captured_last_round = true
+	
+	# retain corpse image when bear moves on to next target
+	elif captured_last_round:
+		portrait.try_load_image(_index_to_color(channel).path_join("corpse"))
+		captured_last_round = false
 
 func on_game_started() -> void:
 	var channel = _get_suit_channel()
