@@ -20,6 +20,7 @@ enum Orientation {
 @onready var scorpion_tail_game_scene = preload("res://scenes/scorpion_tail_game.tscn")
 @onready var outlaw_game_scene = preload("res://scenes/outlaw_game.tscn")
 @onready var card_capture_game_scene = preload("res://scenes/card_capture_game.tscn")
+@onready var outrun_game_scene = preload("res://scenes/outrun_game.tscn")
 
 @onready var orientation = Orientation.PORTRAIT
 
@@ -37,6 +38,7 @@ var should_add_joker_jb_game_pane: bool
 var should_add_scorpion_tail_game_pane: bool
 var should_add_outlaw_game_pane: bool
 var should_add_card_capture_game_pane: bool
+var should_add_outrun_game_pane: bool
 
 func queue_add_image_pane() -> void:
 	should_add_image_pane = true
@@ -76,6 +78,9 @@ func queue_add_outlaw_game_pane() -> void:
 
 func queue_add_card_capture_game_pane() -> void:
 	should_add_card_capture_game_pane = true
+
+func queue_add_outrun_game_pane() -> void:
+	should_add_outrun_game_pane = true
 
 func _add_pane(scene: Resource) -> void:
 	# we are designing with up to 4 panes in mind
@@ -126,6 +131,9 @@ func _process(_delta: float) -> void:
 	elif should_add_card_capture_game_pane:
 		_add_pane(card_capture_game_scene)
 		should_add_card_capture_game_pane = false
+	elif should_add_outrun_game_pane:
+		_add_pane(outrun_game_scene)
+		should_add_outrun_game_pane = false
 	
 	if childCount != get_child_count():
 		if childCount > get_child_count():

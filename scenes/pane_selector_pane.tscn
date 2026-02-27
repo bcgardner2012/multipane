@@ -21,7 +21,7 @@ offset_top = -10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
-item_count = 13
+item_count = 14
 popup/item_0/text = "Image Pane"
 popup/item_0/id = 0
 popup/item_1/text = "Scoundrel Game"
@@ -48,6 +48,8 @@ popup/item_11/text = "Outlaw Game"
 popup/item_11/id = 11
 popup/item_12/text = "Card Capture Game"
 popup/item_12/id = 12
+popup/item_13/text = "Outrun Game"
+popup/item_13/id = 13
 script = ExtResource("1_croqb")
 
 [connection signal="item_selected" from="PaneSelector" to="PaneSelector" method="_on_item_selected"]

@@ -77,6 +77,11 @@ func receive_broadcast(from: Node) -> void:
 	elif from is CardCaptureGamePane:
 		var ccgp = from as CardCaptureGamePane
 		ccgp.captured.connect($CardCaptureGamePlug.on_captured)
+	elif from is OutrunGamePane:
+		var ogp = from as OutrunGamePane
+		ogp.attacked.connect($OutrunGamePlug.on_attacked)
+		ogp.captured.connect($OutrunGamePlug.on_captured)
+		ogp.game_started.connect($OutrunGamePlug.on_game_started)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

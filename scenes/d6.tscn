@@ -28,7 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://dqg1wgrl5cff5" path="res://assets/dice/tile023.png" id="26_mpu48"]
 
 [node name="D6" type="TextureRect"]
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -66,3 +66,5 @@ sprites = Array[Texture2D]([ExtResource("19_utvnx"), ExtResource("20_2ipiv"), Ex
 [node name="Side6" type="Node" parent="."]
 script = ExtResource("3_er5e8")
 sprites = Array[Texture2D]([ExtResource("23_u8s7s"), ExtResource("24_7os1f"), ExtResource("25_jugxq"), ExtResource("26_mpu48")])
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

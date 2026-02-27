@@ -1,0 +1,468 @@
+[gd_scene load_steps=13 format=3 uid="uid://c86icr6bk6caj"]
+
+[ext_resource type="Script" uid="uid://pkcac18dfvsg" path="res://scripts/outrun_game_player.gd" id="1_5mo8y"]
+[ext_resource type="Script" uid="uid://ia3aloe2u3oq" path="res://scripts/outrun_game_pane.gd" id="1_b5xps"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_lyxe7"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_m2nyx"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_ky3iw"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="4_jjbdm"]
+[ext_resource type="Texture2D" uid="uid://dyovt2f48h8ds" path="res://assets/bear.png" id="4_m2nyx"]
+[ext_resource type="Texture2D" uid="uid://dj3rxluc7rrno" path="res://assets/running man white.png" id="5_ky3iw"]
+[ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="6_jjbdm"]
+[ext_resource type="Script" uid="uid://cln2no5r6mlhb" path="res://scripts/outrun_dice_container.gd" id="7_3ixp6"]
+[ext_resource type="Script" uid="uid://daqpu585nlorr" path="res://scripts/outrun_game_warnings.gd" id="10_7wa45"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b5xps"]
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+
+[node name="OutrunGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b5xps")
+
+[node name="OutrunGamePlayer" type="Node" parent="." node_paths=PackedStringArray("red_dice_container", "blue_dice_container", "green_dice_container", "done_rolling_button", "continue_button", "option_button", "red_man", "blue_man", "green_man", "red_desperation_label", "blue_desperation_label", "green_desperation_label")]
+script = ExtResource("1_5mo8y")
+red_dice_container = NodePath("../PlayArea/RedDice")
+blue_dice_container = NodePath("../PlayArea/BlueDice")
+green_dice_container = NodePath("../PlayArea/GreenDice")
+done_rolling_button = NodePath("../PlayArea/GreenDice/Buttons/DoneRolling")
+continue_button = NodePath("../PlayArea/GreenDice/Buttons/Continue")
+option_button = NodePath("../PlayArea/GreenDice/Buttons/OptionButton")
+red_man = NodePath("../PlayArea/RedMan")
+blue_man = NodePath("../PlayArea/BlueMan")
+green_man = NodePath("../PlayArea/GreenMan")
+red_desperation_label = NodePath("../PlayArea/RedMan/Label")
+blue_desperation_label = NodePath("../PlayArea/BlueMan/Label")
+green_desperation_label = NodePath("../PlayArea/GreenMan/Label")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_lyxe7")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_m2nyx")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_ky3iw")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="Bear" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -63.0
+offset_right = 126.0
+offset_bottom = 63.0
+grow_vertical = 2
+texture = ExtResource("4_m2nyx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RedMan" type="TextureRect" parent="PlayArea"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 156.0
+offset_top = -212.0
+offset_right = 240.0
+offset_bottom = -128.0
+grow_vertical = 2
+texture = ExtResource("5_ky3iw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PlayArea/RedMan"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -67.0
+offset_right = 20.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "!!! 0 !!!"
+
+[node name="BlueMan" type="TextureRect" parent="PlayArea"]
+modulate = Color(0, 0, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 148.0
+offset_top = -30.0
+offset_right = 232.0
+offset_bottom = 54.0
+grow_vertical = 2
+texture = ExtResource("5_ky3iw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PlayArea/BlueMan"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -67.0
+offset_right = 20.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "!!! 0 !!!"
+
+[node name="GreenMan" type="TextureRect" parent="PlayArea"]
+modulate = Color(0, 0.8117647, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 138.0
+offset_top = 140.0
+offset_right = 222.0
+offset_bottom = 224.0
+grow_vertical = 2
+texture = ExtResource("5_ky3iw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PlayArea/GreenMan"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -67.0
+offset_right = 20.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "!!! 0 !!!"
+
+[node name="RedDice" type="Control" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -174.0
+offset_bottom = -174.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_3ixp6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayArea/RedDice"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="D6_1" parent="PlayArea/RedDice/HBoxContainer" instance=ExtResource("6_jjbdm")]
+modulate = Color(1, 0.4117647, 0.53333336, 1)
+layout_mode = 2
+
+[node name="D6_2" parent="PlayArea/RedDice/HBoxContainer" instance=ExtResource("6_jjbdm")]
+modulate = Color(1, 0.4117647, 0.53333336, 1)
+layout_mode = 2
+
+[node name="D6_3" parent="PlayArea/RedDice/HBoxContainer" instance=ExtResource("6_jjbdm")]
+modulate = Color(1, 0.4117647, 0.53333336, 1)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PlayArea/RedDice"]
+layout_mode = 1
+offset_left = 116.0
+offset_right = 156.0
+offset_bottom = 23.0
+text = "3"
+horizontal_alignment = 1
+
+[node name="Decision" type="Label" parent="PlayArea/RedDice"]
+layout_mode = 0
+offset_left = 181.0
+offset_right = 221.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+
+[node name="BlueDice" type="Control" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_3ixp6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayArea/BlueDice"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="D6_1" parent="PlayArea/BlueDice/HBoxContainer" instance=ExtResource("6_jjbdm")]
+modulate = Color(0.36862746, 0.77254903, 0.7882353, 1)
+layout_mode = 2
+
+[node name="D6_2" parent="PlayArea/BlueDice/HBoxContainer" instance=ExtResource("6_jjbdm")]
+modulate = Color(0.36862746, 0.77254903, 0.7882353, 1)
+layout_mode = 2
+
+[node name="D6_3" parent="PlayArea/BlueDice/HBoxContainer" instance=ExtResource("6_jjbdm")]
+modulate = Color(0.36862746, 0.77254903, 0.7882353, 1)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PlayArea/BlueDice"]
+layout_mode = 0
+offset_left = 116.0
+offset_right = 156.0
+offset_bottom = 23.0
+text = "3"
+horizontal_alignment = 1
+
+[node name="Decision" type="Label" parent="PlayArea/BlueDice"]
+layout_mode = 0
+offset_left = 181.0
+offset_right = 221.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+
+[node name="GreenDice" type="Control" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 174.0
+offset_bottom = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_3ixp6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayArea/GreenDice"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="D6_1" parent="PlayArea/GreenDice/HBoxContainer" instance=ExtResource("6_jjbdm")]
+modulate = Color(0.21568628, 0.8392157, 0.32941177, 1)
+layout_mode = 2
+
+[node name="D6_2" parent="PlayArea/GreenDice/HBoxContainer" instance=ExtResource("6_jjbdm")]
+modulate = Color(0.21568628, 0.8392157, 0.32941177, 1)
+layout_mode = 2
+
+[node name="D6_3" parent="PlayArea/GreenDice/HBoxContainer" instance=ExtResource("6_jjbdm")]
+modulate = Color(0.21568628, 0.8392157, 0.32941177, 1)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PlayArea/GreenDice"]
+layout_mode = 0
+offset_left = 116.0
+offset_right = 156.0
+offset_bottom = 23.0
+text = "3"
+horizontal_alignment = 1
+
+[node name="Buttons" type="Control" parent="PlayArea/GreenDice"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 200.0
+
+[node name="DoneRolling" type="Button" parent="PlayArea/GreenDice/Buttons"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Done"
+
+[node name="Continue" type="Button" parent="PlayArea/GreenDice/Buttons"]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Continue"
+
+[node name="OptionButton" type="OptionButton" parent="PlayArea/GreenDice/Buttons"]
+visible = false
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 20.0
+allow_reselect = true
+item_count = 4
+popup/item_0/text = "Help Red"
+popup/item_0/id = 0
+popup/item_1/text = "Screw Red"
+popup/item_1/id = 1
+popup/item_2/text = "Help Blue"
+popup/item_2/id = 2
+popup/item_3/text = "Screw Blue"
+popup/item_3/id = 3
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click the bear to start
+- You are the green player
+- At the start of each round, all 
+players roll their dice. Dice may
+be re-rolled unless they roll a 1,
+at which point that die is locked for
+the round.
+- Click a green die to re-roll it.
+- Your total for the round is the sum
+of your dice, plus any desperation
+points you have. The player with
+the lowest total is closest to the
+bear.
+- After all players have finished
+rolling, they select a color and
+whether they will help or hinder
+that player this round.
+- The round ends with all players
+revealing their choice at the same
+time. Whoever is closest to the bear
+loses 1 die. If they have lost all dice,
+that player loses and is out the rest
+of the game.
+- At the end of a round, count how
+many players are ahead of you. You
+gain that many desperation points
+for the rest of the game. Current
+desperation is shown above the
+player's head.
+- If 2 players both hinder each other,
+both lose 6 points from total.
+- If 2 players help each other, both
+gain 6 points to total.
+- If 2 players target each other with
+opposite actions, 6 points instead
+of 3 each.
+- If 1 player helps another but is not
+targeted by the same player, the
+one helped gains 3 points.
+- If 1 player hinders another but is
+not targeted by the same, the one
+hindered loses 3 points.
+- Players cannot target themselves
+and must target 1 other each
+round.
+
+"
+placeholder_text = "Add any notes here..."
+script = ExtResource("4_jjbdm")
+
+[node name="WarningsHolder" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("10_7wa45")
+metadata/_custom_type_script = "uid://bdq24bq44w65l"
+
+[node name="RedDeadError" type="Label" parent="WarningsHolder"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -200.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "Cannot select red, red is dead"
+label_settings = SubResource("LabelSettings_b5xps")
+horizontal_alignment = 1
+
+[node name="BlueDeadError" type="Label" parent="WarningsHolder"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -200.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "Cannot select blue, blue is dead"
+label_settings = SubResource("LabelSettings_b5xps")
+horizontal_alignment = 1
+
+[node name="GameOver" type="Label" parent="WarningsHolder"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -200.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "Green Died, Game Over"
+label_settings = SubResource("LabelSettings_b5xps")
+horizontal_alignment = 1
+
+[connection signal="error_blue_dead" from="OutrunGamePlayer" to="WarningsHolder" method="_on_outrun_game_player_error_blue_dead"]
+[connection signal="error_red_dead" from="OutrunGamePlayer" to="WarningsHolder" method="_on_outrun_game_player_error_red_dead"]
+[connection signal="game_over" from="OutrunGamePlayer" to="WarningsHolder" method="_on_outrun_game_player_game_over"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="PlayArea/Bear" to="OutrunGamePlayer" method="_on_bear_gui_input"]
+[connection signal="left_clicked" from="PlayArea/GreenDice/HBoxContainer/D6_1" to="OutrunGamePlayer" method="_on_die_left_clicked"]
+[connection signal="left_clicked" from="PlayArea/GreenDice/HBoxContainer/D6_2" to="OutrunGamePlayer" method="_on_die_left_clicked"]
+[connection signal="left_clicked" from="PlayArea/GreenDice/HBoxContainer/D6_3" to="OutrunGamePlayer" method="_on_die_left_clicked"]
+[connection signal="pressed" from="PlayArea/GreenDice/Buttons/DoneRolling" to="OutrunGamePlayer" method="_on_done_rolling_pressed"]
+[connection signal="pressed" from="PlayArea/GreenDice/Buttons/Continue" to="OutrunGamePlayer" method="_on_continue_pressed"]
+[connection signal="item_selected" from="PlayArea/GreenDice/Buttons/OptionButton" to="OutrunGamePlayer" method="_on_option_button_item_selected"]

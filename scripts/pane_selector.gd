@@ -16,6 +16,7 @@ const JOKER_JB_GAME := 9
 const SCORPION_TAIL_GAME := 10
 const OUTLAW_GAME := 11
 const CARD_CAPTURE_GAME := 12
+const OUTRUN_GAME := 13
 
 func _on_item_selected(index: int) -> void:
 	var panes_node = get_parent().get_parent()
@@ -45,6 +46,8 @@ func _on_item_selected(index: int) -> void:
 		panes_node.queue_add_outlaw_game_pane()
 	elif index == CARD_CAPTURE_GAME:
 		panes_node.queue_add_card_capture_game_pane()
+	elif index == OUTRUN_GAME:
+		panes_node.queue_add_outrun_game_pane()
 	
 	if index >= 0:
 		get_parent().free()
