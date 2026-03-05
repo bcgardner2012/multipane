@@ -82,6 +82,13 @@ func receive_broadcast(from: Node) -> void:
 		ogp.attacked.connect($OutrunGamePlug.on_attacked)
 		ogp.captured.connect($OutrunGamePlug.on_captured)
 		ogp.game_started.connect($OutrunGamePlug.on_game_started)
+	elif from is SnakeCharmerGamePane:
+		var scgp = from as SnakeCharmerGamePane
+		scgp.player_bit.connect($SnakeCharmerGamePlug.on_player_bit)
+		scgp.player_lost.connect($SnakeCharmerGamePlug.on_player_lost)
+		scgp.player_trying_to_capture.connect($SnakeCharmerGamePlug.on_player_attempting_to_capture)
+		scgp.player_won.connect($SnakeCharmerGamePlug.on_player_won)
+		scgp.player_rolled.connect($SnakeCharmerGamePlug.on_player_rolled)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

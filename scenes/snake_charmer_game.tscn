@@ -1,0 +1,379 @@
+[gd_scene load_steps=14 format=3 uid="uid://b51sk2cnr246l"]
+
+[ext_resource type="Script" uid="uid://caviucel3nj8v" path="res://scripts/snake_charmer_game_pane.gd" id="1_r8ane"]
+[ext_resource type="Script" uid="uid://bh0bp3kckk80x" path="res://scripts/snake_charmer_game_player.gd" id="1_ubm8x"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_yeqn8"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_xpwmi"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_u3x8p"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="4_8svoe"]
+[ext_resource type="Texture2D" uid="uid://cs7voro0nc8le" path="res://assets/snake.png" id="4_xpwmi"]
+[ext_resource type="Texture2D" uid="uid://dj3rxluc7rrno" path="res://assets/running man white.png" id="5_u3x8p"]
+[ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="7_hxdtu"]
+[ext_resource type="Script" uid="uid://bi34c66mh8d6a" path="res://scripts/snake_charmer_warnings_holder.gd" id="9_hxdtu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ubm8x"]
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r8ane"]
+font_size = 24
+font_color = Color(0, 0, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r38xn"]
+font_size = 24
+font_color = Color(0, 1, 0, 1)
+
+[node name="SnakeCharmerGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r8ane")
+
+[node name="SnakeCharmerGamePlayer" type="Node" parent="." node_paths=PackedStringArray("snake_die", "red_die", "blue_die", "green_die", "red_label", "blue_label", "green_label", "red_man", "blue_man", "green_man")]
+script = ExtResource("1_ubm8x")
+snake_die = NodePath("../PlayArea/Snake/D6")
+red_die = NodePath("../PlayArea/RedDice/D6")
+blue_die = NodePath("../PlayArea/BlueDice/D6")
+green_die = NodePath("../PlayArea/GreenDice/D6")
+red_label = NodePath("../PlayArea/RedMan/Label")
+blue_label = NodePath("../PlayArea/BlueMan/Label")
+green_label = NodePath("../PlayArea/GreenMan/Label")
+red_man = NodePath("../PlayArea/RedMan")
+blue_man = NodePath("../PlayArea/BlueMan")
+green_man = NodePath("../PlayArea/GreenMan")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_yeqn8")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_xpwmi")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_u3x8p")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="Snake" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -63.0
+offset_right = 126.0
+offset_bottom = 63.0
+grow_vertical = 2
+texture = ExtResource("4_xpwmi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="D6" parent="PlayArea/Snake" instance=ExtResource("7_hxdtu")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 43.0
+offset_top = 74.0
+offset_right = 75.0
+offset_bottom = 114.0
+grow_horizontal = 1
+
+[node name="RedMan" type="TextureRect" parent="PlayArea"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 255.0
+offset_top = -212.0
+offset_right = 339.0
+offset_bottom = -128.0
+grow_vertical = 2
+texture = ExtResource("5_u3x8p")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Label" type="Label" parent="PlayArea/RedMan"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -67.0
+offset_right = 20.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3"
+horizontal_alignment = 1
+
+[node name="BlueMan" type="TextureRect" parent="PlayArea"]
+modulate = Color(0, 0, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 254.0
+offset_top = -30.0
+offset_right = 338.0
+offset_bottom = 54.0
+grow_vertical = 2
+texture = ExtResource("5_u3x8p")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Label" type="Label" parent="PlayArea/BlueMan"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -67.0
+offset_right = 20.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3"
+horizontal_alignment = 1
+
+[node name="GreenMan" type="TextureRect" parent="PlayArea"]
+modulate = Color(0, 0.8117647, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 257.0
+offset_top = 140.0
+offset_right = 341.0
+offset_bottom = 224.0
+grow_vertical = 2
+texture = ExtResource("5_u3x8p")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Label" type="Label" parent="PlayArea/GreenMan"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -67.0
+offset_right = 20.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3"
+horizontal_alignment = 1
+
+[node name="RedDice" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 181.0
+offset_top = -174.0
+offset_right = 181.0
+offset_bottom = -174.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="D6" parent="PlayArea/RedDice" instance=ExtResource("7_hxdtu")]
+visible = false
+modulate = Color(1, 0.4117647, 0.53333336, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 32.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="BlueDice" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 175.0
+offset_right = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="D6" parent="PlayArea/BlueDice" instance=ExtResource("7_hxdtu")]
+visible = false
+modulate = Color(0.36862746, 0.77254903, 0.7882353, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 32.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="GreenDice" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 171.0
+offset_top = 174.0
+offset_right = 171.0
+offset_bottom = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="D6" parent="PlayArea/GreenDice" instance=ExtResource("7_hxdtu")]
+visible = false
+modulate = Color(0.21568628, 0.8392157, 0.32941177, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 32.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click the snake to start
+- The game will proceed
+automatically because it is 100%
+luck based.
+- At the start of each round, the
+snake will roll its die. The players
+all try to roll this number next.
+- Players who match the snake's roll
+move close to the snake, others are
+out of the round.
+- In case of a tie, the tying players
+keep rolling until only 1 has  a
+match.
+- When only one player is near the
+snake, they may roll again. If they
+match the snake's roll while close to
+it, they capture the snake and win 
+the game.
+- If the player is near the snake and
+rolls any number other than the
+snake's, it bites them, reducing
+their health by 1. After 3 bites, that
+player dies and is out of the game.
+- Last one standing also wins."
+placeholder_text = "Add any notes here..."
+script = ExtResource("4_8svoe")
+
+[node name="WarningsHolder" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("9_hxdtu")
+
+[node name="RedWon" type="Label" parent="WarningsHolder"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -200.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "Red Won!"
+label_settings = SubResource("LabelSettings_ubm8x")
+horizontal_alignment = 1
+
+[node name="BlueWon" type="Label" parent="WarningsHolder"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -200.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "Blue Won!"
+label_settings = SubResource("LabelSettings_r8ane")
+horizontal_alignment = 1
+
+[node name="GreenWon" type="Label" parent="WarningsHolder"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -200.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "Green Won!"
+label_settings = SubResource("LabelSettings_r38xn")
+horizontal_alignment = 1
+
+[connection signal="blue_won" from="SnakeCharmerGamePlayer" to="WarningsHolder" method="_on_snake_charmer_game_player_blue_won"]
+[connection signal="green_won" from="SnakeCharmerGamePlayer" to="WarningsHolder" method="_on_snake_charmer_game_player_green_won"]
+[connection signal="red_won" from="SnakeCharmerGamePlayer" to="WarningsHolder" method="_on_snake_charmer_game_player_red_won"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="PlayArea/Snake" to="SnakeCharmerGamePlayer" method="_on_snake_gui_input"]
