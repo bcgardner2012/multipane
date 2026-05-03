@@ -3,21 +3,22 @@ class_name PaneSelector
 
 # Will appear as a grandchild of the Panes holder
 
-const IMAGE_PANE := 0
-const SCOUNDREL_GAME := 1
-const AREA_52_GAME := 2
-const SANDWICH_GUY_GAME := 3
-const EMISSARY_GAME := 4
-const WAR_GAME := 5
-const HILO_GAME := 6
-const BNN_GAME := 7
-const ZOMBIE_DICE_GAME := 8
-const JOKER_JB_GAME := 9
-const SCORPION_TAIL_GAME := 10
-const OUTLAW_GAME := 11
-const CARD_CAPTURE_GAME := 12
-const OUTRUN_GAME := 13
-const SNAKE_CHARMER_GAME := 14
+const IMAGE_PANE = 0
+const SCOUNDREL_GAME = 1
+const AREA_52_GAME = 2
+const SANDWICH_GUY_GAME = 3
+const EMISSARY_GAME = 4
+const WAR_GAME = 5
+const HILO_GAME = 6
+const BNN_GAME = 7
+const ZOMBIE_DICE_GAME = 8
+const JOKER_JB_GAME = 9
+const SCORPION_TAIL_GAME = 10
+const OUTLAW_GAME = 11
+const CARD_CAPTURE_GAME = 12
+const OUTRUN_GAME = 13
+const SNAKE_CHARMER_GAME = 14
+const CARRION_EATER_GAME = 15
 
 func _on_item_selected(index: int) -> void:
 	var panes_node = get_parent().get_parent()
@@ -51,6 +52,8 @@ func _on_item_selected(index: int) -> void:
 		panes_node.queue_add_outrun_game_pane()
 	elif index == SNAKE_CHARMER_GAME:
 		panes_node.queue_add_snake_charmer_game_pane()
+	elif index == CARRION_EATER_GAME:
+		panes_node.queue_add_carrion_eater_game_pane()
 	
 	if index >= 0:
 		get_parent().free()
