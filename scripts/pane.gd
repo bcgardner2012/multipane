@@ -89,6 +89,16 @@ func receive_broadcast(from: Node) -> void:
 		scgp.player_trying_to_capture.connect($SnakeCharmerGamePlug.on_player_attempting_to_capture)
 		scgp.player_won.connect($SnakeCharmerGamePlug.on_player_won)
 		scgp.player_rolled.connect($SnakeCharmerGamePlug.on_player_rolled)
+	elif from is CarrionEaterGamePane:
+		var cegp = from as CarrionEaterGamePane
+		cegp.enemy_healed.connect($CarrionEaterGamePlug.on_enemy_healed)
+		cegp.enemy_killed.connect($CarrionEaterGamePlug.on_enemy_killed)
+		cegp.enemy_respawned.connect($CarrionEaterGamePlug.on_enemy_respawned)
+		cegp.player_attacked.connect($CarrionEaterGamePlug.on_player_attacked)
+		cegp.player_damaged.connect($CarrionEaterGamePlug.on_player_damaged)
+		cegp.player_killed.connect($CarrionEaterGamePlug.on_player_killed)
+		cegp.player_moved.connect($CarrionEaterGamePlug.on_player_moved)
+		cegp.player_won.connect($CarrionEaterGamePlug.on_player_won)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

@@ -177,7 +177,7 @@ func _on_action_dice_six_rolled() -> void:
 			_signals.player_killed.emit()
 		else:
 			health_die.set_value(maxi(health_die.value - delta, 1))
-			_signals.player_damaged.emit()
+			_signals.player_damaged.emit(health_die.value)
 
 # Note: my take on the rules was that _size == health on respawn
 func _on_action_dice_duplicates_rolled(duplicates: Array[int]) -> void:
