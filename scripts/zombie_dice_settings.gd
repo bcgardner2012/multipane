@@ -1,4 +1,4 @@
-extends Control
+extends Settings
 class_name ZombieDiceSettings
 
 enum ZombieDiceLoseCondition {
@@ -14,8 +14,6 @@ static var lose_condition_count: int = 7
 
 @export var injury_label: Label
 @export var bullets_label: Label
-
-var game_in_progress: bool
 
 func _on_brain_count_setting_value_changed(value: float) -> void:
 	win_condition_brain_count = value as int
@@ -38,11 +36,6 @@ func _on_option_button_item_selected(index: int) -> void:
 
 func _on_lose_setting_value_changed(value: float) -> void:
 	lose_condition_count = value as int
-
-
-func _on_settings_tool_gui_input(event: InputEvent) -> void:
-	if ClickHelper.is_left_click(event) and not game_in_progress:
-		visible = !visible
 
 
 func _on_human_deck_start_game() -> void:

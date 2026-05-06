@@ -1,6 +1,7 @@
 extends GamePane
 class_name CarrionEaterGamePane
 
+signal player_fell()
 signal player_damaged(health: int)
 signal player_attacked() # as in player did the attack
 signal player_moved()

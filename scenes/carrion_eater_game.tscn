@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ssvg6d8vqus7"]
+[gd_scene load_steps=16 format=3 uid="uid://ssvg6d8vqus7"]
 
 [ext_resource type="Script" uid="uid://bklyyniev25hx" path="res://scripts/carrion_eater_game_pane.gd" id="1_5og6f"]
 [ext_resource type="Script" uid="uid://dvdgtp0s4yk7p" path="res://scripts/carrion_eater_game_player.gd" id="1_ikda2"]
@@ -8,9 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://dwmumv4cnv7ft" path="res://assets/carrion/carrion.png" id="4_7tf21"]
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="4_to0pj"]
 [ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="5_kt5e3"]
+[ext_resource type="Texture2D" uid="uid://b5du84ehm1i8u" path="res://assets/gear_icon.png" id="5_yg6yn"]
 [ext_resource type="Script" uid="uid://v8c5ca1q0px6" path="res://scripts/carrion_eater_enemy_dice.gd" id="6_gk5xa"]
 [ext_resource type="Script" uid="uid://b5bmii10aenne" path="res://scripts/carrion_eater_action_dice.gd" id="7_jwbty"]
 [ext_resource type="Script" uid="uid://de6jvksu6qbfp" path="res://scripts/carrion_eater_warnings_holder.gd" id="10_r5cpu"]
+[ext_resource type="Script" uid="uid://cihsein2v18yv" path="res://scripts/carrion_eater_settings.gd" id="12_u774g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yg6yn"]
+font_size = 10
 
 [sub_resource type="LabelSettings" id="LabelSettings_r5cpu"]
 font_size = 24
@@ -24,12 +29,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5og6f")
 
-[node name="CarrionEaterGamePlayer" type="Node" parent="." node_paths=PackedStringArray("enemy_dice_node", "action_dice_node", "health_die", "board")]
+[node name="CarrionEaterGamePlayer" type="Node" parent="." node_paths=PackedStringArray("enemy_dice_node", "action_dice_node", "health_die", "stamina_die", "board", "settings")]
 script = ExtResource("1_ikda2")
 enemy_dice_node = NodePath("../PlayArea/MotionAnchor/EnemyDice")
 action_dice_node = NodePath("../PlayArea/MotionAnchor/Board/ActionDice")
 health_die = NodePath("../PlayArea/MotionAnchor/Board/HealthDie")
+stamina_die = NodePath("../PlayArea/MotionAnchor/Board/StaminaDie")
 board = NodePath("../PlayArea/MotionAnchor/Board")
+settings = NodePath("../Settings")
 
 [node name="Toolbar" type="FoldableContainer" parent="."]
 layout_mode = 1
@@ -57,6 +64,12 @@ stretch_mode = 4
 [node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("2_to0pj")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="SettingsTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_yg6yn")
 expand_mode = 4
 stretch_mode = 4
 
@@ -103,6 +116,15 @@ layout_mode = 1
 offset_left = 72.0
 offset_top = -93.0
 offset_right = 104.0
+offset_bottom = -61.0
+
+[node name="StaminaDie" parent="PlayArea/MotionAnchor/Board" instance=ExtResource("5_kt5e3")]
+visible = false
+modulate = Color(1, 0.74509805, 0, 1)
+layout_mode = 1
+offset_left = 33.0
+offset_top = -93.0
+offset_right = 65.0
 offset_bottom = -61.0
 
 [node name="ActionDice" type="Control" parent="PlayArea/MotionAnchor/Board" node_paths=PackedStringArray("action_die")]
@@ -256,6 +278,7 @@ offset_bottom = 154.0
 grow_horizontal = 1
 
 [node name="Notes" type="TextEdit" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.005
@@ -306,6 +329,33 @@ below 1."
 placeholder_text = "Add any notes here..."
 script = ExtResource("4_to0pj")
 
+[node name="Settings" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+script = ExtResource("12_u774g")
+
+[node name="AddStaminaCheckBox" type="CheckBox" parent="Settings"]
+layout_mode = 1
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 161.0
+offset_bottom = 27.0
+text = "Add Stamina Die?"
+
+[node name="AddStaminaDescription" type="Label" parent="Settings"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 25.0
+offset_right = 229.0
+offset_bottom = 45.0
+text = "Ending turn when stamina is 1 forces descent.
+Falling or ending turn while descended restores
+all stamina."
+label_settings = SubResource("LabelSettings_yg6yn")
+
 [node name="WarningsHolder" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -351,11 +401,15 @@ label_settings = SubResource("LabelSettings_r5cpu")
 horizontal_alignment = 1
 
 [connection signal="multiple_dice_rolled" from="CarrionEaterGamePlayer" to="WarningsHolder" method="_on_carrion_eater_game_player_multiple_dice_rolled"]
+[connection signal="player_lost" from="CarrionEaterGamePlayer" to="WarningsHolder" method="_on_carrion_eater_game_player_player_lost"]
 [connection signal="player_won" from="CarrionEaterGamePlayer" to="WarningsHolder" method="_on_carrion_eater_game_player_player_won"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SettingsTool" to="Notes" method="_on_settings_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SettingsTool" to="Settings" method="_on_settings_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
 [connection signal="gui_input" from="PlayArea/MotionAnchor/Board" to="CarrionEaterGamePlayer" method="_on_board_gui_input"]
+[connection signal="gui_input" from="PlayArea/MotionAnchor/Board" to="Settings" method="_on_board_gui_input"]
 [connection signal="action_die_selected" from="PlayArea/MotionAnchor/Board/ActionDice" to="CarrionEaterGamePlayer" method="_on_action_dice_action_die_selected"]
 [connection signal="action_die_selected" from="PlayArea/MotionAnchor/Board/ActionDice" to="WarningsHolder" method="_on_action_dice_action_die_selected"]
 [connection signal="duplicates_rolled" from="PlayArea/MotionAnchor/Board/ActionDice" to="CarrionEaterGamePlayer" method="_on_action_dice_duplicates_rolled"]
@@ -366,3 +420,4 @@ horizontal_alignment = 1
 [connection signal="left_clicked" from="PlayArea/MotionAnchor/Board/ActionDice/D6_4" to="PlayArea/MotionAnchor/Board/ActionDice" method="_on_d_6_left_clicked"]
 [connection signal="left_clicked" from="PlayArea/MotionAnchor/Board/ActionDice/D6_5" to="PlayArea/MotionAnchor/Board/ActionDice" method="_on_d_6_left_clicked"]
 [connection signal="do_respawn" from="PlayArea/MotionAnchor/EnemyDice" to="CarrionEaterGamePlayer" method="_on_enemy_dice_do_respawn"]
+[connection signal="toggled" from="Settings/AddStaminaCheckBox" to="Settings" method="_on_add_stamina_check_box_toggled"]

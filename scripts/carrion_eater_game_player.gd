@@ -44,7 +44,9 @@ signal player_lost()
 @export var enemy_dice_node: CarrionEaterEnemyDice
 @export var action_dice_node: CarrionEaterActionDice
 @export var health_die: D6
+@export var stamina_die: D6
 @export var board: Control
+@export var settings: CarrionEaterSettings
 
 const X_MOTION_DELTA = 52 # pixels, enemy dice are this far apart
 const Y_MOTION_DELTA = 104 # pixels, difference between ascend/descend poses
@@ -72,6 +74,8 @@ func _physics_process(_delta) -> void:
 	# re-rolling should always be possible
 	# the rules say nothing about when you can end your turn and start the next
 	if Input.is_action_just_pressed("roll") and action_dice_node.count <= 5:
+		_change_stamina()
+		
 		if _rolls.size() > 1:
 			for die in _rolls:
 				if _die_unused(die):
@@ -127,6 +131,21 @@ func _physics_process(_delta) -> void:
 		_do_attack()
 		_decrement_remaining_actions()
 
+# not part of the original game rules, toggled via a setting
+# do this before rolling dice so player could take damage from falling
+func _change_stamina() -> void:
+	if settings.is_stamina_enabled:
+		if _is_ascended:
+			if stamina_die.value == 1:
+				board.position += _y_motion_delta
+				_is_ascended = false
+				stamina_die.set_value(6)
+				_signals.player_fell.emit()
+			else:
+				stamina_die.decrement()
+		else:
+			stamina_die.set_value(6)
+
 func _die_unused(die: int) -> bool:
 	return not IntArrayHelper.contains(_duplicates, die) and die != 6 and _original_action_die_value != die
 
@@ -162,6 +181,10 @@ func _init_dice() -> void:
 	action_dice_node.roll_dice()
 	_action_die = action_dice_node.action_die
 	_remaining_actions = _action_die.value
+	
+	if settings.is_stamina_enabled:
+		stamina_die.visible = true
+		stamina_die.set_value(6)
 
 
 func _on_action_dice_six_rolled() -> void:
@@ -171,8 +194,10 @@ func _on_action_dice_six_rolled() -> void:
 			if enemy_dice_node.get_child(i).visible:
 				delta += 1
 		
+		print(str(delta))
 		if delta >= health_die.value:
 			# game over
+			print("Game Over")
 			player_lost.emit()
 			_signals.player_killed.emit()
 		else:

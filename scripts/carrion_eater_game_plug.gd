@@ -12,16 +12,15 @@ class_name CarrionEaterGamePlug
 
 # Improvements:
 # Include enemy index. Which enemy healed, and have images unique to that index
-# Include amount of damage player took. More damage shows more severe images.
 # Track how many times in a row player moved. More points spent on movement
 # could show more "heroic" flight images (taking off, floating, superman pose)
 # Track direction of movement. Move down could show hero-landing.
 # Include number of action dice. There are underbelly riding images.
-# Include player health. Movement could reflect some sort of transformation.
 
 const PLAYER_MOVED_DIR = "player_moved"
 const PLAYER_DAMAGED_DIR = "player_damage"
 const PLAYER_ATTACK_DIR = "player_attack"
+const PLAYER_FELL_DIR = "player_fell"
 
 var health: int = 6
 
@@ -57,3 +56,8 @@ func on_player_moved() -> void:
 
 func on_player_won() -> void:
 	portrait.try_load_random_image_from_subdir("player_won")
+
+func on_player_fell() -> void:
+	var dir = PLAYER_FELL_DIR + "/" + str(health)
+	if !portrait.try_load_random_image_from_subdir(dir):
+		portrait.try_load_random_image_from_subdir(PLAYER_FELL_DIR)

@@ -47,11 +47,6 @@ func roll_dice() -> Array[int]:
 		six_rolled.emit()
 	if _duplicates.size() > 0:
 		duplicates_rolled.emit(IntArrayHelper.dedupe(_duplicates))
-	
-	var dbg = ""
-	for i in seen_numbers:
-		dbg += str(i)
-	print(dbg)
 	return seen_numbers
 
 func _show_action_die_only() -> void:

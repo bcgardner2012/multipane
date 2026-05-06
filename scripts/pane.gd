@@ -96,6 +96,7 @@ func receive_broadcast(from: Node) -> void:
 		cegp.enemy_respawned.connect($CarrionEaterGamePlug.on_enemy_respawned)
 		cegp.player_attacked.connect($CarrionEaterGamePlug.on_player_attacked)
 		cegp.player_damaged.connect($CarrionEaterGamePlug.on_player_damaged)
+		cegp.player_fell.connect($CarrionEaterGamePlug.on_player_fell)
 		cegp.player_killed.connect($CarrionEaterGamePlug.on_player_killed)
 		cegp.player_moved.connect($CarrionEaterGamePlug.on_player_moved)
 		cegp.player_won.connect($CarrionEaterGamePlug.on_player_won)
