@@ -15,6 +15,10 @@ run/main_scene="uid://b0y6xlrl2t0pr"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+RcpNode="*res://scripts/network/rcp_node.gd"
+
 [display]
 
 window/size/viewport_width=1600

@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://saro0telnpeq"]
+
+[ext_resource type="Script" uid="uid://bi40g3xa5m06u" path="res://scripts/server_image_pane.gd" id="1_eckju"]
+[ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="1_f2snv"]
+[ext_resource type="Script" uid="uid://b0wbadre6nr1b" path="res://scripts/portrait.gd" id="2_fgk5t"]
+[ext_resource type="Script" uid="uid://do8lgptca7wid" path="res://scripts/button_men_plug.gd" id="2_yqihn"]
+[ext_resource type="Script" uid="uid://d571nsxmjowr" path="res://scripts/control_holder.gd" id="3_gyh2f"]
+[ext_resource type="Script" uid="uid://ogs0qx730nyh" path="res://scripts/folder_selector.gd" id="4_4pc3a"]
+[ext_resource type="Texture2D" uid="uid://d3d185da1palt" path="res://assets/cycle.png" id="5_yqihn"]
+[ext_resource type="Texture2D" uid="uid://d3ejsw71l54p3" path="res://assets/cycle_clicked.png" id="6_rh1ad"]
+
+[node name="ServerImagePane" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eckju")
+
+[node name="Plugs" type="Node" parent="."]
+
+[node name="ButtonMenPlug" type="Node" parent="Plugs" node_paths=PackedStringArray("portrait")]
+script = ExtResource("2_yqihn")
+portrait = NodePath("../../PortraitHolder/Portrait")
+
+[node name="PortraitHolder" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Portrait" type="TextureRect" parent="PortraitHolder"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.00003
+offset_right = 63.99997
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_f2snv")
+expand_mode = 2
+stretch_mode = 5
+script = ExtResource("2_fgk5t")
+
+[node name="FolderSelectorHolder" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.25
+anchor_top = 0.94
+anchor_right = 0.75
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("3_gyh2f")
+
+[node name="FolderSelector" type="OptionButton" parent="FolderSelectorHolder"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("4_4pc3a")
+
+[node name="RandomImageButton" type="TextureButton" parent="FolderSelectorHolder"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -5.0
+offset_right = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_yqihn")
+texture_pressed = ExtResource("6_rh1ad")
+ignore_texture_size = true
+stretch_mode = 4
+
+[connection signal="item_selected" from="FolderSelectorHolder/FolderSelector" to="FolderSelectorHolder/FolderSelector" method="_on_item_selected"]
+[connection signal="pressed" from="FolderSelectorHolder/RandomImageButton" to="FolderSelectorHolder/FolderSelector" method="_on_random_image_button_pressed"]
