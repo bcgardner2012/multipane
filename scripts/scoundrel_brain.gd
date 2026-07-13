@@ -1,13 +1,24 @@
 extends Node
 class_name ScoundrelBrain
 
+class WeaponDelta:
+	var pre_durability: int
+	var pre_rank: int
+	var post_durability: int
+	var post_rank: int
+	func _init(a: int, b: int, c: int, d: int):
+		pre_durability = a
+		pre_rank = b
+		post_durability = c
+		post_rank = d
+
 # This brain is now capable of winning, but seems to make some clear mistakes
 # Notably, when using any weapon with say 6 dur, it will barehand a 5 monster, then
 # use the weapon on a 4 monster, both in the same room. It should weapon on both.
 # This is a result of taking it one card at a time and barehanding based on health %.
 
 # delay before making another decision, so we can watch
-const DELAY = 1.5
+const DELAY = 2.0
 var timer: float
 
 var is_active: bool
@@ -16,7 +27,7 @@ var game_player: ScoundrelGamePlayer
 
 ##### Turn Data #####
 # AI can skip a card when processing left-to-right. After MAX, just resolve in order.
-const MAX_SKIPS = 8
+const MAX_SKIPS = 12
 var skips: int
 var is_skipping_frames: bool # if we did a skip last frame, don't do a DELAY
 
@@ -53,34 +64,18 @@ func _do_turn() -> void:
 		return
 	
 	# if cards_resolved is 0, we need to get and sort cards
-	if cards_resolved == 0:
-		var card_nodes = game_player.room.get_children()
-		var cards: Array[CardData] = []
-		for card_node in card_nodes:
-			if card_node.data != null: # false in cases on last room
-				cards.append(card_node.data)
-			
-		if cards.size() < 4:
-			# we made it through the dungeon! We win!
-			deactivate()
-			return
-		
-		sorted_cards = _sort_cards(cards)
-		if game_player.can_run and _should_run_away():
-			_run_away()
-			return
+	if _on_new_room():
+		return
 	
 	# if cards_resolved is 3, reset to 0 and wait for the next frame
-	if cards_resolved == 3:
-		cards_resolved = 0
-		card_index = 0
-		sorted_cards = []
+	if _on_room_cleared():
 		return
 	
 	var card = sorted_cards[card_index]
 	
 	# if skips exceed max, just resolve the first card
 	if skips >= MAX_SKIPS:
+		print("AI has become desperate!")
 		# skips will become exhausted because we have no clear good choices.
 		# ideally, we would choose the least bad then... which means:
 		# smashing weaker potions over stronger >
@@ -104,7 +99,7 @@ func _do_turn() -> void:
 			_play(card)
 			return
 		else:
-			_skip()
+			_skip(card)
 			return
 	
 	if card.suit == CardData.Suit.DIAMONDS:
@@ -117,11 +112,18 @@ func _do_turn() -> void:
 			_play(card)
 			return
 		else:
-			_skip()
+			_skip(card)
 			return
 	
 	# at this point, card must be black
-	if _is_unarmed_dmg_tolerable(card):
+	
+	# if you are facing an enemy whose rank is 1 less than durability, you are
+	# silly if you don't use the weapon on them.
+	if _is_armed_attack_optimal(card):
+		# do armed attack
+		_play(card)
+		return
+	elif _is_unarmed_dmg_tolerable(card):
 		# do unarmed attack
 		_play(card, MOUSE_BUTTON_RIGHT)
 		return
@@ -131,43 +133,99 @@ func _do_turn() -> void:
 		return
 	else:
 		# I'm going to take too much damage. Skip for now.
-		_skip()
+		_skip(card)
 		return
+
+# returns true when this frame should be skipped to preserve sanity
+func _on_new_room() -> bool:
+	if cards_resolved == 0:
+		var card_nodes = game_player.room.get_children()
+		var cards: Array[CardData] = []
+		for card_node in card_nodes:
+			if card_node.data != null: # false in cases on last room
+				cards.append(card_node.data)
+			
+		if cards.size() < 4:
+			# we made it through the dungeon! We win!
+			deactivate()
+			return true
+		
+		sorted_cards = _sort_cards(cards)
+		if game_player.can_run and _should_run_away():
+			_run_away()
+			return true
+	return false
+
+# returns true when this frame should be skipped to preserve sanity
+func _on_room_cleared() -> bool:
+	if cards_resolved == 3:
+		cards_resolved = 0
+		card_index = 0
+		sorted_cards = []
+		return true
+	return false
 
 func _is_heal_tolerable(card: CardData) -> bool:
 	var dmg = 20 - _health()
 	if dmg >= card.rank - 0: # means we will waste at most 1 HP from a potion. TODO: config this
+		print(card.get_abbreviation() + " Heal is tolerable!")
 		return true
 	return false
 
-func _is_weapon_swap_tolerable(card: CardData) -> bool:
+func _is_weapon_swap_tolerable(_card: CardData) -> bool:
 	# TODO: extend this class and implement a Hook function
 	# if my weapon's durability is less than 7, that means it can be used on less
 	# than half of the monsters I will encounter. So swap it.
-	return game_player.equipped_weapon == null or (game_player.durability < 7 and not _weapon_is_immediately_useful())
+	var result = game_player.equipped_weapon == null or (game_player.durability < 7 and not _weapon_is_immediately_useful())
+	#print(card.get_abbreviation() + " weapon swap is acceptable? " + str(result))
+	return result
 
 func _weapon_is_immediately_useful() -> bool:
+	if game_player.equipped_weapon == null:
+		return false
+	
 	for card in sorted_cards:
 		if card.suit == CardData.Suit.CLUBS or card.suit == CardData.Suit.SPADES:
 			if game_player.equipped_weapon.rank >= card.rank and game_player.durability > card.rank:
 				return true
 	return false
 
+func _is_armed_attack_optimal(card: CardData) -> bool:
+	# TODO: hook function, while there is only 1 "optimal" scenario,
+	# we can override this to prefer armed attacks in suboptimal scenarios too
+	# Ideally, we would consider whether our current weapon is low durability,
+	# but can still kill remaining enemies, while also considering whether there's
+	# a new weapon in the room as well. Exhaust this one, then grab that one.
+	var result = game_player.durability == card.rank + 1 and _is_armed_dmg_tolerable(card)
+	print(card.get_abbreviation() + " Armed attack optimal? " + str(result))
+	return result
+	# or _immediate_replacement_available() and _enemies_are_in_sequence()
+
 func _is_unarmed_dmg_tolerable(card: CardData) -> bool:
 	# TODO: hook function
 	# if it would take more than 50% of my current health, false
-	return card.rank < 0.5 * _health()
+	var result = card.rank < 0.5 * _health()
+	print(card.get_abbreviation() + " Unarmed dmg tolerable? " + str(result))
+	print("^^Dmg: " + str(card.rank))
+	return result
 
 func _is_armed_dmg_tolerable(card: CardData) -> bool:
 	# TODO: hook function
 	# if durability < card.rank, we can't use the weapon, it'll still be unarmed
+	var result = false
+	var dmg = card.rank
 	if game_player.durability <= card.rank:
-		return card.rank < _health()
+		result = card.rank < _health()
 	else:
-		return card.rank - game_player.equipped_weapon.rank < _health()
+		dmg = card.rank - game_player.equipped_weapon.rank
+		result = card.rank - game_player.equipped_weapon.rank < _health()
+	print(card.get_abbreviation() + " Armed Dmg Tolerable? " + str(result))
+	print("^^Dmg: " + str(dmg))
+	return result
 
 func _should_run_away() -> bool:
 	if _is_premature_red_flush():
+		print("Was premature red flush, you should run...")
 		return true
 	
 	var potential_dmg = 0
@@ -206,7 +264,9 @@ func _should_run_away() -> bool:
 		
 		index += 1
 	
-	return potential_dmg >= _health()
+	var result = potential_dmg >= _health()
+	#print("The room is likely to kill me? " + str(result))
+	return result
 
 func _is_premature_red_flush() -> bool:
 	if _is_red_flush() and _health() > 10 and game_player.equipped_weapon != null and game_player.durability > 12:
@@ -262,13 +322,16 @@ func _sort_extract_by_suit(suits: Array[CardData.Suit], cards: Array[CardData], 
 						break
 	return suited_cards
 
-func _skip() -> void:
+func _skip(card: CardData) -> void:
+	print("Skipping " + card.get_abbreviation())
 	skips += 1
 	card_index += 1
 	card_index %= sorted_cards.size()
 	is_skipping_frames = true
 
+# right mouse button means unarmed attack will be performed
 func _play(card: CardData, button: int = MOUSE_BUTTON_LEFT) -> void:
+	#print("Played " + card.get_abbreviation())
 	is_skipping_frames = false
 	signals.play_card.emit(card, button)
 	cards_resolved += 1
@@ -284,6 +347,7 @@ func _health() -> int:
 	return game_player.health_slider.currentValue
 
 func _run_away() -> void:
+	print("RRRRUUNN AWAY!!!")
 	signals.run_away.emit()
 	card_index = 0
 	cards_resolved = 0

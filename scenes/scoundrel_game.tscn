@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://bojxu5kidkrwt"]
+[gd_scene load_steps=105 format=3 uid="uid://bojxu5kidkrwt"]
 
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_3gpsl"]
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="1_qxvcr"]
@@ -88,6 +88,10 @@
 [ext_resource type="AudioStream" uid="uid://bs7a2yc4o4oqh" path="res://assets/audio/tarot-shuffle-89105.mp3" id="65_5jx8g"]
 [ext_resource type="Script" uid="uid://cjaxclxnet13m" path="res://scripts/scoundrel_brain.gd" id="66_3mqit"]
 [ext_resource type="Script" uid="uid://c7abs33fp0wdq" path="res://scripts/scoundrel_brain_signals.gd" id="66_babrs"]
+[ext_resource type="Script" uid="uid://bjg2smbg0mw0a" path="res://scripts/unarmed_aversion_scoundrel_brain.gd" id="68_pq5hq"]
+[ext_resource type="Script" uid="uid://f48j5q5lutvl" path="res://scripts/scoring_scoundrel_brain.gd" id="69_0ascx"]
+[ext_resource type="Script" uid="uid://dor68pxdvf1ay" path="res://scripts/nonlinear_scoring_scoundrel_brain.gd" id="70_38ut5"]
+[ext_resource type="Script" uid="uid://b8b4jb8q48uly" path="res://scripts/hc_scoring_scoundrel_brain.gd" id="71_rkgpk"]
 [ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="73_d668h"]
 [ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="74_d1ykn"]
 [ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="75_mkbb6"]
@@ -473,6 +477,83 @@ script = ExtResource("66_babrs")
 
 [node name="PrototypeBrain" type="Node" parent="ScoundrelGamePlayer/AIBrains"]
 script = ExtResource("66_3mqit")
+
+[node name="UnarmedAversionBrain" type="Node" parent="ScoundrelGamePlayer/AIBrains"]
+script = ExtResource("68_pq5hq")
+
+[node name="HealthFreak" type="Node" parent="ScoundrelGamePlayer/AIBrains"]
+script = ExtResource("69_0ascx")
+health_weight = 3.0
+weapon_rank_delta_weight = 1.0
+durability_weight = -1.0
+durability_delta_weight = 1.0
+weapon_change_while_cur_weapon_imm_useful_weight = -20.0
+overheal_amount_weight = -2.0
+potion_wastage_count_weight = -1.0
+potion_wastage_sum_weight = -1.0
+monsters_killed_sum_weight = 10.0
+monsters_killed_in_desc_order_weight = 1.0
+
+[node name="Alpha" type="Node" parent="ScoundrelGamePlayer/AIBrains"]
+script = ExtResource("69_0ascx")
+health_weight = 0.5
+durability_weight = 1.0
+overheal_amount_weight = -1.0
+potion_wastage_sum_weight = -1.0
+monsters_killed_count_weight = 1.0
+monsters_killed_sum_weight = 0.5
+_description_ = "Capable of winning. Very low rate though."
+
+[node name="Monk" type="Node" parent="ScoundrelGamePlayer/AIBrains"]
+script = ExtResource("69_0ascx")
+health_weight = 0.5
+overheal_amount_weight = -1.0
+potion_wastage_sum_weight = -1.0
+monsters_killed_count_weight = 10.0
+monsters_killed_sum_weight = 1.0
+_description_ = "Capable of winning. Slightly better than Alpha, but could be better."
+
+[node name="Mauler" type="Node" parent="ScoundrelGamePlayer/AIBrains"]
+script = ExtResource("69_0ascx")
+health_weight = 0.5
+weapon_rank_weight = 0.15
+durability_weight = 1.0
+overheal_amount_weight = -1.0
+potion_wastage_sum_weight = -1.0
+monsters_killed_count_weight = 10.0
+monsters_killed_sum_weight = 1.0
+_description_ = "Capable of winning. Slightly better than Alpha, but could be better."
+
+[node name="Rogue" type="Node" parent="ScoundrelGamePlayer/AIBrains"]
+script = ExtResource("69_0ascx")
+health_weight = 0.5
+weapon_rank_weight = -0.3
+durability_weight = 1.5
+overheal_amount_weight = -1.0
+potion_wastage_sum_weight = -1.0
+monsters_killed_count_weight = 5.0
+monsters_killed_sum_weight = 1.0
+_description_ = "Capable of winning. Slightly better than Alpha, but could be better."
+
+[node name="NonLinearBrain" type="Node" parent="ScoundrelGamePlayer/AIBrains"]
+script = ExtResource("70_38ut5")
+health_weight = 1.0
+weapon_rank_weight = 1.0
+durability_delta_weight = 1.0
+weapon_change_while_cur_weapon_imm_useful_weight = -10.0
+overheal_amount_weight = -1.0
+potion_wastage_sum_weight = -1.0
+monsters_killed_sum_weight = 1.0
+monsters_killed_in_desc_order_weight = 1.0
+
+[node name="HealthCurrencyBrain" type="Node" parent="ScoundrelGamePlayer/AIBrains"]
+script = ExtResource("71_rkgpk")
+survivability_modifier = 3.0
+smash_modifier = 2.0
+weak_weapon_threshold = 4
+health_delta_weight = 1.0
+weapon_change_while_cur_weapon_imm_useful_weight = 100.0
+overheal_amount_weight = 1.0
 
 [node name="StatusContainer" type="HBoxContainer" parent="."]
 layout_mode = 1

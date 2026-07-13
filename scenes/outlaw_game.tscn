@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://knr4lv4oo5ps"]
+[gd_scene load_steps=19 format=3 uid="uid://knr4lv4oo5ps"]
 
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_3ymqy"]
 [ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="1_g7025"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_uvy3o"]
 [ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_3ypv2"]
 [ext_resource type="Texture2D" uid="uid://bkav0sfatefj" path="res://assets/outlaw/outlaw_chart.jpg" id="5_3ypv2"]
+[ext_resource type="Texture2D" uid="uid://b5du84ehm1i8u" path="res://assets/gear_icon.png" id="5_4t68w"]
 [ext_resource type="Script" uid="uid://bvlwige5msnfw" path="res://scripts/outlaw_cross.gd" id="5_c2qt5"]
 [ext_resource type="Script" uid="uid://vm8gsk162esu" path="res://scripts/outlaw_chart.gd" id="5_cvxja"]
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="5_uvy3o"]
@@ -14,6 +15,7 @@
 [ext_resource type="Script" uid="uid://ch5dhhlb28xak" path="res://scripts/outlaw_roll_area.gd" id="9_18lln"]
 [ext_resource type="Script" uid="uid://d3g46t6chc45d" path="res://scripts/outlaw_keep_area.gd" id="11_uknak"]
 [ext_resource type="Script" uid="uid://u03fhu027m5l" path="res://scripts/outlaw_game_warnings.gd" id="13_flcce"]
+[ext_resource type="Script" uid="uid://cf8gvdlwik6ib" path="res://scripts/outlaw_settings.gd" id="15_xnrw8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uknak"]
 
@@ -68,6 +70,12 @@ texture = ExtResource("2_uvy3o")
 expand_mode = 4
 stretch_mode = 4
 
+[node name="SettingsTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_4t68w")
+expand_mode = 4
+stretch_mode = 4
+
 [node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("3_3ypv2")
@@ -80,7 +88,7 @@ anchor_left = 0.2
 anchor_right = 0.9
 anchor_bottom = 1.0
 
-[node name="Chart" type="TextureRect" parent="PlayArea"]
+[node name="Chart" type="TextureRect" parent="PlayArea" node_paths=PackedStringArray("_signals")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
@@ -89,6 +97,7 @@ anchor_bottom = 0.8
 texture = ExtResource("5_3ypv2")
 expand_mode = 1
 script = ExtResource("5_cvxja")
+_signals = NodePath("../..")
 
 [node name="Cross4" type="TextureRect" parent="PlayArea/Chart"]
 visible = false
@@ -343,21 +352,25 @@ horizontal_alignment = 1
 
 [node name="D6" parent="PlayArea/DiceArea/RollArea" instance=ExtResource("1_g7025")]
 layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.2
 anchor_right = 0.2
 
 [node name="D6_2" parent="PlayArea/DiceArea/RollArea" instance=ExtResource("1_g7025")]
 layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.4
 anchor_right = 0.4
 
 [node name="D6_3" parent="PlayArea/DiceArea/RollArea" instance=ExtResource("1_g7025")]
 layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.6
 anchor_right = 0.6
 
 [node name="D6_4" parent="PlayArea/DiceArea/RollArea" instance=ExtResource("1_g7025")]
 layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.8
 anchor_right = 0.8
 
@@ -433,6 +446,7 @@ offset_bottom = 46.0
 text = "NPC Score: $0"
 
 [node name="Notes" type="TextEdit" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.005
@@ -460,6 +474,34 @@ Clear your color off the chart.
 - Goal: claim $50,000 in bounties."
 placeholder_text = "Add any notes here..."
 script = ExtResource("5_uvy3o")
+
+[node name="Settings" type="Control" parent="." node_paths=PackedStringArray("chart")]
+layout_mode = 1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+script = ExtResource("15_xnrw8")
+chart = NodePath("../PlayArea/Chart")
+
+[node name="ThemeLabel" type="Label" parent="Settings"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 5.0
+offset_right = 120.0
+offset_bottom = 28.0
+text = "Board Theme"
+
+[node name="ThemeOptionButton" type="OptionButton" parent="Settings"]
+layout_mode = 0
+offset_left = 156.0
+offset_right = 277.0
+offset_bottom = 31.0
+item_count = 2
+popup/item_0/text = "default"
+popup/item_0/id = 0
+popup/item_1/text = "mass effect"
+popup/item_1/id = 1
 
 [node name="Warnings" type="Control" parent="."]
 layout_mode = 1
@@ -504,22 +546,21 @@ label_settings = SubResource("LabelSettings_uknak")
 [connection signal="player_won" from="OutlawGamePlayer" to="Warnings" method="_on_outlaw_game_player_player_won"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SettingsTool" to="Notes" method="_on_settings_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SettingsTool" to="Settings" method="_on_settings_tool_gui_input"]
 [connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
 [connection signal="d6_entered_tree" from="PlayArea/DiceArea/RollArea/D6" to="OutlawGamePlayer" method="_on_d_6_d_6_entered_tree"]
-[connection signal="gui_input" from="PlayArea/DiceArea/RollArea/D6" to="PlayArea/DiceArea/RollArea/D6" method="_on_gui_input"]
 [connection signal="left_clicked" from="PlayArea/DiceArea/RollArea/D6" to="OutlawGamePlayer" method="_on_d_6_left_clicked"]
 [connection signal="tree_entered" from="PlayArea/DiceArea/RollArea/D6" to="PlayArea/DiceArea/RollArea/D6" method="_on_tree_entered"]
 [connection signal="d6_entered_tree" from="PlayArea/DiceArea/RollArea/D6_2" to="OutlawGamePlayer" method="_on_d_6_d_6_entered_tree"]
-[connection signal="gui_input" from="PlayArea/DiceArea/RollArea/D6_2" to="PlayArea/DiceArea/RollArea/D6_2" method="_on_gui_input"]
 [connection signal="left_clicked" from="PlayArea/DiceArea/RollArea/D6_2" to="OutlawGamePlayer" method="_on_d_6_left_clicked"]
 [connection signal="tree_entered" from="PlayArea/DiceArea/RollArea/D6_2" to="PlayArea/DiceArea/RollArea/D6_2" method="_on_tree_entered"]
 [connection signal="d6_entered_tree" from="PlayArea/DiceArea/RollArea/D6_3" to="OutlawGamePlayer" method="_on_d_6_d_6_entered_tree"]
-[connection signal="gui_input" from="PlayArea/DiceArea/RollArea/D6_3" to="PlayArea/DiceArea/RollArea/D6_3" method="_on_gui_input"]
 [connection signal="left_clicked" from="PlayArea/DiceArea/RollArea/D6_3" to="OutlawGamePlayer" method="_on_d_6_left_clicked"]
 [connection signal="tree_entered" from="PlayArea/DiceArea/RollArea/D6_3" to="PlayArea/DiceArea/RollArea/D6_3" method="_on_tree_entered"]
 [connection signal="d6_entered_tree" from="PlayArea/DiceArea/RollArea/D6_4" to="OutlawGamePlayer" method="_on_d_6_d_6_entered_tree"]
-[connection signal="gui_input" from="PlayArea/DiceArea/RollArea/D6_4" to="PlayArea/DiceArea/RollArea/D6_4" method="_on_gui_input"]
 [connection signal="left_clicked" from="PlayArea/DiceArea/RollArea/D6_4" to="OutlawGamePlayer" method="_on_d_6_left_clicked"]
 [connection signal="tree_entered" from="PlayArea/DiceArea/RollArea/D6_4" to="PlayArea/DiceArea/RollArea/D6_4" method="_on_tree_entered"]
 [connection signal="pressed" from="PlayArea/DiceArea/RerollButton" to="OutlawGamePlayer" method="_on_reroll_button_pressed"]
 [connection signal="pressed" from="PlayArea/DiceArea/ClaimButton" to="OutlawGamePlayer" method="_on_claim_button_pressed"]
+[connection signal="item_selected" from="Settings/ThemeOptionButton" to="Settings" method="_on_theme_option_button_item_selected"]

@@ -26,3 +26,16 @@ func is_black() -> bool:
 
 func same_suit(other: CardData) -> bool:
 	return not other == null and other.suit == suit
+
+func get_abbreviation() -> String:
+	var s = ""
+	match suit:
+		Suit.HEARTS:
+			s = "H"
+		Suit.DIAMONDS:
+			s = "D"
+		Suit.CLUBS:
+			s = "C"
+		Suit.SPADES:
+			s = "S"
+	return str(rank) + s
