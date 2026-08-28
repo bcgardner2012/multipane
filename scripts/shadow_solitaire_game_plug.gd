@@ -40,7 +40,13 @@ func on_new_round_started(boss: CardData, health: int) -> void:
 # the point here is to reset the boss' image to show the new one, so we can
 # also see the defeat scene for the last boss, briefly. Maybe we have a case for
 # goon specific logic to though?
-func on_attacked(target: CardData, action: CardData) -> void:
+func on_attacked(_target: CardData, _action: CardData) -> void:
 	if _get_suit_channel() == BOSS_MODE:
 		var dir = _card_to_notation(prev_boss).path_join("profile")
+		portrait.try_load_random_image_from_subdir(dir)
+
+# could represent a minion being summoned
+func on_joker_drawn() -> void:
+	if _get_suit_channel() == BOSS_MODE:
+		var dir = _card_to_notation(prev_boss).path_join("summon")
 		portrait.try_load_random_image_from_subdir(dir)

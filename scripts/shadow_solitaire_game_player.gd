@@ -7,6 +7,7 @@ signal player_won()
 signal bomb_used()
 signal new_round_started(boss: CardData, health: int)
 signal attacked(target: CardData, action: CardData)
+signal joker_drawn()
 
 @export var play_area: Control
 @export var boss_deck_count: Label
@@ -116,6 +117,7 @@ func _draw_action() -> void:
 	if action_card.data.rank == JOKER_RANK: #Joker
 		action_points += 1
 		ap_label.text = "AP: " + str(action_points)
+		joker_drawn.emit()
 		
 		goons.append(action_card.data)
 		goon_row.show_goons(goons)
@@ -191,6 +193,7 @@ func _on_goon_card_use_card(data: CardData, _button_index: int) -> void:
 			dmg = action_context_rank
 		
 		if dmg > 0:
+			attacked.emit(goons[index], action_card.data)
 			_update_goon_health(index, dmg)
 		else:
 			invalid_selection.emit()
