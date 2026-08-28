@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://b7of08ot155n3"]
+[gd_scene load_steps=74 format=3 uid="uid://b7of08ot155n3"]
 
 [ext_resource type="Script" uid="uid://cmscssmd30tpy" path="res://scripts/card_capture_game_pane.gd" id="1_80yru"]
 [ext_resource type="Script" uid="uid://c8ie85fprcapv" path="res://scripts/card_capture_game_player.gd" id="1_s5opr"]
@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="38_11giq"]
 [ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="39_dade8"]
 [ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="40_p50jr"]
+[ext_resource type="Texture2D" uid="uid://cdo0h83sp8bni" path="res://assets/cards/normal/better_joker.png" id="41_hugel"]
 [ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="41_iaxhm"]
 [ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="42_6lp70"]
 [ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="43_sluuk"]
@@ -56,10 +57,8 @@
 [ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="52_b4qgb"]
 [ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="53_18cv5"]
 [ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="54_ojf8b"]
-[ext_resource type="Texture2D" uid="uid://msvrghvpqax6" path="res://assets/cards/normal/b_joker.png" id="55_0s10i"]
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="55_q00h8"]
 [ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="56_h6pei"]
-[ext_resource type="Texture2D" uid="uid://bratwehtmfsi1" path="res://assets/cards/normal/r_joker.png" id="56_s5opr"]
 [ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="57_vh2br"]
 [ext_resource type="Texture2D" uid="uid://bfildnevjcona" path="res://assets/cards/normal/back_red.png" id="58_52l4y"]
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="58_h6pei"]
@@ -312,11 +311,11 @@ texture = ExtResource("44_oneen")
 [node name="BJOKER" type="Node" parent="CardCaptureGamePlayer/PlayerStarterDeck"]
 script = ExtResource("2_loxor")
 suit = 2
-texture = ExtResource("55_0s10i")
+texture = ExtResource("41_hugel")
 
 [node name="RJOKER" type="Node" parent="CardCaptureGamePlayer/PlayerStarterDeck"]
 script = ExtResource("2_loxor")
-texture = ExtResource("56_s5opr")
+texture = ExtResource("41_hugel")
 
 [node name="Royalty" type="Node" parent="CardCaptureGamePlayer"]
 

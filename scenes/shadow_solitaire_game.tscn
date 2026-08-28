@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://clujhw1ox1na5"]
+[gd_scene load_steps=83 format=3 uid="uid://clujhw1ox1na5"]
 
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_7s2tn"]
 [ext_resource type="Script" uid="uid://b3in8vci4tjue" path="res://scripts/shadow_solitaire_game_player.gd" id="1_83gqh"]
@@ -50,9 +50,8 @@
 [ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="37_tw3bu"]
 [ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="38_50hv6"]
 [ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="39_aiww6"]
-[ext_resource type="Texture2D" uid="uid://msvrghvpqax6" path="res://assets/cards/normal/b_joker.png" id="40_1rena"]
 [ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="41_447sc"]
-[ext_resource type="Texture2D" uid="uid://bratwehtmfsi1" path="res://assets/cards/normal/r_joker.png" id="41_fr5x6"]
+[ext_resource type="Texture2D" uid="uid://cdo0h83sp8bni" path="res://assets/cards/normal/better_joker.png" id="42_a04w1"]
 [ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="42_el8qu"]
 [ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="43_q280q"]
 [ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="44_wofse"]
@@ -348,13 +347,12 @@ texture = ExtResource("41_447sc")
 script = ExtResource("1_x6a4x")
 suit = 3
 rank = -1
-texture = ExtResource("40_1rena")
+texture = ExtResource("42_a04w1")
 
 [node name="Joker2" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
 script = ExtResource("1_x6a4x")
-suit = 3
 rank = -1
-texture = ExtResource("41_fr5x6")
+texture = ExtResource("42_a04w1")
 
 [node name="CourtCards" type="Node" parent="ShadowSolitaireGamePlayer"]
 
