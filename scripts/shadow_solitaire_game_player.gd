@@ -151,7 +151,7 @@ func _get_strongest_and_weakest_goon():
 			if strongest_goon == null or strongest_goon.rank < goon.rank:
 				strongest_goon = goon
 			# any goon except Aces and Jokers can be picked
-			if (weakest_goon == null and goon.rank > 1) or (weakest_goon.rank > goon.rank and goon.rank > 1):
+			if (weakest_goon == null and goon.rank > 1) or (goon.rank > 1 and weakest_goon.rank > goon.rank):
 				weakest_goon = goon
 	
 	if weakest_goon == null: # we drew all Aces and Jokers...
