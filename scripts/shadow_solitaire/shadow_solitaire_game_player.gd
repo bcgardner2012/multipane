@@ -35,6 +35,8 @@ var goons: Array[CardData]
 var strongest_goon = null
 var weakest_goon = null
 
+var _signals: ShadowSolitaireGamePane
+
 func _ready() -> void:
 	discard_pile = []
 	deck = []
@@ -74,6 +76,7 @@ func _on_bomb_button_bomb_toggled() -> void:
 
 
 func _on_deck_start_game() -> void:
+	_signals = get_parent()
 	for child in play_area.get_children():
 		child.visible = true
 	_start_round()
@@ -81,6 +84,7 @@ func _on_deck_start_game() -> void:
 func _start_round() -> void:
 	if court_cards.size() == 0:
 		player_won.emit()
+		_signals.player_won.emit()
 		return
 	
 	# draw boss
@@ -108,6 +112,7 @@ func _start_round() -> void:
 	# handle Jokers
 	_draw_action()
 	new_round_started.emit(boss, health_slider.currentValue)
+	_signals.new_round_started.emit(boss, health_slider.currentValue)
 
 func _draw_action() -> void:
 	if action_card.data != null and not action_card.data.rank == JOKER_RANK:
@@ -118,6 +123,7 @@ func _draw_action() -> void:
 		action_points += 1
 		ap_label.text = "AP: " + str(action_points)
 		joker_drawn.emit()
+		_signals.joker_drawn.emit()
 		
 		goons.append(action_card.data)
 		goon_row.show_goons(goons)
@@ -183,6 +189,7 @@ func _on_goon_card_use_card(data: CardData, _button_index: int) -> void:
 			bomb_was_used = true
 			bomb_is_on = false
 			bomb_used.emit()
+			_signals.bomb_used.emit()
 			_update_goon_health(index, strongest_goon.rank)
 	else:
 		var dmg = 0
@@ -194,6 +201,7 @@ func _on_goon_card_use_card(data: CardData, _button_index: int) -> void:
 		
 		if dmg > 0:
 			attacked.emit(goons[index], action_card.data)
+			_signals.attacked.emit(goons[index], action_card.data)
 			_update_goon_health(index, dmg)
 		else:
 			invalid_selection.emit()
@@ -234,6 +242,7 @@ func _cleanup_round() -> void:
 	health_slider.change_value(-dmg)
 	if health_slider.currentValue <= 0:
 		player_died.emit()
+		_signals.player_died.emit()
 	
 	goon_row.clear_goons()
 	strongest_goon = null
