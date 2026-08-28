@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://b51sk2cnr246l"]
 
-[ext_resource type="Script" uid="uid://caviucel3nj8v" path="res://scripts/snake_charmer_game_pane.gd" id="1_r8ane"]
-[ext_resource type="Script" uid="uid://bh0bp3kckk80x" path="res://scripts/snake_charmer_game_player.gd" id="1_ubm8x"]
+[ext_resource type="Script" uid="uid://caviucel3nj8v" path="res://scripts/snake_charmer/snake_charmer_game_pane.gd" id="1_r8ane"]
+[ext_resource type="Script" uid="uid://bh0bp3kckk80x" path="res://scripts/snake_charmer/snake_charmer_game_player.gd" id="1_ubm8x"]
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_yeqn8"]
 [ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_xpwmi"]
 [ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_u3x8p"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cs7voro0nc8le" path="res://assets/snake.png" id="4_xpwmi"]
 [ext_resource type="Texture2D" uid="uid://dj3rxluc7rrno" path="res://assets/running man white.png" id="5_u3x8p"]
 [ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="7_hxdtu"]
-[ext_resource type="Script" uid="uid://bi34c66mh8d6a" path="res://scripts/snake_charmer_warnings_holder.gd" id="9_hxdtu"]
+[ext_resource type="Script" uid="uid://bi34c66mh8d6a" path="res://scripts/snake_charmer/snake_charmer_warnings_holder.gd" id="9_hxdtu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ubm8x"]
 font_size = 24

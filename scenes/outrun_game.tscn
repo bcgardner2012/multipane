@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://c86icr6bk6caj"]
 
-[ext_resource type="Script" uid="uid://pkcac18dfvsg" path="res://scripts/outrun_game_player.gd" id="1_5mo8y"]
-[ext_resource type="Script" uid="uid://ia3aloe2u3oq" path="res://scripts/outrun_game_pane.gd" id="1_b5xps"]
+[ext_resource type="Script" uid="uid://pkcac18dfvsg" path="res://scripts/outrun/outrun_game_player.gd" id="1_5mo8y"]
+[ext_resource type="Script" uid="uid://ia3aloe2u3oq" path="res://scripts/outrun/outrun_game_pane.gd" id="1_b5xps"]
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_lyxe7"]
 [ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_m2nyx"]
 [ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_ky3iw"]
@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dyovt2f48h8ds" path="res://assets/bear.png" id="4_m2nyx"]
 [ext_resource type="Texture2D" uid="uid://dj3rxluc7rrno" path="res://assets/running man white.png" id="5_ky3iw"]
 [ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="6_jjbdm"]
-[ext_resource type="Script" uid="uid://cln2no5r6mlhb" path="res://scripts/outrun_dice_container.gd" id="7_3ixp6"]
-[ext_resource type="Script" uid="uid://daqpu585nlorr" path="res://scripts/outrun_game_warnings.gd" id="10_7wa45"]
+[ext_resource type="Script" uid="uid://cln2no5r6mlhb" path="res://scripts/outrun/outrun_dice_container.gd" id="7_3ixp6"]
+[ext_resource type="Script" uid="uid://daqpu585nlorr" path="res://scripts/outrun/outrun_game_warnings.gd" id="10_7wa45"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_b5xps"]
 font_size = 24

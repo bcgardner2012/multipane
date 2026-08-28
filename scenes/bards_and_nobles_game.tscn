@@ -1,8 +1,8 @@
 [gd_scene load_steps=81 format=3 uid="uid://bt2fiffmcs7ks"]
 
 [ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_4dx5i"]
-[ext_resource type="Script" uid="uid://c5csnobgg2dgq" path="res://scripts/bards_and_nobles_game_pane.gd" id="1_qd5iq"]
-[ext_resource type="Script" uid="uid://b6nqeyg2xaywg" path="res://scripts/bards_and_nobles_game_player.gd" id="1_wobb0"]
+[ext_resource type="Script" uid="uid://c5csnobgg2dgq" path="res://scripts/bards_and_nobles/bards_and_nobles_game_pane.gd" id="1_qd5iq"]
+[ext_resource type="Script" uid="uid://b6nqeyg2xaywg" path="res://scripts/bards_and_nobles/bards_and_nobles_game_player.gd" id="1_wobb0"]
 [ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_ms0g2"]
 [ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="3_2d51a"]
 [ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="4_7dsjg"]
@@ -58,7 +58,7 @@
 [ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="54_mau47"]
 [ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="55_fx4fp"]
 [ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="56_51n52"]
-[ext_resource type="Script" uid="uid://cs63fhltmbmyw" path="res://scripts/bards_and_nobles_game_audio.gd" id="57_i08p6"]
+[ext_resource type="Script" uid="uid://cs63fhltmbmyw" path="res://scripts/bards_and_nobles/bards_and_nobles_game_audio.gd" id="57_i08p6"]
 [ext_resource type="AudioStream" uid="uid://bnyqgj23l7nlp" path="res://assets/audio/cash-register-kaching-376867.mp3" id="57_oasi1"]
 [ext_resource type="Texture2D" uid="uid://dr5idoohosp33" path="res://assets/sound_off.png" id="57_xw4mg"]
 [ext_resource type="AudioStream" uid="uid://can7veoxkxntr" path="res://assets/audio/game-over-39-199830.mp3" id="58_78vaa"]
@@ -74,7 +74,7 @@
 [ext_resource type="Script" uid="uid://cjrsd47nnngmp" path="res://scripts/card_highlighter.gd" id="65_g5dmh"]
 [ext_resource type="Texture2D" uid="uid://ddyq3kgxhcboc" path="res://assets/cards/card_hilight.png" id="66_08wc7"]
 [ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="67_oasi1"]
-[ext_resource type="Script" uid="uid://bt0y6cl5jdes8" path="res://scripts/bards_and_nobles_warnings.gd" id="71_08wc7"]
+[ext_resource type="Script" uid="uid://bt0y6cl5jdes8" path="res://scripts/bards_and_nobles/bards_and_nobles_warnings.gd" id="71_08wc7"]
 [ext_resource type="Texture2D" uid="uid://dtibwbmx8sy8t" path="res://assets/crown.png" id="74_w80sr"]
 [ext_resource type="Texture2D" uid="uid://c84a0snycb8dj" path="res://assets/book.png" id="75_o1tkp"]
 

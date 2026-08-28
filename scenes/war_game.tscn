@@ -1,7 +1,7 @@
 [gd_scene load_steps=69 format=3 uid="uid://blkvh550p7uqs"]
 
-[ext_resource type="Script" uid="uid://c00wy6rcamu08" path="res://scripts/war_game_pane.gd" id="1_i5q7p"]
-[ext_resource type="Script" uid="uid://q57cfnvylnr7" path="res://scripts/war_game_player.gd" id="1_lu24n"]
+[ext_resource type="Script" uid="uid://c00wy6rcamu08" path="res://scripts/war/war_game_pane.gd" id="1_i5q7p"]
+[ext_resource type="Script" uid="uid://q57cfnvylnr7" path="res://scripts/war/war_game_player.gd" id="1_lu24n"]
 [ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="2_a2e2d"]
 [ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="3_g0ds6"]
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="4_20eii"]
@@ -64,7 +64,7 @@
 [ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="53_es1o5"]
 [ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="54_hv6fe"]
 [ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="55_q3pej"]
-[ext_resource type="Script" uid="uid://bxkyvuis4xhjp" path="res://scripts/war_tiebreaker.gd" id="66_g0ds6"]
+[ext_resource type="Script" uid="uid://bxkyvuis4xhjp" path="res://scripts/war/war_tiebreaker.gd" id="66_g0ds6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a2e2d"]
 font_size = 24

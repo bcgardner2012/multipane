@@ -1,7 +1,7 @@
 [gd_scene load_steps=74 format=3 uid="uid://b7of08ot155n3"]
 
-[ext_resource type="Script" uid="uid://cmscssmd30tpy" path="res://scripts/card_capture_game_pane.gd" id="1_80yru"]
-[ext_resource type="Script" uid="uid://c8ie85fprcapv" path="res://scripts/card_capture_game_player.gd" id="1_s5opr"]
+[ext_resource type="Script" uid="uid://cmscssmd30tpy" path="res://scripts/card_capture/card_capture_game_pane.gd" id="1_80yru"]
+[ext_resource type="Script" uid="uid://c8ie85fprcapv" path="res://scripts/card_capture/card_capture_game_player.gd" id="1_s5opr"]
 [ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_yc847"]
 [ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_loxor"]
 [ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="3_h506f"]
@@ -66,11 +66,11 @@
 [ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="60_8vkp1"]
 [ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="60_mu8bk"]
 [ext_resource type="Texture2D" uid="uid://cm36j136fu2ho" path="res://assets/cards/card_holder_transparent.png" id="62_r0ipr"]
-[ext_resource type="Script" uid="uid://slb0w1nlyxta" path="res://scripts/enemy_card_capture_zone.gd" id="63_d8x4w"]
+[ext_resource type="Script" uid="uid://slb0w1nlyxta" path="res://scripts/card_capture/enemy_card_capture_zone.gd" id="63_d8x4w"]
 [ext_resource type="Script" uid="uid://cjrsd47nnngmp" path="res://scripts/card_highlighter.gd" id="63_fx7oi"]
 [ext_resource type="Texture2D" uid="uid://ddyq3kgxhcboc" path="res://assets/cards/card_hilight.png" id="64_0s10i"]
-[ext_resource type="Script" uid="uid://c3gm4df04gd5q" path="res://scripts/player_card_capture_zone.gd" id="66_osw0g"]
-[ext_resource type="Script" uid="uid://blrblmlmsw6in" path="res://scripts/card_capture_warnings.gd" id="71_hugel"]
+[ext_resource type="Script" uid="uid://c3gm4df04gd5q" path="res://scripts/card_capture/player_card_capture_zone.gd" id="66_osw0g"]
+[ext_resource type="Script" uid="uid://blrblmlmsw6in" path="res://scripts/card_capture/card_capture_warnings.gd" id="71_hugel"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kn77h"]
 font_size = 24

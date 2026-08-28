@@ -1,7 +1,7 @@
 [gd_scene load_steps=69 format=3 uid="uid://ccgdwu58v4k8t"]
 
-[ext_resource type="Script" uid="uid://cyb22ir0ctu54" path="res://scripts/scorpion_tail_game_player.gd" id="1_3qwi8"]
-[ext_resource type="Script" uid="uid://db075si8eylai" path="res://scripts/scorpion_tail_game_pane.gd" id="1_8shyf"]
+[ext_resource type="Script" uid="uid://cyb22ir0ctu54" path="res://scripts/scorpion_tail/scorpion_tail_game_player.gd" id="1_3qwi8"]
+[ext_resource type="Script" uid="uid://db075si8eylai" path="res://scripts/scorpion_tail/scorpion_tail_game_pane.gd" id="1_8shyf"]
 [ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="2_xti1b"]
 [ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="3_8shyf"]
 [ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="4_dg3mo"]
@@ -64,8 +64,8 @@
 [ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="53_463bb"]
 [ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="54_5y3f0"]
 [ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="55_ghxc0"]
-[ext_resource type="Script" uid="uid://ct4n2pnig4gai" path="res://scripts/scorpion_tail_tail_node.gd" id="62_xti1b"]
-[ext_resource type="Script" uid="uid://dc188c72go6no" path="res://scripts/scorpion_tail_warnings.gd" id="66_0ypex"]
+[ext_resource type="Script" uid="uid://ct4n2pnig4gai" path="res://scripts/scorpion_tail/scorpion_tail_tail_node.gd" id="62_xti1b"]
+[ext_resource type="Script" uid="uid://dc188c72go6no" path="res://scripts/scorpion_tail/scorpion_tail_warnings.gd" id="66_0ypex"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_metcd"]
 font_size = 24

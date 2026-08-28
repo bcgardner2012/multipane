@@ -1,7 +1,7 @@
 [gd_scene load_steps=82 format=3 uid="uid://cvqspycf8y8a0"]
 
-[ext_resource type="Script" uid="uid://dbui5s6dt8oje" path="res://scripts/joker_jailbreak_game_pane.gd" id="1_1v6m6"]
-[ext_resource type="Script" uid="uid://fi2pegkvhwax" path="res://scripts/joker_jailbreak_game_player.gd" id="1_dgljc"]
+[ext_resource type="Script" uid="uid://dbui5s6dt8oje" path="res://scripts/joker_jailbreak/joker_jailbreak_game_pane.gd" id="1_1v6m6"]
+[ext_resource type="Script" uid="uid://fi2pegkvhwax" path="res://scripts/joker_jailbreak/joker_jailbreak_game_player.gd" id="1_dgljc"]
 [ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="1_hgek0"]
 [ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="2_6iuw3"]
 [ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="2_cj6ev"]
@@ -68,12 +68,12 @@
 [ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="53_hdbsq"]
 [ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="54_kcu1w"]
 [ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="55_wgcst"]
-[ext_resource type="Script" uid="uid://dbl38f670k8dd" path="res://scripts/joker_jailbreak_game_audio.gd" id="56_rc1sd"]
+[ext_resource type="Script" uid="uid://dbl38f670k8dd" path="res://scripts/joker_jailbreak/joker_jailbreak_game_audio.gd" id="56_rc1sd"]
 [ext_resource type="AudioStream" uid="uid://ch0ah7pekynts" path="res://assets/audio/pickaxe-blow-333695.mp3" id="57_usu3a"]
 [ext_resource type="AudioStream" uid="uid://wth8qiwjf4dx" path="res://assets/audio/rocks-6129.mp3" id="59_daolq"]
-[ext_resource type="Script" uid="uid://dv38hnfiyyx5" path="res://scripts/joker_jailbreak_slots.gd" id="64_eqbig"]
+[ext_resource type="Script" uid="uid://dv38hnfiyyx5" path="res://scripts/joker_jailbreak/joker_jailbreak_slots.gd" id="64_eqbig"]
 [ext_resource type="Script" uid="uid://cjrsd47nnngmp" path="res://scripts/card_highlighter.gd" id="66_6iuw3"]
-[ext_resource type="Script" uid="uid://crd1lc2ecvbsr" path="res://scripts/joker_jailbreak_warnings.gd" id="70_rvlxu"]
+[ext_resource type="Script" uid="uid://crd1lc2ecvbsr" path="res://scripts/joker_jailbreak/joker_jailbreak_warnings.gd" id="70_rvlxu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2dj88"]
 

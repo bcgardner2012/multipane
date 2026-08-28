@@ -1,8 +1,8 @@
 [gd_scene load_steps=80 format=3 uid="uid://cjuytov2ll3g8"]
 
 [ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="1_4q62k"]
-[ext_resource type="Script" uid="uid://7w4yfydc3ffx" path="res://scripts/area_52_game_player.gd" id="1_6ki1a"]
-[ext_resource type="Script" uid="uid://dc00bvpvb4de6" path="res://scripts/area_52_game_pane.gd" id="1_57ttv"]
+[ext_resource type="Script" uid="uid://7w4yfydc3ffx" path="res://scripts/area52/area_52_game_player.gd" id="1_6ki1a"]
+[ext_resource type="Script" uid="uid://dc00bvpvb4de6" path="res://scripts/area52/area_52_game_pane.gd" id="1_57ttv"]
 [ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_om5bm"]
 [ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_js67o"]
 [ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="2_l1egf"]
@@ -63,9 +63,9 @@
 [ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="52_vgn28"]
 [ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="53_76g2g"]
 [ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="54_yukuh"]
-[ext_resource type="Script" uid="uid://co0lo1o5plypj" path="res://scripts/area_52_game_audio.gd" id="56_5dpdv"]
+[ext_resource type="Script" uid="uid://co0lo1o5plypj" path="res://scripts/area52/area_52_game_audio.gd" id="56_5dpdv"]
 [ext_resource type="AudioStream" uid="uid://dk26qjp1002e5" path="res://assets/audio/meaty-gunshot-101257.mp3" id="56_7a6l7"]
-[ext_resource type="Script" uid="uid://cnir1xs667nea" path="res://scripts/area_52_warnings.gd" id="56_17lq6"]
+[ext_resource type="Script" uid="uid://cnir1xs667nea" path="res://scripts/area52/area_52_warnings.gd" id="56_17lq6"]
 [ext_resource type="AudioStream" uid="uid://dudrafwn1omha" path="res://assets/audio/thump-and-grunt-85606.mp3" id="57_y6gq0"]
 [ext_resource type="AudioStream" uid="uid://bs7a2yc4o4oqh" path="res://assets/audio/tarot-shuffle-89105.mp3" id="58_gloaf"]
 [ext_resource type="AudioStream" uid="uid://hw453vo06gbl" path="res://assets/audio/medieval-fanfare-6826.mp3" id="59_5dpdv"]
@@ -76,7 +76,7 @@
 [ext_resource type="Texture2D" uid="uid://cm36j136fu2ho" path="res://assets/cards/card_holder_transparent.png" id="63_rwavj"]
 [ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="64_rwavj"]
 [ext_resource type="Texture2D" uid="uid://ddyq3kgxhcboc" path="res://assets/cards/card_hilight.png" id="67_g7gj0"]
-[ext_resource type="Script" uid="uid://b36mxm2qotn0q" path="res://scripts/area_52_card_hilighter.gd" id="77_52um1"]
+[ext_resource type="Script" uid="uid://b36mxm2qotn0q" path="res://scripts/area52/area_52_card_hilighter.gd" id="77_52um1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rwavj"]
 font_size = 24

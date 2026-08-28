@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://ssvg6d8vqus7"]
 
-[ext_resource type="Script" uid="uid://bklyyniev25hx" path="res://scripts/carrion_eater_game_pane.gd" id="1_5og6f"]
-[ext_resource type="Script" uid="uid://dvdgtp0s4yk7p" path="res://scripts/carrion_eater_game_player.gd" id="1_ikda2"]
+[ext_resource type="Script" uid="uid://bklyyniev25hx" path="res://scripts/carrion_eater/carrion_eater_game_pane.gd" id="1_5og6f"]
+[ext_resource type="Script" uid="uid://dvdgtp0s4yk7p" path="res://scripts/carrion_eater/carrion_eater_game_player.gd" id="1_ikda2"]
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_inxqb"]
 [ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_to0pj"]
 [ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_7tf21"]
@@ -9,10 +9,10 @@
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="4_to0pj"]
 [ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="5_kt5e3"]
 [ext_resource type="Texture2D" uid="uid://b5du84ehm1i8u" path="res://assets/gear_icon.png" id="5_yg6yn"]
-[ext_resource type="Script" uid="uid://v8c5ca1q0px6" path="res://scripts/carrion_eater_enemy_dice.gd" id="6_gk5xa"]
-[ext_resource type="Script" uid="uid://b5bmii10aenne" path="res://scripts/carrion_eater_action_dice.gd" id="7_jwbty"]
-[ext_resource type="Script" uid="uid://de6jvksu6qbfp" path="res://scripts/carrion_eater_warnings_holder.gd" id="10_r5cpu"]
-[ext_resource type="Script" uid="uid://cihsein2v18yv" path="res://scripts/carrion_eater_settings.gd" id="12_u774g"]
+[ext_resource type="Script" uid="uid://v8c5ca1q0px6" path="res://scripts/carrion_eater/carrion_eater_enemy_dice.gd" id="6_gk5xa"]
+[ext_resource type="Script" uid="uid://b5bmii10aenne" path="res://scripts/carrion_eater/carrion_eater_action_dice.gd" id="7_jwbty"]
+[ext_resource type="Script" uid="uid://de6jvksu6qbfp" path="res://scripts/carrion_eater/carrion_eater_warnings_holder.gd" id="10_r5cpu"]
+[ext_resource type="Script" uid="uid://cihsein2v18yv" path="res://scripts/carrion_eater/carrion_eater_settings.gd" id="12_u774g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yg6yn"]
 font_size = 10

@@ -1,8 +1,8 @@
 [gd_scene load_steps=76 format=3 uid="uid://hmkujffux4ck"]
 
-[ext_resource type="Script" uid="uid://0ivfv48ad021" path="res://scripts/sandwich_guy_game_pane.gd" id="1_3kws5"]
+[ext_resource type="Script" uid="uid://0ivfv48ad021" path="res://scripts/sandwich_guy/sandwich_guy_game_pane.gd" id="1_3kws5"]
 [ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_aloaj"]
-[ext_resource type="Script" uid="uid://dhl5e37e4nxr1" path="res://scripts/sandwich_guy_game_player.gd" id="1_c8tn0"]
+[ext_resource type="Script" uid="uid://dhl5e37e4nxr1" path="res://scripts/sandwich_guy/sandwich_guy_game_player.gd" id="1_c8tn0"]
 [ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_7iiuy"]
 [ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="3_jy1st"]
 [ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="4_iqya2"]
@@ -60,7 +60,7 @@
 [ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="56_iqya2"]
 [ext_resource type="Texture2D" uid="uid://cw64du7eb3jkm" path="res://assets/sound_on.png" id="56_roqc0"]
 [ext_resource type="Script" uid="uid://bw8t5ilvils5b" path="res://scripts/sound_toggle.gd" id="57_jp4u1"]
-[ext_resource type="Script" uid="uid://344m3ucjempt" path="res://scripts/sandwich_guy_game_audio.gd" id="57_mysd4"]
+[ext_resource type="Script" uid="uid://344m3ucjempt" path="res://scripts/sandwich_guy/sandwich_guy_game_audio.gd" id="57_mysd4"]
 [ext_resource type="Texture2D" uid="uid://cm36j136fu2ho" path="res://assets/cards/card_holder_transparent.png" id="57_t3h8p"]
 [ext_resource type="Texture2D" uid="uid://dr5idoohosp33" path="res://assets/sound_off.png" id="58_5bs17"]
 [ext_resource type="Script" uid="uid://cjrsd47nnngmp" path="res://scripts/card_highlighter.gd" id="58_c8tn0"]
@@ -70,9 +70,9 @@
 [ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="60_3kws5"]
 [ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="60_n48l4"]
 [ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="61_mysd4"]
-[ext_resource type="Script" uid="uid://ck6t13ijlisao" path="res://scripts/sandwich_guy_hand.gd" id="64_5bs17"]
+[ext_resource type="Script" uid="uid://ck6t13ijlisao" path="res://scripts/sandwich_guy/sandwich_guy_hand.gd" id="64_5bs17"]
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="68_jp4u1"]
-[ext_resource type="Script" uid="uid://c33v0mdm80q0c" path="res://scripts/sandwich_guy_warnings.gd" id="70_c5k2i"]
+[ext_resource type="Script" uid="uid://c33v0mdm80q0c" path="res://scripts/sandwich_guy/sandwich_guy_warnings.gd" id="70_c5k2i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wffey"]
 font_size = 24
