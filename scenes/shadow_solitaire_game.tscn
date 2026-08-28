@@ -1,0 +1,1059 @@
+[gd_scene load_steps=84 format=3 uid="uid://clujhw1ox1na5"]
+
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_7s2tn"]
+[ext_resource type="Script" uid="uid://b3in8vci4tjue" path="res://scripts/shadow_solitaire_game_player.gd" id="1_83gqh"]
+[ext_resource type="Script" uid="uid://c4eddca0p5n8q" path="res://scripts/shadow_solitaire_game_pane.gd" id="1_v4fko"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="1_x6a4x"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="2_84kp7"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_ctvjy"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_114o7"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="3_ludpl"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="4_1rena"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="4_ctvjy"]
+[ext_resource type="Script" uid="uid://ds4qyeolmyv8n" path="res://scripts/gauge_slider.gd" id="4_ykfww"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="5_fr5x6"]
+[ext_resource type="Texture2D" uid="uid://5paj0fjfasri" path="res://assets/heart.png" id="5_gahq4"]
+[ext_resource type="Script" uid="uid://ejd2pitsqv7x" path="res://scripts/gauge_icon.gd" id="6_65f7o"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="6_w8me8"]
+[ext_resource type="Texture2D" uid="uid://myp0200iy2ws" path="res://assets/lightning.png" id="7_my6qs"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="7_sotu1"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="8_83gqh"]
+[ext_resource type="Texture2D" uid="uid://demtkcgcng4ai" path="res://assets/mana.png" id="8_vciot"]
+[ext_resource type="Script" uid="uid://dpbedum2trnxl" path="res://scripts/gauge_label.gd" id="9_5hw3g"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="9_136qt"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="11_ji0x3"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="12_fc1ly"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="13_87qao"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="14_a04w1"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="15_v4fko"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="16_q7akl"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="17_8u3bf"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="18_m8vql"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="19_3j6u2"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="20_lbte7"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="21_i8swx"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="22_32rsd"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="23_rp0ik"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="24_v8rx2"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="25_qqmyh"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="26_fgoxr"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="27_tkkof"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="28_1hjs1"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="29_mwb1c"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="30_pnl6e"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="31_kdeu1"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="32_kuwol"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="33_0kuao"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="34_kh6o4"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="35_rkabb"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="36_g1lk3"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="37_tw3bu"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="38_50hv6"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="39_aiww6"]
+[ext_resource type="Texture2D" uid="uid://msvrghvpqax6" path="res://assets/cards/normal/b_joker.png" id="40_1rena"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="41_447sc"]
+[ext_resource type="Texture2D" uid="uid://bratwehtmfsi1" path="res://assets/cards/normal/r_joker.png" id="41_fr5x6"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="42_el8qu"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="43_q280q"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="44_wofse"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="45_aq6px"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="46_yyag7"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="47_2snot"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="48_4irj4"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="49_v5wji"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="50_klhgv"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="51_lg2df"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="52_gjwfe"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="53_smr8e"]
+[ext_resource type="Texture2D" uid="uid://bfildnevjcona" path="res://assets/cards/normal/back_red.png" id="61_84kp7"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="61_x6a4x"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="62_84kp7"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="65_fr5x6"]
+[ext_resource type="Texture2D" uid="uid://05gyxubk1pn6" path="res://assets/linked.png" id="66_w8me8"]
+[ext_resource type="Script" uid="uid://6wre55fa6js1" path="res://scripts/ss_goon_row.gd" id="67_fc1ly"]
+[ext_resource type="Script" uid="uid://dlxuaad8cl5v5" path="res://scripts/ss_grapple_button.gd" id="68_136qt"]
+[ext_resource type="Texture2D" uid="uid://cy2rokhudy48m" path="res://assets/Bomb.png" id="68_sotu1"]
+[ext_resource type="Script" uid="uid://tbhapn0jvitm" path="res://scripts/ss_health_row.gd" id="70_87qao"]
+[ext_resource type="Script" uid="uid://o2wei5swgl88" path="res://scripts/ss_bomb_button.gd" id="71_reo2u"]
+[ext_resource type="Texture2D" uid="uid://ddhcplv3ha6e" path="res://assets/LitBomb.png" id="72_ji0x3"]
+[ext_resource type="Script" uid="uid://c1w0vsutbvl23" path="res://scripts/ss_warnings.gd" id="76_a04w1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6wk2e"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ludpl"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sotu1"]
+font_size = 28
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_83gqh"]
+font_size = 20
+font_color = Color(0.9098039, 0.9098039, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_87qao"]
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a04w1"]
+font_size = 24
+font_color = Color(0, 1, 0, 1)
+
+[node name="ShadowSolitaireGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v4fko")
+
+[node name="ShadowSolitaireGamePlayer" type="Node" parent="." node_paths=PackedStringArray("play_area", "boss_deck_count", "boss_card", "deck_count", "goon_row", "health_row", "action_card", "ap_label", "health_slider")]
+script = ExtResource("1_83gqh")
+play_area = NodePath("../PlayArea")
+boss_deck_count = NodePath("../PlayArea/BossDeck/CountLabel")
+boss_card = NodePath("../PlayArea/BossCard")
+deck_count = NodePath("../PlayArea/PlayingDeck/CountLabel")
+goon_row = NodePath("../PlayArea/GoonRow")
+health_row = NodePath("../PlayArea/HealthRow")
+action_card = NodePath("../PlayArea/ActionCard")
+ap_label = NodePath("../PlayArea/APLabel")
+health_slider = NodePath("../GaugeSlider")
+
+[node name="PlayingCards" type="Node" parent="ShadowSolitaireGamePlayer"]
+
+[node name="H2" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+rank = 2
+texture = ExtResource("2_84kp7")
+
+[node name="H3" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+rank = 3
+texture = ExtResource("3_ludpl")
+
+[node name="H4" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+rank = 4
+texture = ExtResource("4_1rena")
+
+[node name="H5" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+rank = 5
+texture = ExtResource("5_fr5x6")
+
+[node name="H6" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+rank = 6
+texture = ExtResource("6_w8me8")
+
+[node name="H7" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+rank = 7
+texture = ExtResource("7_sotu1")
+
+[node name="H8" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+rank = 8
+texture = ExtResource("8_83gqh")
+
+[node name="H9" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+rank = 9
+texture = ExtResource("9_136qt")
+
+[node name="HA" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+rank = 1
+texture = ExtResource("11_ji0x3")
+
+[node name="D2" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 2
+texture = ExtResource("12_fc1ly")
+
+[node name="D3" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 3
+texture = ExtResource("13_87qao")
+
+[node name="D4" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 4
+texture = ExtResource("14_a04w1")
+
+[node name="D5" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 5
+texture = ExtResource("15_v4fko")
+
+[node name="D6" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 6
+texture = ExtResource("16_q7akl")
+
+[node name="D7" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 7
+texture = ExtResource("17_8u3bf")
+
+[node name="D8" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 8
+texture = ExtResource("18_m8vql")
+
+[node name="D9" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 9
+texture = ExtResource("19_3j6u2")
+
+[node name="D10" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 10
+texture = ExtResource("20_lbte7")
+
+[node name="DA" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 1
+texture = ExtResource("21_i8swx")
+
+[node name="C2" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 2
+texture = ExtResource("22_32rsd")
+
+[node name="C3" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 3
+texture = ExtResource("23_rp0ik")
+
+[node name="C4" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 4
+texture = ExtResource("24_v8rx2")
+
+[node name="C5" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 5
+texture = ExtResource("25_qqmyh")
+
+[node name="C6" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 6
+texture = ExtResource("26_fgoxr")
+
+[node name="C7" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 7
+texture = ExtResource("27_tkkof")
+
+[node name="C8" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 8
+texture = ExtResource("28_1hjs1")
+
+[node name="C9" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 9
+texture = ExtResource("29_mwb1c")
+
+[node name="C10" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 10
+texture = ExtResource("30_pnl6e")
+
+[node name="CA" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 1
+texture = ExtResource("31_kdeu1")
+
+[node name="S2" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 2
+texture = ExtResource("32_kuwol")
+
+[node name="S3" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 3
+texture = ExtResource("33_0kuao")
+
+[node name="S4" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 4
+texture = ExtResource("34_kh6o4")
+
+[node name="S5" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 5
+texture = ExtResource("35_rkabb")
+
+[node name="S6" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 6
+texture = ExtResource("36_g1lk3")
+
+[node name="S7" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 7
+texture = ExtResource("37_tw3bu")
+
+[node name="S8" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 8
+texture = ExtResource("38_50hv6")
+
+[node name="S9" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 9
+texture = ExtResource("39_aiww6")
+
+[node name="SA" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 1
+texture = ExtResource("41_447sc")
+
+[node name="Joker1" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = -1
+texture = ExtResource("40_1rena")
+
+[node name="Joker2" type="Node" parent="ShadowSolitaireGamePlayer/PlayingCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = -1
+texture = ExtResource("41_fr5x6")
+
+[node name="CourtCards" type="Node" parent="ShadowSolitaireGamePlayer"]
+
+[node name="SJ" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 11
+texture = ExtResource("42_el8qu")
+
+[node name="CJ" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 11
+texture = ExtResource("43_q280q")
+
+[node name="HJ" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+rank = 11
+texture = ExtResource("44_wofse")
+
+[node name="DJ" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 11
+texture = ExtResource("45_aq6px")
+
+[node name="SQ" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 12
+texture = ExtResource("46_yyag7")
+
+[node name="CQ" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 12
+texture = ExtResource("47_2snot")
+
+[node name="HQ" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+rank = 12
+texture = ExtResource("48_4irj4")
+
+[node name="DQ" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 12
+texture = ExtResource("49_v5wji")
+
+[node name="SK" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+suit = 3
+rank = 13
+texture = ExtResource("50_klhgv")
+
+[node name="CK" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+suit = 2
+rank = 13
+texture = ExtResource("51_lg2df")
+
+[node name="HK" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+rank = 13
+texture = ExtResource("52_gjwfe")
+
+[node name="DK" type="Node" parent="ShadowSolitaireGamePlayer/CourtCards"]
+script = ExtResource("1_x6a4x")
+suit = 1
+rank = 13
+texture = ExtResource("53_smr8e")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_7s2tn")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ctvjy")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_114o7")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="GaugeSlider" type="ColorRect" parent="." node_paths=PackedStringArray("gaugeFill")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.05
+anchor_right = 0.18
+anchor_bottom = 0.085
+offset_left = 30.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.08468992, 0.08468992, 0.08468992, 1)
+script = ExtResource("4_ykfww")
+gaugeFill = NodePath("GaugeFill")
+maxValue = 20
+
+[node name="GaugeFill" type="ColorRect" parent="GaugeSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+mouse_filter = 2
+color = Color(0.7652293, 0, 0.08521909, 1)
+
+[node name="GaugeIcon" type="TextureRect" parent="GaugeSlider" node_paths=PackedStringArray("gaugeFill")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -30.00003
+offset_right = 97.0
+offset_bottom = 97.99997
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_gahq4")
+script = ExtResource("6_65f7o")
+healthTexture = ExtResource("5_gahq4")
+staminaTexture = ExtResource("7_my6qs")
+manaTexture = ExtResource("8_vciot")
+healthColor = Color(0.7647059, 0, 0.08627451, 1)
+staminaColor = Color(1, 0.88235295, 0, 1)
+manaColor = Color(0, 0, 0.6784314, 1)
+gaugeFill = NodePath("../GaugeFill")
+
+[node name="Label" type="Label" parent="GaugeSlider/GaugeIcon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -11.5
+offset_right = 21.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "20/20"
+label_settings = SubResource("LabelSettings_6wk2e")
+script = ExtResource("9_5hw3g")
+maxValue = 20
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.3
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="BossDeck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.1
+anchor_bottom = 0.1
+offset_left = -3.0517578e-05
+offset_top = -60.0
+offset_right = 87.99997
+offset_bottom = 64.0
+texture = ExtResource("61_84kp7")
+stretch_mode = 4
+script = ExtResource("62_84kp7")
+
+[node name="CountLabel" type="Label" parent="PlayArea/BossDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "12"
+label_settings = SubResource("LabelSettings_ludpl")
+horizontal_alignment = 1
+
+[node name="BossCard" parent="PlayArea" instance=ExtResource("65_fr5x6")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_84kp7")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="GoonRow" type="HBoxContainer" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -62.0
+offset_bottom = 62.0
+theme_override_constants/separation = 30
+alignment = 1
+script = ExtResource("67_fc1ly")
+
+[node name="GoonCard" parent="PlayArea/GoonRow" instance=ExtResource("65_fr5x6")]
+layout_mode = 2
+texture = ExtResource("61_84kp7")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="ButtonHolder" type="Control" parent="PlayArea/GoonRow"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureButton" type="TextureButton" parent="PlayArea/GoonRow/ButtonHolder" node_paths=PackedStringArray("left_card", "right_card")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("66_w8me8")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("68_136qt")
+left_card = NodePath("../../GoonCard")
+right_card = NodePath("../../GoonCard2")
+
+[node name="GoonCard2" parent="PlayArea/GoonRow" instance=ExtResource("65_fr5x6")]
+layout_mode = 2
+texture = ExtResource("61_84kp7")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="ButtonHolder2" type="Control" parent="PlayArea/GoonRow"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureButton" type="TextureButton" parent="PlayArea/GoonRow/ButtonHolder2" node_paths=PackedStringArray("left_card", "right_card")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("66_w8me8")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("68_136qt")
+left_card = NodePath("../../GoonCard2")
+right_card = NodePath("../../GoonCard3")
+
+[node name="GoonCard3" parent="PlayArea/GoonRow" instance=ExtResource("65_fr5x6")]
+layout_mode = 2
+texture = ExtResource("61_84kp7")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="ButtonHolder3" type="Control" parent="PlayArea/GoonRow"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureButton" type="TextureButton" parent="PlayArea/GoonRow/ButtonHolder3" node_paths=PackedStringArray("left_card", "right_card")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("66_w8me8")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("68_136qt")
+left_card = NodePath("../../GoonCard3")
+right_card = NodePath("../../GoonCard4")
+
+[node name="GoonCard4" parent="PlayArea/GoonRow" instance=ExtResource("65_fr5x6")]
+layout_mode = 2
+texture = ExtResource("61_84kp7")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="ButtonHolder4" type="Control" parent="PlayArea/GoonRow"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureButton" type="TextureButton" parent="PlayArea/GoonRow/ButtonHolder4" node_paths=PackedStringArray("left_card", "right_card")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("66_w8me8")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("68_136qt")
+left_card = NodePath("../../GoonCard4")
+right_card = NodePath("../../GoonCard5")
+
+[node name="GoonCard5" parent="PlayArea/GoonRow" instance=ExtResource("65_fr5x6")]
+visible = false
+layout_mode = 2
+texture = ExtResource("61_84kp7")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="ButtonHolder5" type="Control" parent="PlayArea/GoonRow"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureButton" type="TextureButton" parent="PlayArea/GoonRow/ButtonHolder5" node_paths=PackedStringArray("left_card", "right_card")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("66_w8me8")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("68_136qt")
+left_card = NodePath("../../GoonCard5")
+right_card = NodePath("../../GoonCard6")
+
+[node name="GoonCard6" parent="PlayArea/GoonRow" instance=ExtResource("65_fr5x6")]
+visible = false
+layout_mode = 2
+texture = ExtResource("61_84kp7")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="HealthRow" type="HBoxContainer" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -112.0
+offset_bottom = -63.0
+theme_override_constants/separation = 115
+alignment = 1
+script = ExtResource("70_87qao")
+
+[node name="HP" type="Label" parent="PlayArea/HealthRow"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_sotu1")
+
+[node name="HP2" type="Label" parent="PlayArea/HealthRow"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_sotu1")
+
+[node name="HP3" type="Label" parent="PlayArea/HealthRow"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_sotu1")
+
+[node name="HP4" type="Label" parent="PlayArea/HealthRow"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_sotu1")
+
+[node name="HP5" type="Label" parent="PlayArea/HealthRow"]
+visible = false
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_sotu1")
+
+[node name="HP6" type="Label" parent="PlayArea/HealthRow"]
+visible = false
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_sotu1")
+
+[node name="PlayingDeck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.8
+anchor_right = 0.1
+anchor_bottom = 0.8
+offset_top = -60.0
+offset_right = 88.0
+offset_bottom = 64.0
+texture = ExtResource("61_x6a4x")
+stretch_mode = 4
+script = ExtResource("62_84kp7")
+
+[node name="CountLabel" type="Label" parent="PlayArea/PlayingDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "40"
+label_settings = SubResource("LabelSettings_ludpl")
+horizontal_alignment = 1
+
+[node name="ActionCard" parent="PlayArea" instance=ExtResource("65_fr5x6")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.8
+anchor_right = 0.5
+anchor_bottom = 0.8
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("61_x6a4x")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="BombButton" type="TextureButton" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.8
+anchor_right = 0.5
+anchor_bottom = 0.8
+offset_left = 56.0
+offset_top = -30.0
+offset_right = 116.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("68_sotu1")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("71_reo2u")
+original_texture = ExtResource("68_sotu1")
+lit_texture = ExtResource("72_ji0x3")
+
+[node name="APLabel" type="Label" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.8
+anchor_right = 0.5
+anchor_bottom = 0.8
+offset_left = -24.0
+offset_top = 66.0
+offset_right = 24.0
+offset_bottom = 94.0
+text = "AP: 4"
+label_settings = SubResource("LabelSettings_83gqh")
+horizontal_alignment = 1
+
+[node name="SkipButton" type="Button" parent="PlayArea"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.8
+anchor_right = 0.5
+anchor_bottom = 0.8
+offset_left = -102.0
+offset_top = -14.0
+offset_right = -61.0
+offset_bottom = 17.0
+text = "Skip"
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click a deck to start the game.
+- You have 20 health. You lose if it
+reaches 0.
+- Every round starts with drawing a
+court card (encounter boss or ally
+in distress [hearts])
+- Then 4 goons are drawn. If ever a
+Joker is drawn, it is added to the 
+goons (max 6 goons)
+- The active court card's suit 
+empowers goons with the same suit
+making them immune to bombs.
+- Each goon has health equal to its
+rank.
+- Once all goons are laid out, it's 
+your turn. You draw 1 card and 
+decide which action below to take:
+- Basic Attack: stack the card on a
+goon, reducing its health by that
+amount (card must be no more
+than 3 greater than the goon)
+- Grapple Line: play the card between
+2 goons, defeating both if their sum
+is equal to or under it by no more
+than 3. Burn your card otherwise.
+This can be performed once per
+round.
+- Bomb: once per round, you can
+discard drawn card to defeat any
+goon.
+- Skip: end the round. Happens 
+automatically when you play 4-6
+actions, equal to the number of 
+goons.
+- At round end, each undefeated
+goon deals 1 damage. Queens
+add 1 to total damage taken, Kings
+add 2. If no goons remain, no
+damage is taken.
+- After resolving damage taken,
+regain 1 health if you didn't
+use a bomb
+- After resolving damage and healing,
+discard all used goons and actions.
+If you ever run out of cards to draw,
+the discard pile is shuffled and used.
+- Special Cards: Aces are double 
+agents when used as goons (equal to
+highest threat this round) or equal to
+the lowest goon as an action. Jokers
+become goons with rank equal to
+highest other goon, and are immune
+to bombs. 
+- Goal: defeat all the goons to win
+the round, then start the next. Win 
+the game by completing all rounds."
+placeholder_text = "Add any notes here..."
+script = ExtResource("4_ctvjy")
+
+[node name="Warnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("76_a04w1")
+
+[node name="InvalidSelection" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -97.0
+offset_right = 97.0
+offset_bottom = 34.0
+text = "Invalid selection"
+label_settings = SubResource("LabelSettings_87qao")
+
+[node name="PlayerDied" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -59.0
+offset_right = 63.0
+offset_bottom = 34.0
+text = "You died!"
+label_settings = SubResource("LabelSettings_87qao")
+
+[node name="PlayerWon" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 0
+offset_left = -59.0
+offset_right = 63.0
+offset_bottom = 34.0
+text = "You won!"
+label_settings = SubResource("LabelSettings_a04w1")
+
+[connection signal="bomb_used" from="ShadowSolitaireGamePlayer" to="PlayArea/BombButton" method="_on_shadow_solitaire_game_player_bomb_used"]
+[connection signal="invalid_selection" from="ShadowSolitaireGamePlayer" to="Warnings" method="_on_shadow_solitaire_game_player_invalid_selection"]
+[connection signal="new_round_started" from="ShadowSolitaireGamePlayer" to="PlayArea/BombButton" method="_on_shadow_solitaire_game_player_new_round_started"]
+[connection signal="player_died" from="ShadowSolitaireGamePlayer" to="Warnings" method="_on_shadow_solitaire_game_player_player_died"]
+[connection signal="player_won" from="ShadowSolitaireGamePlayer" to="Warnings" method="_on_shadow_solitaire_game_player_player_won"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="GaugeSlider" to="GaugeSlider" method="_on_gui_input"]
+[connection signal="gui_input" from="GaugeSlider" to="GaugeSlider/GaugeIcon/Label" method="_on_gauge_slider_gui_input"]
+[connection signal="gui_input" from="GaugeSlider/GaugeIcon" to="GaugeSlider/GaugeIcon" method="_on_gui_input"]
+[connection signal="gui_input" from="PlayArea/BossDeck" to="PlayArea/BossDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/BossDeck" to="ShadowSolitaireGamePlayer" method="_on_deck_start_game"]
+[connection signal="start_game" from="PlayArea/BossDeck" to="PlayArea/PlayingDeck" method="_on_other_deck_start_game"]
+[connection signal="use_card" from="PlayArea/GoonRow/GoonCard" to="ShadowSolitaireGamePlayer" method="_on_goon_card_use_card"]
+[connection signal="grapple_clicked" from="PlayArea/GoonRow/ButtonHolder/TextureButton" to="ShadowSolitaireGamePlayer" method="_on_texture_button_grapple_clicked"]
+[connection signal="pressed" from="PlayArea/GoonRow/ButtonHolder/TextureButton" to="PlayArea/GoonRow/ButtonHolder/TextureButton" method="_on_pressed"]
+[connection signal="use_card" from="PlayArea/GoonRow/GoonCard2" to="ShadowSolitaireGamePlayer" method="_on_goon_card_use_card"]
+[connection signal="grapple_clicked" from="PlayArea/GoonRow/ButtonHolder2/TextureButton" to="ShadowSolitaireGamePlayer" method="_on_texture_button_grapple_clicked"]
+[connection signal="pressed" from="PlayArea/GoonRow/ButtonHolder2/TextureButton" to="PlayArea/GoonRow/ButtonHolder2/TextureButton" method="_on_pressed"]
+[connection signal="use_card" from="PlayArea/GoonRow/GoonCard3" to="ShadowSolitaireGamePlayer" method="_on_goon_card_use_card"]
+[connection signal="grapple_clicked" from="PlayArea/GoonRow/ButtonHolder3/TextureButton" to="ShadowSolitaireGamePlayer" method="_on_texture_button_grapple_clicked"]
+[connection signal="pressed" from="PlayArea/GoonRow/ButtonHolder3/TextureButton" to="PlayArea/GoonRow/ButtonHolder3/TextureButton" method="_on_pressed"]
+[connection signal="use_card" from="PlayArea/GoonRow/GoonCard4" to="ShadowSolitaireGamePlayer" method="_on_goon_card_use_card"]
+[connection signal="grapple_clicked" from="PlayArea/GoonRow/ButtonHolder4/TextureButton" to="ShadowSolitaireGamePlayer" method="_on_texture_button_grapple_clicked"]
+[connection signal="pressed" from="PlayArea/GoonRow/ButtonHolder4/TextureButton" to="PlayArea/GoonRow/ButtonHolder4/TextureButton" method="_on_pressed"]
+[connection signal="use_card" from="PlayArea/GoonRow/GoonCard5" to="ShadowSolitaireGamePlayer" method="_on_goon_card_use_card"]
+[connection signal="grapple_clicked" from="PlayArea/GoonRow/ButtonHolder5/TextureButton" to="ShadowSolitaireGamePlayer" method="_on_texture_button_grapple_clicked"]
+[connection signal="pressed" from="PlayArea/GoonRow/ButtonHolder5/TextureButton" to="PlayArea/GoonRow/ButtonHolder5/TextureButton" method="_on_pressed"]
+[connection signal="use_card" from="PlayArea/GoonRow/GoonCard6" to="ShadowSolitaireGamePlayer" method="_on_goon_card_use_card"]
+[connection signal="gui_input" from="PlayArea/PlayingDeck" to="PlayArea/PlayingDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/PlayingDeck" to="ShadowSolitaireGamePlayer" method="_on_deck_start_game"]
+[connection signal="start_game" from="PlayArea/PlayingDeck" to="PlayArea/BossDeck" method="_on_other_deck_start_game"]
+[connection signal="bomb_toggled" from="PlayArea/BombButton" to="ShadowSolitaireGamePlayer" method="_on_bomb_button_bomb_toggled"]
+[connection signal="pressed" from="PlayArea/BombButton" to="PlayArea/BombButton" method="_on_pressed"]
+[connection signal="pressed" from="PlayArea/SkipButton" to="ShadowSolitaireGamePlayer" method="_on_skip_button_pressed"]

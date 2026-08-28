@@ -19,6 +19,7 @@ const CARD_CAPTURE_GAME = 12
 const OUTRUN_GAME = 13
 const SNAKE_CHARMER_GAME = 14
 const CARRION_EATER_GAME = 15
+const SS_GAME = 16
 
 func _on_item_selected(index: int) -> void:
 	var panes_node = get_parent().get_parent()
@@ -54,6 +55,8 @@ func _on_item_selected(index: int) -> void:
 		panes_node.queue_add_snake_charmer_game_pane()
 	elif index == CARRION_EATER_GAME:
 		panes_node.queue_add_carrion_eater_game_pane()
+	elif index == SS_GAME:
+		panes_node.queue_add_ss_game_pane()
 	
 	if index >= 0:
 		get_parent().free()

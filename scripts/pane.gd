@@ -100,6 +100,13 @@ func receive_broadcast(from: Node) -> void:
 		cegp.player_killed.connect($CarrionEaterGamePlug.on_player_killed)
 		cegp.player_moved.connect($CarrionEaterGamePlug.on_player_moved)
 		cegp.player_won.connect($CarrionEaterGamePlug.on_player_won)
+	elif from is ShadowSolitaireGamePane:
+		var ssgp = from as ShadowSolitaireGamePane
+		ssgp.attacked.connect($ShadowSolitaireGamePlug.on_attacked)
+		ssgp.bomb_used.connect($ShadowSolitaireGamePlug.on_bomb_used)
+		ssgp.new_round_started.connect($ShadowSolitaireGamePlug.on_new_round_started)
+		ssgp.player_died.connect($ShadowSolitaireGamePlug.on_player_died)
+		ssgp.player_won.connect($ShadowSolitaireGamePlug.on_player_won)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel
