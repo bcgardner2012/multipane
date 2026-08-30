@@ -20,6 +20,8 @@ func _on_card_use_card(_data: CardData, button_index: int) -> void:
 			texture = highlight_texture
 	elif button_index == MOUSE_BUTTON_RIGHT:
 		texture = default_texture
+		if is_singleton_highlight and _singleton == self:
+			_singleton = null
 
 func _trigger_highlight(card: CardData) -> void:
 	if card.equals(get_child(0).data):

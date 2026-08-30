@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://pjilwspntgn6"]
+[gd_scene load_steps=52 format=3 uid="uid://pjilwspntgn6"]
 
 [ext_resource type="Script" uid="uid://dd7ywskexogj6" path="res://scripts/pane.gd" id="1_ghsmc"]
 [ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="1_k7av0"]
@@ -46,6 +46,7 @@
 [ext_resource type="Script" uid="uid://cbs4nwpdmt6yl" path="res://scripts/carrion_eater/carrion_eater_game_plug.gd" id="16_4xtkf"]
 [ext_resource type="Texture2D" uid="uid://05gyxubk1pn6" path="res://assets/linked.png" id="16_bcyca"]
 [ext_resource type="Script" uid="uid://dgxqv2g2givt2" path="res://scripts/shadow_solitaire/shadow_solitaire_game_plug.gd" id="17_fonb3"]
+[ext_resource type="Script" uid="uid://f8n3wlxmpoia" path="res://scripts/club_fight_game_plug.gd" id="18_30wca"]
 [ext_resource type="Script" uid="uid://d571nsxmjowr" path="res://scripts/control_holder.gd" id="30_xrk25"]
 [ext_resource type="Texture2D" uid="uid://d3d185da1palt" path="res://assets/cycle.png" id="31_rav8p"]
 [ext_resource type="Texture2D" uid="uid://d3ejsw71l54p3" path="res://assets/cycle_clicked.png" id="32_ilg2h"]
@@ -129,6 +130,9 @@ portrait = NodePath("../PortraitHolder/Portrait")
 [node name="ShadowSolitaireGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("17_fonb3")
 portrait = NodePath("../PortraitHolder/Portrait")
+
+[node name="ClubFightGamePlug" type="Node" parent="."]
+script = ExtResource("18_30wca")
 
 [node name="SuitIcon" type="TextureRect" parent="."]
 visible = false

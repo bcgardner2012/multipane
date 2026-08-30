@@ -108,6 +108,9 @@ func receive_broadcast(from: Node) -> void:
 		ssgp.player_died.connect($ShadowSolitaireGamePlug.on_player_died)
 		ssgp.player_won.connect($ShadowSolitaireGamePlug.on_player_won)
 		ssgp.joker_drawn.connect($ShadowSolitaireGamePlug.on_joker_drawn)
+	elif from is ClubFightGamePane:
+		var cfgp = from as ClubFightGamePane
+		cfgp.move_made.connect($ClubFightGamePlug.on_move_made)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

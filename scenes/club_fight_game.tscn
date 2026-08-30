@@ -1,0 +1,946 @@
+[gd_scene load_steps=72 format=3 uid="uid://fwm4jm3r334u"]
+
+[ext_resource type="Script" uid="uid://dgg3vj5w6lmi2" path="res://scripts/club_fight_game_player.gd" id="1_gx6q0"]
+[ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_nglsg"]
+[ext_resource type="Script" uid="uid://c345dx8daeqo4" path="res://scripts/club_fight_game_pane.gd" id="1_pr745"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_r6gwl"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_8d6gv"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_qfsbq"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="3_gx6q0"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_kjc3r"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="4_8d6gv"]
+[ext_resource type="Texture2D" uid="uid://bfildnevjcona" path="res://assets/cards/normal/back_red.png" id="4_jb217"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="4_k3m65"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="5_jq8vg"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="5_ldrw5"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="6_jflow"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="6_pr745"]
+[ext_resource type="Texture2D" uid="uid://cm36j136fu2ho" path="res://assets/cards/card_holder_transparent.png" id="7_8ht1g"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="7_hwko3"]
+[ext_resource type="Script" uid="uid://cjrsd47nnngmp" path="res://scripts/card_highlighter.gd" id="8_5a2sr"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="8_dmh5j"]
+[ext_resource type="Texture2D" uid="uid://ddyq3kgxhcboc" path="res://assets/cards/card_hilight.png" id="9_8ks65"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="9_wd46p"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="10_b86hs"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="10_pp5hq"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="11_pppi6"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="12_44bo6"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="13_k8l1e"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="14_ahxiy"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="15_xhthb"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="16_83fik"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="17_rt5m3"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="18_befl8"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="19_qsrri"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="20_5x2bw"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="21_mhoqs"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="22_p8mrx"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="23_lffb3"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="24_tuhjh"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="25_i7vey"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="26_ri6ec"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="27_1i6am"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="28_pcswh"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="29_gcfgr"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="30_su5ce"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="31_kj81k"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="32_4h0of"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="33_pcjbp"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="34_cqwxp"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="35_dmqm2"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="36_xnkre"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="37_vka60"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="38_cl7fp"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="39_e1ie3"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="40_xeka5"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="41_x642k"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="42_i8p5w"]
+[ext_resource type="Texture2D" uid="uid://cdo0h83sp8bni" path="res://assets/cards/normal/better_joker.png" id="42_qfsbq"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="43_hxsj7"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="44_tn84h"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="45_xj6hs"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="46_qxrxy"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="47_imi0d"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="48_4t3y3"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="49_5xq2d"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="50_grlqn"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="51_uqutm"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="52_4avfo"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="53_1hl13"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="54_k348o"]
+[ext_resource type="Script" uid="uid://c56xcj0qqs6ky" path="res://scripts/club_fight_grid.gd" id="63_ldrw5"]
+[ext_resource type="Script" uid="uid://c14u6a7030sni" path="res://scripts/club_fight_hand.gd" id="67_k3m65"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7mbvd"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="ClubFightGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pr745")
+
+[node name="ClubFightGamePlayer" type="Node" parent="." node_paths=PackedStringArray("grid_deck_count_label", "club_deck_count_label", "grid_node", "hand_node", "move_type_label")]
+script = ExtResource("1_gx6q0")
+grid_deck_count_label = NodePath("../PlayArea/GridDeck/CountLabel")
+club_deck_count_label = NodePath("../PlayArea/ClubDeck/CountLabel")
+grid_node = NodePath("../PlayArea/Grid")
+hand_node = NodePath("../PlayArea/Hand")
+move_type_label = NodePath("../PlayArea/MoveTypeLabel")
+
+[node name="GridCards" type="Node" parent="ClubFightGamePlayer"]
+script = ExtResource("1_nglsg")
+
+[node name="H2" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 2
+texture = ExtResource("3_gx6q0")
+
+[node name="H3" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 3
+texture = ExtResource("4_k3m65")
+
+[node name="H4" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 4
+texture = ExtResource("5_ldrw5")
+
+[node name="H5" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 5
+texture = ExtResource("6_pr745")
+
+[node name="H6" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 6
+texture = ExtResource("7_hwko3")
+
+[node name="H7" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 7
+texture = ExtResource("8_dmh5j")
+
+[node name="H8" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 8
+texture = ExtResource("9_wd46p")
+
+[node name="H9" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 9
+texture = ExtResource("10_pp5hq")
+
+[node name="H10" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 10
+texture = ExtResource("11_pppi6")
+
+[node name="HJ" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 11
+texture = ExtResource("12_44bo6")
+
+[node name="HQ" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 12
+texture = ExtResource("13_k8l1e")
+
+[node name="HK" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 13
+texture = ExtResource("14_ahxiy")
+
+[node name="HA" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+rank = 1
+texture = ExtResource("15_xhthb")
+
+[node name="D2" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 2
+texture = ExtResource("16_83fik")
+
+[node name="D3" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 3
+texture = ExtResource("17_rt5m3")
+
+[node name="D4" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 4
+texture = ExtResource("18_befl8")
+
+[node name="D5" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 5
+texture = ExtResource("19_qsrri")
+
+[node name="D6" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 6
+texture = ExtResource("20_5x2bw")
+
+[node name="D7" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 7
+texture = ExtResource("21_mhoqs")
+
+[node name="D8" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 8
+texture = ExtResource("22_p8mrx")
+
+[node name="D9" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 9
+texture = ExtResource("23_lffb3")
+
+[node name="D10" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 10
+texture = ExtResource("24_tuhjh")
+
+[node name="DJ" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 11
+texture = ExtResource("25_i7vey")
+
+[node name="DQ" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 12
+texture = ExtResource("26_ri6ec")
+
+[node name="DK" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 13
+texture = ExtResource("27_1i6am")
+
+[node name="DA" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 1
+rank = 1
+texture = ExtResource("28_pcswh")
+
+[node name="S2" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 2
+texture = ExtResource("29_gcfgr")
+
+[node name="S3" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 3
+texture = ExtResource("30_su5ce")
+
+[node name="S4" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 4
+texture = ExtResource("31_kj81k")
+
+[node name="S5" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 5
+texture = ExtResource("32_4h0of")
+
+[node name="S6" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 6
+texture = ExtResource("33_pcjbp")
+
+[node name="S7" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 7
+texture = ExtResource("34_cqwxp")
+
+[node name="S8" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 8
+texture = ExtResource("35_dmqm2")
+
+[node name="S9" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 9
+texture = ExtResource("36_xnkre")
+
+[node name="S10" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 10
+texture = ExtResource("37_vka60")
+
+[node name="SJ" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 11
+texture = ExtResource("38_cl7fp")
+
+[node name="SQ" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 12
+texture = ExtResource("39_e1ie3")
+
+[node name="SK" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 13
+texture = ExtResource("40_xeka5")
+
+[node name="SA" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = 1
+texture = ExtResource("41_x642k")
+
+[node name="Joker" type="Node" parent="ClubFightGamePlayer/GridCards"]
+script = ExtResource("2_qfsbq")
+suit = 3
+rank = -99
+texture = ExtResource("42_qfsbq")
+
+[node name="Clubs" type="Node" parent="ClubFightGamePlayer"]
+
+[node name="C2" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 2
+texture = ExtResource("42_i8p5w")
+
+[node name="C3" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 3
+texture = ExtResource("43_hxsj7")
+
+[node name="C4" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 4
+texture = ExtResource("44_tn84h")
+
+[node name="C5" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 5
+texture = ExtResource("45_xj6hs")
+
+[node name="C6" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 6
+texture = ExtResource("46_qxrxy")
+
+[node name="C7" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 7
+texture = ExtResource("47_imi0d")
+
+[node name="C8" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 8
+texture = ExtResource("48_4t3y3")
+
+[node name="C9" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 9
+texture = ExtResource("49_5xq2d")
+
+[node name="C10" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 10
+texture = ExtResource("50_grlqn")
+
+[node name="CJ" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 11
+texture = ExtResource("51_uqutm")
+
+[node name="CQ" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 12
+texture = ExtResource("52_4avfo")
+
+[node name="CK" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 13
+texture = ExtResource("53_1hl13")
+
+[node name="CA" type="Node" parent="ClubFightGamePlayer/Clubs"]
+script = ExtResource("2_qfsbq")
+suit = 2
+rank = 1
+texture = ExtResource("54_k348o")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_r6gwl")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_8d6gv")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_kjc3r")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="GridDeck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = -60.0
+offset_right = -263.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jb217")
+stretch_mode = 4
+script = ExtResource("5_jq8vg")
+
+[node name="CountLabel" type="Label" parent="PlayArea/GridDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "39"
+label_settings = SubResource("LabelSettings_7mbvd")
+horizontal_alignment = 1
+
+[node name="ClubDeck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = 232.0
+offset_right = -263.0
+offset_bottom = 356.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_jflow")
+stretch_mode = 4
+script = ExtResource("5_jq8vg")
+
+[node name="CountLabel" type="Label" parent="PlayArea/ClubDeck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "13"
+label_settings = SubResource("LabelSettings_7mbvd")
+horizontal_alignment = 1
+
+[node name="Grid" type="VBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = -199.0
+offset_right = 145.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("63_ldrw5")
+
+[node name="TopRow" type="HBoxContainer" parent="PlayArea/Grid"]
+layout_mode = 2
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Grid/TopRow"]
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+
+[node name="Card" parent="PlayArea/Grid/TopRow/CardHolder1" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jb217")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Grid/TopRow"]
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+
+[node name="Card" parent="PlayArea/Grid/TopRow/CardHolder2" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jb217")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Grid/TopRow"]
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+
+[node name="Card" parent="PlayArea/Grid/TopRow/CardHolder3" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jb217")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="MidRow" type="HBoxContainer" parent="PlayArea/Grid"]
+layout_mode = 2
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Grid/MidRow"]
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+
+[node name="Card" parent="PlayArea/Grid/MidRow/CardHolder1" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jb217")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Grid/MidRow"]
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+
+[node name="Card" parent="PlayArea/Grid/MidRow/CardHolder2" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jb217")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Grid/MidRow"]
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+
+[node name="Card" parent="PlayArea/Grid/MidRow/CardHolder3" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jb217")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="BottomRow" type="HBoxContainer" parent="PlayArea/Grid"]
+layout_mode = 2
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Grid/BottomRow"]
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+
+[node name="Card" parent="PlayArea/Grid/BottomRow/CardHolder1" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jb217")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Grid/BottomRow"]
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+
+[node name="Card" parent="PlayArea/Grid/BottomRow/CardHolder2" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jb217")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Grid/BottomRow"]
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+
+[node name="Card" parent="PlayArea/Grid/BottomRow/CardHolder3" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jb217")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="MoveTypeLabel" type="Label" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 223.0
+offset_top = -45.0
+offset_right = 322.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Invalid Move"
+
+[node name="ConfirmButton" type="Button" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 229.0
+offset_top = -15.5
+offset_right = 317.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Confirm"
+
+[node name="Hand" type="HBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = 585.0
+offset_right = 194.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("67_k3m65")
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Hand"]
+visible = false
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Hand/CardHolder1" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_jflow")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Hand"]
+visible = false
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Hand/CardHolder2" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_jflow")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Hand"]
+visible = false
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Hand/CardHolder3" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_jflow")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="CardHolder4" type="TextureRect" parent="PlayArea/Hand"]
+visible = false
+layout_mode = 2
+texture = ExtResource("7_8ht1g")
+script = ExtResource("8_5a2sr")
+default_texture = ExtResource("7_8ht1g")
+highlight_texture = ExtResource("9_8ks65")
+is_singleton_highlight = true
+
+[node name="Card" parent="PlayArea/Hand/CardHolder4" instance=ExtResource("10_b86hs")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_jflow")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click the deck to start
+- A = 1, J = 11, etc . Jokers have no
+values.
+- Goal: clear all cards from the grid
+and red deck.
+- There are 2 decks. Draw your hand
+from the blue deck of Club cards.
+The grid is formed from everything
+else.
+- Select one card from your hand
+and any number of cards on the
+grid to setup an attack. The label on
+the right will tell you what kind of
+attack you've setup. Hit confirm to
+perform it. Attacks are below:
+- Match: discard 1 club to remove
+all matching ranks from the grid
+- Sum: discard 1 club to remove any
+number of selected cards whose
+sum is equal to the club
+- Any: discard 1 club to remove any
+1 other card (including Jokers)
+- Line: discard one club to remove
+all cards in one row or one column
+that contains a card of the same
+value. BLOCKED WHENEVER 3 OR
+MORE DIAMONDS APPEAR IN GRID
+- Up/Down:  discard the 2-7 of clubs to
+remove all cards in the grid lower in
+value of the discarded card. Or,
+discard the 7-Q of clubs to remove all
+cards in the grid higher in value of the
+discarded card. BLOCKED WHENEVER
+3 OR MORE SPADES APPEAR IN GRID
+- Run: discard one club to remove any
+number of cards in the grid which,
+along with the discarded card, are
+sequential in order. The cleared cards
+do not need to be of the same suit. K
+does not wrap around to A. BLOCKED
+WHENEVER 3 OR MORE HEARTS
+APPEAR IN GRID"
+placeholder_text = "Add any notes here..."
+script = ExtResource("4_8d6gv")
+
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="gui_input" from="PlayArea/GridDeck" to="PlayArea/GridDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/GridDeck" to="ClubFightGamePlayer" method="_on_deck_start_game"]
+[connection signal="start_game" from="PlayArea/GridDeck" to="PlayArea/ClubDeck" method="_on_other_deck_start_game"]
+[connection signal="gui_input" from="PlayArea/ClubDeck" to="PlayArea/ClubDeck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/ClubDeck" to="ClubFightGamePlayer" method="_on_deck_start_game"]
+[connection signal="start_game" from="PlayArea/ClubDeck" to="PlayArea/GridDeck" method="_on_other_deck_start_game"]
+[connection signal="deselect_card" from="PlayArea/Grid" to="ClubFightGamePlayer" method="_on_grid_deselect_card"]
+[connection signal="select_card" from="PlayArea/Grid" to="ClubFightGamePlayer" method="_on_grid_select_card"]
+[connection signal="use_card" from="PlayArea/Grid/TopRow/CardHolder1/Card" to="PlayArea/Grid" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/TopRow/CardHolder1/Card" to="PlayArea/Grid/TopRow/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/TopRow/CardHolder2/Card" to="PlayArea/Grid" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/TopRow/CardHolder2/Card" to="PlayArea/Grid/TopRow/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/TopRow/CardHolder3/Card" to="PlayArea/Grid" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/TopRow/CardHolder3/Card" to="PlayArea/Grid/TopRow/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/MidRow/CardHolder1/Card" to="PlayArea/Grid" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/MidRow/CardHolder1/Card" to="PlayArea/Grid/MidRow/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/MidRow/CardHolder2/Card" to="PlayArea/Grid" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/MidRow/CardHolder2/Card" to="PlayArea/Grid/MidRow/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/MidRow/CardHolder3/Card" to="PlayArea/Grid" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/MidRow/CardHolder3/Card" to="PlayArea/Grid/MidRow/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/BottomRow/CardHolder1/Card" to="PlayArea/Grid" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/BottomRow/CardHolder1/Card" to="PlayArea/Grid/BottomRow/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/BottomRow/CardHolder2/Card" to="PlayArea/Grid" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/BottomRow/CardHolder2/Card" to="PlayArea/Grid/BottomRow/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/BottomRow/CardHolder3/Card" to="PlayArea/Grid" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Grid/BottomRow/CardHolder3/Card" to="PlayArea/Grid/BottomRow/CardHolder3" method="_on_card_use_card"]
+[connection signal="pressed" from="PlayArea/ConfirmButton" to="ClubFightGamePlayer" method="_on_confirm_button_pressed"]
+[connection signal="deselect_card" from="PlayArea/Hand" to="ClubFightGamePlayer" method="_on_hand_deselect_card"]
+[connection signal="select_card" from="PlayArea/Hand" to="ClubFightGamePlayer" method="_on_hand_select_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder1/Card" to="PlayArea/Hand" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder1/Card" to="PlayArea/Hand/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder2/Card" to="PlayArea/Hand" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder2/Card" to="PlayArea/Hand/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder3/Card" to="PlayArea/Hand" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder3/Card" to="PlayArea/Hand/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder4/Card" to="PlayArea/Hand" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Hand/CardHolder4/Card" to="PlayArea/Hand/CardHolder4" method="_on_card_use_card"]
