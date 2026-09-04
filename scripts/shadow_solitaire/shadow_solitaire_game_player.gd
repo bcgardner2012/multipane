@@ -56,6 +56,7 @@ func _on_texture_button_grapple_clicked(card1: CardData, card2: CardData) -> voi
 		var i2 = goons.find(card2)
 		goons_health[i1] = 0
 		goons_health[i2] = 0
+		_signals.grapple_attacked.emit([card1, card2], action_card.data)
 		_decrement_ap_and_show_health()
 	else:
 		invalid_selection.emit()
@@ -189,7 +190,7 @@ func _on_goon_card_use_card(data: CardData, _button_index: int) -> void:
 			bomb_was_used = true
 			bomb_is_on = false
 			bomb_used.emit()
-			_signals.bomb_used.emit()
+			_signals.bomb_used.emit(data)
 			_update_goon_health(index, strongest_goon.rank)
 	else:
 		var dmg = 0
@@ -201,7 +202,7 @@ func _on_goon_card_use_card(data: CardData, _button_index: int) -> void:
 		
 		if dmg > 0:
 			attacked.emit(goons[index], action_card.data)
-			_signals.attacked.emit(goons[index], action_card.data)
+			_signals.attacked.emit(goons[index], action_card.data, goons_health)
 			_update_goon_health(index, dmg)
 		else:
 			invalid_selection.emit()

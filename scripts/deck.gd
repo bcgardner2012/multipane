@@ -6,7 +6,8 @@ signal deck_clicked() # only use this after the game has been started
 
 var game_in_progress: bool
 
-@export var has_post_start_functionality: bool = false
+# when false, only start_game is emitted. When true, start_game is emitted first click, deck_clicked emitted thereafter.
+@export var has_post_start_functionality: bool = false 
 
 func _on_gui_input(event: InputEvent) -> void:
 	if ClickHelper.is_left_click(event):

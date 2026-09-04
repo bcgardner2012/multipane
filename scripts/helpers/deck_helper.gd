@@ -33,6 +33,15 @@ static func contains_suit(deck: Array[CardData], suit: CardData.Suit) -> bool:
 			return true
 	return false
 
+static func get_suit_counts(deck: Array[CardData]) -> Dictionary:
+	var counts = {}
+	for suit in CardData.Suit.keys():
+		counts[suit] = 0
+		for card in deck:
+			if card.suit == CardData.Suit.get(suit):
+				counts[suit] += 1 
+	return counts
+
 static func remove_card(deck: Array[CardData], card: CardData) -> void:
 	for i in range(0, deck.size()):
 		if deck[i].equals(card):

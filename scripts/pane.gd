@@ -108,6 +108,7 @@ func receive_broadcast(from: Node) -> void:
 		ssgp.player_died.connect($ShadowSolitaireGamePlug.on_player_died)
 		ssgp.player_won.connect($ShadowSolitaireGamePlug.on_player_won)
 		ssgp.joker_drawn.connect($ShadowSolitaireGamePlug.on_joker_drawn)
+		ssgp.grapple_attacked.connect($ShadowSolitaireGamePlug.on_grapple_attacked)
 	elif from is ClubFightGamePane:
 		var cfgp = from as ClubFightGamePane
 		cfgp.move_made.connect($ClubFightGamePlug.on_move_made)

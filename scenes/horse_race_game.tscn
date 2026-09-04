@@ -1,0 +1,1125 @@
+[gd_scene load_steps=77 format=3 uid="uid://dg674wqiiuwah"]
+
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="1_71mdg"]
+[ext_resource type="Script" uid="uid://dws737lplwh0" path="res://scripts/horse_race_game_player.gd" id="1_fwxqo"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_k8ypf"]
+[ext_resource type="Script" uid="uid://ww57bt2wunxi" path="res://scripts/horse_race_game_pane.gd" id="1_t0wpb"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_114gp"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="2_qhca6"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="3_cgdx5"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="4_djq0x"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="4_ltbuj"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="5_114gp"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="5_beed6"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="6_5yy55"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="7_uuyb1"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="8_kn54d"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="9_mnbw1"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="10_pjh2b"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="11_pdjv1"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="12_fwxqo"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="13_p72gl"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="14_kbfvd"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="15_t0wpb"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="16_otil2"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="17_0ghnl"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="18_8d6io"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="19_1yfqp"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="20_o5n4m"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="21_lxhni"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="22_o8g5h"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="23_bhvl4"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="24_1pwe0"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="25_wbwjc"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="26_n4t5g"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="27_0p8vi"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="28_84mk2"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="29_q8vfs"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="30_ajnt2"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="31_vysi4"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="32_somhn"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="33_omic5"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="34_24vxx"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="35_vpqr4"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="36_1rq5d"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="37_4mvk4"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="38_xl5jg"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="39_0bfpj"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="40_42l7c"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="41_crlvn"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="42_7o8ac"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="43_xoyur"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="44_kg1g7"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="45_meeta"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="46_16xp8"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="47_dr2c7"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="48_uage6"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="49_n0l08"]
+[ext_resource type="Texture2D" uid="uid://cb5sdaxxw1abv" path="res://assets/chits/club_horse.png" id="57_qhca6"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="58_84ncl"]
+[ext_resource type="Texture2D" uid="uid://efme0onf5rtc" path="res://assets/chits/diamond_horse.png" id="58_cgdx5"]
+[ext_resource type="Texture2D" uid="uid://8veq45cdlkqb" path="res://assets/chits/heart_horse.png" id="59_ltbuj"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="59_ot7w3"]
+[ext_resource type="Texture2D" uid="uid://diecbw8tt8jg4" path="res://assets/chits/spade_horse.png" id="60_beed6"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="60_qhca6"]
+[ext_resource type="Texture2D" uid="uid://boxmjgi0nw8ib" path="res://assets/chits/club_chit.jpg" id="61_5yy55"]
+[ext_resource type="Texture2D" uid="uid://dt6xpxlb7g5bu" path="res://assets/chips/tile003.png" id="62_ltbuj"]
+[ext_resource type="Script" uid="uid://dug6cvwwcn2xa" path="res://scripts/horse_race_bookie.gd" id="62_p72gl"]
+[ext_resource type="Texture2D" uid="uid://xgqa1x5gy2p5" path="res://assets/chits/diamond_chit.jpg" id="62_uuyb1"]
+[ext_resource type="Texture2D" uid="uid://b7peorl4gbm8d" path="res://assets/chits/heart_chit.jpg" id="63_kn54d"]
+[ext_resource type="Texture2D" uid="uid://b64qw0c8ra43e" path="res://assets/chits/spade_chit.jpg" id="64_mnbw1"]
+[ext_resource type="Texture2D" uid="uid://dk2x8vb0oqthc" path="res://assets/chips/tile001.png" id="64_pdjv1"]
+[ext_resource type="Texture2D" uid="uid://ylay4e42nugm" path="res://assets/chips/tile002.png" id="65_fwxqo"]
+[ext_resource type="Script" uid="uid://ctv72chfxndtp" path="res://scripts/horse_race_bet_text_edit.gd" id="65_kbfvd"]
+[ext_resource type="Script" uid="uid://cvm7jeq2lwiu5" path="res://scripts/horse_race_suit_selector.gd" id="65_t0wpb"]
+[ext_resource type="Texture2D" uid="uid://mxb6ie0s7ic5" path="res://assets/chips/tile005.png" id="67_p72gl"]
+[ext_resource type="Texture2D" uid="uid://dkxlqduhpfw5k" path="res://assets/chips/tile007.png" id="69_kbfvd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cqivn"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_t0wpb"]
+font_color = Color(0, 1, 0, 1)
+
+[node name="HorseRaceGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t0wpb")
+
+[node name="HorseRaceGamePlayer" type="Node" parent="." node_paths=PackedStringArray("links_node", "drawn_card_node", "bookie", "deck_count_label", "club_horse", "diamond_horse", "heart_horse", "spade_horse")]
+script = ExtResource("1_fwxqo")
+links_node = NodePath("../PlayArea/Links")
+drawn_card_node = NodePath("../PlayArea/Draw")
+bookie = NodePath("../Bookie")
+deck_count_label = NodePath("../PlayArea/Deck/CountLabel")
+club_horse = NodePath("../PlayArea/Horses/Club")
+diamond_horse = NodePath("../PlayArea/Horses/Diamond")
+heart_horse = NodePath("../PlayArea/Horses/Heart")
+spade_horse = NodePath("../PlayArea/Horses/Spade")
+
+[node name="CardDatas" type="Node" parent="HorseRaceGamePlayer"]
+
+[node name="H2" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 2
+texture = ExtResource("2_qhca6")
+
+[node name="H3" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 3
+texture = ExtResource("3_cgdx5")
+
+[node name="H4" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 4
+texture = ExtResource("4_ltbuj")
+
+[node name="H5" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 5
+texture = ExtResource("5_beed6")
+
+[node name="H6" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 6
+texture = ExtResource("6_5yy55")
+
+[node name="H7" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 7
+texture = ExtResource("7_uuyb1")
+
+[node name="H8" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 8
+texture = ExtResource("8_kn54d")
+
+[node name="H9" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 9
+texture = ExtResource("9_mnbw1")
+
+[node name="H10" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 10
+texture = ExtResource("10_pjh2b")
+
+[node name="HJ" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 11
+texture = ExtResource("11_pdjv1")
+
+[node name="HQ" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 12
+texture = ExtResource("12_fwxqo")
+
+[node name="HK" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+rank = 13
+texture = ExtResource("13_p72gl")
+
+[node name="D2" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 2
+texture = ExtResource("14_kbfvd")
+
+[node name="D3" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 3
+texture = ExtResource("15_t0wpb")
+
+[node name="D4" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 4
+texture = ExtResource("16_otil2")
+
+[node name="D5" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 5
+texture = ExtResource("17_0ghnl")
+
+[node name="D6" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 6
+texture = ExtResource("18_8d6io")
+
+[node name="D7" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 7
+texture = ExtResource("19_1yfqp")
+
+[node name="D8" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 8
+texture = ExtResource("20_o5n4m")
+
+[node name="D9" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 9
+texture = ExtResource("21_lxhni")
+
+[node name="D10" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 10
+texture = ExtResource("22_o8g5h")
+
+[node name="DJ" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 11
+texture = ExtResource("23_bhvl4")
+
+[node name="DQ" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 12
+texture = ExtResource("24_1pwe0")
+
+[node name="DK" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 1
+rank = 13
+texture = ExtResource("25_wbwjc")
+
+[node name="C2" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 2
+texture = ExtResource("26_n4t5g")
+
+[node name="C3" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 3
+texture = ExtResource("27_0p8vi")
+
+[node name="C4" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 4
+texture = ExtResource("28_84mk2")
+
+[node name="C5" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 5
+texture = ExtResource("29_q8vfs")
+
+[node name="C6" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 6
+texture = ExtResource("30_ajnt2")
+
+[node name="C7" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 7
+texture = ExtResource("31_vysi4")
+
+[node name="C8" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 8
+texture = ExtResource("32_somhn")
+
+[node name="C9" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 9
+texture = ExtResource("33_omic5")
+
+[node name="C10" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 10
+texture = ExtResource("34_24vxx")
+
+[node name="CJ" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 11
+texture = ExtResource("35_vpqr4")
+
+[node name="CQ" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 12
+texture = ExtResource("36_1rq5d")
+
+[node name="CK" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 2
+rank = 13
+texture = ExtResource("37_4mvk4")
+
+[node name="S2" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 2
+texture = ExtResource("38_xl5jg")
+
+[node name="S3" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 3
+texture = ExtResource("39_0bfpj")
+
+[node name="S4" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 4
+texture = ExtResource("40_42l7c")
+
+[node name="S5" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 5
+texture = ExtResource("41_crlvn")
+
+[node name="S6" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 6
+texture = ExtResource("42_7o8ac")
+
+[node name="S7" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 7
+texture = ExtResource("43_xoyur")
+
+[node name="S8" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 8
+texture = ExtResource("44_kg1g7")
+
+[node name="S9" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 9
+texture = ExtResource("45_meeta")
+
+[node name="S10" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 10
+texture = ExtResource("46_16xp8")
+
+[node name="SJ" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 11
+texture = ExtResource("47_dr2c7")
+
+[node name="SQ" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 12
+texture = ExtResource("48_uage6")
+
+[node name="SK" type="Node" parent="HorseRaceGamePlayer/CardDatas"]
+script = ExtResource("1_71mdg")
+suit = 3
+rank = 13
+texture = ExtResource("49_n0l08")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_k8ypf")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_114gp")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_djq0x")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="Deck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -457.0
+offset_top = 36.0
+offset_right = -369.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_84ncl")
+stretch_mode = 4
+script = ExtResource("59_ot7w3")
+has_post_start_functionality = true
+
+[node name="CountLabel" type="Label" parent="PlayArea/Deck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "52"
+label_settings = SubResource("LabelSettings_cqivn")
+horizontal_alignment = 1
+
+[node name="Draw" parent="PlayArea" instance=ExtResource("60_qhca6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -457.0
+offset_top = -99.0
+offset_right = -369.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_84ncl")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Links" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card" parent="PlayArea/Links" instance=ExtResource("60_qhca6")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -227.0
+offset_top = -148.0
+offset_right = -179.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_84ncl")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card2" parent="PlayArea/Links" instance=ExtResource("60_qhca6")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -129.0
+offset_top = -148.0
+offset_right = -81.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_84ncl")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card3" parent="PlayArea/Links" instance=ExtResource("60_qhca6")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = -148.0
+offset_right = 17.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_84ncl")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card4" parent="PlayArea/Links" instance=ExtResource("60_qhca6")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 68.0
+offset_top = -148.0
+offset_right = 116.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_84ncl")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card5" parent="PlayArea/Links" instance=ExtResource("60_qhca6")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 165.0
+offset_top = -148.0
+offset_right = 213.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_84ncl")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card6" parent="PlayArea/Links" instance=ExtResource("60_qhca6")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 263.0
+offset_top = -148.0
+offset_right = 311.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_84ncl")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Card7" parent="PlayArea/Links" instance=ExtResource("60_qhca6")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 361.0
+offset_top = -148.0
+offset_right = 409.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_84ncl")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Horses" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Club" type="TextureRect" parent="PlayArea/Horses"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -28.0
+offset_right = -248.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("57_qhca6")
+
+[node name="Diamond" type="TextureRect" parent="PlayArea/Horses"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = 31.0
+offset_right = -248.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_cgdx5")
+
+[node name="Heart" type="TextureRect" parent="PlayArea/Horses"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = 91.0
+offset_right = -248.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("59_ltbuj")
+
+[node name="Spade" type="TextureRect" parent="PlayArea/Horses"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = 152.0
+offset_right = -248.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("60_beed6")
+
+[node name="ColorRect" type="ColorRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 435.0
+offset_top = -32.0
+offset_right = 437.0
+offset_bottom = 183.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bookie" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -179.0
+offset_right = 296.0
+offset_bottom = 208.0
+grow_vertical = 2
+color = Color(0, 0.1764706, 0, 1)
+script = ExtResource("62_p72gl")
+
+[node name="Background" type="ColorRect" parent="Bookie"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.34901962, 0.105882354, 0, 1)
+
+[node name="Headers" type="Control" parent="Bookie"]
+layout_mode = 1
+anchor_right = 1.0
+offset_bottom = 30.0
+
+[node name="ChipColor" type="Label" parent="Bookie/Headers"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.333
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 6.0
+offset_bottom = 29.0
+text = "Player"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Horse" type="Label" parent="Bookie/Headers"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333
+anchor_right = 0.667
+offset_top = 6.0
+offset_bottom = 29.0
+text = "Horse"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bet" type="Label" parent="Bookie/Headers"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.667
+anchor_right = 1.0
+offset_top = 6.0
+offset_bottom = 29.0
+text = "Bet"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerRow" type="Control" parent="Bookie"]
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 38.0
+offset_right = 282.0
+offset_bottom = 106.0
+
+[node name="Chip" type="TextureRect" parent="Bookie/PlayerRow"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.333
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = -12.908005
+offset_bottom = -9.0
+texture = ExtResource("62_ltbuj")
+expand_mode = 1
+
+[node name="Total" type="Label" parent="Bookie/PlayerRow/Chip"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "$500"
+label_settings = SubResource("LabelSettings_t0wpb")
+
+[node name="Suit" type="TextureRect" parent="Bookie/PlayerRow"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333
+anchor_right = 0.667
+anchor_bottom = 1.0
+offset_left = 21.091995
+offset_top = 17.0
+offset_right = -21.707718
+offset_bottom = -22.0
+texture = ExtResource("61_5yy55")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("65_t0wpb")
+textures = Array[Texture2D]([ExtResource("61_5yy55"), ExtResource("62_uuyb1"), ExtResource("63_kn54d"), ExtResource("64_mnbw1")])
+suits = Array[int]([2, 1, 0, 3])
+
+[node name="TextEdit" type="TextEdit" parent="Bookie/PlayerRow"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.9080048
+offset_top = 12.0
+offset_right = -3.0
+offset_bottom = -21.0
+placeholder_text = "100"
+context_menu_enabled = false
+script = ExtResource("65_kbfvd")
+
+[node name="PlayerRow2" type="Control" parent="Bookie"]
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 103.0
+offset_right = 282.0
+offset_bottom = 172.0
+
+[node name="Chip" type="TextureRect" parent="Bookie/PlayerRow2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.333
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = -12.908005
+offset_bottom = -9.0
+texture = ExtResource("64_pdjv1")
+expand_mode = 1
+
+[node name="Total" type="Label" parent="Bookie/PlayerRow2/Chip"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "$500"
+label_settings = SubResource("LabelSettings_t0wpb")
+
+[node name="Suit" type="TextureRect" parent="Bookie/PlayerRow2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333
+anchor_right = 0.667
+anchor_bottom = 1.0
+offset_left = 21.091995
+offset_top = 17.0
+offset_right = -21.707718
+offset_bottom = -22.0
+texture = ExtResource("61_5yy55")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextEdit" type="TextEdit" parent="Bookie/PlayerRow2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.908005
+offset_top = 18.0
+offset_right = -26.0
+offset_bottom = -21.0
+text = "$25"
+editable = false
+
+[node name="PlayerRow3" type="Control" parent="Bookie"]
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 171.0
+offset_right = 282.0
+offset_bottom = 240.0
+
+[node name="Chip" type="TextureRect" parent="Bookie/PlayerRow3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.333
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = -12.908005
+offset_bottom = -9.0
+texture = ExtResource("65_fwxqo")
+expand_mode = 1
+
+[node name="Total" type="Label" parent="Bookie/PlayerRow3/Chip"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "$500"
+label_settings = SubResource("LabelSettings_t0wpb")
+
+[node name="Suit" type="TextureRect" parent="Bookie/PlayerRow3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333
+anchor_right = 0.667
+anchor_bottom = 1.0
+offset_left = 21.091995
+offset_top = 17.0
+offset_right = -21.707718
+offset_bottom = -22.0
+texture = ExtResource("62_uuyb1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextEdit" type="TextEdit" parent="Bookie/PlayerRow3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.908005
+offset_top = 14.0
+offset_right = -26.0
+offset_bottom = -24.0
+text = "$25"
+editable = false
+
+[node name="PlayerRow4" type="Control" parent="Bookie"]
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 234.0
+offset_right = 282.0
+offset_bottom = 302.0
+
+[node name="Chip" type="TextureRect" parent="Bookie/PlayerRow4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.333
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = -12.908005
+offset_bottom = -9.0
+texture = ExtResource("67_p72gl")
+expand_mode = 1
+
+[node name="Total" type="Label" parent="Bookie/PlayerRow4/Chip"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "$500"
+label_settings = SubResource("LabelSettings_t0wpb")
+
+[node name="Suit" type="TextureRect" parent="Bookie/PlayerRow4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333
+anchor_right = 0.667
+anchor_bottom = 1.0
+offset_left = 21.091995
+offset_top = 17.0
+offset_right = -21.707718
+offset_bottom = -22.0
+texture = ExtResource("63_kn54d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextEdit" type="TextEdit" parent="Bookie/PlayerRow4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.908005
+offset_top = 17.0
+offset_right = -26.0
+offset_bottom = -19.0
+text = "$25"
+editable = false
+
+[node name="PlayerRow5" type="Control" parent="Bookie"]
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 295.0
+offset_right = 282.0
+offset_bottom = 363.0
+
+[node name="Chip" type="TextureRect" parent="Bookie/PlayerRow5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.333
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = -12.908005
+offset_bottom = -9.0
+texture = ExtResource("69_kbfvd")
+expand_mode = 1
+
+[node name="Total" type="Label" parent="Bookie/PlayerRow5/Chip"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "$500"
+label_settings = SubResource("LabelSettings_t0wpb")
+
+[node name="Suit" type="TextureRect" parent="Bookie/PlayerRow5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333
+anchor_right = 0.667
+anchor_bottom = 1.0
+offset_left = 21.091995
+offset_top = 17.0
+offset_right = -21.707718
+offset_bottom = -22.0
+texture = ExtResource("64_mnbw1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextEdit" type="TextEdit" parent="Bookie/PlayerRow5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.908005
+offset_top = 17.0
+offset_right = -26.0
+offset_bottom = -19.0
+text = "$25"
+editable = false
+
+[node name="Notes" type="TextEdit" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Pick a chip color and an amount to
+bet.
+- Aces represent horses in a race.
+- 7 other cards are laid out in a row
+representing a position in the race.
+- Click an Ace to place your bet
+- Once a bet is placed, click the deck
+to start the race. Keep clicking the
+deck to advance the race.
+- The first horse to reach the end
+wins.
+- Suits in the track determine the
+payout for betting on that horse:
+0 to x1
+1 to x2
+2 to x3
+3 to x5
+4 to x10
+- Horses advance when their suit is
+drawn from the deck.
+- If included, Jokers advance all
+horses except those in first place.
+- Game is infinite, unless you run
+out of money."
+placeholder_text = "Add any notes here..."
+script = ExtResource("5_114gp")
+
+[connection signal="race_ended" from="HorseRaceGamePlayer" to="Bookie/PlayerRow/Suit" method="_on_horse_race_game_player_race_ended"]
+[connection signal="race_ended" from="HorseRaceGamePlayer" to="Bookie/PlayerRow/TextEdit" method="_on_horse_race_game_player_race_ended"]
+[connection signal="race_started" from="HorseRaceGamePlayer" to="Bookie/PlayerRow/Suit" method="_on_horse_race_game_player_race_started"]
+[connection signal="race_started" from="HorseRaceGamePlayer" to="Bookie/PlayerRow/TextEdit" method="_on_horse_race_game_player_race_started"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="deck_clicked" from="PlayArea/Deck" to="HorseRaceGamePlayer" method="_on_deck_deck_clicked"]
+[connection signal="gui_input" from="PlayArea/Deck" to="PlayArea/Deck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/Deck" to="HorseRaceGamePlayer" method="_on_deck_start_game"]
+[connection signal="gui_input" from="Bookie/PlayerRow/Suit" to="Bookie/PlayerRow/Suit" method="_on_gui_input"]
+[connection signal="suit_selected" from="Bookie/PlayerRow/Suit" to="HorseRaceGamePlayer" method="_on_suit_suit_selected"]
+[connection signal="bet_set" from="Bookie/PlayerRow/TextEdit" to="HorseRaceGamePlayer" method="_on_text_edit_bet_set"]
+[connection signal="text_changed" from="Bookie/PlayerRow/TextEdit" to="Bookie/PlayerRow/TextEdit" method="_on_text_changed"]

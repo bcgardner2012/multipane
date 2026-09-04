@@ -25,6 +25,7 @@ enum Orientation {
 @onready var carrion_eater_game_scene = preload("res://scenes/carrion_eater_game.tscn")
 @onready var ss_game_scene = preload("res://scenes/shadow_solitaire_game.tscn")
 @onready var club_fight_game_scene = preload("res://scenes/club_fight_game.tscn")
+@onready var horse_race_game_scene = preload("res://scenes/horse_race_game.tscn")
 
 @onready var orientation = Orientation.PORTRAIT
 
@@ -47,6 +48,7 @@ var should_add_snake_charmer_game_pane: bool
 var should_add_carrion_eater_game_pane: bool
 var should_add_ss_game_pane: bool
 var should_add_club_fight_game_pane: bool
+var should_add_horse_race_game_pane: bool
 
 func queue_add_image_pane() -> void:
 	should_add_image_pane = true
@@ -101,6 +103,9 @@ func queue_add_ss_game_pane() -> void:
 
 func queue_add_club_fight_game_pane() -> void:
 	should_add_club_fight_game_pane = true
+
+func queue_add_horse_race_game_pane() -> void:
+	should_add_horse_race_game_pane = true
 
 func _add_pane(scene: Resource) -> void:
 	# we are designing with up to 4 panes in mind
@@ -166,6 +171,9 @@ func _process(_delta: float) -> void:
 	elif should_add_club_fight_game_pane:
 		_add_pane(club_fight_game_scene)
 		should_add_club_fight_game_pane = false
+	elif should_add_horse_race_game_pane:
+		_add_pane(horse_race_game_scene)
+		should_add_horse_race_game_pane = false
 	
 	if childCount != get_child_count():
 		if childCount > get_child_count():
