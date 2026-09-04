@@ -163,7 +163,6 @@ func _handle_bets(winner: CardData.Suit) -> void:
 			npc_index = 4
 	
 	wallets[npc_index] += npc_gain
-	_signals.npc_won.emit(winner, wallets[npc_index])
 	
 	# player, done last to prioritize player's images
 	if winner == player_suit:
@@ -171,6 +170,7 @@ func _handle_bets(winner: CardData.Suit) -> void:
 		_signals.player_won.emit(wallets[0])
 	else:
 		wallets[0] -= player_bet
+		_signals.npc_won.emit(winner, wallets[npc_index], wallets[0])
 	
 	bookie.update_cash_totals(wallets)
 

@@ -720,6 +720,7 @@ color = Color(0.34901962, 0.105882354, 0, 1)
 
 [node name="Headers" type="Control" parent="Bookie"]
 layout_mode = 1
+anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 30.0
 

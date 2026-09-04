@@ -132,11 +132,13 @@ portrait = NodePath("../PortraitHolder/Portrait")
 script = ExtResource("17_fonb3")
 portrait = NodePath("../PortraitHolder/Portrait")
 
-[node name="ClubFightGamePlug" type="Node" parent="."]
+[node name="ClubFightGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("18_30wca")
+portrait = NodePath("../PortraitHolder/Portrait")
 
-[node name="HorseRaceGamePlug" type="Node" parent="."]
+[node name="HorseRaceGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("19_mmsrj")
+portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="SuitIcon" type="TextureRect" parent="."]
 visible = false
