@@ -8,6 +8,10 @@ class_name ClubFightGamePlug
 const JOKER_RANK = -99
 
 func on_move_made(move_type: ClubFightGamePlayer.MoveType, cards: Array[CardData]) -> void:
+	if cards.size() > 4:
+		portrait.try_load_random_image_from_subdir("nuke")
+		return
+	
 	match move_type:
 		ClubFightGamePlayer.MoveType.INVALID:
 			return
