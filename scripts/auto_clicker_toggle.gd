@@ -1,11 +1,13 @@
 extends CheckButton
-class_name HorseRaceAutoDrawToggle
+class_name AutoClickerToggle
 
-# button_pressed true means the toggle is on
+# The given clickable_node must implement a _on_gui_input(InputEventMouseButton)
+# function.
+# button_pressed true means the toggle is on.
 
 const DELAY = 1.0 # seconds
 
-@export var deck: Deck
+@export var clickable_node: Control
 
 var _timer: float
 var _mock_mouse_event: InputEventMouseButton
@@ -20,4 +22,8 @@ func _process(delta: float) -> void:
 		_timer += delta
 		if _timer >= DELAY:
 			_timer = 0.0
-			deck._on_gui_input(_mock_mouse_event)
+			clickable_node._on_gui_input(_mock_mouse_event)
+
+# connect signals to this to disable auto clicking
+func _turn_off() -> void:
+	button_pressed = false

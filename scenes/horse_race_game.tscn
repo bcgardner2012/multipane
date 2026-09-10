@@ -74,7 +74,7 @@
 [ext_resource type="Script" uid="uid://cvm7jeq2lwiu5" path="res://scripts/horse_race_suit_selector.gd" id="65_t0wpb"]
 [ext_resource type="Texture2D" uid="uid://mxb6ie0s7ic5" path="res://assets/chips/tile005.png" id="67_p72gl"]
 [ext_resource type="Texture2D" uid="uid://dkxlqduhpfw5k" path="res://assets/chips/tile007.png" id="69_kbfvd"]
-[ext_resource type="Script" uid="uid://dqydkmhtmhee0" path="res://scripts/horse_race_auto_draw_toggle.gd" id="75_otil2"]
+[ext_resource type="Script" uid="uid://cq8yyq1xyux7c" path="res://scripts/auto_clicker_toggle.gd" id="75_otil2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cqivn"]
 font_size = 24
@@ -1112,14 +1112,14 @@ out of money."
 placeholder_text = "Add any notes here..."
 script = ExtResource("5_114gp")
 
-[node name="CheckButton" type="CheckButton" parent="." node_paths=PackedStringArray("deck")]
+[node name="CheckButton" type="CheckButton" parent="." node_paths=PackedStringArray("clickable_node")]
 layout_mode = 0
 offset_top = 4.0
 offset_right = 44.0
 offset_bottom = 28.0
 text = "Auto Draw"
 script = ExtResource("75_otil2")
-deck = NodePath("../PlayArea/Deck")
+clickable_node = NodePath("../PlayArea/Deck")
 
 [connection signal="race_ended" from="HorseRaceGamePlayer" to="Bookie/PlayerRow/Suit" method="_on_horse_race_game_player_race_ended"]
 [connection signal="race_ended" from="HorseRaceGamePlayer" to="Bookie/PlayerRow/TextEdit" method="_on_horse_race_game_player_race_ended"]

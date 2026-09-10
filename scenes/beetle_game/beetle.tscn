@@ -1,0 +1,205 @@
+[gd_scene load_steps=15 format=3 uid="uid://b7r40yfivcli8"]
+
+[ext_resource type="Script" uid="uid://dfpcfcbtt1n58" path="res://scripts/beetle_game_beetle.gd" id="1_kbmil"]
+[ext_resource type="Texture2D" uid="uid://cpl14t8wvgvr1" path="res://assets/beetle/bug_beetle/body.jpg" id="2_51ub1"]
+[ext_resource type="Texture2D" uid="uid://dvtbsy5ygnkpf" path="res://assets/beetle/bug_beetle/tail.png" id="3_upu8t"]
+[ext_resource type="Texture2D" uid="uid://wtjsklyje0p5" path="res://assets/beetle/bug_beetle/head.png" id="4_sstcb"]
+[ext_resource type="Texture2D" uid="uid://dld3ymukochce" path="res://assets/beetle/bug_beetle/leg1.png" id="5_quq7a"]
+[ext_resource type="Texture2D" uid="uid://b5scvc4re814" path="res://assets/beetle/bug_beetle/leg2.png" id="6_114cv"]
+[ext_resource type="Texture2D" uid="uid://c2munaogxrrnx" path="res://assets/beetle/bug_beetle/leg3.png" id="7_pcbiy"]
+[ext_resource type="Texture2D" uid="uid://b7c8m86h5nmrc" path="res://assets/beetle/bug_beetle/leg4.png" id="8_8hydx"]
+[ext_resource type="Texture2D" uid="uid://wjgxasjd7pm2" path="res://assets/beetle/bug_beetle/leg5.png" id="9_wvdan"]
+[ext_resource type="Texture2D" uid="uid://drf2781bwcohs" path="res://assets/beetle/bug_beetle/leg6.png" id="10_jc3la"]
+[ext_resource type="Texture2D" uid="uid://cxsji821fxpcq" path="res://assets/beetle/bug_beetle/eye1.png" id="11_ccvmw"]
+[ext_resource type="Texture2D" uid="uid://5381emaowy8n" path="res://assets/beetle/bug_beetle/eye2.png" id="12_b8fq5"]
+[ext_resource type="Texture2D" uid="uid://wioap4ycpiv5" path="res://assets/beetle/bug_beetle/antena1.png" id="13_75bai"]
+[ext_resource type="Texture2D" uid="uid://b5f4j04phlanc" path="res://assets/beetle/bug_beetle/antena2.png" id="14_dickb"]
+
+[node name="Beetle" type="Control"]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 120.0
+offset_bottom = 100.0
+grow_vertical = 2
+script = ExtResource("1_kbmil")
+color = Color(1, 0, 0, 1)
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+
+[node name="Body" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_51ub1")
+expand_mode = 2
+
+[node name="Tail" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_upu8t")
+expand_mode = 2
+
+[node name="Head" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_sstcb")
+expand_mode = 2
+
+[node name="Legs" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Leg1" type="TextureRect" parent="Legs"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_quq7a")
+expand_mode = 1
+
+[node name="Leg2" type="TextureRect" parent="Legs"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_114cv")
+expand_mode = 1
+
+[node name="Leg3" type="TextureRect" parent="Legs"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_pcbiy")
+expand_mode = 1
+
+[node name="Leg4" type="TextureRect" parent="Legs"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_8hydx")
+expand_mode = 1
+
+[node name="Leg5" type="TextureRect" parent="Legs"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_wvdan")
+expand_mode = 1
+
+[node name="Leg6" type="TextureRect" parent="Legs"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_jc3la")
+expand_mode = 1
+
+[node name="Eyes" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Eye1" type="TextureRect" parent="Eyes"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_ccvmw")
+expand_mode = 1
+
+[node name="Eye2" type="TextureRect" parent="Eyes"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_b8fq5")
+expand_mode = 1
+
+[node name="Antennas" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Antenna1" type="TextureRect" parent="Antennas"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_75bai")
+expand_mode = 1
+
+[node name="Antenna2" type="TextureRect" parent="Antennas"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_dickb")
+expand_mode = 1

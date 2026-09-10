@@ -112,6 +112,16 @@ func receive_broadcast(from: Node) -> void:
 	elif from is ClubFightGamePane:
 		var cfgp = from as ClubFightGamePane
 		cfgp.move_made.connect($ClubFightGamePlug.on_move_made)
+	elif from is HorseRaceGamePane:
+		var hrgp = from as HorseRaceGamePane
+		hrgp.moved.connect($HorseRaceGamePlug.on_moved)
+		hrgp.npc_won.connect($HorseRaceGamePlug.on_npc_won)
+		hrgp.player_won.connect($HorseRaceGamePlug.on_player_won)
+		hrgp.race_started.connect($HorseRaceGamePlug.on_race_started)
+	elif from is BeetleGamePane:
+		var bgp = from as BeetleGamePane
+		bgp.game_over.connect($BeetleGamePlug.on_game_over)
+		bgp.part_added.connect($BeetleGamePlug.on_part_added)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

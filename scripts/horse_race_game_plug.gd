@@ -32,7 +32,7 @@ func on_moved(horse: CardData.Suit) -> void:
 	if channel == FIRST_MONITOR or channel == SECOND_MONITOR:
 		var dir = HORSE_DIR.path_join(_suit_to_str(place))
 		# 8 is a win
-		if not PortraitHelper.seeburg_select_subdir(portrait, move_counts[place], 9, dir):
+		if not PortraitHelper.seeburg_select_subdir(portrait, 0, move_counts[place] + 1, dir):
 			portrait.try_load_random_image_from_subdir(dir)
 
 func on_player_won(cash: int) -> void:
@@ -51,8 +51,8 @@ func on_npc_won(npc: CardData.Suit, cash: int, player_cash: int) -> void:
 func _show_wealth_img(dir: String, cash: int) -> void:
 	# log10 of x round down gives number of digits - 1
 	# use this to select image, 1-by-1 iteration up to 1 million will drag on...
-	var wealth_lvl: int = log10(cash) # -10 to 10, then integer overflow
-	if not PortraitHelper.seeburg_select_subdir(portrait, wealth_lvl, 10, dir):
+	var wealth_lvl: int = log10(cash) # 0 to 10, then integer overflow
+	if not PortraitHelper.seeburg_select_subdir(portrait, 0, wealth_lvl + 1, dir):
 		portrait.try_load_random_image_from_subdir(dir)
 
 # clear data

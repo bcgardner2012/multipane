@@ -1,0 +1,160 @@
+[gd_scene load_steps=10 format=3 uid="uid://cajk2fijssy0u"]
+
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_4yei3"]
+[ext_resource type="Script" uid="uid://4h8477oc6cia" path="res://scripts/beetle_game_pane.gd" id="1_ajhfe"]
+[ext_resource type="PackedScene" uid="uid://b7r40yfivcli8" path="res://scenes/beetle_game/beetle.tscn" id="1_usv5a"]
+[ext_resource type="Script" uid="uid://c6w8re70tqyyw" path="res://scripts/beetle_game_player.gd" id="1_xexap"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_2nv62"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="2_fiu8m"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_xexap"]
+[ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="5_2nv62"]
+[ext_resource type="Script" uid="uid://cq8yyq1xyux7c" path="res://scripts/auto_clicker_toggle.gd" id="8_blijo"]
+
+[node name="BeetleGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ajhfe")
+
+[node name="BeetleGamePlayer" type="Node" parent="." node_paths=PackedStringArray("bugs")]
+script = ExtResource("1_xexap")
+bugs = [NodePath("../PlayArea/Beetle"), NodePath("../PlayArea/Beetle2"), NodePath("../PlayArea/Beetle3")]
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_4yei3")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_2nv62")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_xexap")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="Beetle" parent="PlayArea" instance=ExtResource("1_usv5a")]
+layout_mode = 1
+anchors_preset = -1
+offset_top = -60.0
+offset_bottom = 60.0
+
+[node name="D6" parent="PlayArea/Beetle" instance=ExtResource("5_2nv62")]
+layout_mode = 1
+anchors_preset = -1
+offset_top = -104.0
+offset_bottom = -72.0
+
+[node name="Beetle2" parent="PlayArea" instance=ExtResource("1_usv5a")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+color = Color(0, 1, 0, 1)
+
+[node name="D6" parent="PlayArea/Beetle2" instance=ExtResource("5_2nv62")]
+layout_mode = 1
+offset_top = -106.0
+offset_bottom = -74.0
+
+[node name="Beetle3" parent="PlayArea" instance=ExtResource("1_usv5a")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = -60.0
+offset_right = 0.0
+offset_bottom = 60.0
+grow_horizontal = 0
+color = Color(0, 0, 1, 1)
+
+[node name="D6" parent="PlayArea/Beetle3" instance=ExtResource("5_2nv62")]
+layout_mode = 1
+offset_top = -100.0
+offset_bottom = -68.0
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click a die to start
+- Players roll their die at the same
+time. Each roll determines what
+body part to draw on your beetle.
+1: Body
+2: Head
+3: Leg
+4: Eye
+5: Antenna
+6: Tail
+- You must roll the body first. Then
+you can start attaching other pieces
+- Eyes and antennas can only be
+drawn after the head.
+- First person to draw a complete
+beetle wins."
+placeholder_text = "Add any notes here..."
+script = ExtResource("2_fiu8m")
+
+[node name="CheckButton" type="CheckButton" parent="." node_paths=PackedStringArray("clickable_node")]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 44.0
+offset_bottom = 28.0
+text = "Auto Roll"
+script = ExtResource("8_blijo")
+clickable_node = NodePath("../PlayArea/Beetle/D6")
+
+[connection signal="disable_auto_click" from="BeetleGamePlayer" to="CheckButton" method="_turn_off"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="left_clicked" from="PlayArea/Beetle/D6" to="BeetleGamePlayer" method="_on_d_6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/Beetle/D6" to="PlayArea/Beetle/D6" method="_on_tree_entered"]
+[connection signal="left_clicked" from="PlayArea/Beetle2/D6" to="BeetleGamePlayer" method="_on_d_6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/Beetle2/D6" to="PlayArea/Beetle2/D6" method="_on_tree_entered"]
+[connection signal="left_clicked" from="PlayArea/Beetle3/D6" to="BeetleGamePlayer" method="_on_d_6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/Beetle3/D6" to="PlayArea/Beetle3/D6" method="_on_tree_entered"]
