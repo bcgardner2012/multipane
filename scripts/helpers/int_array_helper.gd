@@ -7,6 +7,13 @@ static func contains(arr: Array[int], x: int) -> bool:
 			return true
 	return false
 
+static func count_of(arr: Array[int], x: int) -> int:
+	var c = 0
+	for i in arr:
+		if i == x:
+			c += 1
+	return c
+
 # does nothing if x is not found
 static func remove(arr: Array[int], x: int) -> void:
 	var i = arr.find(x)

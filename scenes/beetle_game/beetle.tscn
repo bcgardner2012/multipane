@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://b7r40yfivcli8"]
 
-[ext_resource type="Script" uid="uid://dfpcfcbtt1n58" path="res://scripts/beetle_game_beetle.gd" id="1_kbmil"]
+[ext_resource type="Script" uid="uid://dfpcfcbtt1n58" path="res://scripts/beetle/beetle_game_beetle.gd" id="1_kbmil"]
 [ext_resource type="Texture2D" uid="uid://cpl14t8wvgvr1" path="res://assets/beetle/bug_beetle/body.jpg" id="2_51ub1"]
 [ext_resource type="Texture2D" uid="uid://dvtbsy5ygnkpf" path="res://assets/beetle/bug_beetle/tail.png" id="3_upu8t"]
 [ext_resource type="Texture2D" uid="uid://wtjsklyje0p5" path="res://assets/beetle/bug_beetle/head.png" id="4_sstcb"]

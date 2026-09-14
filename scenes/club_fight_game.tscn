@@ -1,8 +1,8 @@
 [gd_scene load_steps=72 format=3 uid="uid://fwm4jm3r334u"]
 
-[ext_resource type="Script" uid="uid://dgg3vj5w6lmi2" path="res://scripts/club_fight_game_player.gd" id="1_gx6q0"]
+[ext_resource type="Script" uid="uid://dgg3vj5w6lmi2" path="res://scripts/club_fight/club_fight_game_player.gd" id="1_gx6q0"]
 [ext_resource type="Script" uid="uid://bd01k6ux54lms" path="res://scripts/card_holder.gd" id="1_nglsg"]
-[ext_resource type="Script" uid="uid://c345dx8daeqo4" path="res://scripts/club_fight_game_pane.gd" id="1_pr745"]
+[ext_resource type="Script" uid="uid://c345dx8daeqo4" path="res://scripts/club_fight/club_fight_game_pane.gd" id="1_pr745"]
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_r6gwl"]
 [ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_8d6gv"]
 [ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_qfsbq"]
@@ -68,8 +68,8 @@
 [ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="52_4avfo"]
 [ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="53_1hl13"]
 [ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="54_k348o"]
-[ext_resource type="Script" uid="uid://c56xcj0qqs6ky" path="res://scripts/club_fight_grid.gd" id="63_ldrw5"]
-[ext_resource type="Script" uid="uid://c14u6a7030sni" path="res://scripts/club_fight_hand.gd" id="67_k3m65"]
+[ext_resource type="Script" uid="uid://c56xcj0qqs6ky" path="res://scripts/club_fight/club_fight_grid.gd" id="63_ldrw5"]
+[ext_resource type="Script" uid="uid://c14u6a7030sni" path="res://scripts/club_fight/club_fight_hand.gd" id="67_k3m65"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7mbvd"]
 font_size = 24

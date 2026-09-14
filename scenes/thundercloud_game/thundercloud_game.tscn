@@ -1,0 +1,185 @@
+[gd_scene load_steps=11 format=3 uid="uid://biabconkctim4"]
+
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_cycua"]
+[ext_resource type="Script" uid="uid://c2dc85v7j5igp" path="res://scripts/thundercloud_game_pane.gd" id="1_pvgoj"]
+[ext_resource type="Script" uid="uid://x1yh3jhophe3" path="res://scripts/thundercloud_game_player.gd" id="1_sy1f3"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_vy6cx"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_api7t"]
+[ext_resource type="PackedScene" uid="uid://ywolpdttqp1m" path="res://scenes/thundercloud_game/thundercloud_graphic.tscn" id="4_vk1o2"]
+[ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="5_i3olk"]
+[ext_resource type="Script" uid="uid://b8tku4txy5j5c" path="res://scripts/thundercloud_game_dice.gd" id="5_yvb4i"]
+[ext_resource type="Script" uid="uid://cq8yyq1xyux7c" path="res://scripts/auto_clicker_toggle.gd" id="9_kotx4"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="12_grr4k"]
+
+[node name="ThundercloudGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pvgoj")
+
+[node name="ThundercloudGamePlayer" type="Node" parent="." node_paths=PackedStringArray("dice_node", "graphics")]
+script = ExtResource("1_sy1f3")
+dice_node = NodePath("../PlayArea/Dice")
+graphics = [NodePath("../PlayArea/Thundercloud1"), NodePath("../PlayArea/Thundercloud2"), NodePath("../PlayArea/Thundercloud3")]
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_cycua")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_vy6cx")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_api7t")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="Thundercloud1" parent="PlayArea" instance=ExtResource("4_vk1o2")]
+layout_mode = 1
+anchors_preset = 4
+
+[node name="Thundercloud2" parent="PlayArea" instance=ExtResource("4_vk1o2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+grow_horizontal = 2
+color = Color(0, 1, 0, 1)
+
+[node name="Thundercloud3" parent="PlayArea" instance=ExtResource("4_vk1o2")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_right = 0.0
+grow_horizontal = 0
+color = Color(0, 0, 1, 1)
+
+[node name="Dice" type="HBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -168.0
+offset_right = 20.0
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+script = ExtResource("5_yvb4i")
+color = Color(1, 0, 0, 1)
+
+[node name="D6" parent="PlayArea/Dice" instance=ExtResource("5_i3olk")]
+layout_mode = 2
+stretch_mode = 3
+
+[node name="D7" parent="PlayArea/Dice" instance=ExtResource("5_i3olk")]
+layout_mode = 2
+stretch_mode = 3
+
+[node name="D8" parent="PlayArea/Dice" instance=ExtResource("5_i3olk")]
+layout_mode = 2
+stretch_mode = 3
+
+[node name="D9" parent="PlayArea/Dice" instance=ExtResource("5_i3olk")]
+layout_mode = 2
+stretch_mode = 3
+
+[node name="D10" parent="PlayArea/Dice" instance=ExtResource("5_i3olk")]
+layout_mode = 2
+stretch_mode = 3
+
+[node name="D11" parent="PlayArea/Dice" instance=ExtResource("5_i3olk")]
+layout_mode = 2
+stretch_mode = 3
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click a die to start
+- Players take turns rolling a
+shrinking set of dice.
+- When you roll a 1, take the 1s out
+of the set, pass the dice to the next
+player.
+- If no 1s are rolled, draw a section
+of your thundercloud.
+- On the 7th roll of no 1s, lightning
+strikes! That player is out of the 
+game.
+- Last person standing wins.
+- When all dice are removed, all
+players put their dice back and play
+continues."
+placeholder_text = "Add any notes here..."
+script = ExtResource("12_grr4k")
+
+[node name="CheckButton" type="CheckButton" parent="." node_paths=PackedStringArray("clickable_node")]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 44.0
+offset_bottom = 28.0
+text = "Auto Roll"
+script = ExtResource("9_kotx4")
+clickable_node = NodePath("../PlayArea/Dice/D11")
+
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="left_clicked" from="PlayArea/Dice/D6" to="ThundercloudGamePlayer" method="_on_d6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/Dice/D6" to="PlayArea/Dice/D6" method="_on_tree_entered"]
+[connection signal="left_clicked" from="PlayArea/Dice/D7" to="ThundercloudGamePlayer" method="_on_d6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/Dice/D7" to="PlayArea/Dice/D7" method="_on_tree_entered"]
+[connection signal="left_clicked" from="PlayArea/Dice/D8" to="ThundercloudGamePlayer" method="_on_d6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/Dice/D8" to="PlayArea/Dice/D8" method="_on_tree_entered"]
+[connection signal="left_clicked" from="PlayArea/Dice/D9" to="ThundercloudGamePlayer" method="_on_d6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/Dice/D9" to="PlayArea/Dice/D9" method="_on_tree_entered"]
+[connection signal="left_clicked" from="PlayArea/Dice/D10" to="ThundercloudGamePlayer" method="_on_d6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/Dice/D10" to="PlayArea/Dice/D10" method="_on_tree_entered"]
+[connection signal="left_clicked" from="PlayArea/Dice/D11" to="ThundercloudGamePlayer" method="_on_d6_left_clicked"]
+[connection signal="tree_entered" from="PlayArea/Dice/D11" to="PlayArea/Dice/D11" method="_on_tree_entered"]

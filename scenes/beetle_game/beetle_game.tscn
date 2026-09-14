@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://cajk2fijssy0u"]
 
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_4yei3"]
-[ext_resource type="Script" uid="uid://4h8477oc6cia" path="res://scripts/beetle_game_pane.gd" id="1_ajhfe"]
+[ext_resource type="Script" uid="uid://4h8477oc6cia" path="res://scripts/beetle/beetle_game_pane.gd" id="1_ajhfe"]
 [ext_resource type="PackedScene" uid="uid://b7r40yfivcli8" path="res://scenes/beetle_game/beetle.tscn" id="1_usv5a"]
-[ext_resource type="Script" uid="uid://c6w8re70tqyyw" path="res://scripts/beetle_game_player.gd" id="1_xexap"]
+[ext_resource type="Script" uid="uid://c6w8re70tqyyw" path="res://scripts/beetle/beetle_game_player.gd" id="1_xexap"]
 [ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_2nv62"]
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="2_fiu8m"]
 [ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_xexap"]

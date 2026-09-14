@@ -1,0 +1,105 @@
+[gd_scene load_steps=9 format=3 uid="uid://ywolpdttqp1m"]
+
+[ext_resource type="Script" uid="uid://cbd132iii4icr" path="res://scripts/thundercloud_game_graphic.gd" id="1_4wlv5"]
+[ext_resource type="Texture2D" uid="uid://dvoe2gpp43vsc" path="res://assets/thundercloud/tc1.png" id="2_gyaag"]
+[ext_resource type="Texture2D" uid="uid://cdgs2a8gsin6d" path="res://assets/thundercloud/tc2.png" id="3_o6m1g"]
+[ext_resource type="Texture2D" uid="uid://b2laqemp76v0k" path="res://assets/thundercloud/tc3.png" id="4_qxebc"]
+[ext_resource type="Texture2D" uid="uid://drdkmwn05w56y" path="res://assets/thundercloud/tc4.png" id="5_uig64"]
+[ext_resource type="Texture2D" uid="uid://1hg0gt138edi" path="res://assets/thundercloud/tc5.png" id="6_i6c1n"]
+[ext_resource type="Texture2D" uid="uid://duhq8onaflk7q" path="res://assets/thundercloud/tc6.png" id="7_of6bd"]
+[ext_resource type="Texture2D" uid="uid://claheq73ag0i7" path="res://assets/thundercloud/tc7.png" id="8_6acek"]
+
+[node name="Thundercloud1" type="ColorRect"]
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+script = ExtResource("1_4wlv5")
+
+[node name="Segment1" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gyaag")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Segment2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_o6m1g")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Segment3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_qxebc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Segment4" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_uig64")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Segment5" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_i6c1n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Segment6" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_of6bd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Segment7" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_6acek")
+expand_mode = 1
+stretch_mode = 5

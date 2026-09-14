@@ -122,6 +122,11 @@ func receive_broadcast(from: Node) -> void:
 		var bgp = from as BeetleGamePane
 		bgp.game_over.connect($BeetleGamePlug.on_game_over)
 		bgp.part_added.connect($BeetleGamePlug.on_part_added)
+	elif from is ThundercloudGamePane:
+		var tcgp = from as ThundercloudGamePane
+		tcgp.game_over.connect($ThunderCloudGamePlug.on_game_over)
+		tcgp.not_struck.connect($ThunderCloudGamePlug.on_not_struck)
+		tcgp.struck.connect($ThunderCloudGamePlug.on_struck)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel
