@@ -133,6 +133,32 @@ func receive_broadcast(from: Node) -> void:
 		dfgp.game_over.connect($DiceFishingGamePlug.on_game_over)
 		dfgp.game_won.connect($DiceFishingGamePlug.on_game_won)
 		dfgp.nada.connect($DiceFishingGamePlug.on_nada)
+	elif from is HauntedHouseGamePane:
+		var hhgp = from as HauntedHouseGamePane
+		hhgp.abomination_encounter.connect($HauntedHouseGamePlug.on_abomination_encounter)
+		hhgp.ace_found.connect($HauntedHouseGamePlug.on_ace_found)
+		hhgp.game_over_angry.connect($HauntedHouseGamePlug.on_game_over_angry)
+		hhgp.game_over_cursed.connect($HauntedHouseGamePlug.on_game_over_cursed)
+		hhgp.game_over_dead.connect($HauntedHouseGamePlug.on_game_over_dead)
+		hhgp.game_won.connect($HauntedHouseGamePlug.on_game_won)
+		hhgp.ghost_encounter.connect($HauntedHouseGamePlug.on_ghost_encounter)
+		hhgp.parrot_encounter.connect($HauntedHouseGamePlug.on_parrot_encounter)
+		hhgp.queen_calm.connect($HauntedHouseGamePlug.on_queen_calm)
+		hhgp.queen_gift.connect($HauntedHouseGamePlug.on_queen_gift)
+		hhgp.queen_heal.connect($HauntedHouseGamePlug.on_queen_heal)
+		hhgp.queen_soothe.connect($HauntedHouseGamePlug.on_queen_soothe)
+		hhgp.queen_spotted.connect($HauntedHouseGamePlug.on_queen_spotted)
+		hhgp.rat_encounter.connect($HauntedHouseGamePlug.on_rat_encounter)
+		hhgp.saferoom_meditate.connect($HauntedHouseGamePlug.on_saferoom_meditate)
+		hhgp.saferoom_plead.connect($HauntedHouseGamePlug.on_saferoom_plead)
+		hhgp.saferoom_reached.connect($HauntedHouseGamePlug.on_saferoom_reached)
+		hhgp.saferoom_rest.connect($HauntedHouseGamePlug.on_saferoom_rest)
+		hhgp.saferoom_search.connect($HauntedHouseGamePlug.on_saferoom_search)
+		hhgp.spider_encounter.connect($HauntedHouseGamePlug.on_spider_encounter)
+		hhgp.trap_encounter.connect($HauntedHouseGamePlug.on_trap_encounter)
+		hhgp.wild_bat.connect($HauntedHouseGamePlug.on_wild_bat)
+		hhgp.wild_gargoyle.connect($HauntedHouseGamePlug.on_wild_gargoyle)
+		hhgp.wild_potion.connect($HauntedHouseGamePlug.on_wild_potion)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

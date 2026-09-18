@@ -12,11 +12,15 @@ signal wild_potion()
 signal wild_gargoyle()
 signal wild_bat()
 
+signal ace_found()
+
+signal saferoom_reached()
 signal saferoom_rest()
 signal saferoom_meditate()
 signal saferoom_plead()
 signal saferoom_search(found: bool, item: HauntedHouseGamePlayer.Item)
 
+signal queen_spotted()
 signal queen_heal()
 signal queen_calm()
 signal queen_soothe()

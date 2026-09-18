@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://pjilwspntgn6"]
+[gd_scene load_steps=57 format=3 uid="uid://pjilwspntgn6"]
 
 [ext_resource type="Script" uid="uid://dd7ywskexogj6" path="res://scripts/pane.gd" id="1_ghsmc"]
 [ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="1_k7av0"]
@@ -51,6 +51,7 @@
 [ext_resource type="Script" uid="uid://chdfumal5arsw" path="res://scripts/beetle/beetle_game_plug.gd" id="20_y1cme"]
 [ext_resource type="Script" uid="uid://diqgdbr30762l" path="res://scripts/thunder_cloud_game_plug.gd" id="21_2hl2k"]
 [ext_resource type="Script" uid="uid://v4j4ppgrjeei" path="res://scripts/dice_fishing_game_plug.gd" id="22_gj1rf"]
+[ext_resource type="Script" uid="uid://wkds6crokvga" path="res://scripts/haunted_house_game_plug.gd" id="23_fvqrk"]
 [ext_resource type="Script" uid="uid://d571nsxmjowr" path="res://scripts/control_holder.gd" id="30_xrk25"]
 [ext_resource type="Texture2D" uid="uid://d3d185da1palt" path="res://assets/cycle.png" id="31_rav8p"]
 [ext_resource type="Texture2D" uid="uid://d3ejsw71l54p3" path="res://assets/cycle_clicked.png" id="32_ilg2h"]
@@ -154,6 +155,9 @@ portrait = NodePath("../PortraitHolder/Portrait")
 [node name="DiceFishingGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("22_gj1rf")
 portrait = NodePath("../PortraitHolder/Portrait")
+
+[node name="HauntedHouseGamePlug" type="Node" parent="."]
+script = ExtResource("23_fvqrk")
 
 [node name="SuitIcon" type="TextureRect" parent="."]
 visible = false
