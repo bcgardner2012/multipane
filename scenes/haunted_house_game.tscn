@@ -1,0 +1,1000 @@
+[gd_scene load_steps=87 format=3 uid="uid://ckwyvrlb618a2"]
+
+[ext_resource type="Script" uid="uid://iiniemdkekvj" path="res://scripts/haunted_house_game_pane.gd" id="1_71wfo"]
+[ext_resource type="Script" uid="uid://dnr3cia2055n6" path="res://scripts/haunted_house_game_player.gd" id="1_cp21u"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_xbj4i"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_84aya"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_cp21u"]
+[ext_resource type="Texture2D" uid="uid://c4ykjl8cx3eso" path="res://assets/cards/halloween/h2.png" id="3_cp21u"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_jjbgq"]
+[ext_resource type="Texture2D" uid="uid://beodm8dxowg8h" path="res://assets/cards/halloween/h3.png" id="4_0ub1k"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="4_jqr1f"]
+[ext_resource type="Texture2D" uid="uid://dp1pbs8vctc26" path="res://assets/cards/halloween/back_purple.png" id="4_nj2lw"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="5_jqr1f"]
+[ext_resource type="Texture2D" uid="uid://ce0ru1voxnuuq" path="res://assets/cards/halloween/h4.png" id="5_tv8rf"]
+[ext_resource type="Texture2D" uid="uid://dahtb3xwqnc60" path="res://assets/cards/halloween/h5.png" id="6_i5dxx"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="6_jqr1f"]
+[ext_resource type="Texture2D" uid="uid://g28e4gcy4pmu" path="res://assets/cards/halloween/h6.png" id="7_nrk26"]
+[ext_resource type="Script" uid="uid://ds4qyeolmyv8n" path="res://scripts/gauge_slider.gd" id="7_r7bkl"]
+[ext_resource type="Texture2D" uid="uid://5paj0fjfasri" path="res://assets/heart.png" id="8_8qhsd"]
+[ext_resource type="Texture2D" uid="uid://cge4tiuj6270e" path="res://assets/cards/halloween/h7.png" id="8_pflk8"]
+[ext_resource type="Texture2D" uid="uid://bx4do5aq8wvb1" path="res://assets/cards/halloween/h8.png" id="9_b6y43"]
+[ext_resource type="Script" uid="uid://ejd2pitsqv7x" path="res://scripts/gauge_icon.gd" id="9_fe6cx"]
+[ext_resource type="Texture2D" uid="uid://co27wm3dnku43" path="res://assets/cards/halloween/h9.png" id="10_jxf68"]
+[ext_resource type="Texture2D" uid="uid://myp0200iy2ws" path="res://assets/lightning.png" id="10_s35dh"]
+[ext_resource type="Texture2D" uid="uid://demtkcgcng4ai" path="res://assets/mana.png" id="11_0a3ak"]
+[ext_resource type="Texture2D" uid="uid://dvq7o2rdtcs8t" path="res://assets/cards/halloween/h10.png" id="11_h15h3"]
+[ext_resource type="Texture2D" uid="uid://duh18pwm2qkbk" path="res://assets/cards/halloween/h11.png" id="12_ddhir"]
+[ext_resource type="Script" uid="uid://dpbedum2trnxl" path="res://scripts/gauge_label.gd" id="12_n83ya"]
+[ext_resource type="Texture2D" uid="uid://do0hae4al6bi1" path="res://assets/cards/halloween/h12.png" id="13_e8o1y"]
+[ext_resource type="Texture2D" uid="uid://bxlg54vlfi58w" path="res://assets/cards/halloween/h13.png" id="14_iyoll"]
+[ext_resource type="Texture2D" uid="uid://t2mbg3fucvha" path="res://assets/cards/halloween/h1.png" id="15_o1chy"]
+[ext_resource type="Texture2D" uid="uid://8oih2ilvyua0" path="res://assets/cards/halloween/d2.png" id="16_yokvc"]
+[ext_resource type="Texture2D" uid="uid://bq88kdiucj0c4" path="res://assets/cards/halloween/d3.png" id="17_71wfo"]
+[ext_resource type="Texture2D" uid="uid://cumokdidhkugi" path="res://assets/cards/halloween/d4.png" id="18_k4tj0"]
+[ext_resource type="Texture2D" uid="uid://d3wfmij6vyxro" path="res://assets/cards/halloween/d5.png" id="19_lcqeu"]
+[ext_resource type="Texture2D" uid="uid://bmqs5a8j4ahrr" path="res://assets/cards/halloween/d6.png" id="20_ncqqy"]
+[ext_resource type="Texture2D" uid="uid://blyk6d17tfprv" path="res://assets/cards/halloween/d7.png" id="21_01c7a"]
+[ext_resource type="Texture2D" uid="uid://b5s1at8pjo22h" path="res://assets/cards/halloween/d8.png" id="22_qieym"]
+[ext_resource type="Texture2D" uid="uid://cky2qfojmt50m" path="res://assets/cards/halloween/d9.png" id="23_o2moy"]
+[ext_resource type="Texture2D" uid="uid://c4fpcab3gddcl" path="res://assets/cards/halloween/d10.png" id="24_66gp6"]
+[ext_resource type="Texture2D" uid="uid://bbmwc2yoqvbjs" path="res://assets/cards/halloween/d11.png" id="25_v5rdy"]
+[ext_resource type="Texture2D" uid="uid://cbdpl4bj3bkg4" path="res://assets/cards/halloween/d12.png" id="26_e2x2h"]
+[ext_resource type="Texture2D" uid="uid://ctwee87oqmomk" path="res://assets/cards/halloween/d13.png" id="27_xix2g"]
+[ext_resource type="Texture2D" uid="uid://dwc2tc1rek1l1" path="res://assets/cards/halloween/d1.png" id="28_88rfs"]
+[ext_resource type="Texture2D" uid="uid://cd4jk2r2bsxok" path="res://assets/cards/halloween/c2.png" id="29_cp21u"]
+[ext_resource type="Texture2D" uid="uid://cdipibm2ds3xj" path="res://assets/cards/halloween/c3.png" id="30_0ub1k"]
+[ext_resource type="Texture2D" uid="uid://cg4twuu2hjgre" path="res://assets/cards/halloween/c4.png" id="31_tv8rf"]
+[ext_resource type="Texture2D" uid="uid://ci3afgjp1jb8c" path="res://assets/cards/halloween/c5.png" id="32_i5dxx"]
+[ext_resource type="Texture2D" uid="uid://cu1y8llhbw5n0" path="res://assets/cards/halloween/c6.png" id="33_nrk26"]
+[ext_resource type="Texture2D" uid="uid://84ba2endv7we" path="res://assets/cards/halloween/c7.png" id="34_pflk8"]
+[ext_resource type="Texture2D" uid="uid://cobsky3sbpsi6" path="res://assets/cards/halloween/c8.png" id="35_b6y43"]
+[ext_resource type="Texture2D" uid="uid://bntalolc1evj4" path="res://assets/cards/halloween/c9.png" id="36_jxf68"]
+[ext_resource type="Texture2D" uid="uid://cutvdtmi865en" path="res://assets/cards/halloween/c10.png" id="37_h15h3"]
+[ext_resource type="Texture2D" uid="uid://cbuqbfuubctyt" path="res://assets/cards/halloween/c11.png" id="38_ddhir"]
+[ext_resource type="Texture2D" uid="uid://dv105ddqxstlp" path="res://assets/cards/halloween/c12.png" id="39_e8o1y"]
+[ext_resource type="Texture2D" uid="uid://dp81epn22rixp" path="res://assets/cards/halloween/c13.png" id="40_iyoll"]
+[ext_resource type="Texture2D" uid="uid://dgfp7mujbhesv" path="res://assets/cards/halloween/c1.png" id="41_o1chy"]
+[ext_resource type="Texture2D" uid="uid://d2g718l1vn28m" path="res://assets/cards/halloween/s2.png" id="42_yokvc"]
+[ext_resource type="Texture2D" uid="uid://dwk76q8dfq3bk" path="res://assets/cards/halloween/s3.png" id="43_71wfo"]
+[ext_resource type="Texture2D" uid="uid://c0xu2o0gvnbsg" path="res://assets/cards/halloween/s4.png" id="44_k4tj0"]
+[ext_resource type="Texture2D" uid="uid://8k6brd6253ix" path="res://assets/cards/halloween/s5.png" id="45_lcqeu"]
+[ext_resource type="Texture2D" uid="uid://xxo18n1ne05b" path="res://assets/cards/halloween/s6.png" id="46_ncqqy"]
+[ext_resource type="Texture2D" uid="uid://cwhavvbq8ly5p" path="res://assets/cards/halloween/s7.png" id="47_01c7a"]
+[ext_resource type="Texture2D" uid="uid://8joic6is5pfv" path="res://assets/cards/halloween/s8.png" id="48_qieym"]
+[ext_resource type="Texture2D" uid="uid://b1aljh7yc73lu" path="res://assets/cards/halloween/s9.png" id="49_o2moy"]
+[ext_resource type="Texture2D" uid="uid://dh1m38ue0iwmv" path="res://assets/cards/halloween/s10.png" id="50_66gp6"]
+[ext_resource type="Texture2D" uid="uid://xl5wprx1ph0b" path="res://assets/cards/halloween/s11.png" id="51_v5rdy"]
+[ext_resource type="Texture2D" uid="uid://c5mgvy2xghptb" path="res://assets/cards/halloween/s12.png" id="52_e2x2h"]
+[ext_resource type="Texture2D" uid="uid://duno05iwp408x" path="res://assets/cards/halloween/s13.png" id="53_xix2g"]
+[ext_resource type="Texture2D" uid="uid://dyspjte5y85u" path="res://assets/cards/halloween/s1.png" id="54_88rfs"]
+[ext_resource type="Texture2D" uid="uid://bjjoagvnbxpn6" path="res://assets/cards/halloween/halloween_joker.png" id="55_cp21u"]
+[ext_resource type="Script" uid="uid://c5ab2xen2c4ec" path="res://scripts/haunted_house_default_strategy.gd" id="56_0ub1k"]
+[ext_resource type="Script" uid="uid://dldty63h24y2u" path="res://scripts/haunted_house_deluxe_strategy.gd" id="57_nrk26"]
+[ext_resource type="Script" uid="uid://c6tg5pvfpl688" path="res://scripts/haunted_house_anger_curses_strategy.gd" id="58_iyoll"]
+[ext_resource type="Texture2D" uid="uid://b5du84ehm1i8u" path="res://assets/gear_icon.png" id="59_i5dxx"]
+[ext_resource type="Texture2D" uid="uid://f603gyb2noa1" path="res://assets/angry.png" id="67_iyoll"]
+[ext_resource type="Script" uid="uid://6sko2yxjmies" path="res://scripts/haunted_house_flavor_text.gd" id="70_tv8rf"]
+[ext_resource type="Texture2D" uid="uid://ddg72cm2tiky2" path="res://assets/haunted_house/candle.png" id="71_ddhir"]
+[ext_resource type="Script" uid="uid://cw7dt57io7n2l" path="res://scripts/haunted_house_items.gd" id="71_e8o1y"]
+[ext_resource type="Texture2D" uid="uid://s7jpr7nih1hi" path="res://assets/haunted_house/flashlight.png" id="72_e8o1y"]
+[ext_resource type="Script" uid="uid://blpxgqtm5b57a" path="res://scripts/haunted_house_game_settings.gd" id="72_pflk8"]
+[ext_resource type="Texture2D" uid="uid://c2mum1ph7no25" path="res://assets/haunted_house/spray.png" id="73_iyoll"]
+[ext_resource type="Texture2D" uid="uid://dohjm6c835ivy" path="res://assets/pskull.png" id="73_yokvc"]
+[ext_resource type="Texture2D" uid="uid://d27e6uhbtqexe" path="res://assets/haunted_house/water.png" id="74_o1chy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jqr1f"]
+font_size = 24
+font_color = Color(1, 0.51996845, 0.22643384, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2nqbp"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i5dxx"]
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ub1k"]
+font_size = 24
+
+[node name="HauntedHouseGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_71wfo")
+
+[node name="HauntedHouseGamePlayer" type="Node" parent="." node_paths=PackedStringArray("health_gauge", "draw_node", "deck_count_label", "settings", "items_node")]
+script = ExtResource("1_cp21u")
+health_gauge = NodePath("../PlayArea/HPGaugeSlider")
+draw_node = NodePath("../PlayArea/Draw")
+deck_count_label = NodePath("../PlayArea/Deck/CountLabel")
+settings = NodePath("../Settings")
+items_node = NodePath("../PlayArea/Items")
+
+[node name="CardDatas" type="Node" parent="HauntedHouseGamePlayer"]
+
+[node name="H2" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 2
+texture = ExtResource("3_cp21u")
+
+[node name="H3" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 3
+texture = ExtResource("4_0ub1k")
+
+[node name="H4" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 4
+texture = ExtResource("5_tv8rf")
+
+[node name="H5" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 5
+texture = ExtResource("6_i5dxx")
+
+[node name="H6" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 6
+texture = ExtResource("7_nrk26")
+
+[node name="H7" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 7
+texture = ExtResource("8_pflk8")
+
+[node name="H8" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 8
+texture = ExtResource("9_b6y43")
+
+[node name="H9" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 9
+texture = ExtResource("10_jxf68")
+
+[node name="H10" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 10
+texture = ExtResource("11_h15h3")
+
+[node name="HJ" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 11
+texture = ExtResource("12_ddhir")
+
+[node name="HQ" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 12
+texture = ExtResource("13_e8o1y")
+
+[node name="HK" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 13
+texture = ExtResource("14_iyoll")
+
+[node name="HA" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+rank = 1
+texture = ExtResource("15_o1chy")
+
+[node name="D2" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 2
+texture = ExtResource("16_yokvc")
+
+[node name="D3" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 3
+texture = ExtResource("17_71wfo")
+
+[node name="D4" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 4
+texture = ExtResource("18_k4tj0")
+
+[node name="D5" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 5
+texture = ExtResource("19_lcqeu")
+
+[node name="D6" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 6
+texture = ExtResource("20_ncqqy")
+
+[node name="D7" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 7
+texture = ExtResource("21_01c7a")
+
+[node name="D8" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 8
+texture = ExtResource("22_qieym")
+
+[node name="D9" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 9
+texture = ExtResource("23_o2moy")
+
+[node name="D10" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 10
+texture = ExtResource("24_66gp6")
+
+[node name="DJ" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 11
+texture = ExtResource("25_v5rdy")
+
+[node name="DQ" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 12
+texture = ExtResource("26_e2x2h")
+
+[node name="DK" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 13
+texture = ExtResource("27_xix2g")
+
+[node name="DA" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 1
+rank = 1
+texture = ExtResource("28_88rfs")
+
+[node name="C2" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 2
+texture = ExtResource("29_cp21u")
+
+[node name="C3" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 3
+texture = ExtResource("30_0ub1k")
+
+[node name="C4" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 4
+texture = ExtResource("31_tv8rf")
+
+[node name="C5" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 5
+texture = ExtResource("32_i5dxx")
+
+[node name="C6" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 6
+texture = ExtResource("33_nrk26")
+
+[node name="C7" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 7
+texture = ExtResource("34_pflk8")
+
+[node name="C8" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 8
+texture = ExtResource("35_b6y43")
+
+[node name="C9" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 9
+texture = ExtResource("36_jxf68")
+
+[node name="C10" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 10
+texture = ExtResource("37_h15h3")
+
+[node name="CJ" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 11
+texture = ExtResource("38_ddhir")
+
+[node name="CQ" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 12
+texture = ExtResource("39_e8o1y")
+
+[node name="CK" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 13
+texture = ExtResource("40_iyoll")
+
+[node name="CA" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 2
+rank = 1
+texture = ExtResource("41_o1chy")
+
+[node name="S2" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 2
+texture = ExtResource("42_yokvc")
+
+[node name="S3" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 3
+texture = ExtResource("43_71wfo")
+
+[node name="S4" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 4
+texture = ExtResource("44_k4tj0")
+
+[node name="S5" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 5
+texture = ExtResource("45_lcqeu")
+
+[node name="S6" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 6
+texture = ExtResource("46_ncqqy")
+
+[node name="S7" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 7
+texture = ExtResource("47_01c7a")
+
+[node name="S8" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 8
+texture = ExtResource("48_qieym")
+
+[node name="S9" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 9
+texture = ExtResource("49_o2moy")
+
+[node name="S10" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 10
+texture = ExtResource("50_66gp6")
+
+[node name="SJ" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 11
+texture = ExtResource("51_v5rdy")
+
+[node name="SQ" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 12
+texture = ExtResource("52_e2x2h")
+
+[node name="SK" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 13
+texture = ExtResource("53_xix2g")
+
+[node name="SA" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = 1
+texture = ExtResource("54_88rfs")
+
+[node name="Joker" type="Node" parent="HauntedHouseGamePlayer/CardDatas"]
+script = ExtResource("2_cp21u")
+suit = 3
+rank = -99
+texture = ExtResource("55_cp21u")
+
+[node name="Strategies" type="Node" parent="HauntedHouseGamePlayer"]
+
+[node name="DefaultStrategy" type="Node" parent="HauntedHouseGamePlayer/Strategies" node_paths=PackedStringArray("health_gauge")]
+script = ExtResource("56_0ub1k")
+health_gauge = NodePath("../../../PlayArea/HPGaugeSlider")
+
+[node name="DeluxeStrategy" type="Node" parent="HauntedHouseGamePlayer/Strategies" node_paths=PackedStringArray("items_node", "health_gauge")]
+script = ExtResource("57_nrk26")
+items_node = NodePath("../../../PlayArea/Items")
+health_gauge = NodePath("../../../PlayArea/HPGaugeSlider")
+
+[node name="AncStrategy" type="Node" parent="HauntedHouseGamePlayer/Strategies" node_paths=PackedStringArray("anger_gauge_slider", "curse_gauge_slider", "items_node", "respite_buttons", "queen_buttons", "health_gauge")]
+script = ExtResource("58_iyoll")
+anger_gauge_slider = NodePath("../../../PlayArea/AngerGaugeSlider")
+curse_gauge_slider = NodePath("../../../PlayArea/CurseGaugeSlider")
+items_node = NodePath("../../../PlayArea/Items")
+respite_buttons = NodePath("../../../PlayArea/Buttons/RespiteButtons")
+queen_buttons = NodePath("../../../PlayArea/Buttons/QueenButtons")
+health_gauge = NodePath("../../../PlayArea/HPGaugeSlider")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_xbj4i")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_84aya")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="SettingsTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("59_i5dxx")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_jjbgq")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="Deck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -62.0
+offset_right = -6.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_nj2lw")
+stretch_mode = 4
+script = ExtResource("5_jqr1f")
+has_post_start_functionality = true
+
+[node name="CountLabel" type="Label" parent="PlayArea/Deck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "53"
+label_settings = SubResource("LabelSettings_jqr1f")
+horizontal_alignment = 1
+
+[node name="Draw" parent="PlayArea" instance=ExtResource("6_jqr1f")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -62.0
+offset_right = 100.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_nj2lw")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="HPGaugeSlider" type="ColorRect" parent="PlayArea" node_paths=PackedStringArray("gaugeFill")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.416
+anchor_top = 0.615
+anchor_right = 0.58900005
+anchor_bottom = 0.652
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08468992, 0.08468992, 0.08468992, 1)
+script = ExtResource("7_r7bkl")
+gaugeFill = NodePath("GaugeFill")
+maxValue = 25
+
+[node name="GaugeFill" type="ColorRect" parent="PlayArea/HPGaugeSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+mouse_filter = 2
+color = Color(0.7652293, 0, 0.08521909, 1)
+
+[node name="GaugeIcon" type="TextureRect" parent="PlayArea/HPGaugeSlider" node_paths=PackedStringArray("gaugeFill")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -30.00003
+offset_right = 97.0
+offset_bottom = 97.99997
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_8qhsd")
+script = ExtResource("9_fe6cx")
+healthTexture = ExtResource("8_8qhsd")
+staminaTexture = ExtResource("10_s35dh")
+manaTexture = ExtResource("11_0a3ak")
+healthColor = Color(0.7647059, 0, 0.08627451, 1)
+staminaColor = Color(1, 0.88235295, 0, 1)
+manaColor = Color(0, 0, 0.6784314, 1)
+gaugeFill = NodePath("../GaugeFill")
+
+[node name="Label" type="Label" parent="PlayArea/HPGaugeSlider/GaugeIcon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -11.5
+offset_right = 21.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "25/25"
+label_settings = SubResource("LabelSettings_2nqbp")
+script = ExtResource("12_n83ya")
+maxValue = 25
+
+[node name="AngerGaugeSlider" type="ColorRect" parent="PlayArea" node_paths=PackedStringArray("gaugeFill")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.416
+anchor_top = 0.615
+anchor_right = 0.58900005
+anchor_bottom = 0.652
+offset_left = 3.0517578e-05
+offset_top = 62.200012
+offset_bottom = 62.200012
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08468992, 0.08468992, 0.08468992, 1)
+script = ExtResource("7_r7bkl")
+gaugeFill = NodePath("GaugeFill")
+maxValue = 100
+
+[node name="GaugeFill" type="ColorRect" parent="PlayArea/AngerGaugeSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+mouse_filter = 2
+color = Color(0.99999994, 0.37807965, 0.18017477, 1)
+
+[node name="GaugeIcon" type="TextureRect" parent="PlayArea/AngerGaugeSlider" node_paths=PackedStringArray("gaugeFill")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -30.00003
+offset_right = 97.0
+offset_bottom = 97.99997
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("67_iyoll")
+script = ExtResource("9_fe6cx")
+healthTexture = ExtResource("67_iyoll")
+staminaTexture = ExtResource("10_s35dh")
+manaTexture = ExtResource("11_0a3ak")
+healthColor = Color(0.7647059, 0, 0.08627451, 1)
+staminaColor = Color(1, 0.88235295, 0, 1)
+manaColor = Color(0, 0, 0.6784314, 1)
+gaugeFill = NodePath("../GaugeFill")
+
+[node name="Label" type="Label" parent="PlayArea/AngerGaugeSlider/GaugeIcon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -11.5
+offset_right = 21.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0/100"
+label_settings = SubResource("LabelSettings_2nqbp")
+script = ExtResource("12_n83ya")
+maxValue = 100
+
+[node name="CurseGaugeSlider" type="ColorRect" parent="PlayArea" node_paths=PackedStringArray("gaugeFill")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.416
+anchor_top = 0.615
+anchor_right = 0.58900005
+anchor_bottom = 0.652
+offset_left = 3.0517578e-05
+offset_top = 129.20001
+offset_bottom = 129.20001
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08468992, 0.08468992, 0.08468992, 1)
+script = ExtResource("7_r7bkl")
+gaugeFill = NodePath("GaugeFill")
+maxValue = 5
+
+[node name="GaugeFill" type="ColorRect" parent="PlayArea/CurseGaugeSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+mouse_filter = 2
+color = Color(0.42836824, 0.0004059829, 0.5045305, 1)
+
+[node name="GaugeIcon" type="TextureRect" parent="PlayArea/CurseGaugeSlider" node_paths=PackedStringArray("gaugeFill")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -30.00003
+offset_right = 97.0
+offset_bottom = 97.99997
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("73_yokvc")
+script = ExtResource("9_fe6cx")
+healthTexture = ExtResource("73_yokvc")
+staminaTexture = ExtResource("10_s35dh")
+manaTexture = ExtResource("11_0a3ak")
+healthColor = Color(0.7647059, 0, 0.08627451, 1)
+staminaColor = Color(1, 0.88235295, 0, 1)
+manaColor = Color(0, 0, 0.6784314, 1)
+gaugeFill = NodePath("../GaugeFill")
+
+[node name="Label" type="Label" parent="PlayArea/CurseGaugeSlider/GaugeIcon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -11.5
+offset_right = 21.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0/5"
+label_settings = SubResource("LabelSettings_2nqbp")
+script = ExtResource("12_n83ya")
+maxValue = 5
+
+[node name="Items" type="HBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = 65.0
+offset_right = 99.0
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("71_e8o1y")
+
+[node name="Candle" type="TextureRect" parent="PlayArea/Items"]
+visible = false
+layout_mode = 2
+texture = ExtResource("71_ddhir")
+expand_mode = 2
+
+[node name="Flashlight" type="TextureRect" parent="PlayArea/Items"]
+visible = false
+layout_mode = 2
+texture = ExtResource("72_e8o1y")
+expand_mode = 2
+
+[node name="Spray" type="TextureRect" parent="PlayArea/Items"]
+visible = false
+layout_mode = 2
+texture = ExtResource("73_iyoll")
+expand_mode = 2
+
+[node name="Holy Water" type="TextureRect" parent="PlayArea/Items"]
+visible = false
+layout_mode = 2
+texture = ExtResource("74_o1chy")
+expand_mode = 2
+
+[node name="Buttons" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 115.0
+offset_top = -57.0
+offset_right = 233.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RespiteButtons" type="Control" parent="PlayArea/Buttons"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RestButton" type="Button" parent="PlayArea/Buttons/RespiteButtons"]
+layout_mode = 0
+offset_right = 162.0
+offset_bottom = 31.0
+text = "Rest (+2 LIFE)"
+
+[node name="MeditateButton" type="Button" parent="PlayArea/Buttons/RespiteButtons"]
+layout_mode = 0
+offset_top = 36.0
+offset_right = 110.0
+offset_bottom = 67.0
+text = "Meditate (-1 CURSE)"
+
+[node name="PleadButton" type="Button" parent="PlayArea/Buttons/RespiteButtons"]
+layout_mode = 0
+offset_top = 71.0
+offset_right = 160.0
+offset_bottom = 102.0
+text = "Plead (-20 ANGER)"
+
+[node name="SearchButton" type="Button" parent="PlayArea/Buttons/RespiteButtons"]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 159.0
+offset_bottom = 137.0
+text = "Search"
+
+[node name="QueenButtons" type="Control" parent="PlayArea/Buttons"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealButton" type="Button" parent="PlayArea/Buttons/QueenButtons"]
+layout_mode = 0
+offset_right = 207.0
+offset_bottom = 31.0
+text = "Heal (+2 LIFE)"
+
+[node name="CalmButton" type="Button" parent="PlayArea/Buttons/QueenButtons"]
+layout_mode = 0
+offset_top = 35.0
+offset_right = 209.0
+offset_bottom = 66.0
+text = "Calm Me (-2 CURSE)"
+
+[node name="SoothButton" type="Button" parent="PlayArea/Buttons/QueenButtons"]
+layout_mode = 0
+offset_top = 70.0
+offset_right = 159.0
+offset_bottom = 101.0
+text = "Sooth Ghosts (-20 ANGER)"
+
+[node name="GiftButton" type="Button" parent="PlayArea/Buttons/QueenButtons"]
+layout_mode = 0
+offset_top = 105.0
+offset_right = 207.0
+offset_bottom = 136.0
+text = "Gift (lose all items, heal)"
+
+[node name="Notes" type="TextEdit" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click the deck to start.
+- The goal is to collect all the aces.
+- You have 25 health.
+- 2s are empty rooms. By default,
+they do nothing, just a break from
+the horrors of the house.*
+- 3-10 are minor horrors, dealing 1
+damage unless a check is passed.
+By default, the check is rolling 2
+dice and seeing they >= the rank.
+- Jacks are ghosts dealing 2 damage.
+- Queens are benevolent spirits that
+heal you 2 HP.
+- Kings are angry ghosts dealing 3
+damage.
+- The Joker is an eldritch horror or
+serial killer, attacks you for 5 dmg.
+- Game over if you lose all health.
+- * Multiple versions of this game
+exist, see settings for configurable
+details.
+- Dice rolls will be performed in the
+background, results communicated
+through text."
+placeholder_text = "Add any notes here..."
+script = ExtResource("4_jqr1f")
+
+[node name="Settings" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.005
+anchor_top = 0.005
+anchor_right = 0.18
+anchor_bottom = 0.99
+script = ExtResource("72_pflk8")
+
+[node name="GameModeSelector" type="HBoxContainer" parent="Settings"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Settings/GameModeSelector"]
+layout_mode = 2
+text = "Game Mode"
+
+[node name="OptionButton" type="OptionButton" parent="Settings/GameModeSelector"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "Default"
+popup/item_0/id = 0
+popup/item_1/text = "Deluxe"
+popup/item_1/id = 1
+popup/item_2/text = "Anger&Curses"
+popup/item_2/id = 2
+
+[node name="GameModeDescription" type="Label" parent="Settings"]
+layout_mode = 0
+offset_top = 56.4
+offset_right = 40.0
+offset_bottom = 79.4
+text = "Default: As described in the instructions
+
+Deluxe: adds items found in safe rooms (2s),
+10s are random events, Jacks are traps, all
+3-9s have a 50% chance of dealing 1 damage
+
+Anger&Curses: deluxe, plus 2 more gauges:
+Curse and Anger. Items you find can be 
+cursed causing a different effect and giving
+1 curse. Anger increases by the rank of each
+card drawn. If either gauge maxes out, game
+over. Queens and safe rooms provide a way
+to lower them. 3s and 6s are cursing parrots,
+they have a 50% chance of adding 1 curse."
+label_settings = SubResource("LabelSettings_i5dxx")
+
+[node name="FlavorText" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -24.5
+offset_top = 7.0
+offset_right = 24.5
+offset_bottom = 41.0
+grow_horizontal = 2
+text = "Click the deck to start the game"
+label_settings = SubResource("LabelSettings_0ub1k")
+horizontal_alignment = 1
+script = ExtResource("70_tv8rf")
+
+[connection signal="show_text" from="HauntedHouseGamePlayer" to="FlavorText" method="_on_show_text"]
+[connection signal="show_text" from="HauntedHouseGamePlayer/Strategies/DefaultStrategy" to="FlavorText" method="_on_show_text"]
+[connection signal="add_item" from="HauntedHouseGamePlayer/Strategies/DeluxeStrategy" to="HauntedHouseGamePlayer" method="_on_add_item"]
+[connection signal="show_text" from="HauntedHouseGamePlayer/Strategies/DeluxeStrategy" to="FlavorText" method="_on_show_text"]
+[connection signal="add_item" from="HauntedHouseGamePlayer/Strategies/AncStrategy" to="HauntedHouseGamePlayer" method="_on_add_item"]
+[connection signal="show_text" from="HauntedHouseGamePlayer/Strategies/AncStrategy" to="FlavorText" method="_on_show_text"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/SettingsTool" to="Settings" method="_on_settings_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="deck_clicked" from="PlayArea/Deck" to="HauntedHouseGamePlayer" method="_on_deck_deck_clicked"]
+[connection signal="gui_input" from="PlayArea/Deck" to="PlayArea/Deck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/Deck" to="HauntedHouseGamePlayer" method="_on_deck_start_game"]
+[connection signal="gui_input" from="PlayArea/HPGaugeSlider" to="PlayArea/HPGaugeSlider" method="_on_gui_input"]
+[connection signal="gui_input" from="PlayArea/HPGaugeSlider" to="PlayArea/HPGaugeSlider/GaugeIcon/Label" method="_on_gauge_slider_gui_input"]
+[connection signal="gui_input" from="PlayArea/HPGaugeSlider/GaugeIcon" to="PlayArea/HPGaugeSlider/GaugeIcon" method="_on_gui_input"]
+[connection signal="gui_input" from="PlayArea/AngerGaugeSlider" to="PlayArea/AngerGaugeSlider" method="_on_gui_input"]
+[connection signal="gui_input" from="PlayArea/AngerGaugeSlider" to="PlayArea/AngerGaugeSlider/GaugeIcon/Label" method="_on_gauge_slider_gui_input"]
+[connection signal="gui_input" from="PlayArea/AngerGaugeSlider/GaugeIcon" to="PlayArea/AngerGaugeSlider/GaugeIcon" method="_on_gui_input"]
+[connection signal="gui_input" from="PlayArea/CurseGaugeSlider" to="PlayArea/CurseGaugeSlider" method="_on_gui_input"]
+[connection signal="gui_input" from="PlayArea/CurseGaugeSlider" to="PlayArea/CurseGaugeSlider/GaugeIcon/Label" method="_on_gauge_slider_gui_input"]
+[connection signal="gui_input" from="PlayArea/CurseGaugeSlider/GaugeIcon" to="PlayArea/CurseGaugeSlider/GaugeIcon" method="_on_gui_input"]
+[connection signal="pressed" from="PlayArea/Buttons/RespiteButtons/RestButton" to="HauntedHouseGamePlayer/Strategies/AncStrategy" method="_on_rest_button_pressed"]
+[connection signal="pressed" from="PlayArea/Buttons/RespiteButtons/MeditateButton" to="HauntedHouseGamePlayer/Strategies/AncStrategy" method="_on_meditate_button_pressed"]
+[connection signal="pressed" from="PlayArea/Buttons/RespiteButtons/PleadButton" to="HauntedHouseGamePlayer/Strategies/AncStrategy" method="_on_plead_button_pressed"]
+[connection signal="pressed" from="PlayArea/Buttons/RespiteButtons/SearchButton" to="HauntedHouseGamePlayer/Strategies/AncStrategy" method="_on_search_button_pressed"]
+[connection signal="pressed" from="PlayArea/Buttons/QueenButtons/HealButton" to="HauntedHouseGamePlayer/Strategies/AncStrategy" method="_on_heal_button_pressed"]
+[connection signal="pressed" from="PlayArea/Buttons/QueenButtons/CalmButton" to="HauntedHouseGamePlayer/Strategies/AncStrategy" method="_on_calm_button_pressed"]
+[connection signal="pressed" from="PlayArea/Buttons/QueenButtons/SoothButton" to="HauntedHouseGamePlayer/Strategies/AncStrategy" method="_on_sooth_button_pressed"]
+[connection signal="pressed" from="PlayArea/Buttons/QueenButtons/GiftButton" to="HauntedHouseGamePlayer/Strategies/AncStrategy" method="_on_gift_button_pressed"]
+[connection signal="item_selected" from="Settings/GameModeSelector/OptionButton" to="HauntedHouseGamePlayer" method="_on_game_mode_selected"]

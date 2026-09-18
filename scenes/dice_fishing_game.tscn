@@ -1,0 +1,569 @@
+[gd_scene load_steps=36 format=3 uid="uid://bdlyjrhjl1my6"]
+
+[ext_resource type="Script" uid="uid://eeprifjgnrv6" path="res://scripts/dice_fishing_game_player.gd" id="1_eoy4c"]
+[ext_resource type="Script" uid="uid://cngts2qebfu1h" path="res://scripts/dice_fishing_game_pane.gd" id="1_l5ylr"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_t0b0i"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_drrvx"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_ba8kj"]
+[ext_resource type="PackedScene" uid="uid://dyt1lt41riuag" path="res://scenes/nudgable_die.tscn" id="4_ba8kj"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="4_drrvx"]
+[ext_resource type="Texture2D" uid="uid://dpjupltgse3px" path="res://assets/fishing/board/dice_fishing_board.jpg" id="5_7pnot"]
+[ext_resource type="Texture2D" uid="uid://bpqn45dwtkqtq" path="res://assets/fishing/board/sm_mackerel.png" id="6_bdo2l"]
+[ext_resource type="Texture2D" uid="uid://bhcdganxemebv" path="res://assets/fishing/board/big_mackerel.png" id="7_i6ey5"]
+[ext_resource type="Texture2D" uid="uid://3n27lfx2orhj" path="res://assets/fishing/board/sm_grouper.png" id="8_kqfpr"]
+[ext_resource type="Texture2D" uid="uid://dd58ebxac57p6" path="res://assets/fishing/board/big_grouper.png" id="9_e6pe6"]
+[ext_resource type="Texture2D" uid="uid://bt7jrukgk3bf8" path="res://assets/fishing/board/sm_red.png" id="10_0qo7l"]
+[ext_resource type="Texture2D" uid="uid://bkpw3p4g7rorj" path="res://assets/fishing/board/big_red.png" id="11_m4i5w"]
+[ext_resource type="Texture2D" uid="uid://3v3gu3gp0toj" path="res://assets/fishing/board/sm_tuna.png" id="12_g7wae"]
+[ext_resource type="Texture2D" uid="uid://x8fbgh5m3cgp" path="res://assets/fishing/board/big_tuna.png" id="13_ibvj3"]
+[ext_resource type="Texture2D" uid="uid://dvxhuwdgs8a8i" path="res://assets/fishing/board/sm_mahi.png" id="14_fpa5s"]
+[ext_resource type="Texture2D" uid="uid://c4tadgrhw6ej4" path="res://assets/fishing/board/big_mahi.png" id="15_gvs3p"]
+[ext_resource type="Texture2D" uid="uid://bdou6nmmjxo8j" path="res://assets/fishing/board/sm_marlin.png" id="16_nr8gs"]
+[ext_resource type="Texture2D" uid="uid://bw8cph0rlirr5" path="res://assets/fishing/board/big_marlin.png" id="17_0f26p"]
+[ext_resource type="Texture2D" uid="uid://b67olick4u67c" path="res://assets/fishing/board/awful_cast0.png" id="18_g7wae"]
+[ext_resource type="Script" uid="uid://dljxriffti3sg" path="res://scripts/dice_fishing_triple_collider.gd" id="18_jm2tw"]
+[ext_resource type="Script" uid="uid://bnpto23wfqh4l" path="res://scripts/dice_fishing_dice.gd" id="19_8xgy6"]
+[ext_resource type="Texture2D" uid="uid://b1gw2e2c7o7gp" path="res://assets/fishing/board/nudge0.png" id="19_ibvj3"]
+[ext_resource type="Script" uid="uid://p0s3ydfpwnuv" path="res://scripts/textured_counter.gd" id="19_nr8gs"]
+[ext_resource type="Texture2D" uid="uid://rd45pgk6eljd" path="res://assets/fishing/board/awful_cast1.jpg" id="20_nr8gs"]
+[ext_resource type="Texture2D" uid="uid://bgcp6rim5me37" path="res://assets/fishing/board/awful_cast2.jpg" id="21_0f26p"]
+[ext_resource type="Texture2D" uid="uid://fi182jbds1s6" path="res://assets/fishing/board/awful_cast3.jpg" id="22_wud1k"]
+[ext_resource type="Texture2D" uid="uid://c0xlxf0ilvbnk" path="res://assets/fishing/board/nudge1.png" id="25_eoy4c"]
+[ext_resource type="Texture2D" uid="uid://cyp3spdkaijo6" path="res://assets/fishing/board/nudge2.png" id="26_jm2tw"]
+[ext_resource type="Texture2D" uid="uid://derbm1ynu35bf" path="res://assets/fishing/board/nudge3.png" id="27_8xgy6"]
+[ext_resource type="Texture2D" uid="uid://c0gefdyk4dnu7" path="res://assets/fishing/board/nudge4.png" id="28_100dk"]
+[ext_resource type="Script" uid="uid://c7o60bgik2b8" path="res://scripts/dice_fishing_warnings.gd" id="32_100dk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8xgy6"]
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_100dk"]
+font_size = 24
+font_color = Color(0, 1, 0, 1)
+
+[node name="DiceFishingGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l5ylr")
+
+[node name="DiceFishingGamePlayer" type="Node" parent="." node_paths=PackedStringArray("dice_node", "awful_casts", "nudges", "hole1", "hole2", "hole3", "hole4", "hole5", "hole6")]
+script = ExtResource("1_eoy4c")
+dice_node = NodePath("../PlayArea/Dice")
+awful_casts = NodePath("../PlayArea/AwfulCasts")
+nudges = NodePath("../PlayArea/Nudges")
+hole1 = [NodePath("../PlayArea/Board/Clickables/FishCollider"), NodePath("../PlayArea/Board/Clickables/FishCollider2")]
+hole2 = [NodePath("../PlayArea/Board/Clickables/FishCollider3"), NodePath("../PlayArea/Board/Clickables/FishCollider4")]
+hole3 = [NodePath("../PlayArea/Board/Clickables/FishCollider5"), NodePath("../PlayArea/Board/Clickables/FishCollider6")]
+hole4 = [NodePath("../PlayArea/Board/Clickables/FishCollider7"), NodePath("../PlayArea/Board/Clickables/FishCollider8")]
+hole5 = [NodePath("../PlayArea/Board/Clickables/FishCollider9"), NodePath("../PlayArea/Board/Clickables/FishCollider10")]
+hole6 = [NodePath("../PlayArea/Board/Clickables/FishCollider11"), NodePath("../PlayArea/Board/Clickables/FishCollider12")]
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_t0b0i")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_drrvx")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_ba8kj")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Board" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_7pnot")
+
+[node name="mackerel1" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bdo2l")
+
+[node name="mackerel2" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_i6ey5")
+
+[node name="grouper1" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_kqfpr")
+
+[node name="grouper2" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_e6pe6")
+
+[node name="snapper1" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_0qo7l")
+
+[node name="snapper2" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_m4i5w")
+
+[node name="tuna1" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_g7wae")
+
+[node name="tuna2" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_ibvj3")
+
+[node name="mahi1" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_fpa5s")
+
+[node name="mahi2" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_gvs3p")
+
+[node name="marlin1" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_nr8gs")
+
+[node name="marlin2" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_0f26p")
+
+[node name="Clickables" type="Control" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FishCollider" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.14
+anchor_right = 0.21800001
+anchor_bottom = 0.22000001
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../mackerel1")
+
+[node name="FishCollider2" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.055000003
+anchor_top = 0.28300002
+anchor_right = 0.254
+anchor_bottom = 0.34300002
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../mackerel2")
+is_big = true
+
+[node name="FishCollider3" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.432
+anchor_top = 0.156
+anchor_right = 0.546
+anchor_bottom = 0.216
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../grouper1")
+hole_number = 1
+
+[node name="FishCollider4" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.4
+anchor_top = 0.28300002
+anchor_right = 0.57100004
+anchor_bottom = 0.35500002
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../grouper2")
+hole_number = 1
+is_big = true
+
+[node name="FishCollider5" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.79700005
+anchor_top = 0.156
+anchor_right = 0.89500004
+anchor_bottom = 0.22000001
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../snapper1")
+hole_number = 2
+
+[node name="FishCollider6" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.768
+anchor_top = 0.28100002
+anchor_right = 0.93100005
+anchor_bottom = 0.35300002
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../snapper2")
+hole_number = 2
+is_big = true
+
+[node name="FishCollider7" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.091000006
+anchor_top = 0.65000004
+anchor_right = 0.20500001
+anchor_bottom = 0.711
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../tuna1")
+hole_number = 3
+
+[node name="FishCollider8" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.040000003
+anchor_top = 0.772
+anchor_right = 0.24000001
+anchor_bottom = 0.878
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../tuna2")
+hole_number = 3
+is_big = true
+
+[node name="FishCollider9" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.432
+anchor_top = 0.65500003
+anchor_right = 0.558
+anchor_bottom = 0.72700006
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../mahi1")
+hole_number = 4
+
+[node name="FishCollider10" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.39100003
+anchor_top = 0.78000003
+anchor_right = 0.57600003
+anchor_bottom = 0.85600007
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../mahi2")
+hole_number = 4
+is_big = true
+
+[node name="FishCollider11" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.77300006
+anchor_top = 0.65300006
+anchor_right = 0.90300006
+anchor_bottom = 0.72300005
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../marlin1")
+hole_number = 5
+
+[node name="FishCollider12" type="Control" parent="PlayArea/Board/Clickables" node_paths=PackedStringArray("textureRect")]
+layout_mode = 1
+anchor_left = 0.73800004
+anchor_top = 0.77000004
+anchor_right = 0.94400007
+anchor_bottom = 0.89900005
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_jm2tw")
+textureRect = NodePath("../../marlin2")
+hole_number = 5
+is_big = true
+
+[node name="Dice" type="HBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -469.0
+offset_top = -52.0
+offset_right = -341.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+script = ExtResource("19_8xgy6")
+
+[node name="NudgableDie" parent="PlayArea/Dice" instance=ExtResource("4_ba8kj")]
+layout_mode = 2
+
+[node name="NudgableDie2" parent="PlayArea/Dice" instance=ExtResource("4_ba8kj")]
+layout_mode = 2
+index = 1
+
+[node name="NudgableDie3" parent="PlayArea/Dice" instance=ExtResource("4_ba8kj")]
+layout_mode = 2
+index = 2
+
+[node name="AwfulCasts" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 346.0
+offset_top = -191.0
+offset_right = 505.0
+offset_bottom = -118.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_g7wae")
+script = ExtResource("19_nr8gs")
+textures = Array[Texture2D]([ExtResource("18_g7wae"), ExtResource("20_nr8gs"), ExtResource("21_0f26p"), ExtResource("22_wud1k")])
+
+[node name="Nudges" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 346.0
+offset_top = -108.0
+offset_right = 548.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_ibvj3")
+script = ExtResource("19_nr8gs")
+textures = Array[Texture2D]([ExtResource("19_ibvj3"), ExtResource("25_eoy4c"), ExtResource("26_jm2tw"), ExtResource("27_8xgy6"), ExtResource("28_100dk")])
+
+[node name="CastButton" type="Button" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.0
+offset_top = -100.0
+offset_right = -381.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Cast!"
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click a die to start
+- The goal is to catch all of the fish
+by rolling doubles and a different
+third number. The different number
+is the fish you catch.
+- Rolling triples allows you to pick
+any fish you want.
+- The game ends if you have 4 awful
+casts, where you don't roll a double
+or a triple.
+- You get 3 lucky nudges, allowing
+you to add or subtract 1 from any
+die."
+placeholder_text = "Add any notes here..."
+script = ExtResource("4_drrvx")
+
+[node name="Warnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("32_100dk")
+
+[node name="UnusedTripleError" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -200.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "You rolled a triple, select a fish on the board."
+label_settings = SubResource("LabelSettings_8xgy6")
+horizontal_alignment = 1
+
+[node name="GameOver" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -200.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "Your luck's run out, time to pack it up! Game over!"
+label_settings = SubResource("LabelSettings_8xgy6")
+horizontal_alignment = 1
+
+[node name="GameWon" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -200.0
+offset_right = 207.0
+offset_bottom = 34.0
+text = "What a streak! You caught all the fish!"
+label_settings = SubResource("LabelSettings_100dk")
+horizontal_alignment = 1
+
+[connection signal="disable_nudging" from="DiceFishingGamePlayer" to="PlayArea/Dice/NudgableDie" method="_on_disable_nudging"]
+[connection signal="disable_nudging" from="DiceFishingGamePlayer" to="PlayArea/Dice/NudgableDie2" method="_on_disable_nudging"]
+[connection signal="disable_nudging" from="DiceFishingGamePlayer" to="PlayArea/Dice/NudgableDie3" method="_on_disable_nudging"]
+[connection signal="game_over" from="DiceFishingGamePlayer" to="Warnings" method="_on_dice_fishing_game_player_game_over"]
+[connection signal="game_won" from="DiceFishingGamePlayer" to="Warnings" method="_on_dice_fishing_game_player_game_won"]
+[connection signal="unused_triple_error" from="DiceFishingGamePlayer" to="Warnings" method="_on_dice_fishing_game_player_unused_triple_error"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider" to="PlayArea/Board/Clickables/FishCollider" method="_on_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider2" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider2" to="PlayArea/Board/Clickables/FishCollider2" method="_on_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider3" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider3" to="PlayArea/Board/Clickables/FishCollider3" method="_on_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider4" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider4" to="PlayArea/Board/Clickables/FishCollider4" method="_on_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider5" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider5" to="PlayArea/Board/Clickables/FishCollider5" method="_on_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider6" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider6" to="PlayArea/Board/Clickables/FishCollider6" method="_on_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider7" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider7" to="PlayArea/Board/Clickables/FishCollider7" method="_on_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider8" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider8" to="PlayArea/Board/Clickables/FishCollider8" method="_on_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider9" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider9" to="PlayArea/Board/Clickables/FishCollider9" method="_on_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider10" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider10" to="PlayArea/Board/Clickables/FishCollider10" method="_on_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider11" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider11" to="PlayArea/Board/Clickables/FishCollider11" method="_on_gui_input"]
+[connection signal="caught" from="PlayArea/Board/Clickables/FishCollider12" to="DiceFishingGamePlayer" method="_on_fish_collider_caught"]
+[connection signal="gui_input" from="PlayArea/Board/Clickables/FishCollider12" to="PlayArea/Board/Clickables/FishCollider12" method="_on_gui_input"]
+[connection signal="nudged_down" from="PlayArea/Dice/NudgableDie" to="DiceFishingGamePlayer" method="_on_nudgable_die_nudged_down"]
+[connection signal="nudged_up" from="PlayArea/Dice/NudgableDie" to="DiceFishingGamePlayer" method="_on_nudgable_die_nudged_up"]
+[connection signal="nudged_down" from="PlayArea/Dice/NudgableDie2" to="DiceFishingGamePlayer" method="_on_nudgable_die_nudged_down"]
+[connection signal="nudged_up" from="PlayArea/Dice/NudgableDie2" to="DiceFishingGamePlayer" method="_on_nudgable_die_nudged_up"]
+[connection signal="nudged_down" from="PlayArea/Dice/NudgableDie3" to="DiceFishingGamePlayer" method="_on_nudgable_die_nudged_down"]
+[connection signal="nudged_up" from="PlayArea/Dice/NudgableDie3" to="DiceFishingGamePlayer" method="_on_nudgable_die_nudged_up"]
+[connection signal="pressed" from="PlayArea/CastButton" to="DiceFishingGamePlayer" method="_on_cast_button_pressed"]

@@ -28,6 +28,8 @@ enum Orientation {
 @onready var horse_race_game_scene = preload("res://scenes/horse_race_game.tscn")
 @onready var beetle_game_scene = preload("res://scenes/beetle_game/beetle_game.tscn")
 @onready var thundercloud_game_scene = preload("res://scenes/thundercloud_game/thundercloud_game.tscn")
+@onready var dice_fishing_game_scene = preload("res://scenes/dice_fishing_game.tscn")
+@onready var haunted_house_game_scene = preload("res://scenes/haunted_house_game.tscn")
 
 @onready var orientation = Orientation.PORTRAIT
 
@@ -53,6 +55,8 @@ var should_add_club_fight_game_pane: bool
 var should_add_horse_race_game_pane: bool
 var should_add_beetle_game_pane: bool
 var should_add_thundercloud_game_pane: bool
+var should_add_dice_fishing_game_pane: bool
+var should_add_haunted_house_game_pane: bool
 
 func queue_add_image_pane() -> void:
 	should_add_image_pane = true
@@ -116,6 +120,12 @@ func queue_add_beetle_game_pane() -> void:
 
 func queue_add_thundercloud_game_pane() -> void:
 	should_add_thundercloud_game_pane = true
+
+func queue_add_dice_fishing_game_pane() -> void:
+	should_add_dice_fishing_game_pane = true
+
+func queue_add_haunted_house_game_pane() -> void:
+	should_add_haunted_house_game_pane = true
 
 func _add_pane(scene: Resource) -> void:
 	# we are designing with up to 4 panes in mind
@@ -190,6 +200,12 @@ func _process(_delta: float) -> void:
 	elif should_add_thundercloud_game_pane:
 		_add_pane(thundercloud_game_scene)
 		should_add_thundercloud_game_pane = false
+	elif should_add_dice_fishing_game_pane:
+		_add_pane(dice_fishing_game_scene)
+		should_add_dice_fishing_game_pane = false
+	elif should_add_haunted_house_game_pane:
+		_add_pane(haunted_house_game_scene)
+		should_add_haunted_house_game_pane = false
 	
 	if childCount != get_child_count():
 		if childCount > get_child_count():

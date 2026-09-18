@@ -4,7 +4,7 @@ class_name D6
 signal d6_entered_tree(node: D6)
 signal left_clicked(node: D6)
 
-var value: int
+var value: int = 1
 
 func roll() -> int:
 	var r = (randi() % 6) + 1

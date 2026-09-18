@@ -127,6 +127,12 @@ func receive_broadcast(from: Node) -> void:
 		tcgp.game_over.connect($ThunderCloudGamePlug.on_game_over)
 		tcgp.not_struck.connect($ThunderCloudGamePlug.on_not_struck)
 		tcgp.struck.connect($ThunderCloudGamePlug.on_struck)
+	elif from is DiceFishingGamePane:
+		var dfgp = from as DiceFishingGamePane
+		dfgp.catch.connect($DiceFishingGamePlug.on_catch)
+		dfgp.game_over.connect($DiceFishingGamePlug.on_game_over)
+		dfgp.game_won.connect($DiceFishingGamePlug.on_game_won)
+		dfgp.nada.connect($DiceFishingGamePlug.on_nada)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

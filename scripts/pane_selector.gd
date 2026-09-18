@@ -24,6 +24,8 @@ const CLUB_FIGHT_GAME = 17
 const HORSE_RACE_GAME = 18
 const BEETLE_GAME = 19
 const THUNDERCLOUD_GAME = 20
+const DICE_FISHING_GAME = 21
+const HAUNTED_HOUSE_GAME = 22
 
 func _on_item_selected(index: int) -> void:
 	var panes_node = get_parent().get_parent()
@@ -70,6 +72,10 @@ func _on_item_selected(index: int) -> void:
 			panes_node.queue_add_beetle_game_pane()
 		THUNDERCLOUD_GAME:
 			panes_node.queue_add_thundercloud_game_pane()
+		DICE_FISHING_GAME:
+			panes_node.queue_add_dice_fishing_game_pane()
+		HAUNTED_HOUSE_GAME:
+			panes_node.queue_add_haunted_house_game_pane()
 	
 	if index >= 0:
 		get_parent().free()

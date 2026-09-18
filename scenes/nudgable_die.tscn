@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyt1lt41riuag"]
+
+[ext_resource type="Script" uid="uid://lw45r7fcvwko" path="res://scripts/nudgable_die.gd" id="1_qj0yy"]
+[ext_resource type="Texture2D" uid="uid://hxrc2eltvyd7" path="res://assets/fishing/increment_arrow.png" id="2_mslj7"]
+[ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="3_7ob8c"]
+[ext_resource type="Texture2D" uid="uid://dyvqafvxthakt" path="res://assets/fishing/decrement_arrow.png" id="4_8jfqe"]
+
+[node name="NudgableDie" type="VBoxContainer"]
+script = ExtResource("1_qj0yy")
+
+[node name="up" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_mslj7")
+
+[node name="D6" parent="." instance=ExtResource("3_7ob8c")]
+layout_mode = 2
+stretch_mode = 3
+
+[node name="down" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("4_8jfqe")
+
+[connection signal="gui_input" from="up" to="." method="_on_up_gui_input"]
+[connection signal="tree_entered" from="D6" to="D6" method="_on_tree_entered"]
+[connection signal="gui_input" from="down" to="." method="_on_down_gui_input"]

@@ -1,0 +1,2 @@
+extends Settings
+class_name HauntedHouseGameSettings
