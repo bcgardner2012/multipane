@@ -2,10 +2,13 @@ extends GamePlug
 class_name BetrothalGamePlug
 
 func on_game_won() -> void:
-	pass
+	portrait.try_load_random_image_from_subdir("betrothed")
 
 func on_card_drawn(_card: CardData) -> void:
-	pass
+	portrait.try_load_random_image_from_subdir("draw")
 
 func on_cards_removed(_count: int) -> void:
-	pass
+	if _count == 1:
+		portrait.try_load_random_image_from_subdir("one")
+	else:
+		portrait.try_load_random_image_from_subdir("two")

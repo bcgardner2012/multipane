@@ -157,11 +157,13 @@ portrait = NodePath("../PortraitHolder/Portrait")
 script = ExtResource("22_gj1rf")
 portrait = NodePath("../PortraitHolder/Portrait")
 
-[node name="HauntedHouseGamePlug" type="Node" parent="."]
+[node name="HauntedHouseGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("23_fvqrk")
+portrait = NodePath("../PortraitHolder/Portrait")
 
-[node name="BetrothalGamePlug" type="Node" parent="."]
+[node name="BetrothalGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("24_qxtnm")
+portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="SuitIcon" type="TextureRect" parent="."]
 visible = false
