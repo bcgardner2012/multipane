@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://biabconkctim4"]
 
 [ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_cycua"]
-[ext_resource type="Script" uid="uid://c2dc85v7j5igp" path="res://scripts/thundercloud_game_pane.gd" id="1_pvgoj"]
-[ext_resource type="Script" uid="uid://x1yh3jhophe3" path="res://scripts/thundercloud_game_player.gd" id="1_sy1f3"]
+[ext_resource type="Script" uid="uid://c2dc85v7j5igp" path="res://scripts/thundercloud/thundercloud_game_pane.gd" id="1_pvgoj"]
+[ext_resource type="Script" uid="uid://x1yh3jhophe3" path="res://scripts/thundercloud/thundercloud_game_player.gd" id="1_sy1f3"]
 [ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_vy6cx"]
 [ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_api7t"]
 [ext_resource type="PackedScene" uid="uid://ywolpdttqp1m" path="res://scenes/thundercloud_game/thundercloud_graphic.tscn" id="4_vk1o2"]
 [ext_resource type="PackedScene" uid="uid://b2vbyy4hg2ko7" path="res://scenes/d6.tscn" id="5_i3olk"]
-[ext_resource type="Script" uid="uid://b8tku4txy5j5c" path="res://scripts/thundercloud_game_dice.gd" id="5_yvb4i"]
+[ext_resource type="Script" uid="uid://b8tku4txy5j5c" path="res://scripts/thundercloud/thundercloud_game_dice.gd" id="5_yvb4i"]
 [ext_resource type="Script" uid="uid://cq8yyq1xyux7c" path="res://scripts/auto_clicker_toggle.gd" id="9_kotx4"]
 [ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="12_grr4k"]
 

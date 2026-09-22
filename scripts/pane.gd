@@ -159,6 +159,11 @@ func receive_broadcast(from: Node) -> void:
 		hhgp.wild_bat.connect($HauntedHouseGamePlug.on_wild_bat)
 		hhgp.wild_gargoyle.connect($HauntedHouseGamePlug.on_wild_gargoyle)
 		hhgp.wild_potion.connect($HauntedHouseGamePlug.on_wild_potion)
+	elif from is BetrothalGamePane:
+		var bgp = from as BetrothalGamePane
+		bgp.cards_removed.connect($BetrothalGamePlug.on_cards_removed)
+		bgp.card_drawn.connect($BetrothalGamePlug.on_card_drawn)
+		bgp.game_won.connect($BetrothalGamePlug.on_game_won)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://ywolpdttqp1m"]
 
-[ext_resource type="Script" uid="uid://cbd132iii4icr" path="res://scripts/thundercloud_game_graphic.gd" id="1_4wlv5"]
+[ext_resource type="Script" uid="uid://cbd132iii4icr" path="res://scripts/thundercloud/thundercloud_game_graphic.gd" id="1_4wlv5"]
 [ext_resource type="Texture2D" uid="uid://dvoe2gpp43vsc" path="res://assets/thundercloud/tc1.png" id="2_gyaag"]
 [ext_resource type="Texture2D" uid="uid://cdgs2a8gsin6d" path="res://assets/thundercloud/tc2.png" id="3_o6m1g"]
 [ext_resource type="Texture2D" uid="uid://b2laqemp76v0k" path="res://assets/thundercloud/tc3.png" id="4_qxebc"]

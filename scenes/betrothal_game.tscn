@@ -1,0 +1,1481 @@
+[gd_scene load_steps=69 format=3 uid="uid://bd27smd83gkoh"]
+
+[ext_resource type="Script" uid="uid://bhxp2rifhxgcb" path="res://scripts/betrothal_game_pane.gd" id="1_26n33"]
+[ext_resource type="Script" uid="uid://cxt7w4yptd35f" path="res://scripts/betrothal_game_player.gd" id="1_e6rls"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="1_t17fx"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="1_x525m"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_xqdim"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="2_5au8a"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_7apll"]
+[ext_resource type="Script" uid="uid://1yabxlps1d5c" path="res://scripts/deck.gd" id="2_7mb2m"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_36i7t"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="3_e6rls"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="4_7apll"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="4_w22fs"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="5_26n33"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="6_r1psi"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="7_ydpn7"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="8_djnrc"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="9_3bb2o"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="10_fh3qo"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="11_5njd5"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="12_1kpnk"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="13_b2vp8"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="14_cbr1g"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="15_sty5p"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="16_c8dvv"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="17_anv5x"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="18_knd7i"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="19_bp4d8"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="20_dyew3"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="21_qispx"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="22_4auph"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="23_0ivtn"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="24_r0rm3"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="25_khch7"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="26_6omse"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="27_5dlgr"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="28_whbkq"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="29_124qy"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="30_bjncv"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="31_k42xn"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="32_x2f1l"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="33_405nf"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="34_yac68"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="35_mf3w4"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="36_1wkwo"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="37_bkesp"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="38_ws8y4"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="39_7cfgt"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="40_ndf5j"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="41_ad52v"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="42_5iash"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="43_j0xem"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="44_ecwo7"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="45_p6h1x"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="46_b5tfn"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="47_f2v0c"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="48_mn20r"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="49_lelsd"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="50_pkg5i"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="51_bktss"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="52_b7khn"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="53_1jx6i"]
+[ext_resource type="Script" uid="uid://pthbg14mlgrg" path="res://scripts/betrothal_play_area.gd" id="55_w22fs"]
+[ext_resource type="Texture2D" uid="uid://cm36j136fu2ho" path="res://assets/cards/card_holder_transparent.png" id="56_4wwf3"]
+[ext_resource type="Script" uid="uid://cjrsd47nnngmp" path="res://scripts/card_highlighter.gd" id="57_ycyga"]
+[ext_resource type="Texture2D" uid="uid://ddyq3kgxhcboc" path="res://assets/cards/card_hilight.png" id="58_g5rhq"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="59_edl85"]
+[ext_resource type="Script" uid="uid://df6at8glba8qq" path="res://scripts/int_sticker.gd" id="60_5au8a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1e7ri"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="BetrothalGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_26n33")
+
+[node name="BetrothalGamePlayer" type="Node" parent="." node_paths=PackedStringArray("play_area", "deck_count_label")]
+script = ExtResource("1_e6rls")
+play_area = NodePath("../PlayArea")
+deck_count_label = NodePath("../PlayArea/Deck/CountLabel")
+
+[node name="CardDatas" type="Node" parent="BetrothalGamePlayer"]
+
+[node name="H2" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+rank = 2
+texture = ExtResource("2_5au8a")
+
+[node name="H3" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+rank = 3
+texture = ExtResource("3_e6rls")
+
+[node name="H4" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+rank = 4
+texture = ExtResource("4_w22fs")
+
+[node name="H5" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+rank = 5
+texture = ExtResource("5_26n33")
+
+[node name="H6" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+rank = 6
+texture = ExtResource("6_r1psi")
+
+[node name="H7" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+rank = 7
+texture = ExtResource("7_ydpn7")
+
+[node name="H8" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+rank = 8
+texture = ExtResource("8_djnrc")
+
+[node name="H9" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+rank = 9
+texture = ExtResource("9_3bb2o")
+
+[node name="H10" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+rank = 10
+texture = ExtResource("10_fh3qo")
+
+[node name="HJ" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+rank = 11
+texture = ExtResource("11_5njd5")
+
+[node name="HA" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+rank = 1
+texture = ExtResource("12_1kpnk")
+
+[node name="D2" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 2
+texture = ExtResource("13_b2vp8")
+
+[node name="D3" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 3
+texture = ExtResource("14_cbr1g")
+
+[node name="D4" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 4
+texture = ExtResource("15_sty5p")
+
+[node name="D5" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 5
+texture = ExtResource("16_c8dvv")
+
+[node name="D6" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 6
+texture = ExtResource("17_anv5x")
+
+[node name="D7" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 7
+texture = ExtResource("18_knd7i")
+
+[node name="D8" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 8
+texture = ExtResource("19_bp4d8")
+
+[node name="D9" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 9
+texture = ExtResource("20_dyew3")
+
+[node name="D10" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 10
+texture = ExtResource("21_qispx")
+
+[node name="DJ" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 11
+texture = ExtResource("22_4auph")
+
+[node name="DQ" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 12
+texture = ExtResource("23_0ivtn")
+
+[node name="DK" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 13
+texture = ExtResource("24_r0rm3")
+
+[node name="DA" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 1
+rank = 1
+texture = ExtResource("25_khch7")
+
+[node name="C2" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 2
+texture = ExtResource("26_6omse")
+
+[node name="C3" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 3
+texture = ExtResource("27_5dlgr")
+
+[node name="C4" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 4
+texture = ExtResource("28_whbkq")
+
+[node name="C5" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 5
+texture = ExtResource("29_124qy")
+
+[node name="C6" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 6
+texture = ExtResource("30_bjncv")
+
+[node name="C7" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 7
+texture = ExtResource("31_k42xn")
+
+[node name="C8" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 8
+texture = ExtResource("32_x2f1l")
+
+[node name="C9" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 9
+texture = ExtResource("33_405nf")
+
+[node name="C10" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 10
+texture = ExtResource("34_yac68")
+
+[node name="CJ" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 11
+texture = ExtResource("35_mf3w4")
+
+[node name="CQ" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 12
+texture = ExtResource("36_1wkwo")
+
+[node name="CK" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 13
+texture = ExtResource("37_bkesp")
+
+[node name="CA" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 2
+rank = 1
+texture = ExtResource("38_ws8y4")
+
+[node name="S2" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 2
+texture = ExtResource("39_7cfgt")
+
+[node name="S3" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 3
+texture = ExtResource("40_ndf5j")
+
+[node name="S4" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 4
+texture = ExtResource("41_ad52v")
+
+[node name="S5" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 5
+texture = ExtResource("42_5iash")
+
+[node name="S6" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 6
+texture = ExtResource("43_j0xem")
+
+[node name="S7" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 7
+texture = ExtResource("44_ecwo7")
+
+[node name="S8" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 8
+texture = ExtResource("45_p6h1x")
+
+[node name="S9" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 9
+texture = ExtResource("46_b5tfn")
+
+[node name="S10" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 10
+texture = ExtResource("47_f2v0c")
+
+[node name="SJ" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 11
+texture = ExtResource("48_mn20r")
+
+[node name="SQ" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 12
+texture = ExtResource("49_lelsd")
+
+[node name="SK" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 13
+texture = ExtResource("50_pkg5i")
+
+[node name="SA" type="Node" parent="BetrothalGamePlayer/CardDatas"]
+script = ExtResource("1_t17fx")
+suit = 3
+rank = 1
+texture = ExtResource("51_bktss")
+
+[node name="QH&KH" type="Node" parent="BetrothalGamePlayer"]
+
+[node name="HQ" type="Node" parent="BetrothalGamePlayer/QH&KH"]
+script = ExtResource("1_t17fx")
+rank = 12
+texture = ExtResource("52_b7khn")
+
+[node name="HK" type="Node" parent="BetrothalGamePlayer/QH&KH"]
+script = ExtResource("1_t17fx")
+rank = 13
+texture = ExtResource("53_1jx6i")
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("55_w22fs")
+
+[node name="Deck" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.01
+anchor_right = 0.5
+anchor_bottom = 0.01
+offset_left = -44.0
+offset_right = 44.0
+offset_bottom = 124.0
+texture = ExtResource("1_x525m")
+stretch_mode = 4
+script = ExtResource("2_7mb2m")
+has_post_start_functionality = true
+
+[node name="CountLabel" type="Label" parent="PlayArea/Deck"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 57.000397
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "52"
+label_settings = SubResource("LabelSettings_1e7ri")
+horizontal_alignment = 1
+
+[node name="Row1" type="HBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -782.0
+offset_top = 142.0
+offset_right = 782.0
+offset_bottom = 272.0
+grow_horizontal = 2
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder1" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder1"]
+script = ExtResource("60_5au8a")
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder2" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder2"]
+script = ExtResource("60_5au8a")
+value = 1
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder3" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder3"]
+script = ExtResource("60_5au8a")
+value = 2
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder4" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder4" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder4"]
+script = ExtResource("60_5au8a")
+value = 3
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder5" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder5" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder5"]
+script = ExtResource("60_5au8a")
+value = 4
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder6" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder6" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder6"]
+script = ExtResource("60_5au8a")
+value = 5
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder7" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder7" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder7"]
+script = ExtResource("60_5au8a")
+value = 6
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder8" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder8" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder8"]
+script = ExtResource("60_5au8a")
+value = 7
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder9" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder9" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder9"]
+script = ExtResource("60_5au8a")
+value = 8
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder10" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder10" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder10"]
+script = ExtResource("60_5au8a")
+value = 9
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder11" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder11" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder11"]
+script = ExtResource("60_5au8a")
+value = 10
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder12" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder12" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder12"]
+script = ExtResource("60_5au8a")
+value = 11
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder13" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder13" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder13"]
+script = ExtResource("60_5au8a")
+value = 12
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder14" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder14" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder14"]
+script = ExtResource("60_5au8a")
+value = 13
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder15" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder15" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder15"]
+script = ExtResource("60_5au8a")
+value = 14
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder16" type="TextureRect" parent="PlayArea/Row1"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row1/CardHolder16" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row1/CardHolder16"]
+script = ExtResource("60_5au8a")
+value = 15
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="Row2" type="HBoxContainer" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -782.0
+offset_top = 277.0
+offset_right = 782.0
+offset_bottom = 407.0
+grow_horizontal = 2
+
+[node name="CardHolder1" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder1" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder1"]
+script = ExtResource("60_5au8a")
+value = 16
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder2" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder2" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder2"]
+script = ExtResource("60_5au8a")
+value = 17
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder3" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder3" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder3"]
+script = ExtResource("60_5au8a")
+value = 18
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder4" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder4" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder4"]
+script = ExtResource("60_5au8a")
+value = 19
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder5" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder5" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder5"]
+script = ExtResource("60_5au8a")
+value = 20
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder6" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder6" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder6"]
+script = ExtResource("60_5au8a")
+value = 21
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder7" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder7" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder7"]
+script = ExtResource("60_5au8a")
+value = 22
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder8" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder8" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder8"]
+script = ExtResource("60_5au8a")
+value = 23
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder9" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder9" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder9"]
+script = ExtResource("60_5au8a")
+value = 24
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder10" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder10" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder10"]
+script = ExtResource("60_5au8a")
+value = 25
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder11" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder11" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder11"]
+script = ExtResource("60_5au8a")
+value = 26
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder12" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder12" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder12"]
+script = ExtResource("60_5au8a")
+value = 27
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder13" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder13" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder13"]
+script = ExtResource("60_5au8a")
+value = 28
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder14" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder14" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder14"]
+script = ExtResource("60_5au8a")
+value = 29
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder15" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder15" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder15"]
+script = ExtResource("60_5au8a")
+value = 30
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="CardHolder16" type="TextureRect" parent="PlayArea/Row2"]
+visible = false
+layout_mode = 2
+texture = ExtResource("56_4wwf3")
+script = ExtResource("57_ycyga")
+default_texture = ExtResource("56_4wwf3")
+highlight_texture = ExtResource("58_g5rhq")
+
+[node name="Card" parent="PlayArea/Row2/CardHolder16" instance=ExtResource("59_edl85")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x525m")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Index" type="Node" parent="PlayArea/Row2/CardHolder16"]
+script = ExtResource("60_5au8a")
+value = 31
+metadata/_custom_type_script = "uid://df6at8glba8qq"
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+folded = true
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_xqdim")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_7apll")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_36i7t")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Notes" type="TextEdit" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click the deck to start.
+- The deck has a Q of Hearts at the
+top, and a K of Hearts at the bottom
+- The goal is to bring the Q of Hearts
+and K of Hearts together by 
+removing all other cards.
+- To remove cards, you must select
+2 cards of the same suit or same
+rank. These cards can be 2-3 cards
+apart. Cards between them are
+removed.
+- If you can't see a possible move,
+click the deck to draw another.
+- The game is over if you can't draw
+and can't make more pairings."
+placeholder_text = "Add any notes here..."
+script = ExtResource("4_7apll")
+
+[connection signal="deck_clicked" from="PlayArea/Deck" to="BetrothalGamePlayer" method="_on_deck_deck_clicked"]
+[connection signal="gui_input" from="PlayArea/Deck" to="PlayArea/Deck" method="_on_gui_input"]
+[connection signal="start_game" from="PlayArea/Deck" to="BetrothalGamePlayer" method="_on_deck_start_game"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder1/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder1/Card" to="PlayArea/Row1/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder2/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder2/Card" to="PlayArea/Row1/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder3/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder3/Card" to="PlayArea/Row1/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder4/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder4/Card" to="PlayArea/Row1/CardHolder4" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder5/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder5/Card" to="PlayArea/Row1/CardHolder5" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder6/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder6/Card" to="PlayArea/Row1/CardHolder6" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder7/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder7/Card" to="PlayArea/Row1/CardHolder7" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder8/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder8/Card" to="PlayArea/Row1/CardHolder8" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder9/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder9/Card" to="PlayArea/Row1/CardHolder9" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder10/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder10/Card" to="PlayArea/Row1/CardHolder10" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder11/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder11/Card" to="PlayArea/Row1/CardHolder11" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder12/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder12/Card" to="PlayArea/Row1/CardHolder12" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder13/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder13/Card" to="PlayArea/Row1/CardHolder13" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder14/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder14/Card" to="PlayArea/Row1/CardHolder14" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder15/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder15/Card" to="PlayArea/Row1/CardHolder15" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder16/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row1/CardHolder16/Card" to="PlayArea/Row1/CardHolder16" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder1/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder1/Card" to="PlayArea/Row2/CardHolder1" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder2/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder2/Card" to="PlayArea/Row2/CardHolder2" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder3/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder3/Card" to="PlayArea/Row2/CardHolder3" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder4/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder4/Card" to="PlayArea/Row2/CardHolder4" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder5/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder5/Card" to="PlayArea/Row2/CardHolder5" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder6/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder6/Card" to="PlayArea/Row2/CardHolder6" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder7/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder7/Card" to="PlayArea/Row2/CardHolder7" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder8/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder8/Card" to="PlayArea/Row2/CardHolder8" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder9/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder9/Card" to="PlayArea/Row2/CardHolder9" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder10/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder10/Card" to="PlayArea/Row2/CardHolder10" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder11/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder11/Card" to="PlayArea/Row2/CardHolder11" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder12/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder12/Card" to="PlayArea/Row2/CardHolder12" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder13/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder13/Card" to="PlayArea/Row2/CardHolder13" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder14/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder14/Card" to="PlayArea/Row2/CardHolder14" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder15/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder15/Card" to="PlayArea/Row2/CardHolder15" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder16/Card" to="BetrothalGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/Row2/CardHolder16/Card" to="PlayArea/Row2/CardHolder16" method="_on_card_use_card"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
