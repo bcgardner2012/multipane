@@ -41,6 +41,10 @@ func on_trap_encounter(_defended: bool, keyword: String) -> void:
 				portrait.try_load_random_image_from_subdir(TRAP_DIR)
 
 func on_ghost_encounter(_defended: bool) -> void:
+	if _defended:
+		if portrait.try_load_random_image_from_subdir("ghost".path_join("defended")):
+			return
+	
 	if not portrait.try_load_random_image_from_subdir("ghost"):
 		portrait.try_load_random_image_from_subdir(MINION_DIR)
 
@@ -78,6 +82,11 @@ func on_saferoom_plead() -> void:
 		portrait.try_load_random_image_from_subdir(REST_DIR)
 
 func on_saferoom_search(_found: bool, _item: HauntedHouseGamePlayer.Item) -> void:
+	if _found and _item == HauntedHouseGamePlayer.Item.DOLL:
+		if not portrait.try_load_random_image_from_subdir("voodoo"):
+			if not portrait.try_load_random_image_from_subdir("search"):
+				portrait.try_load_random_image_from_subdir(REST_DIR)
+	
 	if not portrait.try_load_random_image_from_subdir("search"):
 		portrait.try_load_random_image_from_subdir(REST_DIR)
 
