@@ -32,6 +32,7 @@ enum Orientation {
 @onready var haunted_house_game_scene = preload("res://scenes/haunted_house_game.tscn")
 @onready var betrothal_game_scene = preload("res://scenes/betrothal_game.tscn")
 @onready var soccer_game_scene = preload("res://scenes/soccer_game.tscn")
+@onready var mr_president_game_scene = preload("res://scenes/mr_president_game.tscn")
 
 @onready var orientation = Orientation.PORTRAIT
 
@@ -61,6 +62,7 @@ var should_add_dice_fishing_game_pane: bool
 var should_add_haunted_house_game_pane: bool
 var should_add_betrothal_game_pane: bool
 var should_add_soccer_game_pane: bool
+var should_add_mr_president_game_pane: bool
 
 func queue_add_image_pane() -> void:
 	should_add_image_pane = true
@@ -136,6 +138,9 @@ func queue_add_betrothal_game_pane() -> void:
 
 func queue_add_soccer_game_pane() -> void:
 	should_add_soccer_game_pane = true
+
+func queue_add_mr_president_game_pane() -> void:
+	should_add_mr_president_game_pane = true
 
 func _add_pane(scene: Resource) -> void:
 	# we are designing with up to 4 panes in mind
@@ -222,6 +227,9 @@ func _process(_delta: float) -> void:
 	elif should_add_soccer_game_pane:
 		_add_pane(soccer_game_scene)
 		should_add_soccer_game_pane = false
+	elif should_add_mr_president_game_pane:
+		_add_pane(mr_president_game_scene)
+		should_add_mr_president_game_pane = false
 	
 	if childCount != get_child_count():
 		if childCount > get_child_count():

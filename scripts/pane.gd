@@ -171,6 +171,10 @@ func receive_broadcast(from: Node) -> void:
 		sgp.game_won.connect($SoccerGamePlug.on_game_won)
 		sgp.goal.connect($SoccerGamePlug.on_goal)
 		sgp.kicked.connect($SoccerGamePlug.on_kicked)
+	elif from is MrPresidentGamePane:
+		var mpgp = from as MrPresidentGamePane
+		mpgp.game_over.connect($MrPresidentGamePlug.on_game_over)
+		mpgp.round_end.connect($MrPresidentGamePlug.on_round_end)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

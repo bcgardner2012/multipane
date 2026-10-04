@@ -1,4 +1,72 @@
-[gd_scene format=3 uid="uid://5d56mlp3utif"]
+[gd_scene load_steps=68 format=3 uid="uid://5d56mlp3utif"]
+
+[ext_resource type="Script" uid="uid://blwo0ph2u7uwr" path="res://scripts/mr_president_game_player.gd" id="1_2mgwv"]
+[ext_resource type="Script" uid="uid://br2p88rfmi8j5" path="res://scripts/mr_president_game_pane.gd" id="1_nhogu"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_w43ur"]
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="2_rc6j3"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_ygicd"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="3_6o1hk"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="3_a0ijd"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_bptit"]
+[ext_resource type="Texture2D" uid="uid://cxul3ta5dtdjg" path="res://assets/cards/normal/c2.png" id="3_urwrg"]
+[ext_resource type="Texture2D" uid="uid://cbt6yk6n5juy" path="res://assets/mr_president/mr_president.jpg" id="4_bptit"]
+[ext_resource type="Texture2D" uid="uid://bmf86mm413kbt" path="res://assets/cards/normal/c3.png" id="4_cwt12"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="4_mib8f"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="4_ouo8n"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="4_ygicd"]
+[ext_resource type="Texture2D" uid="uid://cgju15aj57yd7" path="res://assets/cards/normal/c4.png" id="5_7v34x"]
+[ext_resource type="Texture2D" uid="uid://boxmjgi0nw8ib" path="res://assets/chits/club_chit.jpg" id="5_ck1dl"]
+[ext_resource type="Script" uid="uid://j65a0dqo6gyx" path="res://scripts/mr_president_board.gd" id="5_lytsp"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="5_qy1dq"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="5_xk1ye"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="6_e4s4v"]
+[ext_resource type="Texture2D" uid="uid://c4lt4i3iy5rg" path="res://assets/cards/normal/c5.png" id="6_hn1h5"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="6_tlfxq"]
+[ext_resource type="Texture2D" uid="uid://rba2wm7humxc" path="res://assets/cards/normal/c6.png" id="7_b8sms"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="7_oy2dr"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="7_sbyap"]
+[ext_resource type="Script" uid="uid://bwpjsir6wu45a" path="res://scripts/mr_president_chit.gd" id="7_x7j0p"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="8_3ptbb"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="8_afh7w"]
+[ext_resource type="Texture2D" uid="uid://cvvoxu6lkg7b5" path="res://assets/cards/normal/c7.png" id="8_h4bo3"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="9_5dbjp"]
+[ext_resource type="Script" uid="uid://mloe0kgitkaj" path="res://scripts/hand_h_box.gd" id="9_50oni"]
+[ext_resource type="Texture2D" uid="uid://ofj26b0jax0u" path="res://assets/cards/normal/c8.png" id="9_iysai"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="9_m015k"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="10_digyh"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="10_jwp0w"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="10_p2msj"]
+[ext_resource type="Texture2D" uid="uid://dsls6t4beoxrc" path="res://assets/cards/normal/c9.png" id="10_rfwf3"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="11_578a2"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="11_awy8o"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="11_emke4"]
+[ext_resource type="Texture2D" uid="uid://dke6a4k8dyl6m" path="res://assets/cards/normal/c10.png" id="11_wmbmw"]
+[ext_resource type="Texture2D" uid="uid://da4j6xc8o7g1c" path="res://assets/cards/normal/c11.png" id="12_7cddk"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="12_bi48l"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="12_if70b"]
+[ext_resource type="Texture2D" uid="uid://bfildnevjcona" path="res://assets/cards/normal/back_red.png" id="12_jwp0w"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="13_athy8"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="13_dcxc8"]
+[ext_resource type="Texture2D" uid="uid://dcwp80ed5x0e3" path="res://assets/cards/normal/c12.png" id="13_js6kd"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="14_4wn1a"]
+[ext_resource type="Texture2D" uid="uid://cn14mdhc1ulh8" path="res://assets/cards/normal/c13.png" id="14_5nsvg"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="14_adr3p"]
+[ext_resource type="Texture2D" uid="uid://cqgsno46twqxh" path="res://assets/cards/normal/c1.png" id="15_1f44b"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="15_6rvw5"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="15_a0ijd"]
+[ext_resource type="Texture2D" uid="uid://cxw8281wt2vl1" path="res://assets/cards/normal/d2.png" id="42_3jqsx"]
+[ext_resource type="Texture2D" uid="uid://cjjstkjb4q3ep" path="res://assets/cards/normal/d3.png" id="43_nhogu"]
+[ext_resource type="Texture2D" uid="uid://djhg0mukw4wmr" path="res://assets/cards/normal/d4.png" id="44_8wvbv"]
+[ext_resource type="Texture2D" uid="uid://j30nu5yd2rhw" path="res://assets/cards/normal/d5.png" id="45_k6wet"]
+[ext_resource type="Texture2D" uid="uid://cnqvgkhhhv64y" path="res://assets/cards/normal/d6.png" id="46_n25wg"]
+[ext_resource type="Texture2D" uid="uid://83uof7m14l5i" path="res://assets/cards/normal/d7.png" id="47_r5gul"]
+[ext_resource type="Texture2D" uid="uid://dfr3gbqn5fxas" path="res://assets/cards/normal/d8.png" id="48_jqbo1"]
+[ext_resource type="Texture2D" uid="uid://de18j47w3jko1" path="res://assets/cards/normal/d9.png" id="49_upx3f"]
+[ext_resource type="Texture2D" uid="uid://dfaqp8pqlj55k" path="res://assets/cards/normal/d10.png" id="50_3gnlr"]
+[ext_resource type="Texture2D" uid="uid://c14vw83n44len" path="res://assets/cards/normal/d11.png" id="51_e075e"]
+[ext_resource type="Texture2D" uid="uid://c37yk6ftqopje" path="res://assets/cards/normal/d12.png" id="52_4yp1g"]
+[ext_resource type="Texture2D" uid="uid://bfv1tiq5fc85a" path="res://assets/cards/normal/d13.png" id="53_w4y66"]
+[ext_resource type="Texture2D" uid="uid://c6yju0qjs0n7g" path="res://assets/cards/normal/d1.png" id="54_i0jsn"]
 
 [node name="MrPresidentGame" type="Control"]
 layout_mode = 3
@@ -7,3 +75,970 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nhogu")
+
+[node name="MrPresidentGamePlayer" type="Node" parent="." node_paths=PackedStringArray("player_hand_node", "board", "player_card_node", "spade_card_node", "diamond_card_node", "remaining_votes_label", "player_score_label", "spade_score_label", "diamond_score_label")]
+script = ExtResource("1_2mgwv")
+player_hand_node = NodePath("../PlayArea/HandHBox")
+board = NodePath("../PlayArea/Board")
+player_card_node = NodePath("../PlayArea/PlayersCard")
+spade_card_node = NodePath("../PlayArea/Opponent1Card")
+diamond_card_node = NodePath("../PlayArea/Opponent2Card")
+remaining_votes_label = NodePath("../PlayArea/Votes/Remaining")
+player_score_label = NodePath("../PlayArea/Votes/PlayerScore")
+spade_score_label = NodePath("../PlayArea/Votes/SpadeScore")
+diamond_score_label = NodePath("../PlayArea/Votes/DiamondScore")
+
+[node name="Clubs" type="Node" parent="MrPresidentGamePlayer"]
+
+[node name="C2" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 2
+texture = ExtResource("3_urwrg")
+
+[node name="C3" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 3
+texture = ExtResource("4_cwt12")
+
+[node name="C4" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 4
+texture = ExtResource("5_7v34x")
+
+[node name="C5" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 5
+texture = ExtResource("6_hn1h5")
+
+[node name="C6" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 6
+texture = ExtResource("7_b8sms")
+
+[node name="C7" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 7
+texture = ExtResource("8_h4bo3")
+
+[node name="C8" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 8
+texture = ExtResource("9_iysai")
+
+[node name="C9" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 9
+texture = ExtResource("10_rfwf3")
+
+[node name="C10" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 10
+texture = ExtResource("11_wmbmw")
+
+[node name="CJ" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 11
+texture = ExtResource("12_7cddk")
+
+[node name="CQ" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 12
+texture = ExtResource("13_js6kd")
+
+[node name="CK" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 13
+texture = ExtResource("14_5nsvg")
+
+[node name="CA" type="Node" parent="MrPresidentGamePlayer/Clubs"]
+script = ExtResource("2_rc6j3")
+suit = 2
+rank = 14
+texture = ExtResource("15_1f44b")
+
+[node name="Spades" type="Node" parent="MrPresidentGamePlayer"]
+
+[node name="S2" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 2
+texture = ExtResource("3_a0ijd")
+
+[node name="S3" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 3
+texture = ExtResource("4_ouo8n")
+
+[node name="S4" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 4
+texture = ExtResource("5_qy1dq")
+
+[node name="S5" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 5
+texture = ExtResource("6_tlfxq")
+
+[node name="S6" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 6
+texture = ExtResource("7_sbyap")
+
+[node name="S7" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 7
+texture = ExtResource("8_afh7w")
+
+[node name="S8" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 8
+texture = ExtResource("9_5dbjp")
+
+[node name="S9" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 9
+texture = ExtResource("10_p2msj")
+
+[node name="S10" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 10
+texture = ExtResource("11_awy8o")
+
+[node name="SJ" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 11
+texture = ExtResource("12_if70b")
+
+[node name="SQ" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 12
+texture = ExtResource("13_dcxc8")
+
+[node name="SK" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 13
+texture = ExtResource("14_4wn1a")
+
+[node name="SA" type="Node" parent="MrPresidentGamePlayer/Spades"]
+script = ExtResource("2_rc6j3")
+suit = 3
+rank = 14
+texture = ExtResource("15_6rvw5")
+
+[node name="Hearts" type="Node" parent="MrPresidentGamePlayer"]
+
+[node name="H2" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 2
+texture = ExtResource("3_6o1hk")
+
+[node name="H3" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 3
+texture = ExtResource("4_mib8f")
+
+[node name="H4" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 4
+texture = ExtResource("5_xk1ye")
+
+[node name="H5" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 5
+texture = ExtResource("6_e4s4v")
+
+[node name="H6" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 6
+texture = ExtResource("7_oy2dr")
+
+[node name="H7" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 7
+texture = ExtResource("8_3ptbb")
+
+[node name="H8" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 8
+texture = ExtResource("9_m015k")
+
+[node name="H9" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 9
+texture = ExtResource("10_digyh")
+
+[node name="H10" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 10
+texture = ExtResource("11_578a2")
+
+[node name="HJ" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 11
+texture = ExtResource("12_bi48l")
+
+[node name="HQ" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 12
+texture = ExtResource("13_athy8")
+
+[node name="HK" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 13
+texture = ExtResource("14_adr3p")
+
+[node name="HA" type="Node" parent="MrPresidentGamePlayer/Hearts"]
+script = ExtResource("2_rc6j3")
+rank = 14
+texture = ExtResource("15_a0ijd")
+
+[node name="Diamonds" type="Node" parent="MrPresidentGamePlayer"]
+
+[node name="D2" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 2
+texture = ExtResource("42_3jqsx")
+
+[node name="D3" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 3
+texture = ExtResource("43_nhogu")
+
+[node name="D4" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 4
+texture = ExtResource("44_8wvbv")
+
+[node name="D5" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 5
+texture = ExtResource("45_k6wet")
+
+[node name="D6" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 6
+texture = ExtResource("46_n25wg")
+
+[node name="D7" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 7
+texture = ExtResource("47_r5gul")
+
+[node name="D8" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 8
+texture = ExtResource("48_jqbo1")
+
+[node name="D9" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 9
+texture = ExtResource("49_upx3f")
+
+[node name="D10" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 10
+texture = ExtResource("50_3gnlr")
+
+[node name="DJ" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 11
+texture = ExtResource("51_e075e")
+
+[node name="DQ" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 12
+texture = ExtResource("52_4yp1g")
+
+[node name="DK" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 13
+texture = ExtResource("53_w4y66")
+
+[node name="DA" type="Node" parent="MrPresidentGamePlayer/Diamonds"]
+script = ExtResource("2_rc6j3")
+suit = 1
+rank = 14
+texture = ExtResource("54_i0jsn")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_w43ur")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ygicd")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_bptit")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="Votes" type="Control" parent="PlayArea"]
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 47.0
+offset_bottom = 48.0
+
+[node name="Remaining" type="Label" parent="PlayArea/Votes"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Remaining Votes: 27"
+
+[node name="PlayerScore" type="Label" parent="PlayArea/Votes"]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 66.0
+offset_bottom = 87.0
+text = "Player: 0"
+
+[node name="SpadeScore" type="Label" parent="PlayArea/Votes"]
+layout_mode = 0
+offset_top = 43.0
+offset_right = 65.0
+offset_bottom = 66.0
+text = "Spade: 0"
+
+[node name="DiamondScore" type="Label" parent="PlayArea/Votes"]
+layout_mode = 0
+offset_top = 22.0
+offset_right = 40.0
+offset_bottom = 45.0
+text = "Diamond: 0"
+
+[node name="Board" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 300.0
+grow_horizontal = 2
+texture = ExtResource("4_bptit")
+script = ExtResource("5_lytsp")
+two_point_region = Array[int]([1])
+three_point_region = Array[int]([2])
+four_point_region = Array[int]([3])
+five_point_region = Array[int]([4, 5, 6])
+six_point_region = Array[int]([7, 8, 9])
+seven_point_region = Array[int]([10, 11, 12, 0])
+
+[node name="Chit1" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -113.0
+offset_top = 108.0
+offset_right = -84.0
+offset_bottom = 137.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit2" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_top = 41.0
+offset_right = -83.0
+offset_bottom = 70.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit3" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.0
+offset_top = 224.0
+offset_right = 3.0
+offset_bottom = 253.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit4" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 44.0
+offset_top = 224.0
+offset_right = 73.0
+offset_bottom = 253.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit5" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 12.0
+offset_top = 156.0
+offset_right = 41.0
+offset_bottom = 185.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit6" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 62.0
+offset_top = 156.0
+offset_right = 91.0
+offset_bottom = 185.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit7" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 112.0
+offset_top = 156.0
+offset_right = 141.0
+offset_bottom = 185.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit8" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -38.0
+offset_top = 41.0
+offset_right = -9.0
+offset_bottom = 70.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit9" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 12.0
+offset_top = 41.0
+offset_right = 41.0
+offset_bottom = 70.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit10" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 12.0
+offset_top = 92.0
+offset_right = 41.0
+offset_bottom = 121.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit11" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -113.0
+offset_top = 158.0
+offset_right = -84.0
+offset_bottom = 187.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit12" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.0
+offset_top = 158.0
+offset_right = -33.0
+offset_bottom = 187.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="Chit13" type="TextureRect" parent="PlayArea/Board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -113.0
+offset_top = 210.0
+offset_right = -84.0
+offset_bottom = 239.0
+grow_horizontal = 2
+texture = ExtResource("5_ck1dl")
+expand_mode = 1
+script = ExtResource("7_x7j0p")
+
+[node name="HandHBox" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -267.0
+offset_top = 433.0
+offset_right = 267.0
+offset_bottom = 561.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_50oni")
+should_chunk_invisble_children = false
+metadata/_custom_type_script = "uid://mloe0kgitkaj"
+
+[node name="Card" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card2" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card3" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card4" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card5" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card6" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card7" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card8" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card9" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card10" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card11" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card12" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card13" parent="PlayArea/HandHBox" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="PlayersCard" parent="PlayArea" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -141.0
+offset_top = 302.0
+offset_right = -53.0
+offset_bottom = 426.0
+grow_horizontal = 2
+texture = ExtResource("11_emke4")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Opponent1Card" parent="PlayArea" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 303.0
+offset_right = 42.0
+offset_bottom = 427.0
+grow_horizontal = 2
+texture = ExtResource("12_jwp0w")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Opponent2Card" parent="PlayArea" instance=ExtResource("10_jwp0w")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 49.0
+offset_top = 303.0
+offset_right = 137.0
+offset_bottom = 427.0
+grow_horizontal = 2
+texture = ExtResource("12_jwp0w")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Goal: win the most votes by winning
+the most sub-areas in each region.
+- The deck is split by suits. The club
+deck is drawn from at the beginning
+of each round. The club card drawn
+represents the region being
+contested this round.
+- Players each receive one deck of
+one suit.
+- Once the club card is revealed, each
+player reveals a card. The highest
+card wins that area. Once all areas
+in a region are voted on, points are
+assigned to the majority player.
+- In cases where there is no majority,
+the area or region remains neutral,
+no points
+- Contested area will be shown in
+yellow."
+placeholder_text = "Add any notes here..."
+script = ExtResource("4_ygicd")
+
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card2" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card3" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card4" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card5" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card6" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card7" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card8" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card9" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card10" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card11" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card12" to="MrPresidentGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card13" to="MrPresidentGamePlayer" method="_on_card_use_card"]

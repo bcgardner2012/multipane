@@ -59,3 +59,12 @@ func _get_visible_child_count() -> int:
 		if child.visible:
 			count += 1
 	return count
+
+# pass the deck to use, make sure you put enough card nodes in to start, then
+# use call_deferred during _ready phase to queue this
+func assemble(deck: Array[CardData]) -> void:
+	for i in range(deck.size()):
+		var card = get_child(i) as Card
+		card.set_card_data(deck[i])
+		card.visible = true
+	_readjust()

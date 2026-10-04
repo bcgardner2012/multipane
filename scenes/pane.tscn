@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://pjilwspntgn6"]
+[gd_scene load_steps=60 format=3 uid="uid://pjilwspntgn6"]
 
 [ext_resource type="Script" uid="uid://dd7ywskexogj6" path="res://scripts/pane.gd" id="1_ghsmc"]
 [ext_resource type="Texture2D" uid="uid://bw1tv3613l5eh" path="res://assets/club.png" id="1_k7av0"]
@@ -54,6 +54,7 @@
 [ext_resource type="Script" uid="uid://wkds6crokvga" path="res://scripts/haunted_house/haunted_house_game_plug.gd" id="23_fvqrk"]
 [ext_resource type="Script" uid="uid://bw2p7rtlk8jv6" path="res://scripts/betrothal_game_plug.gd" id="24_qxtnm"]
 [ext_resource type="Script" uid="uid://b2iwquthkpfsx" path="res://scripts/soccer_game_plug.gd" id="25_1ui5e"]
+[ext_resource type="Script" uid="uid://c5exo8skdh8qs" path="res://scripts/mr_president_game_plug.gd" id="26_sd5p5"]
 [ext_resource type="Script" uid="uid://d571nsxmjowr" path="res://scripts/control_holder.gd" id="30_xrk25"]
 [ext_resource type="Texture2D" uid="uid://d3d185da1palt" path="res://assets/cycle.png" id="31_rav8p"]
 [ext_resource type="Texture2D" uid="uid://d3ejsw71l54p3" path="res://assets/cycle_clicked.png" id="32_ilg2h"]
@@ -168,6 +169,10 @@ portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="SoccerGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
 script = ExtResource("25_1ui5e")
+portrait = NodePath("../PortraitHolder/Portrait")
+
+[node name="MrPresidentGamePlug" type="Node" parent="." node_paths=PackedStringArray("portrait")]
+script = ExtResource("26_sd5p5")
 portrait = NodePath("../PortraitHolder/Portrait")
 
 [node name="SuitIcon" type="TextureRect" parent="."]

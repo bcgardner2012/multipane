@@ -29,27 +29,17 @@ func _ready() -> void:
 	_signals = get_parent()
 	
 	hearts_hand = []
-	for child in $Hearts.get_children():
-		var card = child as CardData
-		hearts_hand.append(card)
+	DeckHelper.init_deck(hearts_hand, $Hearts, false)
 	
 	_assemble_spades_hand()
 	call_deferred("_assemble_hand_node")
 
 func _assemble_hand_node() -> void:
-	for i in range(hearts_hand.size()):
-		var card = hand_h_box.get_child(i) as Card
-		card.set_card_data(hearts_hand[i])
-		card.visible = true
-	hand_h_box._readjust()
+	hand_h_box.assemble(hearts_hand)
 
 func _assemble_spades_hand() -> void:
 	spades_hand = []
-	for child in $Spades.get_children():
-		var card = child as CardData
-		spades_hand.append(card)
-	
-	DeckHelper.shuffle(spades_hand)
+	DeckHelper.init_deck(spades_hand, $Spades, true)
 
 func _on_card_use_card(data: CardData, _button_index: int) -> void:
 	cards_played += 1

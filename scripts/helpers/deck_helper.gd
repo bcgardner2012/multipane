@@ -11,6 +11,14 @@ static func shuffle(deck: Array[CardData]):
 		deck[i-1] = tmp
 		i -= 1
 
+# deck is a ref to the deck to init, node is the card data holder
+static func init_deck(deck: Array[CardData], node: Node, should_shuffle: bool) -> void:
+	for child in node.get_children():
+		var card = child as CardData
+		deck.append(card)
+	if should_shuffle:
+		DeckHelper.shuffle(deck)
+
 static func sort_by_rank(deck: Array[CardData], descending: bool = false) -> Array[CardData]:
 	var sorted_deck: Array[CardData] = []
 	for card in deck:

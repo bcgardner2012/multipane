@@ -282,6 +282,7 @@ texture = ExtResource("5_7dlk7")
 
 [node name="HandHBox" type="Control" parent="PlayArea"]
 layout_mode = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -267.0
