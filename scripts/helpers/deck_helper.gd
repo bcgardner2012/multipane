@@ -58,3 +58,41 @@ static func multi_pop(deck: Array[CardData], count: int) -> Array[CardData]:
 	for i in range(count):
 		stack.append(deck.pop_front())
 	return stack
+
+static func is_flush_of(suit: CardData.Suit, deck: Array[CardData]) -> bool:
+	for card in deck:
+		if card.suit != suit:
+			return false
+	return true
+
+static func is_flush(deck: Array[CardData]) -> bool:
+	if deck.size() <= 0:
+		return false
+	
+	var suit = deck[0].suit
+	for card in deck:
+		if card.suit != suit:
+			return false
+	return true
+
+static func is_red_flush(deck: Array[CardData]) -> bool:
+	for card in deck:
+		if card.is_black():
+			return false
+	return true
+
+static func is_black_flush(deck: Array[CardData]) -> bool:
+	for card in deck:
+		if card.is_red():
+			return false
+	return true
+
+static func is_same_rank(deck: Array[CardData]) -> bool:
+	if deck.size() <= 0:
+		return false
+	
+	var rank = deck[0].rank
+	for card in deck:
+		if card.rank != rank:
+			return false
+	return true

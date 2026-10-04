@@ -6,6 +6,7 @@ signal card_flipped(data: CardData, button_index: int)
 
 @export var should_wipe_texture_on_click: bool = true
 @export var should_wipe_data_on_click: bool = true
+@export var should_hide_on_click: bool = false
 
 # means the card will be facedown until clicked
 @export var is_facedown: bool = false
@@ -44,6 +45,8 @@ func reset_texture_and_emit(button: int) -> void:
 		data = null
 	if should_wipe_texture_on_click:
 		texture = original_texture
+	if should_hide_on_click:
+		visible = false
 	use_card.emit(tmp, button)
 
 func reset_texture() -> void:

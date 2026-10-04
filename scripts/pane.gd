@@ -164,6 +164,13 @@ func receive_broadcast(from: Node) -> void:
 		bgp.cards_removed.connect($BetrothalGamePlug.on_cards_removed)
 		bgp.card_drawn.connect($BetrothalGamePlug.on_card_drawn)
 		bgp.game_won.connect($BetrothalGamePlug.on_game_won)
+	elif from is SoccerGamePane:
+		var sgp = from as SoccerGamePane
+		sgp.game_lost.connect($SoccerGamePlug.on_game_lost)
+		sgp.game_tied.connect($SoccerGamePlug.on_game_tied)
+		sgp.game_won.connect($SoccerGamePlug.on_game_won)
+		sgp.goal.connect($SoccerGamePlug.on_goal)
+		sgp.kicked.connect($SoccerGamePlug.on_kicked)
 
 func _on_suit_icon_tune_suit_channel(channel: int) -> void:
 	suit_channel = channel

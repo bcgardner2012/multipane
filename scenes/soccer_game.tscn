@@ -1,0 +1,713 @@
+[gd_scene load_steps=43 format=3 uid="uid://bjmepp6uxos2b"]
+
+[ext_resource type="Script" uid="uid://17sww1gga6ib" path="res://scripts/card_data.gd" id="1_5tawe"]
+[ext_resource type="Script" uid="uid://3iv1es68ki7f" path="res://scripts/soccer_game_player.gd" id="1_a5jrr"]
+[ext_resource type="Script" uid="uid://f3ctftq46imv" path="res://scripts/soccer_game_pane.gd" id="1_cstej"]
+[ext_resource type="Texture2D" uid="uid://ckm2mt5k1ga8s" path="res://assets/notes.png" id="1_iq8vp"]
+[ext_resource type="Texture2D" uid="uid://cg3lxc223waa6" path="res://assets/cards/normal/h2.png" id="2_86ing"]
+[ext_resource type="Texture2D" uid="uid://mf8do06mku8p" path="res://assets/broadcast.png" id="2_ewpap"]
+[ext_resource type="Texture2D" uid="uid://bcbdvvxpyw64h" path="res://assets/cancel.png" id="3_dl71n"]
+[ext_resource type="Texture2D" uid="uid://dsyd8tmqe5f2o" path="res://assets/cards/normal/h3.png" id="3_l3kjq"]
+[ext_resource type="Script" uid="uid://b5liexi4o5qrg" path="res://scripts/notes.gd" id="4_ewpap"]
+[ext_resource type="Texture2D" uid="uid://7tyv7lctmiq2" path="res://assets/soccer/soccerfield.png" id="4_kaigy"]
+[ext_resource type="Texture2D" uid="uid://c2j6hxaj3h7tu" path="res://assets/cards/normal/h4.png" id="4_lhxuo"]
+[ext_resource type="Texture2D" uid="uid://b26lmrqtdo6cp" path="res://assets/soccer/soccer_ball.png" id="5_7dlk7"]
+[ext_resource type="Texture2D" uid="uid://bjap1nt6l63rl" path="res://assets/cards/normal/h5.png" id="5_a7ik3"]
+[ext_resource type="Script" uid="uid://mloe0kgitkaj" path="res://scripts/hand_h_box.gd" id="6_7dlk7"]
+[ext_resource type="Texture2D" uid="uid://c7n1u47apn6as" path="res://assets/cards/normal/back_blue.png" id="6_aqcxa"]
+[ext_resource type="Texture2D" uid="uid://bm3vqlbd1ow5t" path="res://assets/cards/normal/h6.png" id="6_ld6iu"]
+[ext_resource type="PackedScene" uid="uid://d3mtnjxew1ax2" path="res://scenes/card.tscn" id="7_dfi0e"]
+[ext_resource type="Texture2D" uid="uid://doy7nsfgvsctv" path="res://assets/cards/normal/h7.png" id="7_woknh"]
+[ext_resource type="Texture2D" uid="uid://nd3l7cvm38sm" path="res://assets/cards/normal/h8.png" id="8_v3763"]
+[ext_resource type="Texture2D" uid="uid://dchnd6f85i8f4" path="res://assets/cards/normal/h9.png" id="9_06ej4"]
+[ext_resource type="Texture2D" uid="uid://q224h56iawpn" path="res://assets/cards/normal/h10.png" id="10_iifre"]
+[ext_resource type="Texture2D" uid="uid://bywdstmtow4g7" path="res://assets/cards/normal/h11.png" id="11_70q2n"]
+[ext_resource type="Texture2D" uid="uid://b3u0pbhqu31md" path="res://assets/cards/normal/h12.png" id="12_845r2"]
+[ext_resource type="Texture2D" uid="uid://caqm4cq3u31cr" path="res://assets/cards/normal/h13.png" id="13_tiqc5"]
+[ext_resource type="Texture2D" uid="uid://cvfot1mau43an" path="res://assets/cards/normal/h1.png" id="14_vropd"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1t3mkjh6" path="res://assets/cards/normal/s2.png" id="15_vropd"]
+[ext_resource type="Texture2D" uid="uid://dce38qn4kfh72" path="res://assets/cards/normal/s3.png" id="16_a5jrr"]
+[ext_resource type="Texture2D" uid="uid://b1b4i4008jody" path="res://assets/cards/normal/s4.png" id="17_m6kg5"]
+[ext_resource type="Texture2D" uid="uid://buvmce8ffqq2n" path="res://assets/cards/normal/s5.png" id="18_7i7ee"]
+[ext_resource type="Texture2D" uid="uid://cgu3s54dan4dy" path="res://assets/cards/normal/s6.png" id="19_5cx84"]
+[ext_resource type="Texture2D" uid="uid://cy6d7mpwumhek" path="res://assets/cards/normal/s7.png" id="20_cstej"]
+[ext_resource type="Texture2D" uid="uid://blmwh6keeu7ks" path="res://assets/cards/normal/s8.png" id="21_8pcny"]
+[ext_resource type="Texture2D" uid="uid://bnsf7ap6ytsmu" path="res://assets/cards/normal/s9.png" id="22_nl2o5"]
+[ext_resource type="Texture2D" uid="uid://b3mox8wgvjdkh" path="res://assets/cards/normal/s10.png" id="23_quf8k"]
+[ext_resource type="Texture2D" uid="uid://2s8wvwullff7" path="res://assets/cards/normal/s11.png" id="24_c244r"]
+[ext_resource type="Texture2D" uid="uid://c58w5cv6mj1vl" path="res://assets/cards/normal/s12.png" id="25_x1w76"]
+[ext_resource type="Texture2D" uid="uid://crxp6mhos6fiy" path="res://assets/cards/normal/s13.png" id="26_axcpd"]
+[ext_resource type="Texture2D" uid="uid://cyilxx3jh8mee" path="res://assets/cards/normal/s1.png" id="27_xqxvj"]
+[ext_resource type="Script" uid="uid://c8pph2p5mifny" path="res://scripts/soccer_field.gd" id="33_7i7ee"]
+[ext_resource type="Texture2D" uid="uid://bfildnevjcona" path="res://assets/cards/normal/back_red.png" id="37_m6kg5"]
+[ext_resource type="Script" uid="uid://cqv6iqbei333t" path="res://scripts/soccer_warnings.gd" id="40_5cx84"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5cx84"]
+font_color = Color(1, 0, 0, 1)
+
+[node name="SoccerGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cstej")
+
+[node name="SoccerGamePlayer" type="Node" parent="." node_paths=PackedStringArray("players_card_node", "opponents_card_node", "hand_h_box", "field", "player_score_label", "opponent_score_label")]
+script = ExtResource("1_a5jrr")
+players_card_node = NodePath("../PlayArea/PlayersCard")
+opponents_card_node = NodePath("../PlayArea/OpponentsCard")
+hand_h_box = NodePath("../PlayArea/HandHBox")
+field = NodePath("../PlayArea/Field")
+player_score_label = NodePath("../PlayArea/PlayerScore")
+opponent_score_label = NodePath("../PlayArea/OpponentScore")
+
+[node name="Hearts" type="Node" parent="SoccerGamePlayer"]
+
+[node name="H2" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 2
+texture = ExtResource("2_86ing")
+
+[node name="H3" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 3
+texture = ExtResource("3_l3kjq")
+
+[node name="H4" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 4
+texture = ExtResource("4_lhxuo")
+
+[node name="H5" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 5
+texture = ExtResource("5_a7ik3")
+
+[node name="H6" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 6
+texture = ExtResource("6_ld6iu")
+
+[node name="H7" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 7
+texture = ExtResource("7_woknh")
+
+[node name="H8" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 8
+texture = ExtResource("8_v3763")
+
+[node name="H9" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 9
+texture = ExtResource("9_06ej4")
+
+[node name="H10" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 10
+texture = ExtResource("10_iifre")
+
+[node name="HJ" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 11
+texture = ExtResource("11_70q2n")
+
+[node name="HQ" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 12
+texture = ExtResource("12_845r2")
+
+[node name="HK" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 13
+texture = ExtResource("13_tiqc5")
+
+[node name="HA" type="Node" parent="SoccerGamePlayer/Hearts"]
+script = ExtResource("1_5tawe")
+rank = 1
+texture = ExtResource("14_vropd")
+
+[node name="Spades" type="Node" parent="SoccerGamePlayer"]
+
+[node name="S2" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 2
+texture = ExtResource("15_vropd")
+
+[node name="S3" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 3
+texture = ExtResource("16_a5jrr")
+
+[node name="S4" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 4
+texture = ExtResource("17_m6kg5")
+
+[node name="S5" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 5
+texture = ExtResource("18_7i7ee")
+
+[node name="S6" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 6
+texture = ExtResource("19_5cx84")
+
+[node name="S7" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 7
+texture = ExtResource("20_cstej")
+
+[node name="S8" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 8
+texture = ExtResource("21_8pcny")
+
+[node name="S9" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 9
+texture = ExtResource("22_nl2o5")
+
+[node name="S10" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 10
+texture = ExtResource("23_quf8k")
+
+[node name="SJ" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 11
+texture = ExtResource("24_c244r")
+
+[node name="SQ" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 12
+texture = ExtResource("25_x1w76")
+
+[node name="SK" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 13
+texture = ExtResource("26_axcpd")
+
+[node name="SA" type="Node" parent="SoccerGamePlayer/Spades"]
+script = ExtResource("1_5tawe")
+suit = 3
+rank = 1
+texture = ExtResource("27_xqxvj")
+
+[node name="Toolbar" type="FoldableContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.89400005
+offset_left = -67.0
+offset_bottom = 1.6879883
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+title = "Tools"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toolbar"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NotesTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_iq8vp")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="BroadcastTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ewpap")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CloseTool" type="TextureRect" parent="Toolbar/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_dl71n")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.9
+anchor_bottom = 1.0
+
+[node name="Field" type="TextureRect" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_top = 14.0
+offset_right = 270.0
+offset_bottom = 262.0
+grow_horizontal = 2
+texture = ExtResource("4_kaigy")
+stretch_mode = 5
+script = ExtResource("33_7i7ee")
+
+[node name="Ball" type="TextureRect" parent="PlayArea/Field"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_7dlk7")
+
+[node name="HandHBox" type="Control" parent="PlayArea"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -267.0
+offset_top = 433.0
+offset_right = 267.0
+offset_bottom = 561.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_7dlk7")
+should_chunk_invisble_children = false
+metadata/_custom_type_script = "uid://mloe0kgitkaj"
+
+[node name="Card" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card2" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card3" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card4" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card5" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card6" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card7" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card8" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card9" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card10" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card11" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card12" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="Card13" parent="PlayArea/HandHBox" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+should_hide_on_click = true
+
+[node name="PlayersCard" parent="PlayArea" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -97.0
+offset_top = 286.0
+offset_right = -9.0
+offset_bottom = 410.0
+grow_horizontal = 2
+texture = ExtResource("6_aqcxa")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="OpponentsCard" parent="PlayArea" instance=ExtResource("7_dfi0e")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 9.0
+offset_top = 286.0
+offset_right = 97.0
+offset_bottom = 410.0
+grow_horizontal = 2
+texture = ExtResource("37_m6kg5")
+expand_mode = 0
+stretch_mode = 3
+should_wipe_texture_on_click = false
+should_wipe_data_on_click = false
+
+[node name="PlayerScore" type="Label" parent="PlayArea"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 73.0
+offset_bottom = 29.0
+text = "Player: 0"
+
+[node name="OpponentScore" type="Label" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -105.0
+offset_top = 10.0
+offset_right = -9.0
+offset_bottom = 33.0
+grow_horizontal = 0
+text = "Opponent: 0"
+
+[node name="Notes" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.15
+anchor_right = 0.18
+anchor_bottom = 0.9
+offset_right = 8.0
+grow_vertical = 2
+text = "Instructions:
+- Click the deck to start.
+- The goal is to play higher cards
+than your opponent to move the
+ball into their goal.
+- Aces are special. They beat all face
+cards, but lose to all number cards.
+- Both players get all 13 cards of 1
+suit each half.
+- The game is played in 2 halves. A
+half is over when you've played all
+13 of your cards.
+- Most goals scored at the end wins."
+placeholder_text = "Add any notes here..."
+script = ExtResource("4_ewpap")
+
+[node name="Warnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -189.0
+offset_top = 15.0
+offset_right = 350.0
+offset_bottom = 55.0
+grow_horizontal = 2
+script = ExtResource("40_5cx84")
+
+[node name="FinalHalf" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Final half!"
+label_settings = SubResource("LabelSettings_5cx84")
+horizontal_alignment = 1
+
+[node name="PlayerWon" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You Win!"
+label_settings = SubResource("LabelSettings_5cx84")
+horizontal_alignment = 1
+
+[node name="PlayerLost" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You Lose!"
+label_settings = SubResource("LabelSettings_5cx84")
+horizontal_alignment = 1
+
+[node name="Tied" type="Label" parent="Warnings"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "It's a tie..."
+label_settings = SubResource("LabelSettings_5cx84")
+horizontal_alignment = 1
+
+[connection signal="final_half_started" from="SoccerGamePlayer" to="Warnings" method="_on_soccer_game_player_final_half_started"]
+[connection signal="player_lost" from="SoccerGamePlayer" to="Warnings" method="_on_soccer_game_player_player_lost"]
+[connection signal="player_won" from="SoccerGamePlayer" to="Warnings" method="_on_soccer_game_player_player_won"]
+[connection signal="tied" from="SoccerGamePlayer" to="Warnings" method="_on_soccer_game_player_tied"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/NotesTool" to="Notes" method="_on_notes_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/BroadcastTool" to="." method="_on_broadcast_tool_gui_input"]
+[connection signal="gui_input" from="Toolbar/VBoxContainer/CloseTool" to="." method="_on_close_tool_gui_input"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card2" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card3" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card4" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card5" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card6" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card7" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card8" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card9" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card10" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card11" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card12" to="SoccerGamePlayer" method="_on_card_use_card"]
+[connection signal="use_card" from="PlayArea/HandHBox/Card13" to="SoccerGamePlayer" method="_on_card_use_card"]

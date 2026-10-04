@@ -4,6 +4,8 @@ class_name HandHBox
 # Maintains its current size as the maximum and arranges children
 # evenly within, centered horizontally, allowing overlap.
 
+@export var should_chunk_invisble_children: bool = true
+
 var _last_known_dimensions: Vector2
 
 func _process(_delta: float) -> void:
@@ -18,10 +20,19 @@ func _readjust() -> void:
 	# adjust all children to evenly distribute horizontally
 	var self_width = self.size.x
 	var half_self_width = self_width / 2
-	var chunk_width = self_width / get_child_count()
+	
+	var chunk_width = self_width
+	if should_chunk_invisble_children:
+		chunk_width /= get_child_count()
+	else:
+		chunk_width /= _get_visible_child_count()
+	
 	var half_chunk_width = chunk_width / 2
 	var i = 0
 	for child in get_children():
+		if not (child.visible or should_chunk_invisble_children):
+			continue
+		
 		var child_control = child as Control
 		var half_child_width = child_control.size.x / 2
 		child_control.set_anchors_preset(Control.PRESET_CENTER)
@@ -41,3 +52,10 @@ func _readjust() -> void:
 
 func _on_child_order_changed() -> void:
 	_readjust()
+
+func _get_visible_child_count() -> int:
+	var count = 0
+	for child in get_children():
+		if child.visible:
+			count += 1
+	return count
