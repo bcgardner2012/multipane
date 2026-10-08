@@ -12,8 +12,10 @@ const SUIT_TO_STR = {
 	CardData.Suit.CLUBS: "tie"
 }
 
-func on_round_end(winner: CardData) -> void:
-	portrait.try_load_random_image_from_subdir(SUIT_TO_STR[winner.suit])
+func on_round_end(winner: CardData, region: int) -> void:
+	var ws = SUIT_TO_STR[winner.suit]
+	if not portrait.try_load_random_image_from_subdir(ws.path_join(str(region))):
+		portrait.try_load_random_image_from_subdir(ws)
 
 func on_game_over(winner: CardData.Suit) -> void:
 	portrait.try_load_random_image_from_subdir("win".path_join(SUIT_TO_STR[winner]))

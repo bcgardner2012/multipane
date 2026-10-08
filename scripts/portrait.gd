@@ -16,11 +16,15 @@ func _on_label_gauge_value_changed(value: int) -> void:
 
 # returns true if successfully loaded an image, false otherwise
 func try_load_numbered_image(value: int) -> bool:
-	return try_load_image(str(value) + ".png") or try_load_image(str(value) + ".jpg")
+	return try_load_image(str(value) + ".png") \
+		or try_load_image(str(value) + ".jpg") \
+		or try_load_image(str(value) + ".gif")
 
 func try_load_numbered_image_from_subdir(value: int, subdir: String) -> bool:
 	var suffix = subdir.path_join(str(value))
-	return try_load_image(suffix + ".png") or try_load_image(suffix + ".jpg")
+	return try_load_image(suffix + ".png") \
+		or try_load_image(suffix + ".jpg") \
+		or try_load_image(suffix + ".gif")
 
 func try_load_random_image_from_subdir(subdir: String) -> bool:
 	var path = current_dir.path_join(subdir)
@@ -57,5 +61,9 @@ func _on_folder_selector_dir_changed(dir: String) -> void:
 	current_dir = dir
 
 func _load_image(path: String) -> void:
-	var img = Image.load_from_file(path)
-	texture = ImageTexture.create_from_image(img)
+	# GIFs require a custom addon to render
+	if path.ends_with(".gif"):
+		texture = GIFTexture.from_file(path)
+	else:
+		var img = Image.load_from_file(path)
+		texture = ImageTexture.create_from_image(img)

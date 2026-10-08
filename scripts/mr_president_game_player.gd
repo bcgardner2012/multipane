@@ -90,13 +90,13 @@ func _on_card_use_card(data: CardData, _button_index: int) -> void:
 	# see if region winner changed and update scores and displays
 	_compute_scores()
 	
-	# draw another club card to start next round
-	_draw_club()
-	
 	if heart_deck.size() == 0:
 		_signals.game_over.emit(_get_president())
 	else:
-		_signals.round_end.emit(round_winner)
+		_signals.round_end.emit(round_winner, RANK_TO_REGION[club_card.rank])
+	
+	# draw another club card to start next round
+	_draw_club()
 
 func _compute_scores() -> void:
 	remaining_votes = 0
